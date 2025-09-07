@@ -8,7 +8,7 @@
             <p class="font-['Roboto'] text-base sm:text-lg md:text-xl font-semibold leading-snug">
                 HISTORICAL TOURS OF THE UNIVERSITY OF VIRGINIA
             </p>
-            <button class="font-['Roboto'] mt-15 px-6 py-2 text-lg text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 border hover:border-neutral-300 rounded-full cursor-pointer transition duration-300"
+            <button class="font-['Roboto'] mt-15 px-6 py-2 text-lg text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 border hover:border-neutral-300 rounded-full cursor-pointer transition-all duration-300 ease-in-out"
             aria-label="Explore Virginia Guides">
                 Plan Your Visit
             </button>
@@ -85,7 +85,7 @@
                         </div>
                         <!--Button-->
                         <div class="absolute left-1/2 bottom-20 -translate-x-1/2">
-                            <button class="font-['Montserrat'] text-lg font-semibold px-6 py-2 rounded-[20px] text-white hover:text-white bg-dark-orange border-neutral-700 hover:bg-neutral-900/85 cursor-pointer transition duration-300"
+                            <button class="font-['Montserrat'] text-lg font-semibold px-6 py-2 rounded-[20px] text-white hover:text-white bg-dark-orange border-neutral-700 hover:bg-neutral-900/85 cursor-pointer transition-all duration-300 ease-in-out"
                                 aria-label="Explore Virginia Guides">
                                 TAKE A TOUR
                             </button>
@@ -129,7 +129,7 @@
                 <NuxtImg
                     src="/index-page/carousel-cards/Carousel_Tours.jpg"
                     alt="Columns at the Academical Village"
-                    class="w-full rounded-lg transition duration-250 group-hover:brightness-75"
+                    class="w-full rounded-lg transition-all duration-300 ease-in-out group-hover:brightness-75"
                 />
                 <p class="absolute inset-0 flex items-center justify-center font-['Montserrat'] text-center px-2 text-white font-bold text-base sm:text-lg md:text-xl">
                     Our Tours
@@ -143,7 +143,7 @@
                 <NuxtImg
                     src="/index-page/carousel-cards/Carousel_YourVisit.jpg"
                     alt="Panels of a Pavillion at the Academical Village"
-                    class="w-full rounded-lg transition duration-250 group-hover:brightness-75"
+                    class="w-full rounded-lg transition-all duration-300 ease-in-out group-hover:brightness-75"
                 />
                 <p class="absolute inset-0 flex items-center justify-center font-['Montserrat'] text-center px-2 text-white font-bold text-base sm:text-lg md:text-xl">
                     Take a Tour
@@ -157,7 +157,7 @@
                 <NuxtImg
                     src="/index-page/carousel-cards/Carousel_ForEducators.jpg"
                     alt="Close up of bottom of the columns at the Academical Village"
-                    class="w-full rounded-lg transition duration-250 group-hover:brightness-75"
+                    class="w-full rounded-lg transition-all duration-300 ease-in-out group-hover:brightness-75"
                 />
                 <p class="absolute inset-0 flex items-center justify-center font-['Montserrat'] text-center px-2 text-white font-bold text-base sm:text-lg md:text-xl">
                     For Educators (K-12+)
@@ -171,7 +171,7 @@
                 <NuxtImg
                     src="/index-page/carousel-cards/Carousel_ContactUs.jpg"
                     alt="Image of a tree and an arch made of brick"
-                    class="w-full rounded-lg transition duration-250 group-hover:brightness-75"
+                    class="w-full rounded-lg transition-all duration-300 ease-in-out group-hover:brightness-75"
                 />
                 <p class="absolute inset-0 flex items-center justify-center font-['Montserrat'] text-center px-2 text-white font-bold text-base sm:text-lg md:text-xl">
                     Contact Us
@@ -185,7 +185,7 @@
                 <NuxtImg
                     src="/index-page/carousel-cards/Carousel_AboutOurGuides.jpeg"
                     alt="Columns at the Academical Village"
-                    class="w-full rounded-lg transition duration-250 group-hover:brightness-75"
+                    class="w-full rounded-lg transition-all duration-300 ease-in-out group-hover:brightness-75"
                 />
                 <p class="absolute inset-0 flex items-center justify-center font-['Montserrat'] text-center px-2 text-white font-bold text-base sm:text-lg md:text-xl">
                     About Our Guides
@@ -199,7 +199,7 @@
                 <NuxtImg
                     src="/index-page/carousel-cards/Carousel_Feedback.jpeg"
                     alt="Panels of a Pavillion at the Academical Village"
-                    class="w-full rounded-lg transition duration-250 group-hover:brightness-75"
+                    class="w-full rounded-lg transition-all duration-300 ease-in-out group-hover:brightness-75"
                 />
                 <p class="absolute inset-0 flex items-center justify-center font-['Montserrat'] text-center px-2 text-white font-bold text-base sm:text-lg md:text-xl">
                     Feedback
@@ -213,7 +213,7 @@
                 <NuxtImg
                     src="/index-page/carousel-cards/Carousel_BecomeAGuide.jpeg"
                     alt="Close up of bottom of the columns at the Academical Village"
-                    class="w-full rounded-lg transition duration-250 brightness-70 group-hover:brightness-60"
+                    class="w-full rounded-lg transition-all duration-300 ease-in-out brightness-70 group-hover:brightness-60"
                 />
                 <p class="absolute inset-0 flex items-center justify-center font-['Montserrat'] text-center px-2 text-white font-bold text-base sm:text-lg md:text-xl">
                     Become a Guide
@@ -227,7 +227,7 @@
                 <NuxtImg
                     src="/index-page/carousel-cards/Carousel_Donate.jpeg"
                     alt="Image of a tree and an arch made of brick"
-                    class="w-full rounded-lg transition duration-250 group-hover:brightness-75"
+                    class="w-full rounded-lg transition-all duration-300 ease-in-out group-hover:brightness-75"
                 />
                 <p class="absolute inset-0 flex items-center justify-center font-['Montserrat'] text-center px-2 text-white font-bold text-base sm:text-lg md:text-xl">
                     Donate
@@ -268,17 +268,17 @@
                 <!-- Button Section -->
                 <div class="mt-10 flex flex-col md:flex-row justify-center items-center gap-x-25 gap-y-4 pointer-events-auto">
                     <!-- Button 1: Learn More -->
-                    <button class="font-['Roboto'] bg-royal-blue hover:bg-blue-950 text-white rounded-full py-4 px-14 transition duration-250 cursor-pointer">
+                    <button class="font-['Roboto'] bg-royal-blue hover:bg-blue-950 text-white rounded-full py-4 px-14 transition-all duration-300 ease-in-out cursor-pointer">
                         Learn More
                     </button>
 
                     <!-- Button 2: Donate -->
-                    <button class="font-['Roboto'] bg-royal-blue hover:bg-blue-950 text-white rounded-full py-4 px-18 transition duration-250 cursor-pointer">
+                    <button class="font-['Roboto'] bg-royal-blue hover:bg-blue-950 text-white rounded-full py-4 px-18 transition-all duration-300 ease-in-out cursor-pointer">
                         Donate
                     </button>
 
                     <!-- Button 3: Become a Guide -->
-                    <button class="font-['Roboto'] bg-royal-blue hover:bg-blue-950 text-white rounded-full py-4 px-10 transition duration-250 cursor-pointer">
+                    <button class="font-['Roboto'] bg-royal-blue hover:bg-blue-950 text-white rounded-full py-4 px-10 transition-all duration-300 ease-in-out cursor-pointer">
                         Become a Guide
                     </button>
                 </div>
@@ -332,7 +332,7 @@
             </p>
 
             <!-- Button -->
-            <button class="inline-flex items-center space-x-3 rounded-full border text-white font-['Montserrat'] text-base sm:text-lg md:text-xl py-3 px-6 hover:text-royal-blue hover:bg-neutral-300 transition duration-300">
+            <button class="inline-flex items-center space-x-3 rounded-full border text-white font-['Montserrat'] text-base sm:text-lg md:text-xl py-3 px-6 hover:text-royal-blue hover:bg-neutral-300 transition-all duration-300 ease-in-out">
                 <span>HISTORY TOURS</span>
                 <svg class="flex-shrink-0" height="25px" width="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6 12H18M18 12L13 7M18 12L13 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -344,47 +344,67 @@
         <div class="carousel-body">
             <div class="slider">
                 <div class="slide-track">
-                    <div class="slide flex flex-col justify-start">
-                        <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_womenatuva.jpg" alt="">
-                        <p class="carousel-text self-start text-white font-light font-['Roboto']">History of Women</p>
-                    </div>
-                    <div class="slide flex flex-col">
-                        <img class="carousel-img object-top" src="/index-page/carousel-history-tours/UVAhistoryCarousel_africanamericansatuva.jpg" alt="">
-                        <p class="carousel-text self-start text-white font-light font-['Roboto']">History of African-Americans</p>
-                    </div>
-                    <div class="slide flex flex-col">
-                        <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_GardenTours.jpg" alt="">
-                        <p class="carousel-text self-start text-white font-light font-['Roboto']">Garden Tours</p>
-                    </div>
-                    <div class="slide flex flex-col">
-                        <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_MEL.jpeg" alt="">
-                        <p class="carousel-text self-start text-white font-light font-['Roboto']">Memorial to Enslaved Laborers</p>
-                    </div>
-                    <div class="slide flex flex-col">
-                        <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_childrenstour.jpg" alt="">
-                        <p class="carousel-text self-start text-white font-light font-['Roboto']">Children's Tour</p>
-                    </div>
+                    <a href="/about-tours/#history-of-women-at-uva">
+                        <div class="slide flex flex-col justify-start">
+                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_womenatuva.jpg" alt="">
+                            <p class="carousel-text self-start text-white font-light font-['Roboto']">History of Women</p>
+                        </div>
+                    </a>
+                    <a href="/about-tours/#history-of-african-americans-tour">
+                        <div class="slide flex flex-col">
+                            <img class="carousel-img object-top" src="/index-page/carousel-history-tours/UVAhistoryCarousel_africanamericansatuva.jpg" alt="">
+                            <p class="carousel-text self-start text-white font-light font-['Roboto']">History of African-Americans</p>
+                        </div>
+                    </a>
+                    <a href="/about-tours/#garden-tours">
+                        <div class="slide flex flex-col">
+                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_GardenTours.jpg" alt="">
+                            <p class="carousel-text self-start text-white font-light font-['Roboto']">Garden Tours</p>
+                        </div>
+                    </a>
+                    <a href="/about-tours/#MEL-tour">
+                        <div class="slide flex flex-col">
+                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_MEL.jpeg" alt="">
+                            <p class="carousel-text self-start text-white font-light font-['Roboto']">Memorial to Enslaved Laborers</p>
+                        </div>
+                    </a>
+                    <a href="/about-tours/#childrens-tours">
+                        <div class="slide flex flex-col">
+                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_childrenstour.jpg" alt="">
+                            <p class="carousel-text self-start text-white font-light font-['Roboto']">Children's Tour</p>
+                        </div>
+                    </a>
                     <!--Same 5 slides (doubled)-->
-                    <div class="slide flex flex-col justify-start">
-                        <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_womenatuva.jpg" alt="">
-                        <p class="carousel-text self-start text-white font-light font-['Roboto']">History of Women</p>
-                    </div>
-                    <div class="slide flex flex-col">
-                        <img class="carousel-img object-top" src="/index-page/carousel-history-tours/UVAhistoryCarousel_africanamericansatuva.jpg" alt="">
-                        <p class="carousel-text self-start text-white font-light font-['Roboto']">History of African-Americans</p>
-                    </div>
-                    <div class="slide flex flex-col">
-                        <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_GardenTours.jpg" alt="">
-                        <p class="carousel-text self-start text-white font-light font-['Roboto']">Garden Tours</p>
-                    </div>
-                    <div class="slide flex flex-col">
-                        <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_MEL.jpeg" alt="">
-                        <p class="carousel-text self-start text-white font-light font-['Roboto']">Memorial to Enslaved Laborers</p>
-                    </div>
-                    <div class="slide flex flex-col">
-                        <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_childrenstour.jpg" alt="">
-                        <p class="carousel-text self-start text-white font-light font-['Roboto']">Children's Tour</p>
-                    </div>
+                    <a href="/about-tours/#history-of-women-at-uva">
+                        <div class="slide flex flex-col justify-start">
+                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_womenatuva.jpg" alt="">
+                            <p class="carousel-text self-start text-white font-light font-['Roboto']">History of Women</p>
+                        </div>
+                    </a>
+                    <a href="/about-tours/#history-of-african-americans-tour">
+                        <div class="slide flex flex-col">
+                            <img class="carousel-img object-top" src="/index-page/carousel-history-tours/UVAhistoryCarousel_africanamericansatuva.jpg" alt="">
+                            <p class="carousel-text self-start text-white font-light font-['Roboto']">History of African-Americans</p>
+                        </div>
+                    </a>
+                    <a href="/about-tours/#garden-tours">
+                        <div class="slide flex flex-col">
+                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_GardenTours.jpg" alt="">
+                            <p class="carousel-text self-start text-white font-light font-['Roboto']">Garden Tours</p>
+                        </div>
+                    </a>
+                    <a href="/about-tours/#MEL-tour">
+                        <div class="slide flex flex-col">
+                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_MEL.jpeg" alt="">
+                            <p class="carousel-text self-start text-white font-light font-['Roboto']">Memorial to Enslaved Laborers</p>
+                        </div>
+                    </a>
+                    <a href="/about-tours/#childrens-tours">
+                        <div class="slide flex flex-col">
+                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_childrenstour.jpg" alt="">
+                            <p class="carousel-text self-start text-white font-light font-['Roboto']">Children's Tour</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -621,10 +641,10 @@
 
             <!-- Buttons -->
             <div class="mt-40 flex flex-col sm:flex-row justify-center items-center gap-x-10 gap-y-4 pointer-events-auto">
-                <button class="font-['Roboto'] border border-white text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 hover:border-transparent rounded-full py-3 px-10 cursor-pointer transition duration-250">
+                <button class="font-['Roboto'] border border-white text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 hover:border-transparent rounded-full py-3 px-10 cursor-pointer transition-all duration-300 ease-in-out">
                 PLAN YOUR VISIT
                 </button>
-                <button class="font-['Roboto'] border border-white text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 hover:border-transparent rounded-full py-3 px-18 cursor-pointer transition duration-250">
+                <button class="font-['Roboto'] border border-white text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 hover:border-transparent rounded-full py-3 px-18 cursor-pointer transition-all duration-300 ease-in-out">
                 DONATE
                 </button>
             </div>
@@ -684,7 +704,7 @@
                     </div>
 
                     <div class="flex justify-center md:justify-end">
-                        <button class="border border-white text-white rounded-full px-6 py-2 font-['Montserrat'] hover:bg-zinc-500 hover:border-zinc-500 hover:text-black transition duration-300 cursor-pointer">
+                        <button class="border border-white text-white rounded-full px-6 py-2 font-['Montserrat'] hover:bg-zinc-500 hover:border-zinc-500 hover:text-black transition-all duration-300 ease-in-out cursor-pointer">
                             CONTACT US
                         </button>
                     </div>
@@ -697,6 +717,10 @@
 </template>
 
 <style>
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 6rem;
+    }
     /* Carousel for the Tour Reviews Section */
     .review-carousel-body {
         width: 100%;

@@ -16,16 +16,16 @@
     <section class="relative z-20 -mt-10 px-4 mb-5">
         <div class="shadow-lg rounded-xl p-6 max-w-4xl mx-auto text-center bg-royal-blue">
             <div class="flex flex-col sm:flex-row justify-evenly items-center gap-4">
-                <a href="#about-tours" class="px-6 py-2 bg-white text-royal-blue text-lg rounded-full hover:bg-gray-200 hover:scale-105 transition duration-300 font-semibold">
+                <a href="#about-tours" class="px-6 py-2 bg-white text-royal-blue text-lg rounded-full hover:bg-gray-200 hover:scale-105 transition-all duration-300 ease-in-out font-semibold">
                     About Our Tours
                 </a>
-                <a href="#specialty-tours" class="px-6 py-2 bg-white text-royal-blue text-lg rounded-full hover:bg-gray-200 hover:scale-105 transition duration-300 font-semibold">
+                <a href="#specialty-tours" class="px-6 py-2 bg-white text-royal-blue text-lg rounded-full hover:bg-gray-200 hover:scale-105 transition-all duration-300 ease-in-out font-semibold">
                     Specialty Tours
                 </a>
-                <a href="/your-visit" class="px-6 py-2 bg-white text-royal-blue text-lg rounded-full hover:bg-gray-200 hover:scale-105 transition duration-300 font-semibold">
+                <a href="/your-visit" class="px-6 py-2 bg-white text-royal-blue text-lg rounded-full hover:bg-gray-200 hover:scale-105 transition-all duration-300 ease-in-out font-semibold">
                     Plan Your Visit
                 </a>
-                <a href="/for-educators" class="px-6 py-2 bg-white text-royal-blue text-lg rounded-full hover:bg-gray-200 hover:scale-105 transition duration-300 font-semibold">
+                <a href="/for-educators" class="px-6 py-2 bg-white text-royal-blue text-lg rounded-full hover:bg-gray-200 hover:scale-105 transition-all duration-300 ease-in-out font-semibold">
                     For Educators
                 </a>
             </div>
@@ -121,7 +121,7 @@
     </section>
 
     <!--Specialty Tours Section-->
-    <section id="specialty-tours" class="pt-4 sm:pt-8 md:pt-6">
+    <section id="specialty-tours" class="py-4 sm:py-8 md:py-6">
         <div class="flex flex-col justify-center items-center">
 
             <!--Heading-->
@@ -158,7 +158,7 @@
                                 px-6 py-2 text-sm 
                                 sm:px-8 sm:py-3 sm:text-base 
                                 md:px-10 md:py-4 md:text-lg 
-                                shadow-md hover:bg-green-950 hover:scale-105 transition duration-300">
+                                shadow-md hover:shadow-lg hover:bg-green-700 hover:scale-105 transition-all duration-300 ease-in-out">
                         Special Tour Request Form
                         </a>
                     </div>
@@ -167,17 +167,17 @@
             </div>
 
             <!--Specialty Tours List-->
-            <div class="flex flex-col justify-center items-center gap-5 m-5 lg:m-10">
+            <div class="flex flex-col justify-center items-center gap-10 md:gap-5 py-6 m-5 lg:m-10">
 
                 <!--History of African-Americans at UVA-->
-                <div class="flex flex-row min-h-[50vh] md:h-[50vh] justify-center gap-1 sm:gap-3 md:gap-2 items-stretch">
+                <div id="history-of-african-americans-tour" class="flex flex-col md:flex-row lg:h-[50vh] justify-center gap-1 sm:gap-3 md:gap-2 items-stretch">
                     <!--Picture-->
-                    <div class="w-1/2">
+                    <div class="w-full md:w-1/2 px-2 sm:px-6 md:px-0">
                         <img src="/about-tours-page/specialty-tours/HistoryofAfricanAmericansatUVA.jpg" class="w-full h-full object-cover object-center" alt="History of African Americans at UVA">
                     </div>
                     <!--Text-->
-                    <div class="flex flex-col justify-start space-y-6 w-1/2 px-2 sm:px-6 md:px-4">
-                        <h1 class="font-['Montserrat'] text-left font-medium text-black text-2xl sm:text-3xl">
+                    <div class="md:w-1/2 flex flex-col justify-start space-y-2 md:space-y-6 px-2 sm:px-6 md:px-4">
+                        <h1 class="font-['Montserrat'] text-left font-medium text-black text-2xl sm:text-3xl mt-2">
                             History of African-Americans at UVA
                         </h1>
                         <p class="font-['Roboto'] text-left font-light text-black text-md sm:text-lg">
@@ -186,13 +186,13 @@
                         </p>
                         <!--Request Tour Button-->
                         <div class="w-full flex justify-start">
-                            <button class="cursor-pointer flex items-center gap-2 rounded-full border border-black px-4 py-2 sm:px-6 sm:py-2 md:px-8 md:py-3 transition-all duration-200 hover:bg-gray-200">
+                            <button class="flex items-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-2 sm:px-6 sm:py-2 md:px-8 md:py-3 shadow-sm hover:bg-gray-100 hover:shadow-md transition-all duration-300 ease-in-out cursor-pointer">
                                 <p class="font-['Roboto'] text-gray-800 font-semibold text-sm sm:text-base md:text-lg">
-                                Request Tour
+                                    Request Tour
                                 </p>
                                 <svg class="h-4 w-4 sm:h-5 sm:w-5 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <line x1="3" y1="12" x2="21" y2="12" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                <polyline points="18 15 21 12 18 9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    <line x1="3" y1="12" x2="21" y2="12" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    <polyline points="18 15 21 12 18 9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
                             </button>
                         </div>
@@ -200,14 +200,14 @@
                 </div>
 
                 <!--Memorial to Enslaved Laborers-->
-                <div class="flex flex-row min-h-[50vh] md:h-[50vh] justify-center gap-1 sm:gap-3 md:gap-2 items-stretch">
+                <div id="MEL-tour" class="flex flex-col md:flex-row lg:h-[50vh] justify-center gap-1 sm:gap-3 md:gap-2 items-stretch">
                     <!--Picture-->
-                    <div class="w-1/2">
+                    <div class="w-full md:w-1/2 px-2 sm:px-6 md:px-0">
                         <img src="/about-tours-page/specialty-tours/MemorialtoEnslavedLaborers.jpg" class="w-full h-full object-cover object-center" alt="History of African Americans at UVA">
                     </div>
                     <!--Text-->
-                    <div class="flex flex-col justify-start space-y-6 w-1/2 px-2 sm:px-6 md:px-4">
-                        <h1 class="font-['Montserrat'] text-left font-medium text-black text-2xl sm:text-3xl">
+                    <div class="md:w-1/2 flex flex-col justify-start space-y-3 md:space-y-6 px-2 sm:px-6 md:px-4">
+                        <h1 class="font-['Montserrat'] text-left font-medium text-black text-2xl sm:text-3xl mt-2">
                             Memorial to Enslaved Laborers
                         </h1>
                         <p class="font-['Roboto'] text-left font-light text-black text-md sm:text-lg">
@@ -217,13 +217,13 @@
                         </p>
                         <!--Request Tour Button-->
                         <div class="w-full flex justify-start">
-                            <button class="cursor-pointer flex items-center gap-2 rounded-full border border-black px-4 py-2 sm:px-6 sm:py-2 md:px-8 md:py-3 transition-all duration-200 hover:bg-gray-200">
+                            <button class="flex items-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-2 sm:px-6 sm:py-2 md:px-8 md:py-3 shadow-sm hover:bg-gray-100 hover:shadow-md transition-all duration-300 ease-in-out cursor-pointer">
                                 <p class="font-['Roboto'] text-gray-800 font-semibold text-sm sm:text-base md:text-lg">
-                                Request Tour
+                                    Request Tour
                                 </p>
                                 <svg class="h-4 w-4 sm:h-5 sm:w-5 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <line x1="3" y1="12" x2="21" y2="12" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                <polyline points="18 15 21 12 18 9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    <line x1="3" y1="12" x2="21" y2="12" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    <polyline points="18 15 21 12 18 9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
                             </button>
                         </div>
@@ -231,14 +231,14 @@
                 </div>
 
                 <!--History of Women at UVA-->
-                <div class="flex flex-row min-h-[50vh] md:h-[50vh] justify-center gap-1 sm:gap-3 md:gap-2 items-stretch">
+                <div id="history-of-women-at-uva-tour" class="flex flex-col md:flex-row lg:h-[50vh] justify-center gap-1 sm:gap-3 md:gap-2 items-stretch">
                     <!--Picture-->
-                    <div class="w-1/2">
+                    <div class="w-full md:w-1/2 px-2 sm:px-6 md:px-0">
                         <img src="/about-tours-page/specialty-tours/HistoryofWomen.jpg" class="w-full h-full object-cover object-top" alt="History of African Americans at UVA">
                     </div>
                     <!--Text-->
-                    <div class="flex flex-col justify-start space-y-6 w-1/2 px-2 sm:px-6 md:px-4">
-                        <h1 class="font-['Montserrat'] text-left font-medium text-black text-2xl sm:text-3xl">
+                    <div class="md:w-1/2 flex flex-col justify-start space-y-3 md:space-y-6 px-2 sm:px-6 md:px-4">
+                        <h1 class="font-['Montserrat'] text-left font-medium text-black text-2xl sm:text-3xl mt-2">
                             History of Women at UVA
                         </h1>
                         <p class="font-['Roboto'] text-left font-light text-black text-md sm:text-lg">
@@ -247,13 +247,13 @@
                         </p>
                         <!--Request Tour Button-->
                         <div class="w-full flex justify-start">
-                            <button class="cursor-pointer flex items-center gap-2 rounded-full border border-black px-4 py-2 sm:px-6 sm:py-2 md:px-8 md:py-3 transition-all duration-200 hover:bg-gray-200">
+                            <button class="flex items-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-2 sm:px-6 sm:py-2 md:px-8 md:py-3 shadow-sm hover:bg-gray-100 hover:shadow-md transition-all duration-300 ease-in-out cursor-pointer">
                                 <p class="font-['Roboto'] text-gray-800 font-semibold text-sm sm:text-base md:text-lg">
-                                Request Tour
+                                    Request Tour
                                 </p>
                                 <svg class="h-4 w-4 sm:h-5 sm:w-5 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <line x1="3" y1="12" x2="21" y2="12" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                <polyline points="18 15 21 12 18 9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    <line x1="3" y1="12" x2="21" y2="12" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    <polyline points="18 15 21 12 18 9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
                             </button>
                         </div>
@@ -261,14 +261,14 @@
                 </div>
 
                 <!--Children's Tours-->
-                <div class="flex flex-row min-h-[50vh] md:h-[50vh] justify-center gap-1 sm:gap-3 md:gap-2 overflow-visible">
+                <div id="childrens-tours" class="flex flex-col md:flex-row lg:h-[50vh] justify-center gap-1 sm:gap-3 md:gap-2 items-stretch">
                     <!--Picture-->
-                    <div class="w-1/2">
+                    <div class="w-full md:w-1/2 px-2 sm:px-6 md:px-0">
                         <img src="/about-tours-page/specialty-tours/ChildrensTour.jpg" class="w-full h-full object-cover object-bottom" alt="History of African Americans at UVA">
                     </div>
                     <!--Text-->
-                    <div class="flex flex-col justify-start space-y-6 w-1/2 px-2 sm:px-6 md:px-4">
-                        <h1 class="font-['Montserrat'] text-left font-medium text-black text-2xl sm:text-3xl">
+                    <div class="md:w-1/2 flex flex-col justify-start space-y-3 md:space-y-6 px-2 sm:px-6 md:px-4">
+                        <h1 class="font-['Montserrat'] text-left font-medium text-black text-2xl sm:text-3xl mt-2">
                             Children's Tours
                         </h1>
                         <p class="font-['Roboto'] text-left font-light text-black text-md sm:text-lg">
@@ -278,13 +278,13 @@
                         </p>
                         <!--Button-->
                         <div class="w-full flex justify-start">
-                            <button class="cursor-pointer flex items-center gap-2 rounded-full border border-black px-4 py-2 sm:px-6 sm:py-2 md:px-8 md:py-3 transition-all duration-200 hover:bg-gray-200">
+                            <button class="flex items-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-2 sm:px-6 sm:py-2 md:px-8 md:py-3 shadow-sm hover:bg-gray-100 hover:shadow-md transition-all duration-300 ease-in-out">
                                 <p class="font-['Roboto'] text-gray-800 font-semibold text-sm sm:text-base md:text-lg">
-                                For Educators
+                                    For Educators
                                 </p>
                                 <svg class="h-4 w-4 sm:h-5 sm:w-5 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <line x1="3" y1="12" x2="21" y2="12" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                <polyline points="18 15 21 12 18 9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    <line x1="3" y1="12" x2="21" y2="12" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    <polyline points="18 15 21 12 18 9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
                             </button>
                         </div>
@@ -292,14 +292,14 @@
                 </div>
 
                 <!--Private Admissions Tours-->
-                <div class="flex flex-row min-h-[50vh] md:h-[50vh] justify-center gap-1 sm:gap-3 md:gap-2 overflow-visible">
+                <div id="private-admissions-tour" class="flex flex-col md:flex-row lg:h-[50vh] justify-center gap-1 sm:gap-3 md:gap-2 items-stretch">
                     <!--Picture-->
-                    <div class="w-1/2">
+                    <div class="w-full md:w-1/2 px-2 sm:px-6 md:px-0">
                         <img src="/about-tours-page/specialty-tours/PrivateTour.jpg" class="w-full h-full object-cover object-bottom" alt="History of African Americans at UVA">
                     </div>
                     <!--Text-->
-                    <div class="flex flex-col justify-start space-y-6 w-1/2 px-2 sm:px-6 md:px-4">
-                        <h1 class="font-['Montserrat'] text-left font-medium text-black text-2xl sm:text-3xl">
+                    <div class="md:w-1/2 flex flex-col justify-start space-y-3 md:space-y-6 px-2 sm:px-6 md:px-4">
+                        <h1 class="font-['Montserrat'] text-left font-medium text-black text-2xl sm:text-3xl mt-2">
                             Private Admissions Tours
                         </h1>
                         <p class="font-['Roboto'] text-left font-light text-black text-md sm:text-lg">
@@ -310,13 +310,13 @@
                             athletics, dining, traditions, and much more.                      </p>
                         <!--Request Tour Button-->
                         <div class="w-full flex justify-start">
-                            <button class="cursor-pointer flex items-center gap-2 rounded-full border border-black px-4 py-2 sm:px-6 sm:py-2 md:px-8 md:py-3 transition-all duration-200 hover:bg-gray-200">
+                            <button class="flex items-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-2 sm:px-6 sm:py-2 md:px-8 md:py-3 shadow-sm hover:bg-gray-100 hover:shadow-md transition-all duration-300 ease-in-out cursor-pointer">
                                 <p class="font-['Roboto'] text-gray-800 font-semibold text-sm sm:text-base md:text-lg">
-                                Request Tour
+                                    Request Tour
                                 </p>
                                 <svg class="h-4 w-4 sm:h-5 sm:w-5 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <line x1="3" y1="12" x2="21" y2="12" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                <polyline points="18 15 21 12 18 9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    <line x1="3" y1="12" x2="21" y2="12" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    <polyline points="18 15 21 12 18 9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
                             </button>
                         </div>
@@ -325,14 +325,14 @@
                 </div>
 
                 <!--Garden Tours-->
-                <div class="flex flex-row min-h-[50vh] md:h-[50vh] justify-center gap-1 sm:gap-3 md:gap-2 overflow-visible">
+                <div id="garden-tours" class="flex flex-col md:flex-row lg:h-[50vh] justify-center gap-1 sm:gap-3 md:gap-2 items-stretch">
                     <!--Picture-->
-                    <div class="w-1/2">
+                    <div class="w-full md:w-1/2 px-2 sm:px-6 md:px-0">
                         <img src="/about-tours-page/specialty-tours/GardenTour.jpg" class="w-full h-full object-cover object-center" alt="History of African Americans at UVA">
                     </div>
                     <!--Text-->
-                    <div class="flex flex-col justify-start space-y-6 w-1/2 px-2 sm:px-6 md:px-4">
-                        <h1 class="font-['Montserrat'] text-left font-medium text-black text-2xl sm:text-3xl">
+                    <div class="md:w-1/2 flex flex-col justify-start space-y-3 md:space-y-6 px-2 sm:px-6 md:px-4">
+                        <h1 class="font-['Montserrat'] text-left font-medium text-black text-2xl sm:text-3xl mt-2">
                             Garden Tours
                         </h1>
                         <p class="font-['Roboto'] text-left font-light text-black text-md sm:text-lg">
@@ -341,13 +341,13 @@
                         </p>
                         <!--Request Tour Button-->
                         <div class="w-full flex justify-start">
-                            <button class="cursor-pointer flex items-center gap-2 rounded-full border border-black px-4 py-2 sm:px-6 sm:py-2 md:px-8 md:py-3 transition-all duration-200 hover:bg-gray-200">
+                            <button class="flex items-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-2 sm:px-6 sm:py-2 md:px-8 md:py-3 shadow-sm hover:bg-gray-100 hover:shadow-md transition-all duration-300 ease-in-out cursor-pointer">
                                 <p class="font-['Roboto'] text-gray-800 font-semibold text-sm sm:text-base md:text-lg">
-                                Request Tour
+                                    Request Tour
                                 </p>
                                 <svg class="h-4 w-4 sm:h-5 sm:w-5 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <line x1="3" y1="12" x2="21" y2="12" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                <polyline points="18 15 21 12 18 9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    <line x1="3" y1="12" x2="21" y2="12" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    <polyline points="18 15 21 12 18 9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
                             </button>
                         </div>
@@ -386,10 +386,10 @@
 
             <!-- Buttons -->
             <div class="mt-40 flex flex-col sm:flex-row justify-center items-center gap-x-10 gap-y-4 pointer-events-auto">
-                <button class="font-['Roboto'] border border-white text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 hover:border-transparent rounded-full py-3 px-10 cursor-pointer transition duration-250">
+                <button class="font-['Roboto'] border border-white text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 hover:border-transparent rounded-full py-3 px-10 cursor-pointer transition-all duration-300 ease-in-out">
                 PLAN YOUR VISIT
                 </button>
-                <button class="font-['Roboto'] border border-white text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 hover:border-transparent rounded-full py-3 px-18 cursor-pointer transition duration-250">
+                <button class="font-['Roboto'] border border-white text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 hover:border-transparent rounded-full py-3 px-18 cursor-pointer transition-all duration-300 ease-in-out">
                 DONATE
                 </button>
             </div>
@@ -449,7 +449,7 @@
                     </div>
 
                     <div class="flex justify-center md:justify-end">
-                        <button class="border border-white text-white rounded-full px-6 py-2 font-['Montserrat'] hover:bg-zinc-500 hover:border-zinc-500 hover:text-black transition duration-300 cursor-pointer">
+                        <button class="border border-white text-white rounded-full px-6 py-2 font-['Montserrat'] hover:bg-zinc-500 hover:border-zinc-500 hover:text-black transition-all duration-300 ease-in-out cursor-pointer">
                             CONTACT US
                         </button>
                     </div>
@@ -464,7 +464,7 @@
 <style>
     html {
         scroll-behavior: smooth;
-        scroll-padding-top: 4rem;
+        scroll-padding-top: 6rem;
     }
     .about-carousel-body {
         width: 100%;
