@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+
+/* custom colors for the project */
+@theme {
+    --color-dark-green: #32532B;
+    --color-sandstone: #F7F8EA;
+    --color-royal-blue: #162B3D;
+    --color-UVA-orange: #A86645;
+    --color-off-gray: #838383;
+    --color-dark-burgandy: #361919;
+    --color-dark-orange: #B25E34;
+  }
