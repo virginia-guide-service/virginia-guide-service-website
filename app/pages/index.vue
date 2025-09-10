@@ -347,62 +347,62 @@
                     <a href="/about-tours/#history-of-women-at-uva">
                         <div class="slide flex flex-col justify-start">
                             <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_womenatuva.jpg" alt="">
-                            <p class="carousel-text self-start text-white font-light font-['Roboto']">History of Women</p>
+                            <p class="carousel-text self-start text-white font-['Roboto']">History of Women</p>
                         </div>
                     </a>
                     <a href="/about-tours/#history-of-african-americans-tour">
                         <div class="slide flex flex-col">
                             <img class="carousel-img object-top" src="/index-page/carousel-history-tours/UVAhistoryCarousel_africanamericansatuva.jpg" alt="">
-                            <p class="carousel-text self-start text-white font-light font-['Roboto']">History of African-Americans</p>
+                            <p class="carousel-text self-start text-white  font-['Roboto']">History of African-Americans</p>
                         </div>
                     </a>
                     <a href="/about-tours/#garden-tours">
                         <div class="slide flex flex-col">
                             <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_GardenTours.jpg" alt="">
-                            <p class="carousel-text self-start text-white font-light font-['Roboto']">Garden Tours</p>
+                            <p class="carousel-text self-start text-white  font-['Roboto']">Garden Tours</p>
                         </div>
                     </a>
                     <a href="/about-tours/#MEL-tour">
                         <div class="slide flex flex-col">
                             <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_MEL.jpeg" alt="">
-                            <p class="carousel-text self-start text-white font-light font-['Roboto']">Memorial to Enslaved Laborers</p>
+                            <p class="carousel-text self-start text-white font-['Roboto']">Memorial to Enslaved Laborers</p>
                         </div>
                     </a>
                     <a href="/about-tours/#childrens-tours">
                         <div class="slide flex flex-col">
                             <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_childrenstour.jpg" alt="">
-                            <p class="carousel-text self-start text-white font-light font-['Roboto']">Children's Tour</p>
+                            <p class="carousel-text self-start text-white font-['Roboto']">Children's Tour</p>
                         </div>
                     </a>
                     <!--Same 5 slides (doubled)-->
                     <a href="/about-tours/#history-of-women-at-uva">
                         <div class="slide flex flex-col justify-start">
                             <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_womenatuva.jpg" alt="">
-                            <p class="carousel-text self-start text-white font-light font-['Roboto']">History of Women</p>
+                            <p class="carousel-text self-start text-white font-['Roboto']">History of Women</p>
                         </div>
                     </a>
                     <a href="/about-tours/#history-of-african-americans-tour">
                         <div class="slide flex flex-col">
                             <img class="carousel-img object-top" src="/index-page/carousel-history-tours/UVAhistoryCarousel_africanamericansatuva.jpg" alt="">
-                            <p class="carousel-text self-start text-white font-light font-['Roboto']">History of African-Americans</p>
+                            <p class="carousel-text self-start text-white font-['Roboto']">History of African-Americans</p>
                         </div>
                     </a>
                     <a href="/about-tours/#garden-tours">
                         <div class="slide flex flex-col">
                             <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_GardenTours.jpg" alt="">
-                            <p class="carousel-text self-start text-white font-light font-['Roboto']">Garden Tours</p>
+                            <p class="carousel-text self-start text-white font-['Roboto']">Garden Tours</p>
                         </div>
                     </a>
                     <a href="/about-tours/#MEL-tour">
                         <div class="slide flex flex-col">
                             <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_MEL.jpeg" alt="">
-                            <p class="carousel-text self-start text-white font-light font-['Roboto']">Memorial to Enslaved Laborers</p>
+                            <p class="carousel-text self-start text-white font-['Roboto']">Memorial to Enslaved Laborers</p>
                         </div>
                     </a>
                     <a href="/about-tours/#childrens-tours">
                         <div class="slide flex flex-col">
                             <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_childrenstour.jpg" alt="">
-                            <p class="carousel-text self-start text-white font-light font-['Roboto']">Children's Tour</p>
+                            <p class="carousel-text self-start text-white font-['Roboto']">Children's Tour</p>
                         </div>
                     </a>
                 </div>
