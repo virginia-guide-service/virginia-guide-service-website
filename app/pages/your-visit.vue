@@ -1,20 +1,23 @@
 <template>
     <!--Header Section-->
-    <header class="relative bg-[url('/Header_YourVisit.jpg')] w-full bg-cover bg-right bg-no-repeat h-[60vh] sm:h-[75vh] bg-">
+    <header class="relative bg-[url('/Header_YourVisit.jpg')] w-full bg-cover bg-center bg-no-repeat h-[60vh] sm:h-[90vh]">
         <!-- Centered Text -->
-        <div class="absolute top-1/2 left-1/2 w-full max-w-6xl px-4 -translate-x-1/2 -translate-y-1/2 text-white text-center">
-            <h1 class="font-['Playfair_Display'] italic whitespace-nowrap text-[clamp(3rem,9.5vw,5.5rem)] leading-tight">
+        <div class="absolute top-1/2 xl:top-[45%] left-1/2 w-full max-w-6xl px-4 -translate-x-1/2 -translate-y-1/2 text-white">
+            <h1 class="font-['Playfair_Display'] text-center xl:text-right italic whitespace-nowrap text-[clamp(3rem,9.5vw,5.5rem)] leading-tight [text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)]">
                 YOUR VISIT
             </h1>
-            <p class="font-['Roboto'] text-base sm:text-md md:text-lg font-semibold leading-snug">
+            <p class="font-['Roboto'] text-center xl:text-right text-base sm:text-md md:text-lg font-semibold leading-snug [text-shadow:_3px_3px_6px_rgb(0_0_0_/_0.70)]">
                 DIRECTIONS & FREQUENTLY ASKED QUESTIONS
             </p>
         </div>
     </header>
 
     <!-- Overlapping Section With Buttons for Navigations-->
-    <section class="relative z-20 -mt-10 px-4">
-        <div class="shadow-lg rounded-xl p-6 max-w-4xl mx-auto text-center bg-royal-blue">
+    <section class="relative z-20 -mt-14 px-4">
+        <!-- Line in Background -->
+        <div class="absolute top-1/2 left-0 w-full h-2 bg-dark-burgandy -z-10"></div>
+
+        <div class="shadow-lg rounded-xl p-6 max-w-4xl mx-auto text-center bg-white border-6 border-dark-burgandy">
             <div class="flex flex-col sm:flex-row justify-evenly items-center gap-4">
                 <a href="#times-and-registration" class="px-6 py-2 bg-white text-royal-blue text-lg rounded-full hover:bg-gray-200 hover:scale-105 transition-all duration-300 ease-in-out font-semibold">
                     Times & Registration
@@ -76,8 +79,8 @@
                 students after a semester of intensive training, research, and critical reflection.
                 <br /><br />
                 <span class="font-bold">
-                    All tours are free of charge
-                </span>, regardless of group size. Donations to support work are welcome.
+                    All tours are free of charge,
+                </span> regardless of group size. Donations to support work are welcome.
             </p>
             <br /><br />
             <div class="flex justify-center items-center px-4">
@@ -370,7 +373,7 @@
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-10">
 
             <!-- Header -->
-            <h1 class="font-['Playfair_Display'] text-UVA-orange text-3xl sm:text-4xl md:text-5xl font-medium">
+            <h1 class="font-['Montserrat'] text-UVA-orange text-3xl sm:text-4xl md:text-5xl font-medium">
                 Explore UVA History
             </h1>
 

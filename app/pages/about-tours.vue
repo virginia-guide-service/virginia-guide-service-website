@@ -3,22 +3,22 @@
     <header class="relative bg-[url('/Header_Tours.jpg')] w-full bg-cover bg-right bg-no-repeat h-[60vh] sm:h-[75vh]">
         <!-- Centered Text -->
         <div class="absolute top-1/2 left-1/2 w-full max-w-6xl px-4 -translate-x-1/2 -translate-y-1/2 text-white text-center">
-            <h1 class="font-['Playfair_Display'] italic whitespace-nowrap text-[clamp(3rem,9.5vw,5.5rem)] leading-tight">
+            <h1 class="font-['Playfair_Display'] italic text-center xl:text-left whitespace-nowrap text-[clamp(3rem,9.5vw,5.5rem)] leading-tight [text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)]">
                 SHED LIGHT
             </h1>
-            <p class="font-['Roboto'] text-xl sm:text-2xl md:text-3xl font-extralight leading-snug">
+            <p class="font-Roboto text-center xl:max-w-lg xl:text-right text-xl sm:text-2xl md:text-3xl font-extralight leading-snug [text-shadow:_3px_3px_6px_rgb(0_0_0_/_0.70)]">
                 ON HISTORY
             </p>
         </div>
     </header>
 
     <!-- Overlapping Section With Buttons for Navigations-->
-    <section class="relative z-20 -mt-10 px-4 mb-5">
-        <div class="shadow-lg rounded-xl p-6 max-w-4xl mx-auto text-center bg-royal-blue">
+    <section class="relative z-20 -mt-13 px-4 mb-5">
+        <!-- Blue Line in Background -->
+        <div class="absolute top-1/2 left-0 w-full h-2 bg-[#233a1e] -z-10"></div>
+
+        <div class="shadow-lg rounded-xl p-6 max-w-3xl mx-auto text-center bg-white border-6 border-[#233a1e]">
             <div class="flex flex-col sm:flex-row justify-evenly items-center gap-4">
-                <a href="#about-tours" class="px-6 py-2 bg-white text-royal-blue text-lg rounded-full hover:bg-gray-200 hover:scale-105 transition-all duration-300 ease-in-out font-semibold">
-                    About Our Tours
-                </a>
                 <a href="#specialty-tours" class="px-6 py-2 bg-white text-royal-blue text-lg rounded-full hover:bg-gray-200 hover:scale-105 transition-all duration-300 ease-in-out font-semibold">
                     Specialty Tours
                 </a>
@@ -58,7 +58,7 @@
                     semester of intensive training, research, and critical reflection.
                 </p>
                 <br /><br />
-                <div class="flex justify-center items-center p-4 border-4 border-double border-dark-green rounded-md">
+                <div class="flex flex-col justify-center items-center p-4 border-4 border-double border-dark-green rounded-md">
                     <ul class="list-disc font-['Montserrat'] text-base sm:text-lg leading-relaxed text-gray-900 max-w-xl px-4">
                         <li>
                         Standard History Tours last around <span class="font-bold">1 hour</span>.
@@ -73,6 +73,14 @@
                         </a>
                         </li>
                     </ul>
+                    <!--Button-->
+                    <NuxtLink to="/your-visit#times-and-registration" class="justify-center mt-2">
+                        <button class="rounded-full bg-dark-green px-6 py-3 sm:px-6 sm:py-2 md:px-8 md:py-3 shadow-md hover:shadow-lg hover:bg-green-700 hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer">
+                            <p class="font-['Roboto'] text-white text-sm sm:text-base md:text-lg">
+                                Register Here
+                            </p>
+                        </button>
+                    </NuxtLink>
                 </div>
             </div>
 

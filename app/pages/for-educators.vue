@@ -13,11 +13,14 @@
                 For K-12 & College Groups
             </p>
         </div>
-    </header>
+    </header> 
 
     <!-- Overlapping Section With Buttons for Navigations-->
-    <section class="relative z-20 -mt-10 px-4 mb-10">
-        <div class="shadow-lg rounded-xl p-6 max-w-2xl mx-auto text-center bg-royal-blue">
+    <section class="relative z-20 -mt-13 px-4 mb-10">
+        <!-- Line in Background -->
+        <div class="absolute top-1/2 left-0 w-full h-2 bg-royal-blue -z-10"></div>
+
+        <div class="shadow-lg rounded-xl p-6 max-w-2xl mx-auto text-center bg-white border-6 border-royal-blue">
             <div class="flex flex-col sm:flex-row justify-evenly items-center gap-4">
                 <a href="#times-and-registration" class="px-6 py-2 bg-white text-royal-blue text-lg rounded-full hover:bg-gray-200 hover:scale-105 transition-all duration-300 ease-in-out font-semibold">
                     About Us
@@ -39,7 +42,7 @@
             <h1 class="uppercase font-['Playfair_Display'] italic font-medium text-dark-green text-4xl sm:text-5xl">
                 History for all ages
             </h1>
-            <p class="font-['Montserrat'] text-dark-green text-xl sm:text-2xl">
+            <p class="font-['Montserrat'] text-dark-green text-lg sm:text-xl">
                 Whether you're visiting with young learners, future students, or fellow scholars, we offer tours tailored to every stage of the educational journey.
             </p>
         </div>
@@ -58,10 +61,10 @@
             <div class="w-full lg:w-[60%] flex flex-col gap-5"> 
                 <!--Kids-->
                 <div class="flex flex-col">
-                    <h1 class="font-['Montserrat'] text-xl sm:text-2xl font-semibold">
+                    <h1 class="font-['Montserrat'] text-lg sm:text-xl font-semibold">
                         Kids (K-5) 
                     </h1>
-                    <p class="font-['Montserrat'] text-lg sm:text-xl font-light">
+                    <p class="font-['Montserrat'] text-base sm:text-lg font-light">
                         A one-hour introduction to UVA that blends key moments in history with what college life is like today. Kids will hear about the University's founding vision, 
                         explore the Academical Village's architecture, learn about the 1895 burning of the Rotunda, and see how the University and its community 
                         have changed over time through resilience and creativity.
@@ -69,20 +72,20 @@
                 </div>
                 <!--Middle and High School-->
                 <div class="flex flex-col">
-                    <h1 class="font-['Montserrat'] text-xl sm:text-2xl font-semibold">
+                    <h1 class="font-['Montserrat'] text-lg sm:text-xl font-semibold">
                         Middle and High School Groups
                     </h1>
-                    <p class="font-['Montserrat'] text-lg sm:text-xl font-light">
+                    <p class="font-['Montserrat']  text-base sm:text-lg font-light">
                         Explore UVA's traditions, architecture, and the history of student activism and community leadership, including the legacies of slavery, the Civil War, 
                         and Civil Rights movement after, alongside at the opportunities, culture, and student life that has developed on Grounds today.
                     </p>
                 </div>
                 <!--College Students-->
                 <div class="flex flex-col">
-                    <h1 class="font-['Montserrat'] text-xl sm:text-2xl font-semibold">
+                    <h1 class="font-['Montserrat'] text-lg sm:text-xl font-semibold">
                         College Students 
                     </h1>
-                    <p class="font-['Montserrat'] text-lg sm:text-xl font-light">
+                    <p class="font-['Montserrat']  text-base sm:text-lg font-light">
                         A deeper, more detailed examination of UVA's past and present, tracing its founding ideals through periods marked by slavery, the Civil War, 
                         the 20th century eugenics movement, and progress in Civil Rights. From the 1800s to the present day, this tour reflects on how the University 
                         has acknowledged and responded to these histories through community resistance and efforts to address complex social, political, and cultural challenges still shaping the world today.
@@ -104,7 +107,10 @@
                 </span>. 
                 If interested in a student tour group, 
                 <span class="font-bold">
-                    please complete the specialty tour form us least 3 weeks in advance,
+                    please complete the
+                    <a href="/specialty-tour-form" class="underline">
+                        specialty tour form 
+                    </a> at least 3 weeks in advance,
                 </span> to better plan with you for your tour group size, 
                 interests, and needs.
             </p>
@@ -114,7 +120,7 @@
     <!-- Last Info Section -->
     <section class="p-5 sm:p-8 md:p-6 m-2 lg:m-8">
         <div class="flex flex-col justify-center text-left max-w-6xl mx-auto gap-3">
-            <ul class="list-disc font-['Montserrat'] text-lg sm:text-xl space-y-2">
+            <ul class="list-disc font-['Montserrat'] text-base sm:text-lg space-y-2">
                 <li>
                     <span class="font-bold">
                         Tours typically last between 1-1.5 hours

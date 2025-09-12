@@ -1,17 +1,21 @@
 <template>
     <!--Header Section-->
     <header class="relative overflow-visible h-[110vh] w-full bg-[url('/Header_FrontPage.png')] bg-cover bg-center md:bg-left sm:bg-center" aria-label="Virginia Guides Hero Section">
-        <div class="absolute top-1/2 left-1/2 w-full max-w-6xl px-4 -translate-x-1/2 -translate-y-1/2 text-white text-center">
-            <h1 class="font-['Playfair_Display'] italic whitespace-nowrap text-[clamp(3rem,9.5vw,5.5rem)] leading-tight">
+        <div class="absolute top-[45%] left-1/2 w-full max-w-7xl px-4 -translate-x-1/2 -translate-y-1/2 text-white text-center">
+            <h1 class="font-['Playfair_Display'] text-center xl:text-right italic whitespace-nowrap text-[clamp(3rem,9.5vw,6rem)] leading-tight [text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)]">
                 VIRGINIA GUIDES
             </h1>
-            <p class="font-['Roboto'] text-base sm:text-lg md:text-xl font-semibold leading-snug">
+            <p class="font-Roboto text-center xl:text-right text-sm sm:text-lg md:text-md font-semibold leading-snug [text-shadow:_3px_3px_6px_rgb(0_0_0_/_0.70)]">
                 HISTORICAL TOURS OF THE UNIVERSITY OF VIRGINIA
             </p>
-            <button class="font-['Roboto'] mt-15 px-6 py-2 text-lg text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 border hover:border-neutral-300 rounded-full cursor-pointer transition-all duration-300 ease-in-out"
-            aria-label="Explore Virginia Guides">
-                Plan Your Visit
-            </button>
+            <div class="text-center xl:text-right xl:pr-50">
+                <a href="/your-visit">
+                    <button class="font-Roboto mt-15 xl:mt-10 px-6 py-2 text-lg md:px-8 md:py-3 md:text-2xl text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 border hover:border-neutral-300 rounded-full cursor-pointer transition-all duration-300 ease-in-out"
+                    aria-label="Explore Virginia Guides">
+                        Plan Your Visit
+                    </button>   
+                </a>
+            </div>
         </div>
         <div class="absolute flex flex-col items-center top-3/4 md:top-5/6 left-1/2 w-full max-w-6xl px-4 -translate-x-1/2 text-white text-center">
             <p class="font-['Montserrat'] text-base sm:text-lg md:text-xl font-light leading-snug">
@@ -85,10 +89,12 @@
                         </div>
                         <!--Button-->
                         <div class="absolute left-1/2 bottom-20 -translate-x-1/2">
-                            <button class="font-['Montserrat'] text-lg font-semibold px-6 py-2 rounded-[20px] text-white hover:text-white bg-dark-orange border-neutral-700 hover:bg-neutral-900/85 cursor-pointer transition-all duration-300 ease-in-out"
-                                aria-label="Explore Virginia Guides">
-                                TAKE A TOUR
-                            </button>
+                            <a href="/your-visit">
+                                <button class="font-['Montserrat'] text-lg font-semibold px-6 py-2 rounded-[20px] text-white hover:text-white bg-dark-orange border-neutral-700 hover:bg-neutral-900/85 cursor-pointer transition-all duration-300 ease-in-out"
+                                    aria-label="Explore Virginia Guides">
+                                    TAKE A TOUR
+                                </button>
+                            </a>
                         </div>
 
                         <!-- Footer Note -->
