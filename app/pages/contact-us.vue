@@ -80,7 +80,7 @@
                         <a href="/about-tours#specialty-tours">
                             <li class="cursor-pointer">Specialty Tours</li>
                         </a>
-                        <a href="/specialty-tours-request">
+                        <a href="/request-specialty-tours">
                             <li class="cursor-pointer">Specialty Tours Request</li>
                         </a>
                     </ul>

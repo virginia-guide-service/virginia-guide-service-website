@@ -22,13 +22,13 @@
 
         <div class="shadow-lg rounded-xl p-6 max-w-2xl mx-auto text-center bg-white border-6 border-royal-blue">
             <div class="flex flex-col sm:flex-row justify-evenly items-center gap-4">
-                <a href="#times-and-registration" class="px-6 py-2 bg-white text-royal-blue text-lg rounded-full hover:bg-gray-200 hover:scale-105 transition-all duration-300 ease-in-out font-semibold">
+                <a href="/join-guides" class="px-6 py-2 bg-white text-royal-blue text-lg rounded-full hover:bg-gray-200 hover:scale-105 transition-all duration-300 ease-in-out font-semibold">
                     About Us
                 </a>
-                <a href="#location-and-parking" class="px-6 py-2 bg-white text-royal-blue text-lg rounded-full hover:bg-gray-200 hover:scale-105 transition-all duration-300 ease-in-out font-semibold">
+                <a href="/request-specialty-tours" class="px-6 py-2 bg-white text-royal-blue text-lg rounded-full hover:bg-gray-200 hover:scale-105 transition-all duration-300 ease-in-out font-semibold">
                     Specialty Tour Request Form
                 </a>
-                <a href="#frequently-asked-questions" class="px-6 py-2 bg-white text-royal-blue text-lg rounded-full hover:bg-gray-200 hover:scale-105 transition-all duration-300 ease-in-out font-semibold">
+                <a href="/about-tours#specialty-tours" class="px-6 py-2 bg-white text-royal-blue text-lg rounded-full hover:bg-gray-200 hover:scale-105 transition-all duration-300 ease-in-out font-semibold">
                     Other Tours
                 </a>
             </div>
@@ -108,7 +108,7 @@
                 If interested in a student tour group, 
                 <span class="font-bold">
                     please complete the
-                    <a href="/specialty-tour-form" class="underline">
+                    <a href="/request-specialty-tours" class="underline">
                         specialty tour form 
                     </a> at least 3 weeks in advance,
                 </span> to better plan with you for your tour group size, 
@@ -155,12 +155,14 @@
             </p>
 
             <!-- Button -->
-            <button class="inline-flex items-center space-x-3 rounded-full border text-white font-['Montserrat'] text-base sm:text-lg md:text-xl py-3 px-6 hover:text-royal-blue hover:bg-neutral-300 transition-all duration-300 ease-in-out">
-                <span>HISTORY TOURS</span>
-                <svg class="flex-shrink-0" height="25px" width="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6 12H18M18 12L13 7M18 12L13 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </button>
+            <a href="/about-tours">
+                <button class="inline-flex items-center space-x-3 rounded-full border text-white font-['Montserrat'] text-base sm:text-lg md:text-xl py-3 px-6 hover:text-royal-blue hover:bg-neutral-300 transition-all duration-300 ease-in-out hover:cursor-pointer">
+                    <span>HISTORY TOURS</span>
+                    <svg class="flex-shrink-0" height="25px" width="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 12H18M18 12L13 7M18 12L13 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </a>
         </div>
 
         <!-- Carousel: Our Tours-->
@@ -301,7 +303,7 @@
                         <a href="/about-tours#specialty-tours">
                             <li class="cursor-pointer">Specialty Tours</li>
                         </a>
-                        <a href="/specialty-tours-request">
+                        <a href="/request-specialty-tours">
                             <li class="cursor-pointer">Specialty Tours Request</li>
                         </a>
                     </ul>

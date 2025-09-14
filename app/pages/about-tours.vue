@@ -161,7 +161,7 @@
 
                     <!-- Button -->
                     <div class="text-center text-nowrap">
-                        <a href="/special-tour-request"
+                        <a href="/request-specialty-tours"
                         class="inline-block font-['Montserrat'] bg-dark-green text-white font-semibold rounded-full 
                                 px-6 py-2 text-sm 
                                 sm:px-8 sm:py-3 sm:text-base 
@@ -194,15 +194,17 @@
                         </p>
                         <!--Request Tour Button-->
                         <div class="w-full flex justify-start">
-                            <button class="flex items-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-2 sm:px-6 sm:py-2 md:px-8 md:py-3 shadow-sm hover:bg-gray-100 hover:shadow-md transition-all duration-300 ease-in-out cursor-pointer">
-                                <p class="font-['Roboto'] text-gray-800 font-semibold text-sm sm:text-base md:text-lg">
-                                    Request Tour
-                                </p>
-                                <svg class="h-4 w-4 sm:h-5 sm:w-5 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <line x1="3" y1="12" x2="21" y2="12" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                    <polyline points="18 15 21 12 18 9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </button>
+                            <a href="/request-specialty-tours">
+                                <button class="flex items-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-2 sm:px-6 sm:py-2 md:px-8 md:py-3 shadow-sm hover:bg-gray-100 hover:shadow-md transition-all duration-300 ease-in-out cursor-pointer">
+                                    <p class="font-['Roboto'] text-gray-800 font-semibold text-sm sm:text-base md:text-lg">
+                                        Request Tour
+                                    </p>
+                                    <svg class="h-4 w-4 sm:h-5 sm:w-5 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <line x1="3" y1="12" x2="21" y2="12" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        <polyline points="18 15 21 12 18 9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -225,15 +227,17 @@
                         </p>
                         <!--Request Tour Button-->
                         <div class="w-full flex justify-start">
-                            <button class="flex items-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-2 sm:px-6 sm:py-2 md:px-8 md:py-3 shadow-sm hover:bg-gray-100 hover:shadow-md transition-all duration-300 ease-in-out cursor-pointer">
-                                <p class="font-['Roboto'] text-gray-800 font-semibold text-sm sm:text-base md:text-lg">
-                                    Request Tour
-                                </p>
-                                <svg class="h-4 w-4 sm:h-5 sm:w-5 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <line x1="3" y1="12" x2="21" y2="12" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                    <polyline points="18 15 21 12 18 9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </button>
+                            <a href="/request-specialty-tours">
+                                <button class="flex items-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-2 sm:px-6 sm:py-2 md:px-8 md:py-3 shadow-sm hover:bg-gray-100 hover:shadow-md transition-all duration-300 ease-in-out cursor-pointer">
+                                    <p class="font-['Roboto'] text-gray-800 font-semibold text-sm sm:text-base md:text-lg">
+                                        Request Tour
+                                    </p>
+                                    <svg class="h-4 w-4 sm:h-5 sm:w-5 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <line x1="3" y1="12" x2="21" y2="12" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        <polyline points="18 15 21 12 18 9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -255,15 +259,17 @@
                         </p>
                         <!--Request Tour Button-->
                         <div class="w-full flex justify-start">
-                            <button class="flex items-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-2 sm:px-6 sm:py-2 md:px-8 md:py-3 shadow-sm hover:bg-gray-100 hover:shadow-md transition-all duration-300 ease-in-out cursor-pointer">
-                                <p class="font-['Roboto'] text-gray-800 font-semibold text-sm sm:text-base md:text-lg">
-                                    Request Tour
-                                </p>
-                                <svg class="h-4 w-4 sm:h-5 sm:w-5 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <line x1="3" y1="12" x2="21" y2="12" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                    <polyline points="18 15 21 12 18 9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </button>
+                            <a href="/request-specialty-tours">
+                                <button class="flex items-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-2 sm:px-6 sm:py-2 md:px-8 md:py-3 shadow-sm hover:bg-gray-100 hover:shadow-md transition-all duration-300 ease-in-out cursor-pointer">
+                                    <p class="font-['Roboto'] text-gray-800 font-semibold text-sm sm:text-base md:text-lg">
+                                        Request Tour
+                                    </p>
+                                    <svg class="h-4 w-4 sm:h-5 sm:w-5 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <line x1="3" y1="12" x2="21" y2="12" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        <polyline points="18 15 21 12 18 9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -286,7 +292,8 @@
                         </p>
                         <!--Button-->
                         <div class="w-full flex justify-start">
-                            <button class="flex items-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-2 sm:px-6 sm:py-2 md:px-8 md:py-3 shadow-sm hover:bg-gray-100 hover:shadow-md transition-all duration-300 ease-in-out">
+                            <a href="/for-educators">
+                                <button class="flex items-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-2 sm:px-6 sm:py-2 md:px-8 md:py-3 shadow-sm hover:bg-gray-100 hover:shadow-md transition-all duration-300 ease-in-out hover:cursor-pointer">
                                 <p class="font-['Roboto'] text-gray-800 font-semibold text-sm sm:text-base md:text-lg">
                                     For Educators
                                 </p>
@@ -294,7 +301,8 @@
                                     <line x1="3" y1="12" x2="21" y2="12" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                     <polyline points="18 15 21 12 18 9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
-                            </button>
+                                </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -318,15 +326,17 @@
                             athletics, dining, traditions, and much more.                      </p>
                         <!--Request Tour Button-->
                         <div class="w-full flex justify-start">
-                            <button class="flex items-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-2 sm:px-6 sm:py-2 md:px-8 md:py-3 shadow-sm hover:bg-gray-100 hover:shadow-md transition-all duration-300 ease-in-out cursor-pointer">
-                                <p class="font-['Roboto'] text-gray-800 font-semibold text-sm sm:text-base md:text-lg">
-                                    Request Tour
-                                </p>
-                                <svg class="h-4 w-4 sm:h-5 sm:w-5 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <line x1="3" y1="12" x2="21" y2="12" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                    <polyline points="18 15 21 12 18 9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </button>
+                            <a href="/request-specialty-tours">
+                                <button class="flex items-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-2 sm:px-6 sm:py-2 md:px-8 md:py-3 shadow-sm hover:bg-gray-100 hover:shadow-md transition-all duration-300 ease-in-out cursor-pointer">
+                                    <p class="font-['Roboto'] text-gray-800 font-semibold text-sm sm:text-base md:text-lg">
+                                        Request Tour
+                                    </p>
+                                    <svg class="h-4 w-4 sm:h-5 sm:w-5 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <line x1="3" y1="12" x2="21" y2="12" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        <polyline points="18 15 21 12 18 9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </a>
                         </div>
                     </div>
 
@@ -349,15 +359,17 @@
                         </p>
                         <!--Request Tour Button-->
                         <div class="w-full flex justify-start">
-                            <button class="flex items-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-2 sm:px-6 sm:py-2 md:px-8 md:py-3 shadow-sm hover:bg-gray-100 hover:shadow-md transition-all duration-300 ease-in-out cursor-pointer">
-                                <p class="font-['Roboto'] text-gray-800 font-semibold text-sm sm:text-base md:text-lg">
-                                    Request Tour
-                                </p>
-                                <svg class="h-4 w-4 sm:h-5 sm:w-5 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <line x1="3" y1="12" x2="21" y2="12" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                    <polyline points="18 15 21 12 18 9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </button>
+                            <a href="/request-specialty-tours">
+                                <button class="flex items-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-2 sm:px-6 sm:py-2 md:px-8 md:py-3 shadow-sm hover:bg-gray-100 hover:shadow-md transition-all duration-300 ease-in-out cursor-pointer">
+                                    <p class="font-['Roboto'] text-gray-800 font-semibold text-sm sm:text-base md:text-lg">
+                                        Request Tour
+                                    </p>
+                                    <svg class="h-4 w-4 sm:h-5 sm:w-5 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <line x1="3" y1="12" x2="21" y2="12" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        <polyline points="18 15 21 12 18 9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </a>
                         </div>
                     </div>
 
@@ -436,7 +448,7 @@
                         <a href="/about-tours#specialty-tours">
                             <li class="cursor-pointer">Specialty Tours</li>
                         </a>
-                        <a href="/specialty-tours-request">
+                        <a href="/request-specialty-tours">
                             <li class="cursor-pointer">Specialty Tours Request</li>
                         </a>
                     </ul>

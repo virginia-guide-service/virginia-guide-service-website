@@ -183,9 +183,11 @@
                     <span class="font-semibold">Registration for Standard History Tours are not required but encouraged to receive possible updates on your tour. </span>
                     Standard Historical tours are public for anyone to join and occur regularly throughout the school year.
                 </p>
-                <button class="rounded-full border-2 border-white text-white font-semibold text-base sm:text-lg px-6 py-2 mt-5 cursor-pointer hover:bg-gray-200 hover:text-black hover:border-gray-200 transition-all duration-300 ease-in-out">
-                    Contact Us
-                </button>
+                <a href="/contact-us">
+                    <button class="rounded-full border-2 border-white text-white font-semibold text-base sm:text-lg px-6 py-2 mt-5 cursor-pointer hover:bg-gray-200 hover:text-black hover:border-gray-200 transition-all duration-300 ease-in-out">
+                        Contact Us
+                    </button>
+                </a>
             </div>
         </div>
     </section>
@@ -307,7 +309,7 @@
                         </a> page for more information and opportunities.
                     </p>
                     <div class="flex flex-col sm:flex-row flex-wrap gap-3 mt-4">
-                        <a href="#times-and-registratio" class="w-full sm:w-auto">
+                        <a href="#times-and-registration" class="w-full sm:w-auto">
                             <button class="w-full sm:w-auto px-6 py-2 sm:px-8 sm:py-3 rounded-full bg-dark-green text-white font-semibold text-sm sm:text-base shadow-md hover:bg-green-700 hover:shadow-lg transition-all duration-300 ease-in-out">
                             Registration
                             </button>
@@ -532,7 +534,7 @@
                         <a href="/about-tours#specialty-tours">
                             <li class="cursor-pointer">Specialty Tours</li>
                         </a>
-                        <a href="/specialty-tours-request">
+                        <a href="/request-specialty-tours">
                             <li class="cursor-pointer">Specialty Tours Request</li>
                         </a>
                     </ul>
