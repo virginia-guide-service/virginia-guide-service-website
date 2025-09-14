@@ -1,6 +1,6 @@
 <template>
     <!--Header Section-->
-    <header class="relative bg-[url('/GuidesBanner.jpg')] w-full bg-cover bg-center bg-no-repeat h-[60vh] sm:h-[100vh]">
+    <header class="relative bg-[url('/Header_JoinGuides.jpg')] w-full bg-cover bg-center bg-no-repeat h-[60vh] sm:h-[100vh]">
         <!-- Centered Text -->
         <div class="absolute top-1/2 left-1/2 w-full max-w-7xl px-10 -translate-x-1/2 -translate-y-1/2 text-white">
             <p class="font-Roboto text-xs sm:text-sm md:text-md text-royal-blue font-semibold leading-snug text-center xl:text-right uppercase">
@@ -56,20 +56,43 @@
         <!-- Blue Line in Background -->
         <div class="absolute top-1/2 left-0 w-full h-1 bg-royal-blue -z-10"></div>
 
-        <div class="shadow-lg rounded-xl p-6 max-w-lg mx-auto text-center bg-white border-royal-blue border-4 relative">
-            <div class="flex flex-col sm:flex-row justify-evenly items-center gap-4">
-                <a href="#times-and-registration" class="px-6 py-2 bg-white text-royal-blue text-lg rounded-full hover:bg-gray-200 hover:scale-105 transition-all duration-300 ease-in-out font-semibold">
-                    Being a Guide
-                </a>
-                <a href="#location-and-parking" class="px-6 py-2 bg-white text-royal-blue text-lg rounded-full hover:bg-gray-200 hover:scale-105 transition-all duration-300 ease-in-out font-semibold">
-                    Join Guides
-                </a>
+        <div class="shadow-lg rounded-xl max-w-lg mx-auto text-center bg-white border-royal-blue border-4 relative">
+
+            <div class="flex flex-col sm:flex-row items-center">
+                <!--Join Guides Button-->
+                <div :class="['w-1/2 p-6 transition-all duration-300', joinGuides ? 'bg-royal-blue' : '']">
+                    <button 
+                        @click="toggleJoinGuides"
+                        :class="[
+                            'px-6 py-2 font-semibold text-lg transition-hover duration-100',
+                            joinGuides 
+                                ? 'text-white scale-105' 
+                                : 'text-royal-blue hover:scale-105 hover:[text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)] hover:cursor-pointer'
+                        ]"
+                    >
+                        Join Guides
+                    </button>
+                </div>
+                <!--Being a Guide Button-->
+                <div :class="['w-1/2 p-6 transition-all duration-300', beingAGuide ? 'bg-royal-blue' : '']">
+                    <button 
+                        @click="toggleBeingAGuide"
+                        :class="[
+                            'px-6 py-2 font-semibold text-lg ransition-hover duration-100',
+                            beingAGuide 
+                                ? 'text-white scale-105' 
+                                : 'text-royal-blue hover:[text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)] hover:scale-105 hover:cursor-pointer'
+                        ]"
+                    >
+                        Being a Guide
+                    </button>
+                </div>
             </div>
         </div>
     </section>
 
-    <!--Directions-->
-    <section>
+    <!--Directions: Join Guides-->
+    <section id="join-guides" v-if="joinGuides">
         <div class="flex justify-center px-5 sm:px-8 md:px-6 pt-4">
             <p class="font-Roboto text-UVA-orange text-center text-light italic max-w-5xl text-base sm:text-md md:text-lg">
                 Guides come from all around the world, across all the schools at UVA, and from any program of study. 
@@ -80,10 +103,10 @@
 
         <!--Step 1-->
         <div class="pt-10 px-5 sm:px-8 md:px-6 xl:px-10">
-            <h1 class="font-Roboto text-lg sm:text-xl font-bold italic mb-1">
+            <h1 class="font-Roboto text-lg sm:text-xl font-bold italic mb-2">
                 Step 1: Attend an Info Session and Learn About the Virginia Guides Service
             </h1>
-            <p class="font-Roboto font-light text-base sm:text-lg pb-2">
+            <p class="font-Roboto font-light text-base sm:text-lg mb-2">
                 Guides accepts new members at the beginning of each semester. These probationary members, known as “probies," 
                 spend a semester being trained by their Guides Probationary Chairs (fellow students and current Guides) and learning 
                 from older guides to prepare to give tours. Students trying out for Guides must be in their first, second, or third year, 
@@ -101,7 +124,7 @@
         <div class="px-5 sm:px-8 md:px-6 xl:px-10 flex flex-col lg:flex-row">
             <div class="w-full lg:w-[60%]">
                 <br />
-                <p class="font-Roboto font-light text-base sm:text-lg italic pb-2">
+                <p class="font-Roboto font-light text-base sm:text-lg italic mb-2">
                     <span class="font-bold">
                         Info Sessions:
                     </span>
@@ -113,10 +136,10 @@
                 <p class="font-Roboto text-UVA-orange font-bold text-base sm:text-lg italic">
                     The Rotunda Multipurpose Room is located in the hallway underneath the Rotunda Lawn-side before you enter the building itself.
                 </p>
-                <h1 class="font-Roboto text-lg sm:text-xl font-bold italic mb-1 pt-10">
+                <h1 class="font-Roboto text-lg sm:text-xl font-bold italic mb-2 pt-10">
                     Step 2: Prepare to Try Out
                 </h1>
-                <p class="font-Roboto font-light text-base sm:text-lg pb-2">
+                <p class="font-Roboto font-light text-base sm:text-lg mb-2">
                     For our Fall 2024 recruitment season, you will give a 15 minute historical “trial tour” of the Lawn area to two current Guides 
                     (who will act as your "tourists"). The trial tour is meant to see how well you can craft an organized and meaningful tour, 
                     as well as to assess your public speaking abilities.
@@ -165,17 +188,19 @@
 
         <!--Step 3-->
         <div class="pt-12 px-5 sm:px-8 md:px-6 xl:px-10">
-            <h1 class="font-Roboto text-lg sm:text-xl font-bold italic mb-3">
+            <h1 class="font-Roboto text-lg sm:text-xl font-bold italic mb-2">
                 Step 3: Give Your Trial Tour
             </h1>
-            <p class="font-Roboto font-light text-base sm:text-lg">
+            <p class="font-Roboto font-light text-base sm:text-lg mb-2">
                 Before your trial tour, you will receive an email with the Lawn room number where your “tourists” will meet you for your trial tour. 
                 Please plan to arrive ten minutes early to help the process run smoothly.
-                <br /><br />
+            </p>
+            <p class="font-Roboto font-light text-base sm:text-lg mb-2">
                 We completely understand that giving a trial tour can be very nerve wracking, but we highly encourage you to just go ahead and do it! Your “tourists” 
                 are your biggest supporters and would love to see you do an incredible job. If you're feeling nervous, we strongly recommend reaching out to 
                 the Recruitment Co-Chairs who would be happy to help you with any concerns you may have.
-                <br /><br />
+            </p>
+            <p class="font-Roboto font-light text-base sm:text-lg">
                 Once you arrive, there will be a current Guide there to answer any last minute questions you may have and help you with what you may need then. Feel free to 
                 leave your belongings in this room and they will be happy to watch over your items. Your “tourists” will meet you at the room and they will provide 
                 some starting information. You can then walk with them to the starting location that you have selected for your tour before your time for the tour starts.
@@ -184,7 +209,7 @@
 
         <!--Step 4-->
         <div class="py-10 px-5 sm:px-8 md:px-6 xl:px-10">
-            <h1 class="font-Roboto text-lg sm:text-xl font-bold italic mb-3">
+            <h1 class="font-Roboto text-lg sm:text-xl font-bold italic mb-2">
                 Step 4: Interview
             </h1>
             <p class="font-Roboto font-light text-base sm:text-lg">
@@ -196,6 +221,13 @@
             </p>
         </div>
 
+    </section>
+
+    <!--Directions: Being a Guide-->
+    <section v-if="beingAGuide">
+        <p>
+            being a guide section
+        </p>
     </section>
 
     <!-- Explore UVA History Section -->
@@ -309,28 +341,32 @@
             <!-- Header -->
             <div class="mt-[-6rem] sm:mt-[-8rem] md:mt-[-10rem]">
                 <h1 class="font-['Playfair_Display'] text-white italic text-[clamp(2.5rem,9vw,5rem)] leading-tight">
-                SHED LIGHT
+                    SHED LIGHT
                 </h1>
                 <p class="font-['Roboto'] text-white text-base sm:text-lg md:text-xl font-semibold leading-snug">
-                ON HISTORY
+                    ON HISTORY
                 </p>
             </div>
 
             <!-- Buttons -->
             <div class="mt-40 flex flex-col sm:flex-row justify-center items-center gap-x-10 gap-y-4 pointer-events-auto">
-                <button class="font-['Roboto'] border border-white text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 hover:border-transparent rounded-full py-3 px-10 cursor-pointer transition-all duration-300 ease-in-out">
-                PLAN YOUR VISIT
-                </button>
-                <button class="font-['Roboto'] border border-white text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 hover:border-transparent rounded-full py-3 px-18 cursor-pointer transition-all duration-300 ease-in-out">
-                DONATE
-                </button>
+                <a href="/your-visit">
+                    <button class="font-['Roboto'] border border-white text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 hover:border-transparent rounded-full py-3 px-10 cursor-pointer transition-all duration-300 ease-in-out">
+                        PLAN YOUR VISIT
+                    </button>
+                </a>
+                <a href="/donate">
+                    <button class="font-['Roboto'] border border-white text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 hover:border-transparent rounded-full py-3 px-18 cursor-pointer transition-all duration-300 ease-in-out">
+                        DONATE
+                    </button>
+                </a>
             </div>
 
             <!-- Description -->
             <p class="mt-20 font-['Roboto'] text-white text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
                 The Virginia Guides Service at UVA is an entirely student-run independent volunteer organization. 
                 If you would like to provide additional support, please consider donating to our day-to-day operations 
-                <a href="" class="underline">here</a>. We appreciate your time and thank you for continuing to support our mission.
+                <a href="/donate" class="underline">here</a>. We appreciate your time and thank you for continuing to support our mission.
             </p>
 
             </div>
@@ -344,32 +380,51 @@
 
                 <!-- Left Side Footer -->
                 <div class="basis-1/2 flex flex-wrap justify-between gap-6 text-sm text-zinc-400 font-['Roboto']">
-                <!-- Column 1 -->
-                <ul class="flex flex-col gap-2 min-w-[100x]">
-                    <li class="font-['Playfair_Display'] italic underline text-white text-lg">Visit</li>
-                    <li class="cursor-pointer">Directions + FAQ</li>
-                    <li class="cursor-pointer">History Tours</li>
-                    <li class="cursor-pointer">Specialty Tours</li>
-                    <li class="cursor-pointer">Specialty Tours Request</li>
-                </ul>
+                    <!-- Column 1 -->
+                    <ul class="flex flex-col gap-2 min-w-[100x]">
+                        <li class="font-['Playfair_Display'] italic underline text-white text-lg">Visit</li>
+                        <a href="your-visit">
+                            <li class="cursor-pointer">Directions + FAQ</li>
+                        </a>
+                        <a href="about-tours#about-tours">
+                            <li class="cursor-pointer">History Tours</li>
+                        </a>
+                        <a href="/about-tours#specialty-tours">
+                            <li class="cursor-pointer">Specialty Tours</li>
+                        </a>
+                        <a href="/specialty-tours-request">
+                            <li class="cursor-pointer">Specialty Tours Request</li>
+                        </a>
+                    </ul>
 
-                <!-- Column 2 -->
-                <ul class="flex flex-col gap-2 min-w-[100px]">
-                    <li class="font-['Playfair_Display'] italic underline text-white text-lg">About Us</li>
-                    <li class="cursor-pointer">Our Mission</li>
-                    <li class="cursor-pointer">Become a Guide</li>
-                    <li class="cursor-pointer">Feedback</li>
-                    <li class="cursor-pointer">Instagram</li>
-                </ul>
+                    <!-- Column 2 -->
+                    <ul class="flex flex-col gap-2 min-w-[100px]">
+                        <li class="font-['Playfair_Display'] italic underline text-white text-lg">About Us</li>
+                        <a href="/about-tours#about-tours">
+                            <li class="cursor-pointer">Our Mission</li>
+                        </a>
+                        <a href="/join-guides#join-guides">
+                            <li class="cursor-pointer">Become a Guide</li>
+                        </a>
+                        <a href="/feedback">
+                            <li class="cursor-pointer">Feedback</li>
+                        </a>
+                        <a href="https://www.instagram.com/virginiaguides/">
+                            <li class="cursor-pointer">Instagram</li>
+                        </a>
+                    </ul>
 
-                <!-- Column 3 -->
-                <ul class="flex flex-col gap-2 min-w-[100px]">
-                    <li class="font-['Playfair_Display'] italic underline text-white text-lg">More</li>
-                    <li class="cursor-pointer">For Educators</li>
-                    <li class="cursor-pointer">Donate</li>
-                </ul>
+                    <!-- Column 3 -->
+                    <ul class="flex flex-col gap-2 min-w-[100px]">
+                        <li class="font-['Playfair_Display'] italic underline text-white text-lg">More</li>
+                        <a href="/for-educators">
+                            <li class="cursor-pointer">For Educators</li>
+                        </a>
+                        <a href="/donate">
+                            <li class="cursor-pointer">Donate</li>
+                        </a>
+                    </ul>
                 </div>
-
 
                 <!-- Right Side Footer -->
                 <div class="basis-1/2 flex flex-col gap-3 text-zinc-400 text-sm md:text-base font-light">
@@ -381,9 +436,11 @@
                     </div>
 
                     <div class="flex justify-center md:justify-end">
-                        <button class="border border-white text-white rounded-full px-6 py-2 font-['Montserrat'] hover:bg-zinc-500 hover:border-zinc-500 hover:text-black transition-all duration-300 ease-in-out cursor-pointer">
-                            CONTACT US
-                        </button>
+                        <a href="/contact-us">
+                            <button class="border border-white text-white rounded-full px-6 py-2 font-['Montserrat'] hover:bg-zinc-500 hover:border-zinc-500 hover:text-black transition-all duration-300 ease-in-out cursor-pointer">
+                                CONTACT US
+                            </button>
+                        </a>
                     </div>
                 </div>
 
@@ -392,3 +449,28 @@
     </section>
 
 </template>
+
+<script setup>
+    import { ref } from 'vue';
+
+    const joinGuides = ref(true); // set to true so that the section shows up on the page on load
+    const beingAGuide = ref(false);
+
+    const toggleBeingAGuide = () => {
+        beingAGuide.value = true;
+        joinGuides.value = false;
+
+    }
+
+    const toggleJoinGuides = () => {
+        joinGuides.value = true;
+        beingAGuide.value = false;
+    }
+</script>
+
+<style>
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 6rem;
+    }
+</style>

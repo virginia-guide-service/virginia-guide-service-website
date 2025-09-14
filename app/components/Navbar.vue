@@ -26,15 +26,15 @@
           </button>
         </a>
   
-        <a href="/for-educators">
-          <button class="font-['Montserrat'] font-medium bg-transparent hover:bg-royal-blue hover:text-white cursor-pointer rounded-sm px-3 py-3 transition duration-500">
-            FOR EDUCATORS
-          </button>
-        </a>
-  
         <a href="/join-guides">
           <button class="font-['Montserrat'] font-medium bg-transparent hover:bg-royal-blue hover:text-white cursor-pointer rounded-sm px-3 py-3 transition duration-500">
             JOIN GUIDES
+          </button>
+        </a>
+
+        <a href="/for-educators">
+          <button class="font-['Montserrat'] font-medium bg-transparent hover:bg-royal-blue hover:text-white cursor-pointer rounded-sm px-3 py-3 transition duration-500">
+            FOR EDUCATORS
           </button>
         </a>
   

@@ -481,28 +481,32 @@
             <!-- Header -->
             <div class="mt-[-6rem] sm:mt-[-8rem] md:mt-[-10rem]">
                 <h1 class="font-['Playfair_Display'] text-white italic text-[clamp(2.5rem,9vw,5rem)] leading-tight">
-                SHED LIGHT
+                    SHED LIGHT
                 </h1>
                 <p class="font-['Roboto'] text-white text-base sm:text-lg md:text-xl font-semibold leading-snug">
-                ON HISTORY
+                    ON HISTORY
                 </p>
             </div>
 
             <!-- Buttons -->
             <div class="mt-40 flex flex-col sm:flex-row justify-center items-center gap-x-10 gap-y-4 pointer-events-auto">
-                <button class="font-['Roboto'] border border-white text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 hover:border-transparent rounded-full py-3 px-10 cursor-pointer transition-all duration-300 ease-in-out">
-                PLAN YOUR VISIT
-                </button>
-                <button class="font-['Roboto'] border border-white text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 hover:border-transparent rounded-full py-3 px-18 cursor-pointer transition-all duration-300 ease-in-out">
-                DONATE
-                </button>
+                <a href="/your-visit">
+                    <button class="font-['Roboto'] border border-white text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 hover:border-transparent rounded-full py-3 px-10 cursor-pointer transition-all duration-300 ease-in-out">
+                        PLAN YOUR VISIT
+                    </button>
+                </a>
+                <a href="/donate">
+                    <button class="font-['Roboto'] border border-white text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 hover:border-transparent rounded-full py-3 px-18 cursor-pointer transition-all duration-300 ease-in-out">
+                        DONATE
+                    </button>
+                </a>
             </div>
 
             <!-- Description -->
             <p class="mt-20 font-['Roboto'] text-white text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
                 The Virginia Guides Service at UVA is an entirely student-run independent volunteer organization. 
                 If you would like to provide additional support, please consider donating to our day-to-day operations 
-                <a href="" class="underline">here</a>. We appreciate your time and thank you for continuing to support our mission.
+                <a href="/donate" class="underline">here</a>. We appreciate your time and thank you for continuing to support our mission.
             </p>
 
             </div>
@@ -516,32 +520,51 @@
 
                 <!-- Left Side Footer -->
                 <div class="basis-1/2 flex flex-wrap justify-between gap-6 text-sm text-zinc-400 font-['Roboto']">
-                <!-- Column 1 -->
-                <ul class="flex flex-col gap-2 min-w-[100x]">
-                    <li class="font-['Playfair_Display'] italic underline text-white text-lg">Visit</li>
-                    <li class="cursor-pointer">Directions + FAQ</li>
-                    <li class="cursor-pointer">History Tours</li>
-                    <li class="cursor-pointer">Specialty Tours</li>
-                    <li class="cursor-pointer">Specialty Tours Request</li>
-                </ul>
+                    <!-- Column 1 -->
+                    <ul class="flex flex-col gap-2 min-w-[100x]">
+                        <li class="font-['Playfair_Display'] italic underline text-white text-lg">Visit</li>
+                        <a href="your-visit">
+                            <li class="cursor-pointer">Directions + FAQ</li>
+                        </a>
+                        <a href="about-tours#about-tours">
+                            <li class="cursor-pointer">History Tours</li>
+                        </a>
+                        <a href="/about-tours#specialty-tours">
+                            <li class="cursor-pointer">Specialty Tours</li>
+                        </a>
+                        <a href="/specialty-tours-request">
+                            <li class="cursor-pointer">Specialty Tours Request</li>
+                        </a>
+                    </ul>
 
-                <!-- Column 2 -->
-                <ul class="flex flex-col gap-2 min-w-[100px]">
-                    <li class="font-['Playfair_Display'] italic underline text-white text-lg">About Us</li>
-                    <li class="cursor-pointer">Our Mission</li>
-                    <li class="cursor-pointer">Become a Guide</li>
-                    <li class="cursor-pointer">Feedback</li>
-                    <li class="cursor-pointer">Instagram</li>
-                </ul>
+                    <!-- Column 2 -->
+                    <ul class="flex flex-col gap-2 min-w-[100px]">
+                        <li class="font-['Playfair_Display'] italic underline text-white text-lg">About Us</li>
+                        <a href="/about-tours#about-tours">
+                            <li class="cursor-pointer">Our Mission</li>
+                        </a>
+                        <a href="/join-guides#join-guides">
+                            <li class="cursor-pointer">Become a Guide</li>
+                        </a>
+                        <a href="/feedback">
+                            <li class="cursor-pointer">Feedback</li>
+                        </a>
+                        <a href="https://www.instagram.com/virginiaguides/">
+                            <li class="cursor-pointer">Instagram</li>
+                        </a>
+                    </ul>
 
-                <!-- Column 3 -->
-                <ul class="flex flex-col gap-2 min-w-[100px]">
-                    <li class="font-['Playfair_Display'] italic underline text-white text-lg">More</li>
-                    <li class="cursor-pointer">For Educators</li>
-                    <li class="cursor-pointer">Donate</li>
-                </ul>
+                    <!-- Column 3 -->
+                    <ul class="flex flex-col gap-2 min-w-[100px]">
+                        <li class="font-['Playfair_Display'] italic underline text-white text-lg">More</li>
+                        <a href="/for-educators">
+                            <li class="cursor-pointer">For Educators</li>
+                        </a>
+                        <a href="/donate">
+                            <li class="cursor-pointer">Donate</li>
+                        </a>
+                    </ul>
                 </div>
-
 
                 <!-- Right Side Footer -->
                 <div class="basis-1/2 flex flex-col gap-3 text-zinc-400 text-sm md:text-base font-light">
@@ -553,9 +576,11 @@
                     </div>
 
                     <div class="flex justify-center md:justify-end">
-                        <button class="border border-white text-white rounded-full px-6 py-2 font-['Montserrat'] hover:bg-zinc-500 hover:border-zinc-500 hover:text-black transition-all duration-300 ease-in-out cursor-pointer">
-                            CONTACT US
-                        </button>
+                        <a href="/contact-us">
+                            <button class="border border-white text-white rounded-full px-6 py-2 font-['Montserrat'] hover:bg-zinc-500 hover:border-zinc-500 hover:text-black transition-all duration-300 ease-in-out cursor-pointer">
+                                CONTACT US
+                            </button>
+                        </a>
                     </div>
                 </div>
 
@@ -568,6 +593,6 @@
 <style>
     html {
         scroll-behavior: smooth;
-        scroll-padding-top: 6rem;
+        scroll-padding-top: 8rem;
     }
 </style>
