@@ -12,6 +12,115 @@
         </div>
     </header> 
 
+    <!-- Overlapping Section For Contact Us Form-->
+    <section class="relative z-20 -mt-20 px-4">
+        <div class="shadow-xl p-6 max-w-7xl mx-auto bg-white mb-10">
+            <div class="flex flex-col lg:flex-row justify-between gap-y-8 gap-x-10">
+                <!-- Left: Information Section -->
+                <div class="w-full lg:w-[40%] flex flex-col bg-royal-blue text-white font-Roboto p-6 sm:p-8 lg:p-10 text-center md:text-left">
+                    <!--Text-->
+                    <div class="flex flex-col gap-8 mb-10">
+                        <h1 class="text-3xl sm:text-4xl md:text-5xl font-medium">
+                            Contact Us
+                        </h1>
+                        <div class="text-base md:text-lg font-light flex flex-col gap-3">
+                            <p>Got questions or want to plan a tour with us? We'd love to hear from you!</p>
+                            <p>Let's get in touch.</p>
+                            <p>
+                            If you would like to personally contact our chairs,
+                            <a href="mailto:jyr7db@virginia.edu, xuy8gc@virginia.edu" class="underline">
+                                Nina and Rose,
+                            </a>
+                            feel free to do so as well!
+                            </p>
+                        </div>
+                    </div>
+
+                    <!--Icons and Links-->
+                    <div class="text-base md:text-lg font-light flex flex-col gap-3">
+                    <div class="flex items-center gap-2 justify-center md:justify-start">
+                        <a href="mailto:chair@virginiaguides.org">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                            <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
+                            <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
+                        </svg>
+                        </a>
+                        <a href="mailto:chair@virginiaguides.org">
+                        <p>chair@virginiaguides.org</p>
+                        </a>
+                    </div>
+
+                    <div class="flex items-center gap-2 justify-center md:justify-start">
+                        <a href="mailto:schedulersofugs@gmail.com">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                            <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
+                            <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
+                        </svg>
+                        </a>
+                        <a href="mailto:schedulersofugs@gmail.com">
+                        <p>schedulersofugs@gmail.com</p>
+                        </a>
+                    </div>
+
+                    <div class="flex items-center gap-2 justify-center md:justify-start">
+                        <a href="https://instagram.com/virginiaguides">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                        </a>
+                        <a href="https://instagram.com/virginiaguides">
+                        <p>@virginiaguides</p>
+                        </a>
+                    </div>
+
+                    <div class="flex items-center gap-2 justify-center md:justify-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                        <path fill-rule="evenodd" d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd" />
+                        </svg>
+                        <p>Charlottesville, Virginia 22904</p>
+                    </div>
+
+                    <a>
+                        <button class="rounded-full border border-white px-4 py-3 mt-6 hover:bg-white hover:text-royal-blue transition-all duration-300 ease-in-out cursor-pointer">
+                            Special Tour Request Form
+                        </button>
+                    </a>
+                    </div>
+                </div>
+
+                <!-- Right: Contact Us Form -->
+                <div class="w-full lg:w-[60%] flex flex-col h-full">
+                    <form class="flex flex-col p-6 sm:p-8 lg:p-10 h-full">
+                    <label for="fname" class="font-[Montserrat] font-light text-royal-blue">First Name</label>
+                    <input type="text" id="fname" name="fname"
+                        class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+
+                    <label for="lname" class="font-[Montserrat] font-light text-royal-blue">Last Name</label>
+                    <input type="text" id="lname" name="lname"
+                        class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+
+                    <label for="email" class="font-[Montserrat] font-light text-royal-blue">Email</label>
+                    <input type="email" id="email" name="email"
+                        class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+
+                    <label for="subject" class="font-[Montserrat] font-light text-royal-blue">Subject</label>
+                    <input type="text" id="subject" name="subject"
+                        class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+
+                    <label for="notes" class="font-[Montserrat] font-light text-royal-blue">Message</label>
+                    <textarea id="notes"
+                        class="flex-grow font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-4"></textarea>
+
+                    <button type="submit"
+                        class="font-[Montserrat] bg-dark-green text-white font-semibold rounded-lg px-4 py-2 hover:bg-green-700 transition-all duration-300 ease-in-out cursor-pointer">
+                        Send Message
+                    </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!--Footer Section-->
     <section>
         <div class="relative overflow-hidden">

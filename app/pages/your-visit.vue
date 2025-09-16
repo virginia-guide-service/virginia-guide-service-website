@@ -165,9 +165,9 @@
 
 
                             <label for="notes" class="font-[Montserrat] font-light text-royal-blue">Notes for the Tour</label>
-                            <textarea id="notes" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-4"></textarea>
+                            <textarea id="notes" class="flex-grow font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-4"></textarea>
 
-                            <button type="submit" class="font-[Montserrat] bg-royal-blue text-white font-semibold rounded-lg px-4 py-2 hover:bg-blue-900 transition-all duration-300 ease-in-out">
+                            <button type="submit" class="font-[Montserrat] bg-royal-blue text-white font-semibold rounded-lg px-4 py-2 hover:bg-blue-900 transition-all duration-300 ease-in-out cursor-pointer">
                                 Register
                             </button>
                         </form>
