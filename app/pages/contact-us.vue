@@ -3,10 +3,10 @@
     <header class="relative bg-[url('/Header_ContactUS.jpg')] w-full bg-cover bg-center bg-no-repeat h-[60vh] sm:h-[75vh] bg-">
         <!-- Centered Text -->
         <div class="absolute top-1/2 left-1/2 w-full max-w-8xl px-10 -translate-x-1/2 -translate-y-1/2 text-white">
-            <h1 class="font-['Playfair_Display'] italic text-center xl:text-right whitespace-nowrap text-[clamp(1rem,7vw,3rem)] lg:text-[clamp(1rem,8vw,4rem)] leading-tight [text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)]">
+            <h1 class="font-['Playfair_Display'] italic text-center xl:text-right whitespace-nowrap lg:text-[clamp(1rem,8vw,6rem)] leading-tight [text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)]">
                 VIRGINIA GUIDES
             </h1>
-            <p class="font-['Roboto'] text-base sm:text-md md:text-lg font-semibold leading-snug text-center xl:text-right uppercase [text-shadow:_3px_3px_6px_rgb(0_0_0_/_0.70)]">
+            <p class="font-['Roboto'] text-sm sm:text-lg md:text-xl font-semibold leading-snug text-center xl:text-right uppercase [text-shadow:_3px_3px_6px_rgb(0_0_0_/_0.70)]">
                 History Tours of the University of Virginia
             </p>
         </div>
@@ -71,13 +71,6 @@
                         <a href="https://instagram.com/virginiaguides">
                         <p>@virginiaguides</p>
                         </a>
-                    </div>
-
-                    <div class="flex items-center gap-2 justify-center md:justify-start">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-                        <path fill-rule="evenodd" d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd" />
-                        </svg>
-                        <p>Charlottesville, Virginia 22904</p>
                     </div>
 
                     <a href="/request-specialty-tours">
@@ -353,7 +346,8 @@
                     <div class="flex items-start gap-4 font-['Roboto']">
                         <img class="h-12 w-12 obSject-contain" src="/guides-logo.png" alt="Virginia Guides Logo" />
                         <p>
-                            The Virginia Guides continues 75 years of guiding visitors through UVA. The Guides Service is a student-run organization independent of the University of Virginia, carrying forward tradition while bringing a more complete light to the past.
+                            The Virginia Guides continues 75 years of guiding visitors through UVA in Charlottesville VA. The Guides Service is a 
+                            student-run organization independent of the University of Virginia, carrying forward tradition while bringing a more complete light to the past.
                         </p>
                     </div>
 

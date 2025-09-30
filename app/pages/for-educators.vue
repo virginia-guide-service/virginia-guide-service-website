@@ -16,19 +16,19 @@
     </header> 
 
     <!-- Overlapping Section With Buttons for Navigations-->
-    <section class="relative z-20 -mt-13 px-4 mb-10">
+    <section class="relative z-20 -mt-10 px-4 mb-10">
         <!-- Line in Background -->
-        <div class="absolute top-1/2 left-0 w-full h-2 bg-royal-blue -z-10"></div>
+        <div class="absolute top-1/2 left-0 w-full h-2 bg-royal-blue -z-10 hidden sm:block"></div>
 
-        <div class="shadow-lg rounded-xl p-6 max-w-2xl mx-auto text-center bg-white border-6 border-royal-blue">
-            <div class="flex flex-col sm:flex-row justify-evenly items-center gap-4">
-                <a href="/join-guides" class="px-6 py-2 bg-white text-royal-blue text-lg rounded-full hover:bg-gray-200 hover:scale-105 transition-all duration-300 ease-in-out font-semibold">
+        <div class="shadow-lg p-6 max-w-2xl mx-auto text-center bg-royal-blue">
+            <div class="flex flex-col sm:flex-row justify-evenly items-center gap-4 text-white">
+                <a href="/join-guides" class="text-lg rounded-full hover:scale-105 transition-all duration-300 ease-in-out font-semibold">
                     About Us
                 </a>
-                <a href="/request-specialty-tours" class="px-6 py-2 bg-white text-royal-blue text-lg rounded-full hover:bg-gray-200 hover:scale-105 transition-all duration-300 ease-in-out font-semibold">
+                <a href="/request-specialty-tours" class="text-lg rounded-full hover:scale-105 transition-all duration-300 ease-in-out font-semibold">
                     Specialty Tour Request Form
                 </a>
-                <a href="/about-tours#specialty-tours" class="px-6 py-2 bg-white text-royal-blue text-lg rounded-full hover:bg-gray-200 hover:scale-105 transition-all duration-300 ease-in-out font-semibold">
+                <a href="/about-tours#specialty-tours" class="text-lg rounded-full hover:scale-105 transition-all duration-300 ease-in-out font-semibold">
                     Other Tours
                 </a>
             </div>
@@ -97,8 +97,8 @@
 
     <!--Banner-->
     <section>
-        <div class="w-full bg-gray-300 textpcenter py-6 px-10 lg:px-20 flex justify-center items-center">
-            <p class="font-Roboto text-royal-blue italic text-center text-base sm:text-lg md:text-md">
+        <div class="flex flex-col lg:flex-row w-full gap-y-3 gap-x-3 bg-gray-300 text-center py-6 px-10 lg:px-20 justify-center items-center">
+            <p class="w-full lg:w-3/4 font-Roboto text-royal-blue italic text-center text-base sm:text-lg md:text-md">
                 <span class="font-bold">
                     Because Virginia Guides is student-run, we do not provide tours during exam periods, reading days, or student breaks, which are specified 
                     <a href="https://registrar.virginia.edu/calendar/academic" class="underline">
@@ -114,6 +114,20 @@
                 </span> to better plan with you for your tour group size, 
                 interests, and needs.
             </p>
+            <!--Request Tour Button-->
+            <div class="w-full lg:w-1/4 flex justify-center items-center">
+                <a href="/request-specialty-tours">
+                    <button class="flex items-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-2 sm:px-6 sm:py-2 md:px-8 md:py-3 shadow-sm hover:bg-gray-100 hover:shadow-md transition-all duration-300 ease-in-out cursor-pointer">
+                        <p class="font-['Roboto'] text-gray-800 font-semibold text-base md:text-lg">
+                            Request Tour
+                        </p>
+                        <svg class="h-4 w-4 sm:h-5 sm:w-5 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <line x1="3" y1="12" x2="21" y2="12" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <polyline points="18 15 21 12 18 9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </a>
+            </div>
         </div>
     </section>
 
@@ -342,7 +356,8 @@
                     <div class="flex items-start gap-4 font-['Roboto']">
                         <img class="h-12 w-12 obSject-contain" src="/guides-logo.png" alt="Virginia Guides Logo" />
                         <p>
-                            The Virginia Guides continues 75 years of guiding visitors through UVA. The Guides Service is a student-run organization independent of the University of Virginia, carrying forward tradition while bringing a more complete light to the past.
+                            The Virginia Guides continues 75 years of guiding visitors through UVA in Charlottesville VA. The Guides Service is a 
+                            student-run organization independent of the University of Virginia, carrying forward tradition while bringing a more complete light to the past.
                         </p>
                     </div>
 

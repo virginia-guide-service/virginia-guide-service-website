@@ -13,19 +13,19 @@
     </header>
 
     <!-- Overlapping Section With Buttons for Navigations-->
-    <section class="relative z-20 -mt-13 px-4 mb-5">
+    <section class="relative z-20 -mt-12 px-4 mb-5">
         <!-- Blue Line in Background -->
-        <div class="absolute top-1/2 left-0 w-full h-2 bg-[#233a1e] -z-10"></div>
+        <div class="absolute top-1/2 left-0 w-full h-2 bg-royal-blue -z-10 hidden sm:block"></div>
 
-        <div class="shadow-lg rounded-xl p-6 max-w-3xl mx-auto text-center bg-white border-6 border-[#233a1e]">
-            <div class="flex flex-col sm:flex-row justify-evenly items-center gap-4">
-                <a href="#specialty-tours" class="px-6 py-2 bg-white text-royal-blue text-lg rounded-full hover:bg-gray-200 hover:scale-105 transition-all duration-300 ease-in-out font-semibold">
+        <div class="shadow-lg p-6 max-w-2xl mx-auto text-center bg-royal-blue">
+            <div class="flex flex-col sm:flex-row justify-evenly items-center gap-4 text-white">
+                <a href="#specialty-tours" class="text-lg hover:scale-105 transition-all duration-300 ease-in-out font-semibold">
                     Specialty Tours
                 </a>
-                <a href="/your-visit" class="px-6 py-2 bg-white text-royal-blue text-lg rounded-full hover:bg-gray-200 hover:scale-105 transition-all duration-300 ease-in-out font-semibold">
+                <a href="/your-visit" class="text-lg hover:scale-105 transition-all duration-300 ease-in-out font-semibold">
                     Plan Your Visit
                 </a>
-                <a href="/for-educators" class="px-6 py-2 bg-white text-royal-blue text-lg rounded-full hover:bg-gray-200 hover:scale-105 transition-all duration-300 ease-in-out font-semibold">
+                <a href="/for-educators" class="text-lg hover:scale-105 transition-all duration-300 ease-in-out font-semibold">
                     For Educators
                 </a>
             </div>
@@ -38,7 +38,7 @@
 
             <!-- Right: Image -->
             <div class="w-full lg:w-1/2 flex justify-center items-center">
-                <img src="/about-tours-page/Tourpage_LawnRooms.jpg" alt="Historical Tour Image" class="w-full max-w-lg h-auto rounded-md shadow-md">
+                <img src="/about-tours-page/Tourpage_LawnRooms.jpg" alt="Historical Tour Image" class="w-full max-w-xl h-auto rounded-md shadow-md">
             </div>
 
             <!-- Left: Text -->
@@ -51,36 +51,38 @@
                     UVA's history is more than its founding ideals. It is also shaped by the labor, activism, 
                     and voices of those once excluded. Built and maintained by an estimated 4,000 enslaved 
                     laborers between 1817 and 1865, the University's grounds hold stories long overlooked.
-                    <br /><br />
+                </p>
+                <p class="font-['Montserrat'] text-base sm:text-lg leading-relaxed text-gray-900 pt-2">
                     From its founding to construction, from the Civil War to Civil Rights, our student-led tours 
                     explore 200+ years of change, resistance, and community that shape the present. Tours navigate 
                     the outdoor grounds of the UNESCO World Heritage Site and are written by students after a 
                     semester of intensive training, research, and critical reflection.
                 </p>
-                <br /><br />
-                <div class="flex flex-col justify-center items-center p-4 border-4 border-double border-dark-green rounded-md">
-                    <ul class="list-disc font-['Montserrat'] text-base sm:text-lg leading-relaxed text-gray-900 max-w-xl px-4">
-                        <li>
-                        Standard History Tours last around <span class="font-bold">1 hour</span>.
-                        </li>
-                        <li>
-                        All tours are <span class="font-bold">free of charge</span>, regardless of group size.
-                        </li>
-                        <li>
-                        Donations to support work are welcome at this link
-                        <a href="https://www.givecampus.com/campaigns/21200/donations/new?designation=universityguides">
-                            <span class="underline cursor-pointer">here</span>.
-                        </a>
-                        </li>
-                    </ul>
-                    <!--Button-->
-                    <NuxtLink to="/your-visit#times-and-registration" class="justify-center mt-2">
-                        <button class="rounded-full bg-dark-green px-6 py-3 sm:px-6 sm:py-2 md:px-8 md:py-3 shadow-md hover:shadow-lg hover:bg-green-700 hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer">
-                            <p class="font-['Roboto'] text-white text-sm sm:text-base md:text-lg">
-                                Register Here
-                            </p>
-                        </button>
-                    </NuxtLink>
+                <div class="flex flex-col justify-center items-center pt-5">
+                    <div class="flex flex-col justify-center items-center border-4 border-double border-dark-green rounded-md p-3">
+                        <ul class="list-disc font-['Montserrat'] text-base sm:text-lg leading-relaxed text-gray-900 max-w-xl px-4">
+                            <li>
+                            Standard History Tours last around <span class="font-bold">1 hour</span>.
+                            </li>
+                            <li>
+                            All tours are <span class="font-bold">free of charge</span>, regardless of group size.
+                            </li>
+                            <li>
+                            Donations to support work are welcome at this link
+                            <a href="https://www.givecampus.com/campaigns/21200/donations/new?designation=universityguides">
+                                <span class="underline cursor-pointer">here</span>.
+                            </a>
+                            </li>
+                        </ul>
+                        <!--Button-->
+                        <NuxtLink to="/your-visit#times-and-registration" class="justify-center items-center mt-2">
+                            <button class="rounded-full bg-dark-green px-6 py-3 sm:px-6 sm:py-2 md:px-8 md:py-3 shadow-md hover:shadow-lg hover:bg-green-700 hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer">
+                                <p class="font-['Roboto'] text-white text-sm sm:text-base md:text-lg">
+                                    Register Here
+                                </p>
+                            </button>
+                        </NuxtLink>
+                    </div>
                 </div>
             </div>
 
@@ -144,16 +146,16 @@
             </div>
 
             <!--Banner-->
-            <div class="w-[90%] border-2 border-dark-green py-6 px-10 rounded-sm">
+            <div class="bg-dark-green py-6 px-10">
                 <div class="flex flex-col md:flex-row w-full items-center justify-between gap-8">
 
                     <!-- Description -->
-                    <div class="font-Montserrat text-black text-left text-sm sm:text-base">
-                        <p class="italic mb-5">
+                    <div class="font-Montserrat text-white text-left text-base lg:text-lg">
+                        <p class="italic">
                             To ensure guide availability for special topic or large tour groups, all tour requests should be submitted at least 
                             <span class="underline font-semibold">two to three weeks in advance</span>.
                         </p>
-                        <p>
+                        <p class="pt-2">
                             Standard Historical Tours occur regularly throughout the school year and 
                             <span class="underline font-semibold">do not</span> require a special request.
                         </p>
@@ -162,12 +164,12 @@
                     <!-- Button -->
                     <div class="text-center text-nowrap">
                         <a href="/request-specialty-tours"
-                        class="inline-block font-['Montserrat'] bg-dark-green text-white font-semibold rounded-full 
+                        class="inline-block font-['Montserrat'] bg-white text-dark-green font-semibold rounded-full 
                                 px-6 py-2 text-sm 
                                 sm:px-8 sm:py-3 sm:text-base 
                                 md:px-10 md:py-4 md:text-lg 
-                                shadow-md hover:shadow-lg hover:bg-green-700 hover:scale-105 transition-all duration-300 ease-in-out">
-                        Special Tour Request Form
+                                shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out">
+                        Specialty Tour Request Form
                         </a>
                     </div>
 
@@ -487,7 +489,8 @@
                     <div class="flex items-start gap-4 font-['Roboto']">
                         <img class="h-12 w-12 obSject-contain" src="/guides-logo.png" alt="Virginia Guides Logo" />
                         <p>
-                            The Virginia Guides continues 75 years of guiding visitors through UVA. The Guides Service is a student-run organization independent of the University of Virginia, carrying forward tradition while bringing a more complete light to the past.
+                            The Virginia Guides continues 75 years of guiding visitors through UVA in Charlottesville VA. The Guides Service is a 
+                            student-run organization independent of the University of Virginia, carrying forward tradition while bringing a more complete light to the past.
                         </p>
                     </div>
 

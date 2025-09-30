@@ -18,7 +18,7 @@
             </div>
         </div>
         <div class="absolute flex flex-col items-center top-3/4 md:top-5/6 left-1/2 w-full max-w-6xl px-4 -translate-x-1/2 text-white text-center">
-            <p class="font-['Montserrat'] text-base sm:text-lg md:text-xl font-light leading-snug">
+            <p class="font-['Montserrat'] italic text-base sm:text-lg md:text-xl font-light leading-snug">
                 The Virginia Guides Service continues 75 years of students guiding visitors through UVA.<br />
                 Carrying forward tradition while bringing new light to the past.
             </p>
@@ -29,7 +29,7 @@
     <!-- More Tour Info Section -->
     <section class="bg-white">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-            <div class="flex flex-col md:flex-row items-start md:items-center gap-10">
+            <div class="flex flex-col md:flex-row items-center gap-10">
             
                 <!-- Left: Text -->
                 <div class="w-full md:w-3/5">
@@ -63,27 +63,34 @@
                             loading="lazy"
                         />
 
-                        <!-- Overlay: Tour Times with Clock Icon -->
-                        <div class="absolute top-[116px] left-6 w-52 h-16 flex items-center gap-2 text-left">
-                            <!-- Clock Icon -->
-                            <svg viewBox="0 0 24 24" fill="none" class="w-6 h-6" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 7V12L14.5 13.5M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
+<!-- Overlay: Tour Times with Clock Icon + Subtitle -->
+<div class="absolute top-[116px] left-6 text-left flex items-start gap-2 w-auto sm:w-72 md:w-80 lg:w-auto">
+    <!-- Clock Icon -->
+    <svg viewBox="0 0 24 24" fill="none" class="w-7 h-7 mt-1 shrink-0" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 7V12L14.5 13.5M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" 
+              stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
 
-                            <!-- Tour Times Text -->
-                            <p class="text-stone-800 text-2xl font-bold font-['Montserrat']">TOUR TIMES*</p>
-                        </div>
+    <!-- Text Block -->
+    <div class="flex flex-col">
+        <p class="text-stone-800 text-2xl font-bold font-['Montserrat']">TOUR TIMES*</p>
+        <p class="text-stone-700 text-sm font-medium font-['Montserrat']">
+            All tours leave from the front Rotunda steps
+        </p>
+    </div>
+</div>
+
 
                         <!-- Overlay: Days and Times -->
-                        <div class="absolute top-[179px] left-12 w-36 text-left">
+                        <div class="absolute top-[179px] left-15 w-36 text-left">
                             <p class="text-UVA-orange text-2xl font-semibold font-['Montserrat']">FRIDAY</p>
                             <p class="text-stone-700 text-base font-medium font-['Montserrat'] relative left-[25px]">11:00am-12:15PM</p>
                         </div>
-                        <div class="absolute top-[234px] left-12 w-36 text-left">
+                        <div class="absolute top-[234px] left-15 w-36 text-left">
                             <p class="text-UVA-orange text-2xl font-semibold font-['Montserrat']">SATURDAY</p>
                             <p class="text-stone-700 text-base font-medium font-['Montserrat'] relative left-[25px]">11:00am-12:15PM</p>
                         </div>
-                        <div class="absolute top-[289px] left-12 w-36 text-left">
+                        <div class="absolute top-[289px] left-15 w-36 text-left">
                             <p class="text-UVA-orange text-2xl font-semibold font-['Montserrat']">SUNDAY</p>
                             <p class="text-stone-700 text-base font-medium font-['Montserrat'] relative left-[25px]">11:00am-12:15PM</p>
                         </div>
@@ -279,7 +286,7 @@
 
                 <!-- Description -->
                 <p class="font-['Montserrat'] text-black sm:text-lg md:text-xl leading-relaxed mx-auto mt-10">
-                    The Virginia Guides Service is an independent student-run volunteer tour-giving organization that provides the admissions and historical tours of the University of Virginia.
+                    The Virginia Guides Service is an independent student-run volunteer tour-giving organization that provides the historical and admissions tours of the University of Virginia.
                     Virginia Guides is an organization that embodies a spirit of student self-governance and seeks to foster a sense of unity and cohesion among its members. 
                     <br>
                     <br>
@@ -672,7 +679,7 @@
             <div class="mt-40 flex flex-col sm:flex-row justify-center items-center gap-x-10 gap-y-4 pointer-events-auto">
                 <a href="/your-visit">
                     <button class="font-['Roboto'] border border-white text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 hover:border-transparent rounded-full py-3 px-10 cursor-pointer transition-all duration-300 ease-in-out">
-                        PLAN YOUR VISIT
+                        TAKE A TOUR
                     </button>
                 </a>
                 <a href="/donate">
@@ -751,7 +758,8 @@
                     <div class="flex items-start gap-4 font-['Roboto']">
                         <img class="h-12 w-12 obSject-contain" src="/guides-logo.png" alt="Virginia Guides Logo" />
                         <p>
-                            The Virginia Guides continues 75 years of guiding visitors through UVA. The Guides Service is a student-run organization independent of the University of Virginia, carrying forward tradition while bringing a more complete light to the past.
+                            The Virginia Guides continues 75 years of guiding visitors through UVA in Charlottesville VA. The Guides Service is a 
+                            student-run organization independent of the University of Virginia, carrying forward tradition while bringing a more complete light to the past.
                         </p>
                     </div>
 

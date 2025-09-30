@@ -13,19 +13,19 @@
     </header>
 
     <!-- Overlapping Section With Buttons for Navigations-->
-    <section class="relative z-20 -mt-14 px-4">
+    <section class="relative z-20 -mt-10 px-4">
         <!-- Line in Background -->
-        <div class="absolute top-1/2 left-0 w-full h-2 bg-dark-burgandy -z-10"></div>
+        <div class="absolute top-1/2 left-0 w-full h-2 bg-royal-blue -z-10 hidden sm:block"></div>
 
-        <div class="shadow-lg rounded-xl p-6 max-w-4xl mx-auto text-center bg-white border-6 border-dark-burgandy">
-            <div class="flex flex-col sm:flex-row justify-evenly items-center gap-4">
-                <a href="#times-and-registration" class="px-6 py-2 bg-white text-royal-blue text-lg rounded-full hover:bg-gray-200 hover:scale-105 transition-all duration-300 ease-in-out font-semibold">
+        <div class="shadow-lg p-6 max-w-3xl mx-auto text-center bg-royal-blue">
+            <div class="flex flex-col sm:flex-row justify-evenly items-center gap-4 text-white">
+                <a href="#times-and-registration" class="text-lg rounded-full hover:scale-105 transition-all duration-300 ease-in-out font-semibold">
                     Times & Registration
                 </a>
-                <a href="#location-and-parking" class="px-6 py-2 bg-white text-royal-blue text-lg rounded-full hover:bg-gray-200 hover:scale-105 transition-all duration-300 ease-in-out font-semibold">
+                <a href="#location-and-parking" class="text-lg rounded-full hover:scale-105 transition-all duration-300 ease-in-out font-semibold">
                     Location & Parking
                 </a>
-                <a href="#frequently-asked-questions" class="px-6 py-2 bg-white text-royal-blue text-lg rounded-full hover:bg-gray-200 hover:scale-105 transition-all duration-300 ease-in-out font-semibold">
+                <a href="#frequently-asked-questions" class="text-lg rounded-full hover:scale-105 transition-all duration-300 ease-in-out font-semibold">
                     Frequently Asked Questions
                 </a>
             </div>
@@ -248,17 +248,37 @@
         </div>
     </section>
 
-    <!-- What is the Tour About? Section -->
+    <!-- FAQ Section -->
     <section id="frequently-asked-questions" class="bg-white py-16 px-6 sm:px-12 lg:px-20">
         <div class="max-w-5xl mx-auto">
             <!-- Title -->
-            <h2 class="font-['Montserrat'] text-UVA-orange text-3xl sm:text-4xl md:text-5xl font-semibold text-center mb-12">
-                WHAT IS THE TOUR ABOUT?
+            <h2 class="uppercase font-['Montserrat'] text-UVA-orange text-3xl sm:text-4xl md:text-5xl font-semibold text-center mb-12">
+                Frequently Asked Questions
             </h2>
 
             <!-- FAQ Accordion -->
             <div class="space-y-6 text-dark-green font-['Montserrat']">
                 <!-- FAQ Item -->
+
+                <details class="group border-b pb-4">
+                    <summary class="cursor-pointer text-xl sm:text-2xl font-medium flex justify-between items-center">
+                        <span>What is the tour about?</span>
+                        <span class="text-UVA-orange group-open:rotate-45 transition-transform">+</span>
+                    </summary>
+                    <p class="mt-3 text-base sm:text-lg text-gray-700 leading-relaxed">
+                        UVA's student-led tours trace over 200 years of history, from its founding through decades of change, resistance, 
+                        and community. Drawing on in-depth student research, they include often-overlooked stories of enslaved 
+                        laborers and activists who helped shape the university. 
+                    </p>
+                    <div class="flex flex-col sm:flex-row flex-wrap gap-3 mt-4">
+                        <a href="/about-tours" class="w-full sm:w-auto">
+                            <button class="w-full sm:w-auto px-6 py-2 sm:px-8 sm:py-3 rounded-full bg-dark-green text-white font-semibold text-sm sm:text-base shadow-md hover:bg-green-700 hover:shadow-lg transition-all duration-300 ease-in-out">
+                                Learn More
+                            </button>
+                        </a>
+                    </div>
+                </details>
+
                 <details class="group border-b pb-4">
                     <summary class="cursor-pointer text-xl sm:text-2xl font-medium flex justify-between items-center">
                         <span>How much does a tour cost per guest?</span>
@@ -335,8 +355,8 @@
                             </button>
                         </a>
                     </div>
-
                 </details>
+
             </div>
         </div>
     </section>
@@ -583,7 +603,8 @@
                     <div class="flex items-start gap-4 font-['Roboto']">
                         <img class="h-12 w-12 obSject-contain" src="/guides-logo.png" alt="Virginia Guides Logo" />
                         <p>
-                            The Virginia Guides continues 75 years of guiding visitors through UVA. The Guides Service is a student-run organization independent of the University of Virginia, carrying forward tradition while bringing a more complete light to the past.
+                            The Virginia Guides continues 75 years of guiding visitors through UVA in Charlottesville VA. The Guides Service is a 
+                            student-run organization independent of the University of Virginia, carrying forward tradition while bringing a more complete light to the past.
                         </p>
                     </div>
 
