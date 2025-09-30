@@ -2,7 +2,7 @@
     <!-- Header container with padding and flexbox for layout -->
     <header
       :class="[
-        'fixed top-0 left-0 w-full z-50 transition-all',
+        'fixed top-0 left-0 w-full z-50 transition duration-350',
         isScrolled ? 'bg-white/30 shadow-md backdrop-blur-md text-black' : 'bg-transparent text-white'
       ]"
       class="flex items-center justify-between px-4 py-2"
@@ -21,37 +21,37 @@
       <div class="flex items-center space-x-6">
   
         <a href="/about-tours">
-          <button class="font-['Montserrat'] font-medium bg-transparent hover:bg-royal-blue hover:text-white cursor-pointer rounded-sm px-3 py-3 transition duration-500">
+          <button class="font-['Montserrat'] font-medium bg-transparent hover:bg-royal-blue hover:text-white cursor-pointer rounded-sm px-3 py-3 transition duration-250">
             ABOUT TOURS
           </button>
         </a>
   
         <a href="/join-guides">
-          <button class="font-['Montserrat'] font-medium bg-transparent hover:bg-royal-blue hover:text-white cursor-pointer rounded-sm px-3 py-3 transition duration-500">
+          <button class="font-['Montserrat'] font-medium bg-transparent hover:bg-royal-blue hover:text-white cursor-pointer rounded-sm px-3 py-3 transition duration-250">
             JOIN GUIDES
           </button>
         </a>
 
         <a href="/for-educators">
-          <button class="font-['Montserrat'] font-medium bg-transparent hover:bg-royal-blue hover:text-white cursor-pointer rounded-sm px-3 py-3 transition duration-500">
+          <button class="font-['Montserrat'] font-medium bg-transparent hover:bg-royal-blue hover:text-white cursor-pointer rounded-sm px-3 py-3 transition duration-250">
             FOR EDUCATORS
           </button>
         </a>
   
         <a href="/feedback">
-          <button class="font-['Montserrat'] font-medium bg-transparent hover:bg-royal-blue hover:text-white cursor-pointer rounded-sm px-3 py-3 transition duration-500">
+          <button class="font-['Montserrat'] font-medium bg-transparent hover:bg-royal-blue hover:text-white cursor-pointer rounded-sm px-3 py-3 transition duration-250">
             FEEDBACK
           </button>
         </a>
 
         <a href="/donate">
-          <button class="font-['Montserrat'] font-medium bg-transparent hover:bg-royal-blue hover:text-white cursor-pointer rounded-sm px-3 py-3 transition duration-500">
+          <button class="font-['Montserrat'] font-medium bg-transparent hover:bg-royal-blue hover:text-white cursor-pointer rounded-sm px-3 py-3 transition duration-250">
             DONATE
           </button>
         </a>
   
         <a href="/your-visit">
-          <button class="font-['Montserrat'] font-medium bg-transparent hover:bg-royal-blue hover:text-white cursor-pointer border hover:border-royal-blue rounded-full px-4 py-2 transition duration-500">
+          <button class="font-['Montserrat'] font-medium bg-transparent hover:bg-royal-blue hover:text-white cursor-pointer border hover:border-royal-blue rounded-full px-4 py-2 transition duration-250">
             TAKE A TOUR
           </button>
       </a>

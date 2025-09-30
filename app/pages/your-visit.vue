@@ -229,12 +229,22 @@
     <!-- Map Section -->
     <section class="w-full flex justify-center px-10 p-5 lg:p-5 bg-neutral-100">
         <div class="w-full max-w-5xl aspect-video">
-            <iframe
+
+            <!-- John's Map -->
+            <iframe 
+                src="https://www.google.com/maps/d/embed?mid=16Uf_oN9AUEKhU3pVgavoqg6AHNG1o-o&ehbc=2E312F&noprof=1" 
+                class="w-full h-full border-0"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe> 
+
+            <!--General Map-->
+            <!-- <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5207.173557834788!2d-78.50912734315418!3d38.03665224800225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b3864f8f4cfb4b%3A0x13fd676a940c94c6!2sCentral%20Grounds%20Garage!5e0!3m2!1sen!2sus!4v1757214405792!5m2!1sen!2sus"
                 class="w-full h-full border-0"
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+            </iframe> -->
         </div>
     </section>
 

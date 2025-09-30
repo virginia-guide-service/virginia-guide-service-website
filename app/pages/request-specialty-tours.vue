@@ -117,7 +117,7 @@
                     </div>
 
                     <label for="tour-type" class="font-[Montserrat] font-light text-royal-blue">Type of Tour</label>
-                    <select name="tour-type" id="tour-type" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-4">>
+                    <select name="tour-type" id="tour-type" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5">>
                         <option value="StandardHistorical">Standard Historical Tour</option>
                         <option value="HistoryofAfricanAmericansatUVA">History of African Americans at UVA</option>
                         <option value="MemorialtoEnslavedLaborer">Memorial to Enslaved Laborers</option>
@@ -129,7 +129,7 @@
 
                     <label for="notes" class="font-[Montserrat] font-light text-royal-blue">Tour Group Information & Details</label>
                     <textarea id="notes"
-                        class="flex-grow font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-4">
+                        class="flex-grow font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5">
                     </textarea>
 
                     <button type="submit"

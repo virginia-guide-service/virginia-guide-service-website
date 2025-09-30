@@ -93,16 +93,36 @@
 
     <!--Directions: Join Guides-->
     <section id="join-guides" v-if="joinGuides">
-        <div class="flex justify-center px-5 sm:px-8 md:px-6 pt-4">
-            <p class="font-Roboto text-UVA-orange text-center text-light italic max-w-5xl text-base sm:text-md md:text-lg">
-                Guides come from all around the world, across all the schools at UVA, and from any program of study. 
-                We are involved in many different groups, organizations, and clubs at the University, but what brings us together 
-                is our love for giving tours. Beyond that we also strive for Guides to be a community that members love to be a part of.
-            </p>
+        <!--Running Banner: Join Guides-->
+        <div class="running-text-container font-[Roboto] font-medium text-[#ECE9E9]">
+            <!--First Copy-->
+            <ul>
+                <li>
+                    <span class="running-text">JOIN GUIDES&nbsp;</span>
+                </li>
+                <li>
+                    <span class="running-text">JOIN GUIDES&nbsp;</span>
+                </li>
+                <li>
+                    <span class="running-text">JOIN GUIDES&nbsp;</span>
+                </li>
+            </ul>
+            <!--First Copy for seamless animation-->
+            <ul aria-hidden="true">
+                <li>
+                    <span class="running-text">JOIN GUIDES&nbsp;</span>
+                </li>
+                <li>
+                    <span class="running-text">JOIN GUIDES&nbsp;</span>
+                </li>
+                <li>
+                    <span class="running-text">JOIN GUIDES&nbsp;</span>
+                </li>
+            </ul>
         </div>
 
         <!--Step 1-->
-        <div class="pt-10 px-5 sm:px-8 md:px-6 xl:px-10">
+        <div class="pt-5 px-5 sm:px-10 md:px-15">
             <h1 class="font-Roboto text-lg sm:text-xl font-bold italic mb-2">
                 Step 1: Attend an Info Session and Learn About the Virginia Guides Service
             </h1>
@@ -121,7 +141,7 @@
         </div>
 
         <!--Info Sessions and Step 2-->
-        <div class="px-5 sm:px-8 md:px-6 xl:px-10 flex flex-col lg:flex-row">
+        <div class="px-5 sm:px-10 md:px-15 flex flex-col lg:flex-row">
             <div class="w-full lg:w-[60%]">
                 <br />
                 <p class="font-Roboto font-light text-base sm:text-lg italic mb-2">
@@ -152,12 +172,12 @@
                 </p>
             </div>
             <!-- Image with Subheader -->
-            <div class="w-full lg:w-[40%] flex flex-col justify-center items-center">
+            <div class="w-full lg:w-[40%] flex flex-col mt-5 justify-center items-center">
                 <img 
                     src="/join-guides-page/JoinGuidesDavisEvie.jpg"
                     class="w-[70%] object-cover"
                 >
-                <p class="font-Roboto mt-2 text-base text-center text-gray-800">
+                <p class="font-Roboto mt-5 text-base text-center text-gray-800">
                     Dwyer probies Davis and Evie on the way to their first tour!
                 </p>
             </div>
@@ -187,7 +207,7 @@
         </section>
 
         <!--Step 3-->
-        <div class="pt-12 px-5 sm:px-8 md:px-6 xl:px-10">
+        <div class="pt-12 px-5 sm:px-10 md:px-15">
             <h1 class="font-Roboto text-lg sm:text-xl font-bold italic mb-2">
                 Step 3: Give Your Trial Tour
             </h1>
@@ -208,7 +228,7 @@
         </div>
 
         <!--Step 4-->
-        <div class="py-10 px-5 sm:px-8 md:px-6 xl:px-10">
+        <div class="py-10 px-5 sm:px-10 md:px-15">
             <h1 class="font-Roboto text-lg sm:text-xl font-bold italic mb-2">
                 Step 4: Interview
             </h1>
@@ -221,13 +241,211 @@
             </p>
         </div>
 
+        <!--Running Banner: Join Guides-->
+        <div class="running-text-container font-[Roboto] font-medium text-[#ECE9E9] mb-5">
+            <!--First Copy-->
+            <ul>
+                <li>
+                    <span class="running-text">JOIN GUIDES&nbsp;</span>
+                </li>
+                <li>
+                    <span class="running-text">JOIN GUIDES&nbsp;</span>
+                </li>
+                <li>
+                    <span class="running-text">JOIN GUIDES&nbsp;</span>
+                </li>
+            </ul>
+            <!--First Copy for seamless animation-->
+            <ul aria-hidden="true">
+                <li>
+                    <span class="running-text">JOIN GUIDES&nbsp;</span>
+                </li>
+                <li>
+                    <span class="running-text">JOIN GUIDES&nbsp;</span>
+                </li>
+                <li>
+                    <span class="running-text">JOIN GUIDES&nbsp;</span>
+                </li>
+            </ul>
+        </div>
+
     </section>
 
     <!--Directions: Being a Guide-->
     <section v-if="beingAGuide">
-        <p>
-            being a guide section
-        </p>
+
+        <!--Running Banner: Being A Guide-->
+        <div class="running-text-container font-[Roboto] font-medium text-[#ECE9E9]">
+            <!--First Copy-->
+            <ul>
+                <li>
+                    <span class="running-text">BEING A GUIDE&nbsp;</span>
+                </li>
+                <li>
+                    <span class="running-text">BEING A GUIDE&nbsp;</span>
+                </li>
+                <li>
+                    <span class="running-text">BEING A GUIDE&nbsp;</span>
+                </li>
+            </ul>
+            <!--First Copy for seamless animation-->
+            <ul aria-hidden="true">
+                <li>
+                    <span class="running-text">BEING A GUIDE&nbsp;</span>
+                </li>
+                <li>
+                    <span class="running-text">BEING A GUIDE&nbsp;</span>
+                </li>
+                <li>
+                    <span class="running-text">BEING A GUIDE&nbsp;</span>
+                </li>
+            </ul>
+        </div>
+
+        <!--What We Do Text-->
+        <div class="px-5 sm:px-10 md:px-15 py-6 flex flex-col lg:flex-row gap-6">
+            <div class="flex flex-col space-y-1 justify-center text-center lg:text-start">
+                <h2 class="font-['Montserrat'] text-2xl sm:text-3xl font-bold text-black">
+                WHAT WE DO
+                </h2>
+                <p class="font-Roboto   text-base sm:text-lg leading-relaxed">
+                Members of the Virginia Guides Service (“Guides”) have the incredible opportunity to serve as keepers of our University's history and to also act as ambassadors of UVA to prospective students and their families. All Guides give historical tours of our University, integrating stories from across our school's 200-year history into a unique and cohesive narrative that speaks to both the Guide and their tourists. Members of Guides give hundreds of tours each semester to prospective and current students, faculty and staff, alumni, community members, and visitors from all across the world!    </p>
+            </div>
+        </div>
+
+        <!--Collage Section-->
+        <div class="px-5 sm:px-10 md:px-15 py-6 flex flex-col">
+            <!--first flex row-->
+            <div class="flex flex-col lg:flex-row gap-x-10">
+
+                <!--flex col-->
+                <div class="flex flex-col w-full lg:w-[60%] gap-x-10 gap-y-5 justify-center items-center">
+                    <!-- Why We Do It Text -->
+                    <div class="flex flex-col w-full space-y-1 text-center lg:text-start">
+                        <h2 class="font-['Montserrat'] text-2xl sm:text-3xl font-bold text-black">
+                            WHY WE DO IT
+                        </h2>
+                        <p class="font-Roboto text-base sm:text-lg leading-relaxed">
+                            Guides come from all around the world, across all the schools at UVA, and from any program of study. 
+                            We are involved in many different groups, organizations, and clubs at the University, but what brings us together 
+                            is our love for giving tours and connecting with others through the history of UVA. Each Guide joins for their own 
+                            reasons—whether it's a passion for storytelling, a desire to welcome 
+                            share history, or simply a love for this University—but together we form a community that is 
+                            meaningful, supportive, and lasting; a community that members love to be a part of. Being a Guide is 
+                            about more than just walking tours; it's about creating a community that reaches far beyond what you might expect.
+                        
+                        </p>
+                    </div>
+                    <!--Img + the honor of representing UVA-->
+                    <div class="flex flex-col lg:flex-row w-[80%] lg:w-full gap-x-5 items-center justify-center p-2 bg-royal-blue text-center lg:text-start">
+                        <div class="flex flex-col w-full lg:w-1/2 justify-center items-center">
+                            <img src="/join-guides-page/beingaguide_mtnview.png" class="object-cover w-full max-w-xs md:max-w-sm lg:max-w-md p-2">
+                        </div>
+                        <!--Text-->
+                        <div class="flex flex-col w-full lg:w-1/2 space-y-1 p-2">
+                            <h2 class="uppercase font-['Montserrat'] text-xl sm:text-2xl font-bold text-white">
+                                The Honor of Representing UVA
+                            </h2>
+                            <p class="font-Roboto text-base sm:text-lg leading-relaxed text-white">
+                                The opportunity to serve as the "face of UVA" to so many visitors leaves an indelible impact on our Guides and to the visitors that they have the privilege of interacting with.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Shreya and Madhin Image -->
+                <div class="flex flex-col w-full lg:w-[40%] justify-center items-center mt-5 lg:mt-0">
+                    <img src="/join-guides-page/beingaguide_shreyamadhin.jpg" class="object-cover w-full max-w-xs md:max-w-sm lg:max-w-md p-2 border-4 border-dotted border-dark-green">
+                </div>
+            </div>
+
+            <!--second flex row-->
+            <div class="flex flex-col lg:flex-row py-10 gap-5">
+                <!--Text-->
+                <div class="flex flex-col w-full lg:w-[35%] space-y-1 items-center justify-center">
+                    <div class="p-5 border-4 border-dark-green text-center lg:text-start">
+                        <h2 class="uppercase italic font-['Montserrat'] text-xl sm:text-2xl font-bold text-black">
+                            Collaboration Across Grounds
+                        </h2>
+                        <p class="font-Roboto text-base sm:text-lg leading-relaxed">
+                            Collaborate with other organizations across Grounds to spread a passion for and understanding of our University's multi-faceted history. For example, we have worked with other organizations and students on Grounds to establish the History of Enslaved African American Laborers (HEAAL) tour for first years to learn about the University’s history.
+                        </p>
+                    </div>
+                </div>
+                <!--Image-->
+                <div class="flex flex-col w-full lg:w-[30%] items-center justify-center">
+                    <img src="/join-guides-page/beingaguide_metthebanner.jpeg" class="object-cover w-full max-w-3xs md:max-w-2xs lg:max-w-xs p-2 bg-dark-green">
+                </div>
+                <!--Text-->
+                <div class="flex flex-col w-full lg:w-[35%] space-y-1 items-center justify-center">
+                    <div class="p-5 border-4 border-dark-green text-center lg:text-start">
+                        <h2 class="uppercase font-['Montserrat'] text-xl sm:text-2xl font-bold text-black">
+                            Exploring HISTORY That Matters To You
+                        </h2>
+                        <p class="font-Roboto text-base sm:text-lg leading-relaxed">
+                            Dive into a topic of history that very specifically speaks to you. Some of our members have chosen to do deeper research and work relating to topics such as the history of women, the history of Asian Americans, LGBTQ+ history, the history of African Americans, and the history of medicine at UVA.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!--third flex row-->
+            <div class="flex flex-col lg:flex-row gap-x-4">
+                <!--Image-->
+                <div class="flex flex-col w-full lg:w-[35%] items-center justify-center mb-5 lg:mb-0">
+                    <img src="/join-guides-page/beingaguide_colonnades.jpg" class="object-cover w-full max-w-xs md:max-w-sm lg:max-w-md p-3 border-4 border-UVA-orange">
+                </div>
+                <!--Text-->
+                <div class="flex flex-col w-full lg:w-[30%] space-y-1 p-5 justify-center bg-UVA-orange text-white text-center lg:text-start">
+                    <h2 class="uppercase font-['Montserrat'] text-xl sm:text-2xl font-bold">
+                        Friendships Beyond Grounds
+                    </h2>
+                    <p class="font-Roboto text-base sm:text-lg leading-relaxed">
+                        Dive into a topic of history that very specifically speaks to you. Some of our members have chosen to do deeper research and work relating to topics such as the history of women, the history of Asian Americans, LGBTQ+ history, the history of African Americans, and the history of medicine at UVA.
+                    </p>
+                </div>
+                <!--Image-->
+                <div class="flex flex-col w-full lg:w-[35%] items-center justify-center mt-5 lg:mt-0">
+                    <img src="/join-guides-page/beingaguide_aboriginalart.jpeg" class="object-cover w-full max-w-xs md:max-w-sm lg:max-w-md p-3 border-4 border-UVA-orange">
+                </div>
+            </div>
+
+            <!--fourth flex row-->
+            <div class="flex flex-col lg:flex-row gap-x-5 mt-10">
+                <!--Image-->
+                <div class="flex flex-col w-full lg:w-1/2 items-center justify-center mb-5 lg:mb-0">
+                    <img src="/join-guides-page/beingaguide_metthepicnic.jpg" class="object-cover w-full max-w-sm md:max-w-md lg:max-w-lg p-2 border-4 border-dotted border-dark-green">
+                </div>
+                <!--Text-->
+                <div class="flex flex-col w-full lg:w-1/2 space-y-1 justify-center text-center lg:text-start">
+                    <div class="p-10 text-white bg-royal-blue">
+                        <h2 class="uppercase font-['Montserrat'] text-xl sm:text-2xl font-bold">
+                            The Colonnades Ball
+                        </h2>
+                        <p class="font-Roboto text-base sm:text-lg leading-relaxed">
+                            Attend the unforgettable Colonnades Ball! Virginia Guides hosts the Colonnades Ball, a formal event for the University and Charlottesville community to raise money to support the community around us. The event is open for anyone to attend, but is a wonderful way for all the Guides to get together and dress up for a good cause.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Running Banner #2-->
+        <div class="running-text-container mb-5 font-[Roboto] font-medium text-[#ECE9E9]">
+            <!--First Copy-->
+            <ul>
+                <li>
+                    <span class="uppercase running-text">Join a community that goes back decades and now eagerly awaits to welcome you too!&nbsp;</span>
+                </li>
+            </ul>
+            <!--First Copy for seamless animation-->
+            <ul aria-hidden="true">
+                <li>
+                    <span class="uppercase running-text">Join a community that goes back decades and now eagerly awaits to welcome you too!&nbsp;</span>
+                </li>
+            </ul>
+        </div>
+
     </section>
 
     <!-- Explore UVA History Section -->
@@ -468,6 +686,7 @@
         joinGuides.value = true;
         beingAGuide.value = false;
     }
+    
 </script>
 
 <style>
@@ -475,8 +694,35 @@
         scroll-behavior: smooth;
         scroll-padding-top: 6rem;
     }
-        /* Carousel for Explore UVA History Section */
-        .carousel-body {
+    .running-text-container {
+        /* margin: 20px; */
+        font-size: 5em;
+        /* padding-block: 8px;
+        border-block: 1px solid; */
+        overflow: hidden;
+        user-select: none;
+
+        --gap: 20px;
+        display: flex;
+        gap: var(--gap);
+    }
+    .running-text-container ul {
+        display: flex;
+        flex-shrink: 0;
+        min-width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        gap: var(--gap);
+        animation: text-scroll 20s linear infinite;
+    }
+
+    @keyframes text-scroll {
+        to {
+            transform: translateX(calc(-100% - var( --gap)));
+        }
+    }
+    /* Carousel for Explore UVA History Section */
+    .carousel-body {
         width: 100%;
         height: var(--height);
         display: grid;
