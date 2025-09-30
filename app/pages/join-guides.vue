@@ -17,82 +17,90 @@
     </header>
 
     <!-- About Guides Info Section -->
-    <section id="about-tours" class="p-6 sm:p-8 md:p-10">
-        <div class="flex flex-col lg:flex-row justify-center items-start max-w-7xl mx-auto gap-10">
-            <!-- Left: Image -->
-            <div class="w-full lg:w-1/2 flex justify-center items-center">
-                <img src="/join-guides-page/rotunda-guides.jpg" alt="Historical Tour Image" class="w-full max-w-lg h-auto shadow-md">
+    <section id="about-tours">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <!--Flex-->
+            <div class="flex justify-center items-center xl:items-start flex-col lg:flex-row gap-x-10">
+                <!-- Left: Image -->
+                <div class="w-full lg:w-1/2 flex justify-center items-center">
+                    <img src="/join-guides-page/rotunda-guides.jpg" alt="Historical Tour Image" class="object-cover w-full max-w-sm md:max-w-md lg:max-w-lg shadow-md">
+                </div>
+
+                <!-- Right: Text -->
+                <div class="w-full lg:w-1/2">
+                    <p class="font-['Playfair_Display'] italic text-center font-medium text-dark-green text-4xl sm:text-5xl leading-tight pt-5 lg:pt-0">
+                        ESTABLISHED 1951
+                    </p>
+                    <p class="font-['Montserrat'] text-center lg:text-start text-base sm:text-lg leading-relaxed text-gray-900 pt-5">
+                        The Virginia Guide Service, founded in 1951, is an entirely student-run and independent organization that is 
+                        dedicated to providing historical tours of the University of Virginia's Academical Village.
+                    </p>
+                    <p class="font-['Montserrat'] text-center lg:text-start text-base sm:text-lg leading-relaxed text-gray-900 pt-5">
+                        Our tour guides are students who are put through a rigorous training semester where they learn the ins and outs of UVA's history 
+                        while practicing crucial tour-giving skills. Trainees receive mentorship from experienced guides, professors, and historical 
+                        organization leaders in the Charlottesville community.
+                    </p>
+                </div>
             </div>
 
-            <!-- Right: Text -->
-            <div class="w-full lg:w-1/2 px-5 lg:px-0">
-                <p class="font-['Playfair_Display'] italic text-center font-medium text-dark-green text-4xl sm:text-5xl leading-tight mb-6">
-                    ESTABLISHED 1951
-                </p>
-                <p class="font-['Montserrat'] text-base sm:text-lg leading-relaxed text-gray-900">
-                    The Virginia Guide Service, founded in 1951, is an entirely student-run and independent organization that is 
-                    dedicated to providing historical tours of the University of Virginia's Academical Village.
-                    <br /><br />
-                    Our tour guides are students who are put through a rigorous training semester where they learn the ins and outs of UVA's history 
-                    while practicing crucial tour-giving skills. Trainees receive mentorship from experienced guides, professors, and historical 
-                    organization leaders in the Charlottesville community.
-                </p>
-            </div>
+            <!--Volunteer Statement-->
+            <p class="font-['Montserrat'] text-base sm:text-lg leading-relaxed text-dark-green text-center pt-5 lg:pt-10">
+                The Guide Service is independent and volunteer-based, which gives each guide the opportunity to craft their own tour. 
+                Students are encouraged to follow their passion and engage deeply with history. If you would like to provide additional support, please consider 
+                donating to our day-to-day operations 
+                <a href="/donate" class="underline p-0 m-0">
+                    here.
+                </a> We appreciate your time and thank you for continuing to support our mission
+            </p>
         </div>
-        <div class="max-w-7xl mx-auto pt-10 sm:pt-12 md:pt-15">
-                <p class="font-['Montserrat'] text-base sm:text-lg leading-relaxed text-dark-green">
-                    The Guide Service is independent and volunteer-based, which gives each guide the opportunity to craft their own tour. 
-                    Students are encouraged to follow their passion and engage deeply with history. If you would like to provide additional support, please consider 
-                    donating to our day-to-day operations 
-                    <a href="/donate" class="underline p-0 m-0">
-                        here.
-                    </a> We appreciate your time and thank you for continuing to support our mission
-                </p>
-            </div>
     </section>
 
     <!-- Overlapping Section With Buttons for Navigations-->
-    <section class="relative z-20 p-5 sm:p-8 md:p-6">
-        <!-- Blue Line in Background -->
-        <div class="absolute top-1/2 left-0 w-full h-1 bg-royal-blue -z-10"></div>
+    <section class="relative">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <!-- Blue Line in Background -->
+            <div class="absolute top-1/2 left-0 w-full h-1 bg-royal-blue -z-10"></div>
 
-        <div class="shadow-lg rounded-xl max-w-lg mx-auto text-center bg-white border-royal-blue border-4 relative">
-
-            <div class="flex flex-col sm:flex-row items-center">
-                <!--Join Guides Button-->
-                <div :class="['w-1/2 p-6 transition-all duration-300', joinGuides ? 'bg-royal-blue' : '']">
-                    <button 
-                        @click="toggleJoinGuides"
-                        :class="[
-                            'px-6 py-2 font-semibold text-lg transition-hover duration-100',
-                            joinGuides 
-                                ? 'text-white scale-105' 
-                                : 'text-royal-blue hover:scale-105 hover:[text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)] hover:cursor-pointer'
-                        ]"
-                    >
-                        Join Guides
-                    </button>
-                </div>
-                <!--Being a Guide Button-->
-                <div :class="['w-1/2 p-6 transition-all duration-300', beingAGuide ? 'bg-royal-blue' : '']">
-                    <button 
-                        @click="toggleBeingAGuide"
-                        :class="[
-                            'px-6 py-2 font-semibold text-lg ransition-hover duration-100',
-                            beingAGuide 
-                                ? 'text-white scale-105' 
-                                : 'text-royal-blue hover:[text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)] hover:scale-105 hover:cursor-pointer'
-                        ]"
-                    >
-                        Being a Guide
-                    </button>
+            <!-- Join/Being Buttons -->
+            <div class="shadow-lg rounded-xl max-w-lg mx-auto text-center bg-white border-royal-blue border-4 relative">
+                <div class="flex flex-col sm:flex-row items-center">
+                    <!--Join Guides Button-->
+                    <div :class="['w-1/2 p-6 transition-all duration-300', joinGuides ? 'bg-royal-blue' : '']">
+                        <button 
+                            @click="toggleJoinGuides"
+                            :class="[
+                                'px-6 py-2 font-semibold text-lg transition-hover duration-100',
+                                joinGuides 
+                                    ? 'text-white scale-105' 
+                                    : 'text-royal-blue hover:scale-105 hover:[text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)] hover:cursor-pointer'
+                            ]"
+                        >
+                            Join Guides
+                        </button>
+                    </div>
+                    <!--Being a Guide Button-->
+                    <div :class="['w-1/2 p-6 transition-all duration-300', beingAGuide ? 'bg-royal-blue' : '']">
+                        <button 
+                            @click="toggleBeingAGuide"
+                            :class="[
+                                'px-6 py-2 font-semibold text-lg ransition-hover duration-100',
+                                beingAGuide 
+                                    ? 'text-white scale-105' 
+                                    : 'text-royal-blue hover:[text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)] hover:scale-105 hover:cursor-pointer'
+                            ]"
+                        >
+                            Being a Guide
+                        </button>
+                    </div>
                 </div>
             </div>
+
         </div>
     </section>
 
     <!--Directions: Join Guides-->
     <section id="join-guides" v-if="joinGuides">
+
         <!--Running Banner: Join Guides-->
         <div class="running-text-container font-[Roboto] font-medium text-[#ECE9E9]">
             <!--First Copy-->
@@ -121,67 +129,69 @@
             </ul>
         </div>
 
-        <!--Step 1-->
-        <div class="pt-5 px-5 sm:px-10 md:px-15">
-            <h1 class="font-Roboto text-lg sm:text-xl font-bold italic mb-2">
-                Step 1: Attend an Info Session and Learn About the Virginia Guides Service
-            </h1>
-            <p class="font-Roboto font-light text-base sm:text-lg mb-2">
-                Guides accepts new members at the beginning of each semester. These probationary members, known as “probies," 
-                spend a semester being trained by their Guides Probationary Chairs (fellow students and current Guides) and learning 
-                from older guides to prepare to give tours. Students trying out for Guides must be in their first, second, or third year, 
-                and should be able to commit to attending weekly Probie Class - a crash course in UVA history led by your Probie Chair - 
-                for three hours each Thursday night during their Probie Semester.
-            </p>
-            <p class="font-Roboto font-light text-base sm:text-lg">
-                As the recruitment season begins, follow us on Instagram to keep up to date throughout the recruitment process! Our instagram
-                 will also give you a closer look at the regular happenings of the Virginia Guides Service-make sure to check out our student 
-                 spotlights and takeovers, which let you hear from current Guides about their experiences in the organization!
-            </p>
-        </div>
-
-        <!--Info Sessions and Step 2-->
-        <div class="px-5 sm:px-10 md:px-15 flex flex-col lg:flex-row">
-            <div class="w-full lg:w-[60%]">
-                <br />
-                <p class="font-Roboto font-light text-base sm:text-lg italic mb-2">
-                    <span class="font-bold">
-                        Info Sessions:
-                    </span>
-                    We ask that you attend an information session to learn more about the Virginia Guides Service and 
-                    speak to current Guides. Attending information and Q&A sessions will help you learn about the try-out process, get tips from current guides, 
-                    and learn more about what is expected of UGS members. Information sessions are mandatory and a great way to get your questions 
-                    answered and better understand what makes UGS so great! Our general sessions this semester are:
-                </p>
-                <p class="font-Roboto text-UVA-orange font-bold text-base sm:text-lg italic">
-                    The Rotunda Multipurpose Room is located in the hallway underneath the Rotunda Lawn-side before you enter the building itself.
-                </p>
-                <h1 class="font-Roboto text-lg sm:text-xl font-bold italic mb-2 pt-10">
-                    Step 2: Prepare to Try Out
+        <!--Step 1 and 2 Container-->
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <!--Step 1-->
+            <div class="text-center sm:text-start">
+                <h1 class="font-Roboto text-lg sm:text-xl font-bold italic pb-2">
+                    Step 1: Attend an Info Session and Learn About the Virginia Guides Service
                 </h1>
-                <p class="font-Roboto font-light text-base sm:text-lg mb-2">
-                    For our Fall 2024 recruitment season, you will give a 15 minute historical “trial tour” of the Lawn area to two current Guides 
-                    (who will act as your "tourists"). The trial tour is meant to see how well you can craft an organized and meaningful tour, 
-                    as well as to assess your public speaking abilities.
+                <p class="font-Roboto font-light text-base sm:text-lg pb-2">
+                    Guides accepts new members at the beginning of each semester. These probationary members, known as “probies," 
+                    spend a semester being trained by their Guides Probationary Chairs (fellow students and current Guides) and learning 
+                    from older guides to prepare to give tours. Students trying out for Guides must be in their first, second, or third year, 
+                    and should be able to commit to attending weekly Probie Class - a crash course in UVA history led by your Probie Chair - 
+                    for three hours each Thursday night during their Probie Semester.
                 </p>
                 <p class="font-Roboto font-light text-base sm:text-lg">
-                    You will be able to sign up for a time slot between February 3rd through the 7th for your trial tour at one of our 
-                    info sessions (which is why it is important to attend a session)! Other sign-up opportunities may be offered, 
-                    and will be announced via Instagram. If you can't make it to the sign-up times, or need to cancel or reschedule 
-                    your trial tour for any reason, you can reach out to our Recruitment Co-Chairs to see what slots are available.
+                    As the recruitment season begins, follow us on Instagram to keep up to date throughout the recruitment process! Our instagram
+                    will also give you a closer look at the regular happenings of the Virginia Guides Service-make sure to check out our student 
+                    spotlights and takeovers, which let you hear from current Guides about their experiences in the organization!
                 </p>
             </div>
-            <!-- Image with Subheader -->
-            <div class="w-full lg:w-[40%] flex flex-col mt-5 justify-center items-center">
-                <img 
-                    src="/join-guides-page/join guides placeholder.jpeg"
-                    class="object-cover max-w-xs"
-                >
+
+            <!--Info Sessions and Step 2-->
+            <div class="flex flex-col lg:flex-row">
+                <div class="w-full lg:w-[70%] text-center sm:text-start">
+                    <p class="font-Roboto font-light text-base sm:text-lg italic pt-5 pb-2">
+                        <span class="font-bold">
+                            Info Sessions:
+                        </span>
+                        We ask that you attend an information session to learn more about the Virginia Guides Service and 
+                        speak to current Guides. Attending information and Q&A sessions will help you learn about the try-out process, get tips from current guides, 
+                        and learn more about what is expected of UGS members. Information sessions are mandatory and a great way to get your questions 
+                        answered and better understand what makes UGS so great! Our general sessions this semester are:
+                    </p>
+                    <p class="font-Roboto text-UVA-orange font-bold text-base sm:text-lg italic">
+                        The Rotunda Multipurpose Room is located in the hallway underneath the Rotunda Lawn-side before you enter the building itself.
+                    </p>
+                    <h1 class="font-Roboto text-lg sm:text-xl font-bold italic mb-2 pt-5">
+                        Step 2: Prepare to Try Out
+                    </h1>
+                    <p class="font-Roboto font-light text-base sm:text-lg pb-2">
+                        For our Fall 2024 recruitment season, you will give a 15 minute historical “trial tour” of the Lawn area to two current Guides 
+                        (who will act as your "tourists"). The trial tour is meant to see how well you can craft an organized and meaningful tour, 
+                        as well as to assess your public speaking abilities.
+                    </p>
+                    <p class="font-Roboto font-light text-base sm:text-lg">
+                        You will be able to sign up for a time slot between February 3rd through the 7th for your trial tour at one of our 
+                        info sessions (which is why it is important to attend a session)! Other sign-up opportunities may be offered, 
+                        and will be announced via Instagram. If you can't make it to the sign-up times, or need to cancel or reschedule 
+                        your trial tour for any reason, you can reach out to our Recruitment Co-Chairs to see what slots are available.
+                    </p>
+                </div>
+                <!-- Image with Subheader -->
+                <div class="w-full lg:w-[30%] flex flex-col pt-5 lg:pt-0 justify-center items-center lg:items-end">
+                    <img 
+                        src="/join-guides-page/join guides placeholder.jpeg"
+                        class="object-cover w-full max-w-3xs md:max-w-2xs lg:max-w-xs"
+                    >
+                </div>
             </div>
         </div>
 
         <!--Banner-->
-        <section class="pt-12">
+        <div>
             <div class="w-full bg-dark-green text-center py-6 px-10 lg:px-20 flex justify-center items-center">
                 <p class="font-Roboto text-white text-center text-base sm:text-lg md:text-md">
                     To begin writing, we encourage you to refer to this 
@@ -201,45 +211,48 @@
                     meaning that you can truly ask them anything - they're here to make sure you have the best possible experience trying out.
                 </p>
             </div>
-        </section>
-
-        <!--Step 3-->
-        <div class="pt-12 px-5 sm:px-10 md:px-15">
-            <h1 class="font-Roboto text-lg sm:text-xl font-bold italic mb-2">
-                Step 3: Give Your Trial Tour
-            </h1>
-            <p class="font-Roboto font-light text-base sm:text-lg mb-2">
-                Before your trial tour, you will receive an email with the Lawn room number where your “tourists” will meet you for your trial tour. 
-                Please plan to arrive ten minutes early to help the process run smoothly.
-            </p>
-            <p class="font-Roboto font-light text-base sm:text-lg mb-2">
-                We completely understand that giving a trial tour can be very nerve wracking, but we highly encourage you to just go ahead and do it! Your “tourists” 
-                are your biggest supporters and would love to see you do an incredible job. If you're feeling nervous, we strongly recommend reaching out to 
-                the Recruitment Co-Chairs who would be happy to help you with any concerns you may have.
-            </p>
-            <p class="font-Roboto font-light text-base sm:text-lg">
-                Once you arrive, there will be a current Guide there to answer any last minute questions you may have and help you with what you may need then. Feel free to 
-                leave your belongings in this room and they will be happy to watch over your items. Your “tourists” will meet you at the room and they will provide 
-                some starting information. You can then walk with them to the starting location that you have selected for your tour before your time for the tour starts.
-            </p>
         </div>
 
-        <!--Step 4-->
-        <div class="py-10 px-5 sm:px-10 md:px-15">
-            <h1 class="font-Roboto text-lg sm:text-xl font-bold italic mb-2">
-                Step 4: Interview
-            </h1>
-            <p class="font-Roboto font-light text-base sm:text-lg">
-                At the end of your trial tour, your “tourists” will tell you when and where the list of students selected to receive an interview will be posted.
-                 The interview will be the week following trial tours, and is conducted by a panel of current guides who will assess your diplomacy and ability 
-                 to improvise in response to tough tour questions. It's also a chance for you to share with us what sets you apart and would make you an excellent 
-                 member of Guides. More information on the interview stage of the process is provided after trial tours have concluded. After the interview process, 
-                 we will welcome new probationary members for the amazing semester ahead!
-            </p>
-        </div>
+        <!--Step 3 and 4 Container-->
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <!--Step 3-->
+            <div class="text-center sm:text-start">
+                <h1 class="font-Roboto text-lg sm:text-xl font-bold italic pb-2">
+                    Step 3: Give Your Trial Tour
+                </h1>
+                <p class="font-Roboto font-light text-base sm:text-lg pb-2">
+                    Before your trial tour, you will receive an email with the Lawn room number where your “tourists” will meet you for your trial tour. 
+                    Please plan to arrive ten minutes early to help the process run smoothly.
+                </p>
+                <p class="font-Roboto font-light text-base sm:text-lg pb-2">
+                    We completely understand that giving a trial tour can be very nerve wracking, but we highly encourage you to just go ahead and do it! Your “tourists” 
+                    are your biggest supporters and would love to see you do an incredible job. If you're feeling nervous, we strongly recommend reaching out to 
+                    the Recruitment Co-Chairs who would be happy to help you with any concerns you may have.
+                </p>
+                <p class="font-Roboto font-light text-base sm:text-lg">
+                    Once you arrive, there will be a current Guide there to answer any last minute questions you may have and help you with what you may need then. Feel free to 
+                    leave your belongings in this room and they will be happy to watch over your items. Your “tourists” will meet you at the room and they will provide 
+                    some starting information. You can then walk with them to the starting location that you have selected for your tour before your time for the tour starts.
+                </p>
+            </div>
 
+            <!--Step 4-->
+            <div class="text-center sm:text-start">
+                <h1 class="font-Roboto text-lg sm:text-xl font-bold italic mb-2 pt-5">
+                    Step 4: Interview
+                </h1>
+                <p class="font-Roboto font-light text-base sm:text-lg">
+                    At the end of your trial tour, your “tourists” will tell you when and where the list of students selected to receive an interview will be posted.
+                    The interview will be the week following trial tours, and is conducted by a panel of current guides who will assess your diplomacy and ability 
+                    to improvise in response to tough tour questions. It's also a chance for you to share with us what sets you apart and would make you an excellent 
+                    member of Guides. More information on the interview stage of the process is provided after trial tours have concluded. After the interview process, 
+                    we will welcome new probationary members for the amazing semester ahead!
+                </p>
+            </div>
+        </div>
+    
         <!--Running Banner: Join Guides-->
-        <div class="running-text-container font-[Roboto] font-medium text-[#ECE9E9] mb-5">
+        <div class="running-text-container font-[Roboto] font-medium text-[#ECE9E9] pb-12">
             <!--First Copy-->
             <ul>
                 <li>
@@ -299,136 +312,140 @@
             </ul>
         </div>
 
-        <!--What We Do Text-->
-        <div class="px-5 sm:px-10 md:px-15 py-6 flex flex-col lg:flex-row gap-6">
-            <div class="flex flex-col space-y-1 justify-center text-center lg:text-start">
-                <h2 class="font-['Montserrat'] text-2xl sm:text-3xl font-bold text-black">
-                WHAT WE DO
-                </h2>
-                <p class="font-Roboto   text-base sm:text-lg leading-relaxed">
-                Members of the Virginia Guides Service (“Guides”) have the incredible opportunity to serve as keepers of our University's history and to also act as ambassadors of UVA to prospective students and their families. All Guides give historical tours of our University, integrating stories from across our school's 200-year history into a unique and cohesive narrative that speaks to both the Guide and their tourists. Members of Guides give hundreds of tours each semester to prospective and current students, faculty and staff, alumni, community members, and visitors from all across the world!    </p>
+        <!--Container-->
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <!--What We Do Text-->
+            <div class="flex flex-col lg:flex-row gap-6 pb-5">
+                <div class="flex flex-col space-y-1 justify-center text-center lg:text-start">
+                    <h2 class="font-['Montserrat'] text-2xl sm:text-3xl font-bold text-black">
+                    WHAT WE DO
+                    </h2>
+                    <p class="font-Roboto text-base sm:text-lg leading-relaxed">
+                    Members of the Virginia Guides Service (“Guides”) have the incredible opportunity to serve as keepers of our University's history and to also act as ambassadors of UVA to prospective students and their families. All Guides give historical tours of our University, integrating stories from across our school's 200-year history into a unique and cohesive narrative that speaks to both the Guide and their tourists. Members of Guides give hundreds of tours each semester to prospective and current students, faculty and staff, alumni, community members, and visitors from all across the world!    </p>
+                </div>
             </div>
-        </div>
 
-        <!--Collage Section-->
-        <div class="px-5 sm:px-10 md:px-15 py-6 flex flex-col">
-            <!--first flex row-->
-            <div class="flex flex-col lg:flex-row gap-x-10">
+            <!--Collage Section-->
+            <div>
+                <!--first flex row-->
+                <div class="flex flex-col lg:flex-row gap-x-10">
 
-                <!--flex col-->
-                <div class="flex flex-col w-full lg:w-[60%] gap-x-10 gap-y-5 justify-center items-center">
-                    <!-- Why We Do It Text -->
-                    <div class="flex flex-col w-full space-y-1 text-center lg:text-start">
-                        <h2 class="font-['Montserrat'] text-2xl sm:text-3xl font-bold text-black">
-                            WHY WE DO IT
-                        </h2>
-                        <p class="font-Roboto text-base sm:text-lg leading-relaxed">
-                            Guides come from all around the world, across all the schools at UVA, and from any program of study. 
-                            We are involved in many different groups, organizations, and clubs at the University, but what brings us together 
-                            is our love for giving tours and connecting with others through the history of UVA. Each Guide joins for their own 
-                            reasons—whether it's a passion for storytelling, a desire to welcome 
-                            share history, or simply a love for this University—but together we form a community that is 
-                            meaningful, supportive, and lasting; a community that members love to be a part of. Being a Guide is 
-                            about more than just walking tours; it's about creating a community that reaches far beyond what you might expect.
-                        
-                        </p>
-                    </div>
-                    <!--Img + the honor of representing UVA-->
-                    <div class="flex flex-col lg:flex-row w-[80%] lg:w-full gap-x-5 items-center justify-center p-2 bg-royal-blue text-center lg:text-start">
-                        <div class="flex flex-col w-full lg:w-1/2 justify-center items-center">
-                            <img src="/join-guides-page/beingaguide_mtnview.png" class="object-cover w-full max-w-xs md:max-w-sm lg:max-w-md p-2">
-                        </div>
-                        <!--Text-->
-                        <div class="flex flex-col w-full lg:w-1/2 space-y-1 p-2">
-                            <h2 class="uppercase font-['Montserrat'] text-xl sm:text-2xl font-bold text-white">
-                                The Honor of Representing UVA
+                    <!--flex col-->
+                    <div class="flex flex-col w-full lg:w-[60%] gap-x-10 gap-y-5 justify-center items-center">
+                        <!-- Why We Do It Text -->
+                        <div class="flex flex-col w-full space-y-1 text-center lg:text-start">
+                            <h2 class="font-['Montserrat'] text-2xl sm:text-3xl font-bold text-black">
+                                WHY WE DO IT
                             </h2>
-                            <p class="font-Roboto text-base sm:text-lg leading-relaxed text-white">
-                                The opportunity to serve as the "face of UVA" to so many visitors leaves an indelible impact on our Guides and to the visitors that they have the privilege of interacting with.
+                            <p class="font-Roboto text-base sm:text-lg leading-relaxed">
+                                Guides come from all around the world, across all the schools at UVA, and from any program of study. 
+                                We are involved in many different groups, organizations, and clubs at the University, but what brings us together 
+                                is our love for giving tours and connecting with others through the history of UVA. Each Guide joins for their own 
+                                reasons—whether it's a passion for storytelling, a desire to welcome 
+                                share history, or simply a love for this University—but together we form a community that is 
+                                meaningful, supportive, and lasting; a community that members love to be a part of. Being a Guide is 
+                                about more than just walking tours; it's about creating a community that reaches far beyond what you might expect.
+                            
+                            </p>
+                        </div>
+                        <!--Img + the honor of representing UVA-->
+                        <div class="flex flex-col lg:flex-row w-[80%] lg:w-full gap-x-5 items-center justify-center p-2 bg-royal-blue text-center lg:text-start">
+                            <div class="flex flex-col w-full lg:w-1/2 justify-center items-center">
+                                <img src="/join-guides-page/beingaguide_mtnview.png" class="object-cover w-full max-w-xs md:max-w-sm lg:max-w-md p-2">
+                            </div>
+                            <!--Text-->
+                            <div class="flex flex-col w-full lg:w-1/2 space-y-1 p-2">
+                                <h2 class="uppercase font-['Montserrat'] text-xl sm:text-2xl font-bold text-white">
+                                    The Honor of Representing UVA
+                                </h2>
+                                <p class="font-Roboto text-base sm:text-lg leading-relaxed text-white">
+                                    The opportunity to serve as the "face of UVA" to so many visitors leaves an indelible impact on our Guides and to the visitors that they have the privilege of interacting with.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Shreya and Madhin Image -->
+                    <div class="flex flex-col w-full lg:w-[40%] justify-center items-center pt-5 lg:pt-0">
+                        <img src="/join-guides-page/beingaguide_shreyamadhin.jpg" class="object-cover w-full max-w-xs md:max-w-sm lg:max-w-md p-2 border-4 border-dotted border-dark-green">
+                    </div>
+                </div>
+
+                <!--second flex row-->
+                <div class="flex flex-col lg:flex-row py-5 gap-5">
+                    <!--Text-->
+                    <div class="flex flex-col w-full lg:w-[35%] space-y-1 items-center justify-center">
+                        <div class="p-5 border-4 border-dark-green text-center lg:text-start">
+                            <h2 class="uppercase font-['Montserrat'] text-xl sm:text-2xl font-bold text-black">
+                                Collaboration Across Grounds
+                            </h2>
+                            <p class="font-Roboto text-base sm:text-lg leading-relaxed">
+                                Collaborate with other organizations across Grounds to spread a passion for and understanding of our University's multi-faceted history. For example, we have worked with other organizations and students on Grounds to establish the History of Enslaved African American Laborers (HEAAL) tour for first years to learn about the University’s history.
+                            </p>
+                        </div>
+                    </div>
+                    <!--Image-->
+                    <div class="flex flex-col w-full lg:w-[30%] items-center justify-center">
+                        <img src="/join-guides-page/beingaguide_metthebanner.jpeg" class="object-cover w-full max-w-3xs md:max-w-2xs lg:max-w-xs p-2 bg-dark-green">
+                    </div>
+                    <!--Text-->
+                    <div class="flex flex-col w-full lg:w-[35%] space-y-1 items-center justify-center">
+                        <div class="p-5 border-4 border-dark-green text-center lg:text-start">
+                            <h2 class="uppercase font-['Montserrat'] text-xl sm:text-2xl font-bold text-black">
+                                Exploring HISTORY That Matters To You
+                            </h2>
+                            <p class="font-Roboto text-base sm:text-lg leading-relaxed">
+                                Dive into a topic of history that very specifically speaks to you. Some of our members have chosen to do deeper research and work relating to topics such as the history of women, the history of Asian Americans, LGBTQ+ history, the history of African Americans, and the history of medicine at UVA.
                             </p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Shreya and Madhin Image -->
-                <div class="flex flex-col w-full lg:w-[40%] justify-center items-center mt-5 lg:mt-0">
-                    <img src="/join-guides-page/beingaguide_shreyamadhin.jpg" class="object-cover w-full max-w-xs md:max-w-sm lg:max-w-md p-2 border-4 border-dotted border-dark-green">
-                </div>
-            </div>
-
-            <!--second flex row-->
-            <div class="flex flex-col lg:flex-row py-10 gap-5">
-                <!--Text-->
-                <div class="flex flex-col w-full lg:w-[35%] space-y-1 items-center justify-center">
-                    <div class="p-5 border-4 border-dark-green text-center lg:text-start">
-                        <h2 class="uppercase italic font-['Montserrat'] text-xl sm:text-2xl font-bold text-black">
-                            Collaboration Across Grounds
-                        </h2>
-                        <p class="font-Roboto text-base sm:text-lg leading-relaxed">
-                            Collaborate with other organizations across Grounds to spread a passion for and understanding of our University's multi-faceted history. For example, we have worked with other organizations and students on Grounds to establish the History of Enslaved African American Laborers (HEAAL) tour for first years to learn about the University’s history.
-                        </p>
+                <!--third flex row-->
+                <div class="flex flex-col lg:flex-row gap-5">
+                    <!--Image-->
+                    <div class="flex flex-col w-full lg:w-1/2 items-center justify-center">
+                        <img src="/join-guides-page/beingaguide_metthepicnic.jpg" class="object-cover w-full max-w-sm md:max-w-md lg:max-w-lg p-2 border-4 border-dotted border-dark-green">
+                    </div>
+                    <!--Text-->
+                    <div class="flex flex-col w-full lg:w-1/2 space-y-1 justify-center text-center lg:text-start">
+                        <div class="p-10 text-white bg-royal-blue">
+                            <h2 class="uppercase font-['Montserrat'] text-xl sm:text-2xl font-bold">
+                                The Colonnades Ball
+                            </h2>
+                            <p class="font-Roboto text-base sm:text-lg leading-relaxed">
+                                Attend the unforgettable Colonnades Ball! Virginia Guides hosts the Colonnades Ball, a formal event for the University and Charlottesville community to raise money to support the community around us. The event is open for anyone to attend, but is a wonderful way for all the Guides to get together and dress up for a good cause.
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <!--Image-->
-                <div class="flex flex-col w-full lg:w-[30%] items-center justify-center">
-                    <img src="/join-guides-page/beingaguide_metthebanner.jpeg" class="object-cover w-full max-w-3xs md:max-w-2xs lg:max-w-xs p-2 bg-dark-green">
-                </div>
-                <!--Text-->
-                <div class="flex flex-col w-full lg:w-[35%] space-y-1 items-center justify-center">
-                    <div class="p-5 border-4 border-dark-green text-center lg:text-start">
-                        <h2 class="uppercase font-['Montserrat'] text-xl sm:text-2xl font-bold text-black">
-                            Exploring HISTORY That Matters To You
+
+                <!--fourth flex row-->
+                <div class="flex flex-col lg:flex-row gap-x-5 pt-5">
+                    <!--Image-->
+                    <div class="flex flex-col w-full lg:w-[35%] items-center justify-center mb-5 lg:mb-0">
+                        <img src="/join-guides-page/beingaguide_colonnades.jpg" class="object-cover w-full max-w-xs md:max-w-sm lg:max-w-md p-3 border-4 border-UVA-orange">
+                    </div>
+                    <!--Text-->
+                    <div class="flex flex-col w-full lg:w-[30%] space-y-1 p-5 justify-center bg-UVA-orange text-white text-center lg:text-start">
+                        <h2 class="uppercase font-['Montserrat'] text-xl sm:text-2xl font-bold">
+                            Friendships Beyond Grounds
                         </h2>
                         <p class="font-Roboto text-base sm:text-lg leading-relaxed">
                             Dive into a topic of history that very specifically speaks to you. Some of our members have chosen to do deeper research and work relating to topics such as the history of women, the history of Asian Americans, LGBTQ+ history, the history of African Americans, and the history of medicine at UVA.
                         </p>
                     </div>
-                </div>
-            </div>
-
-            <!--third flex row-->
-            <div class="flex flex-col lg:flex-row gap-x-4">
-                <!--Image-->
-                <div class="flex flex-col w-full lg:w-[35%] items-center justify-center mb-5 lg:mb-0">
-                    <img src="/join-guides-page/beingaguide_colonnades.jpg" class="object-cover w-full max-w-xs md:max-w-sm lg:max-w-md p-3 border-4 border-UVA-orange">
-                </div>
-                <!--Text-->
-                <div class="flex flex-col w-full lg:w-[30%] space-y-1 p-5 justify-center bg-UVA-orange text-white text-center lg:text-start">
-                    <h2 class="uppercase font-['Montserrat'] text-xl sm:text-2xl font-bold">
-                        Friendships Beyond Grounds
-                    </h2>
-                    <p class="font-Roboto text-base sm:text-lg leading-relaxed">
-                        Dive into a topic of history that very specifically speaks to you. Some of our members have chosen to do deeper research and work relating to topics such as the history of women, the history of Asian Americans, LGBTQ+ history, the history of African Americans, and the history of medicine at UVA.
-                    </p>
-                </div>
-                <!--Image-->
-                <div class="flex flex-col w-full lg:w-[35%] items-center justify-center mt-5 lg:mt-0">
-                    <img src="/join-guides-page/beingaguide_aboriginalart.jpeg" class="object-cover w-full max-w-xs md:max-w-sm lg:max-w-md p-3 border-4 border-UVA-orange">
-                </div>
-            </div>
-
-            <!--fourth flex row-->
-            <div class="flex flex-col lg:flex-row gap-x-5 mt-10">
-                <!--Image-->
-                <div class="flex flex-col w-full lg:w-1/2 items-center justify-center mb-5 lg:mb-0">
-                    <img src="/join-guides-page/beingaguide_metthepicnic.jpg" class="object-cover w-full max-w-sm md:max-w-md lg:max-w-lg p-2 border-4 border-dotted border-dark-green">
-                </div>
-                <!--Text-->
-                <div class="flex flex-col w-full lg:w-1/2 space-y-1 justify-center text-center lg:text-start">
-                    <div class="p-10 text-white bg-royal-blue">
-                        <h2 class="uppercase font-['Montserrat'] text-xl sm:text-2xl font-bold">
-                            The Colonnades Ball
-                        </h2>
-                        <p class="font-Roboto text-base sm:text-lg leading-relaxed">
-                            Attend the unforgettable Colonnades Ball! Virginia Guides hosts the Colonnades Ball, a formal event for the University and Charlottesville community to raise money to support the community around us. The event is open for anyone to attend, but is a wonderful way for all the Guides to get together and dress up for a good cause.
-                        </p>
+                    <!--Image-->
+                    <div class="flex flex-col w-full lg:w-[35%] items-center justify-center mt-5 lg:mt-0">
+                        <img src="/join-guides-page/beingaguide_aboriginalart.jpeg" class="object-cover w-full max-w-xs md:max-w-sm lg:max-w-md p-3 border-4 border-UVA-orange">
                     </div>
                 </div>
+
             </div>
         </div>
 
         <!--Running Banner #2-->
-        <div class="running-text-container mb-5 font-[Roboto] font-medium text-[#ECE9E9]">
+        <div class="running-text-container font-[Roboto] font-medium text-[#ECE9E9] pb-12">
             <!--First Copy-->
             <ul>
                 <li>
