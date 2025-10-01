@@ -2,7 +2,7 @@
     <!--Header Section-->
     <header class="relative overflow-visible h-[110vh] w-full bg-[url('/Header_FrontPage.png')] bg-cover bg-center md:bg-left sm:bg-center" aria-label="Virginia Guides Hero Section">
         <div class="absolute top-[45%] left-1/2 w-full max-w-7xl px-4 -translate-x-1/2 -translate-y-1/2 text-white text-center">
-            <h1 class="font-['Playfair_Display'] text-center xl:text-right italic whitespace-nowrap text-[clamp(3rem,9.5vw,6rem)] leading-tight [text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)]">
+            <h1 class="font-['Playfair_Display'] text-center xl:text-right italic text-[clamp(2.5rem,9.5vw,6rem)] leading-tight [text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)]">
                 VIRGINIA GUIDES
             </h1>
             <p class="font-Roboto text-center xl:text-right text-sm sm:text-lg md:text-md font-semibold leading-snug [text-shadow:_3px_3px_6px_rgb(0_0_0_/_0.70)]">
@@ -12,7 +12,7 @@
                 <a href="/your-visit">
                     <button class="font-Roboto mt-15 xl:mt-10 px-6 py-2 text-lg md:px-8 md:py-3 md:text-2xl text-white hover:text-black bg-[rgba(0,0,0,0.45)] hover:bg-neutral-300 border hover:border-neutral-300 rounded-full cursor-pointer transition-all duration-300 ease-in-out"
                     aria-label="Explore Virginia Guides">
-                        Plan Your Visit
+                        Take a Tour
                     </button>   
                 </a>
             </div>
@@ -28,26 +28,26 @@
 
     <!-- More Tour Info Section -->
     <section class="bg-white">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-            <div class="flex flex-col md:flex-row items-center gap-10">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-12">
+            <div class="flex flex-col md:flex-row items-center gap-10 max-w-7xl mx-auto">
             
                 <!-- Left: Text -->
                 <div class="w-full md:w-3/5">
-                    <p class="font-['Playfair_Display'] italic font-bold text-dark-green text-4xl sm:text-5xl leading-tight mb-6">
+                    <p class="font-['Playfair_Display'] italic font-bold text-dark-green text-4xl sm:text-5xl leading-tight pb-6">
                         Where The Past Stands<br />
                         And More Is Told.
                     </p>
                     <p class="font-['Montserrat'] text-base sm:text-lg leading-relaxed text-gray-900">
                         The American promise rests on the idea that all are created equal, and every story has a place in that legacy. 
                         Many who have shaped this University had long gone unrecognized. As we learn more, 
-                        <span class="text-dark-green font-semibold italic">our tours evolve — not to change the past, but to share more of it.</span>
+                        <span class="text-dark-green italic">our tours evolve — not to change the past, but to share more of it.</span>
                         <br /><br />
                         Jefferson's Academical Village is more than its founding. From the history of enslavement to 
                         liberation, desegregation to coeducation, it shapes and reflects the American story, recognized by UNESCO for this role, 
                         and is made richer as we share more.
                         <br /><br />
                         <span class="font-medium italic">With this mission, </span>
-                        <span class="italic underline">all tours are offered free of charge.</span>
+                        <span class="font-['Montserrat'] italic underline text-dark-green">all tours are offered free of charge.</span>
                     </p>
                 </div>
 
@@ -63,23 +63,22 @@
                             loading="lazy"
                         />
 
-<!-- Overlay: Tour Times with Clock Icon + Subtitle -->
-<div class="absolute top-[116px] left-6 text-left flex items-start gap-2 w-auto sm:w-72 md:w-80 lg:w-auto">
-    <!-- Clock Icon -->
-    <svg viewBox="0 0 24 24" fill="none" class="w-7 h-7 mt-1 shrink-0" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 7V12L14.5 13.5M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" 
-              stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
+                        <!-- Overlay: Tour Times with Clock Icon + Subtitle -->
+                        <div class="absolute top-[116px] left-6 text-left flex items-start gap-2 w-auto sm:w-72 md:w-80 lg:w-auto">
+                            <!-- Clock Icon -->
+                            <svg viewBox="0 0 24 24" fill="none" class="w-7 h-7 mt-1 shrink-0" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 7V12L14.5 13.5M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" 
+                                    stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
 
-    <!-- Text Block -->
-    <div class="flex flex-col">
-        <p class="text-stone-800 text-2xl font-bold font-['Montserrat']">TOUR TIMES*</p>
-        <p class="text-stone-700 text-sm font-medium font-['Montserrat']">
-            All tours leave from the front Rotunda steps
-        </p>
-    </div>
-</div>
-
+                            <!-- Text Block -->
+                            <div class="flex flex-col">
+                                <p class="text-stone-800 text-2xl font-bold font-['Montserrat']">TOUR TIMES*</p>
+                                <p class="text-stone-700 text-sm font-medium font-['Montserrat']">
+                                    All tours leave from the front Rotunda steps
+                                </p>
+                            </div>
+                        </div>
 
                         <!-- Overlay: Days and Times -->
                         <div class="absolute top-[179px] left-15 w-36 text-left">
@@ -118,7 +117,8 @@
 
     <!-- Carousel: Cards Link Section -->
     <section>
-        <swiper
+        <div class="pb-20 md:pb-0">
+            <swiper
             :slides-per-view="4"
             :slides-per-group="4"
             :space-between="30"
@@ -130,8 +130,8 @@
             :modules="modules"
             class="mySwiper"
             :breakpoints="{
-                320: { slidesPerView: 2, slidesPerGroup: 2, spaceBetween: 10 },
-                640: { slidesPerView: 3, slidesPerGroup: 3, spaceBetween: 35 },
+                320: { slidesPerView: 1, slidesPerGroup: 1, spaceBetween: 10 },
+                640: { slidesPerView: 2, slidesPerGroup: 3, spaceBetween: 35 },
                 1024: { slidesPerView: 3, slidesPerGroup: 3, spaceBetween: 25 },
                 1280: { slidesPerView: 4, slidesPerGroup: 4, spaceBetween: 30 }
             }"
@@ -263,7 +263,8 @@
                     </div>
                 </a>
             </swiper-slide>
-        </swiper>
+            </swiper>
+        </div>
     </section>
 
     <!-- Who We Are Section -->
@@ -274,11 +275,10 @@
             <NuxtImg 
                 src="/index-page/FrontPage_WhoWeAre.jpg"
                 alt="My image file description"
-                class="overflow-visible min-h-screen w-full object-cover mask-t-from-10% opacity-40"
+                class="overflow-visible h-screen w-full object-cover mask-t-from-10% opacity-40"
             >
             </NuxtImg>
-
-            <div class="absolute top-1/2 left-1/2 w-full max-w-6xl px-4 -translate-x-1/2 -translate-y-1/2 text-center">
+            <div class="absolute top-1/2 left-1/2 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 -translate-x-1/2 -translate-y-1/2 text-center">
                 <!-- Header -->
                 <h1 class="font-['Playfair_Display'] text-UVA-orange text-3xl sm:text-4xl md:text-5xl font-medium">
                     Who We Are
@@ -294,29 +294,41 @@
                     Trainees receive mentorship from experienced guides, professors, and historical organization leaders in the Charlottesville community. All tours are conducted free of charge.
                 </p>
 
-                <!-- Button Section -->
-                <div class="mt-10 flex flex-col md:flex-row justify-center items-center gap-x-25 gap-y-4 pointer-events-auto">
+                <div class="mt-10 flex flex-col md:flex-row justify-center items-center gap-x-6 gap-y-4 pointer-events-auto">
                     <!-- Button 1: Learn More -->
                     <a href="/join-guides">
-                        <button class="font-['Roboto'] bg-royal-blue hover:bg-blue-950 text-white rounded-full py-4 px-14 transition-all duration-300 ease-in-out cursor-pointer">
-                            Learn More
+                        <button class="font-['Roboto'] bg-royal-blue hover:bg-blue-950 text-white rounded-full
+                                    py-3 px-10 text-sm
+                                    sm:py-4 sm:px-10 sm:text-base
+                                    md:px-14 md:text-lg
+                                    transition-all duration-300 ease-in-out cursor-pointer">
+                        Learn More
                         </button>
                     </a>
 
                     <!-- Button 2: Donate -->
                     <a href="/donate">
-                        <button class="font-['Roboto'] bg-royal-blue hover:bg-blue-950 text-white rounded-full py-4 px-18 transition-all duration-300 ease-in-out cursor-pointer">
-                            Donate
+                        <button class="font-['Roboto'] bg-royal-blue hover:bg-blue-950 text-white rounded-full
+                                    py-3 px-13 text-sm
+                                    sm:py-4 sm:px-16 sm:text-base
+                                    md:px-18 md:text-lg
+                                    transition-all duration-300 ease-in-out cursor-pointer">
+                        Donate
                         </button>
                     </a>
 
                     <!-- Button 3: Become a Guide -->
                     <a href="/join-guides#join-guides">
-                        <button class="font-['Roboto'] bg-royal-blue hover:bg-blue-950 text-white rounded-full py-4 px-10 transition-all duration-300 ease-in-out cursor-pointer">
-                            Become a Guide
+                        <button class="font-['Roboto'] bg-royal-blue hover:bg-blue-950 text-white rounded-full
+                                    py-3 px-6 text-sm
+                                    sm:py-4 sm:px-8 sm:text-base
+                                    md:px-9 md:text-lg
+                                    transition-all duration-300 ease-in-out cursor-pointer">
+                        Become a Guide
                         </button>
                     </a>
                 </div>
+
             </div>
         </div>
     </section>
@@ -351,8 +363,8 @@
     </section>
 
     <!-- Explore UVA History Section -->
-    <section class="bg-royal-blue py-16 sm:py-20 md:py-24">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-10">
+    <section class="bg-royal-blue">
+        <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 text-center space-y-10">
 
             <!-- Header -->
             <h1 class="font-['Playfair_Display'] text-UVA-orange text-3xl sm:text-4xl md:text-5xl font-medium">
@@ -377,7 +389,7 @@
         </div>
 
         <!-- Carousel: Our Tours-->
-        <div class="carousel-body">
+        <div class="carousel-body pb-12">
             <div class="slider">
                 <div class="slide-track">
                     <a href="/about-tours/#history-of-women-at-uva">
@@ -582,71 +594,70 @@
         <!-- Content above background -->
         <div class="relative px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
             <div class="flex flex-col md:flex-row items-stretch gap-10">
-
-            <!-- Left: Column Information -->
-            <div class="w-full md:w-2/5 flex justify-center md:justify-end">
-                <div class="relative w-full max-w-sm sm:max-w-md overflow-hidden mt-5">
-                <p class="font-['Playfair_Display'] font-bold text-black text-4xl sm:text-5xl leading-tight mb-6">
-                    Our Events
-                </p>
-                <p class="font-['Montserrat'] font-semibold text-base sm:text-lg leading-relaxed text-black">
-                    Join us in our work of telling a more honest, just, and complete telling of UVA's history.
-                </p>
+                <!-- Left: Column Information -->
+                <div class="w-full md:w-2/5 flex justify-center md:justify-end">
+                    <div class="relative w-full max-w-sm sm:max-w-md overflow-hidden mt-5">
+                        <p class="font-['Playfair_Display'] font-bold text-black text-4xl sm:text-5xl leading-tight mb-6">
+                            Our Events
+                        </p>
+                        <p class="font-['Montserrat'] font-semibold text-base sm:text-lg leading-relaxed text-black">
+                            Join us in our work of telling a more honest, just, and complete telling of UVA's history.
+                        </p>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Right: Event Image Slider -->
-            <swiper
-                :slides-per-view="1"
-                :slides-per-group="1"
-                :space-between="30"
-                :pagination="{ clickable: true }"
-                :grabCursor="true"
-                :autoplay="{ delay: 10000, disableOnInteraction: false, pauseOnMouseEnter: true }"
-                :loop="true"
-                :speed="800"
-                :modules="modules"
-                class="events-swiper w-full"
-            >
-                <!-- Card 1 -->
-                <swiper-slide>
-                <div class="relative w-full lg:w-[75%] mx-auto p-4 pb-10 group cursor-pointer">
-                    <img class="events-image mb-2" src="/index-page/OurEvents_Tour.jpg">
-                    <p class="font-['Montserrat'] font-bold text-black text-2xl sm:text-3xl leading-tight mb-2">
-                    Summer Tours: History of UVA and Prospective Student Tour*
-                    </p>
-                    <p class="font-['Montserrat'] font-medium text-base sm:text-lg leading-relaxed text-gray-900">
-                    Our commitment to providing a more complete history of the University of Virginia carries on this summer.
-                    </p>
-                </div>
-                </swiper-slide>
+                <!-- Right: Event Image Slider -->
+                <swiper
+                    :slides-per-view="1"
+                    :slides-per-group="1"
+                    :space-between="30"
+                    :pagination="{ clickable: true }"
+                    :grabCursor="true"
+                    :autoplay="{ delay: 10000, disableOnInteraction: false, pauseOnMouseEnter: true }"
+                    :loop="true"
+                    :speed="800"
+                    :modules="modules"
+                    class="events-swiper w-full"
+                >
+                    <!-- Card 1 -->
+                    <swiper-slide>
+                    <div class="relative w-full lg:w-[75%] mx-auto p-4 pb-10 group cursor-pointer ">
+                        <img class="events-image mb-2" src="/index-page/OurEvents_Tour.jpg">
+                        <p class="font-['Montserrat'] font-bold text-black text-2xl sm:text-3xl leading-tight mb-2">
+                        Summer Tours: History of UVA and Prospective Student Tour*
+                        </p>
+                        <p class="font-['Montserrat'] font-medium text-base sm:text-lg leading-relaxed text-gray-900">
+                        Our commitment to providing a more complete history of the University of Virginia carries on this summer.
+                        </p>
+                    </div>
+                    </swiper-slide>
 
-                <!-- Card 2 -->
-                <swiper-slide>
-                <div class="relative w-full lg:w-[75%] mx-auto p-4 pb-10 group cursor-pointer">
-                    <img class="events-image mb-2" src="/index-page/OurEvents_Fundraising.jpg">
-                    <p class="font-['Montserrat'] font-bold text-black text-2xl sm:text-3xl leading-tight mb-2">
-                    Fundraising Event Title Here
-                    </p>
-                    <p class="font-['Montserrat'] font-medium text-base sm:text-lg leading-relaxed text-gray-900">
-                    Insert fundraising information here.
-                    </p>
-                </div>
-                </swiper-slide>
+                    <!-- Card 2 -->
+                    <swiper-slide>
+                    <div class="relative w-full lg:w-[75%] mx-auto p-4 pb-10 group cursor-pointer">
+                        <img class="events-image mb-2" src="/index-page/OurEvents_Fundraising.jpg">
+                        <p class="font-['Montserrat'] font-bold text-black text-2xl sm:text-3xl leading-tight mb-2">
+                        Fundraising Event Title Here
+                        </p>
+                        <p class="font-['Montserrat'] font-medium text-base sm:text-lg leading-relaxed text-gray-900">
+                        Insert fundraising information here.
+                        </p>
+                    </div>
+                    </swiper-slide>
 
-                <!-- Card 3 -->
-                <swiper-slide>
-                <div class="relative w-full lg:w-[75%] mx-auto p-4 pb-10 group cursor-pointer">
-                    <img class="events-image mb-2" src="/index-page/OurEvents_SpecialtyTours.jpg">
-                    <p class="font-['Montserrat'] font-bold text-black text-2xl sm:text-3xl leading-tight mb-2">
-                    Specialty Tours Returning in the Fall
-                    </p>
-                    <p class="font-['Montserrat'] font-medium text-base sm:text-lg leading-relaxed text-gray-900">
-                    Our specialty tours dive deeper into a specific aspect of UVA's history such as Women's History and the History of African Americans at UVA.
-                    </p>
-                </div>
-                </swiper-slide>
-            </swiper>
+                    <!-- Card 3 -->
+                    <swiper-slide>
+                    <div class="relative w-full lg:w-[75%] mx-auto p-4 pb-10 group cursor-pointer">
+                        <img class="events-image mb-2" src="/index-page/OurEvents_SpecialtyTours.jpg">
+                        <p class="font-['Montserrat'] font-bold text-black text-2xl sm:text-3xl leading-tight mb-2">
+                        Specialty Tours Returning in the Fall
+                        </p>
+                        <p class="font-['Montserrat'] font-medium text-base sm:text-lg leading-relaxed text-gray-900">
+                        Our specialty tours dive deeper into a specific aspect of UVA's history such as Women's History and the History of African Americans at UVA.
+                        </p>
+                    </div>
+                    </swiper-slide>
+                </swiper>
             </div>
         </div>
     </section>
@@ -659,42 +670,42 @@
             <NuxtImg 
             src="/Header_PageFooters.jpg"
             alt="My image file description"
-            class="w-full min-h-screen sm:h-[120vh] object-cover"
+            class="w-full min-h-screen sm:h-[120vh] object-cover object-top"
             />
 
             <!-- Overlay Content -->
-            <div class="absolute top-1/2 left-1/2 w-full max-w-6xl px-4 -translate-x-1/2 -translate-y-1/2 text-center z-10">
+            <div class="absolute top-1/2 left-1/2 w-full max-w-6xl px-4 sm:px-6 lg:px-8 -translate-x-1/2 -translate-y-1/2 text-center z-10">
 
-            <!-- Header -->
-            <div class="mt-[-6rem] sm:mt-[-8rem] md:mt-[-10rem]">
-                <h1 class="font-['Playfair_Display'] text-white italic text-[clamp(2.5rem,9vw,5rem)] leading-tight">
-                    SHED LIGHT
-                </h1>
-                <p class="font-['Roboto'] text-white text-base sm:text-lg md:text-xl font-semibold leading-snug">
-                    ON HISTORY
+                <!-- Header -->
+                <div class="absolute left-1/2 w-full max-w-6xl px-4 -translate-x-1/2 -translate-y-1/2 text-white text-center">
+                    <h1 class="font-['Playfair_Display'] italic text-center xl:text-left whitespace-nowrap text-[clamp(3rem,9.5vw,4rem)] leading-tight [text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)]">
+                        SHED LIGHT
+                    </h1>
+                    <p class="font-Roboto text-center xl:max-w-sm xl:text-right text-xl sm:text-2xl md:text-3xl font-extralight leading-snug [text-shadow:_3px_3px_6px_rgb(0_0_0_/_0.70)]">
+                        ON HISTORY
+                    </p>
+                </div>
+
+                <!-- Buttons -->
+                <div class="mt-40 flex flex-col sm:flex-row justify-center items-center gap-x-10 gap-y-4 pointer-events-auto">
+                    <a href="/your-visit">
+                        <button class="font-['Roboto'] border border-white text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 hover:border-transparent rounded-full py-3 px-10 cursor-pointer transition-all duration-300 ease-in-out">
+                            TAKE A TOUR
+                        </button>
+                    </a>
+                    <a href="/donate">
+                        <button class="font-['Roboto'] border border-white text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 hover:border-transparent rounded-full py-3 px-15 cursor-pointer transition-all duration-300 ease-in-out">
+                            DONATE
+                        </button>
+                    </a>
+                </div>
+
+                <!-- Description -->
+                <p class="mt-20 font-['Roboto'] text-white text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
+                    The Virginia Guides Service at UVA is an entirely student-run independent volunteer organization. 
+                    If you would like to provide additional support, please consider donating to our day-to-day operations 
+                    <a href="/donate" class="underline">here</a>. We appreciate your time and thank you for continuing to support our mission.
                 </p>
-            </div>
-
-            <!-- Buttons -->
-            <div class="mt-40 flex flex-col sm:flex-row justify-center items-center gap-x-10 gap-y-4 pointer-events-auto">
-                <a href="/your-visit">
-                    <button class="font-['Roboto'] border border-white text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 hover:border-transparent rounded-full py-3 px-10 cursor-pointer transition-all duration-300 ease-in-out">
-                        TAKE A TOUR
-                    </button>
-                </a>
-                <a href="/donate">
-                    <button class="font-['Roboto'] border border-white text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 hover:border-transparent rounded-full py-3 px-18 cursor-pointer transition-all duration-300 ease-in-out">
-                        DONATE
-                    </button>
-                </a>
-            </div>
-
-            <!-- Description -->
-            <p class="mt-20 font-['Roboto'] text-white text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
-                The Virginia Guides Service at UVA is an entirely student-run independent volunteer organization. 
-                If you would like to provide additional support, please consider donating to our day-to-day operations 
-                <a href="/donate" class="underline">here</a>. We appreciate your time and thank you for continuing to support our mission.
-            </p>
 
             </div>
         </div>

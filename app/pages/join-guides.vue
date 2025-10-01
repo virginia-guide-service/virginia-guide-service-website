@@ -18,7 +18,7 @@
 
     <!-- About Guides Info Section -->
     <section id="about-tours">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <!--Flex-->
             <div class="flex justify-center items-center xl:items-start flex-col lg:flex-row gap-x-10">
                 <!-- Left: Image -->
@@ -130,7 +130,7 @@
         </div>
 
         <!--Step 1 and 2 Container-->
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <!--Step 1-->
             <div class="text-center sm:text-start">
                 <h1 class="font-Roboto text-lg sm:text-xl font-bold italic pb-2">
@@ -214,7 +214,7 @@
         </div>
 
         <!--Step 3 and 4 Container-->
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <!--Step 3-->
             <div class="text-center sm:text-start">
                 <h1 class="font-Roboto text-lg sm:text-xl font-bold italic pb-2">
@@ -566,42 +566,42 @@
             <NuxtImg 
             src="/Header_PageFooters.jpg"
             alt="My image file description"
-            class="w-full min-h-screen sm:h-[120vh] object-cover"
+            class="w-full min-h-screen sm:h-[120vh] object-cover object-top"
             />
 
             <!-- Overlay Content -->
-            <div class="absolute top-1/2 left-1/2 w-full max-w-6xl px-4 -translate-x-1/2 -translate-y-1/2 text-center z-10">
+            <div class="absolute top-1/2 left-1/2 w-full max-w-6xl px-4 sm:px-6 lg:px-8 -translate-x-1/2 -translate-y-1/2 text-center z-10">
 
-            <!-- Header -->
-            <div class="mt-[-6rem] sm:mt-[-8rem] md:mt-[-10rem]">
-                <h1 class="font-['Playfair_Display'] text-white italic text-[clamp(2.5rem,9vw,5rem)] leading-tight">
-                    SHED LIGHT
-                </h1>
-                <p class="font-['Roboto'] text-white text-base sm:text-lg md:text-xl font-semibold leading-snug">
-                    ON HISTORY
+                <!-- Header -->
+                <div class="absolute left-1/2 w-full max-w-6xl px-4 -translate-x-1/2 -translate-y-1/2 text-white text-center">
+                    <h1 class="font-['Playfair_Display'] italic text-center xl:text-left whitespace-nowrap text-[clamp(3rem,9.5vw,4rem)] leading-tight [text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)]">
+                        SHED LIGHT
+                    </h1>
+                    <p class="font-Roboto text-center xl:max-w-sm xl:text-right text-xl sm:text-2xl md:text-3xl font-extralight leading-snug [text-shadow:_3px_3px_6px_rgb(0_0_0_/_0.70)]">
+                        ON HISTORY
+                    </p>
+                </div>
+
+                <!-- Buttons -->
+                <div class="mt-40 flex flex-col sm:flex-row justify-center items-center gap-x-10 gap-y-4 pointer-events-auto">
+                    <a href="/your-visit">
+                        <button class="font-['Roboto'] border border-white text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 hover:border-transparent rounded-full py-3 px-10 cursor-pointer transition-all duration-300 ease-in-out">
+                            TAKE A TOUR
+                        </button>
+                    </a>
+                    <a href="/donate">
+                        <button class="font-['Roboto'] border border-white text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 hover:border-transparent rounded-full py-3 px-15 cursor-pointer transition-all duration-300 ease-in-out">
+                            DONATE
+                        </button>
+                    </a>
+                </div>
+
+                <!-- Description -->
+                <p class="mt-20 font-['Roboto'] text-white text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
+                    The Virginia Guides Service at UVA is an entirely student-run independent volunteer organization. 
+                    If you would like to provide additional support, please consider donating to our day-to-day operations 
+                    <a href="/donate" class="underline">here</a>. We appreciate your time and thank you for continuing to support our mission.
                 </p>
-            </div>
-
-            <!-- Buttons -->
-            <div class="mt-40 flex flex-col sm:flex-row justify-center items-center gap-x-10 gap-y-4 pointer-events-auto">
-                <a href="/your-visit">
-                    <button class="font-['Roboto'] border border-white text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 hover:border-transparent rounded-full py-3 px-10 cursor-pointer transition-all duration-300 ease-in-out">
-                        PLAN YOUR VISIT
-                    </button>
-                </a>
-                <a href="/donate">
-                    <button class="font-['Roboto'] border border-white text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 hover:border-transparent rounded-full py-3 px-18 cursor-pointer transition-all duration-300 ease-in-out">
-                        DONATE
-                    </button>
-                </a>
-            </div>
-
-            <!-- Description -->
-            <p class="mt-20 font-['Roboto'] text-white text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
-                The Virginia Guides Service at UVA is an entirely student-run independent volunteer organization. 
-                If you would like to provide additional support, please consider donating to our day-to-day operations 
-                <a href="/donate" class="underline">here</a>. We appreciate your time and thank you for continuing to support our mission.
-            </p>
 
             </div>
         </div>

@@ -3,7 +3,7 @@
     <header class="relative bg-[url('/Header_Feedback.jpg')] w-full bg-cover bg-center bg-no-repeat h-[60vh] sm:h-[75vh]">
         <!-- Centered Text -->
         <div class="absolute top-1/2 left-1/2 w-full max-w-screen-2xl px-10 -translate-x-1/2 -translate-y-1/2 text-white">
-            <h1 class="font-['Playfair_Display'] italic text-center xl:text-left text-[clamp(1rem,6vw,3rem)] lg:text-[clamp(1rem,8vw,4rem)] [text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)]">
+            <h1 class="font-['Playfair_Display'] italic text-center xl:text-left text-[clamp(2.5rem,6vw,3rem)] lg:text-[clamp(1rem,8vw,4rem)] [text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)]">
                 BETTER TOURS, TOGETHER
             </h1>
             <p class="font-['Roboto'] text-center xl:text-left uppercase text-base sm:text-md md:text-lg font-semibold leading-snug [text-shadow:_3px_3px_6px_rgb(0_0_0_/_0.70)]">
@@ -13,7 +13,7 @@
     </header>
 
     <!-- Overlapping Section For Feedback Form-->
-    <section class="relative z-20 -mt-20 px-4">
+    <section class="relative z-20 -mt-20 px-4 sm:px-6 lg:px-8">
         <div class="shadow-xl p-6 max-w-7xl mx-auto bg-white mb-10">
             <div class="flex flex-col lg:flex-row justify-between gap-y-8 gap-x-10">
                 <!-- Left: Information Section -->
@@ -305,42 +305,42 @@
             <NuxtImg 
             src="/Header_PageFooters.jpg"
             alt="My image file description"
-            class="w-full min-h-screen sm:h-[120vh] object-cover"
+            class="w-full min-h-screen sm:h-[120vh] object-cover object-top"
             />
 
             <!-- Overlay Content -->
-            <div class="absolute top-1/2 left-1/2 w-full max-w-6xl px-4 -translate-x-1/2 -translate-y-1/2 text-center z-10">
+            <div class="absolute top-1/2 left-1/2 w-full max-w-6xl px-4 sm:px-6 lg:px-8 -translate-x-1/2 -translate-y-1/2 text-center z-10">
 
-            <!-- Header -->
-            <div class="mt-[-6rem] sm:mt-[-8rem] md:mt-[-10rem]">
-                <h1 class="font-['Playfair_Display'] text-white italic text-[clamp(2.5rem,9vw,5rem)] leading-tight">
-                    SHED LIGHT
-                </h1>
-                <p class="font-['Roboto'] text-white text-base sm:text-lg md:text-xl font-semibold leading-snug">
-                    ON HISTORY
+                <!-- Header -->
+                <div class="absolute left-1/2 w-full max-w-6xl px-4 -translate-x-1/2 -translate-y-1/2 text-white text-center">
+                    <h1 class="font-['Playfair_Display'] italic text-center xl:text-left whitespace-nowrap text-[clamp(3rem,9.5vw,4rem)] leading-tight [text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)]">
+                        SHED LIGHT
+                    </h1>
+                    <p class="font-Roboto text-center xl:max-w-sm xl:text-right text-xl sm:text-2xl md:text-3xl font-extralight leading-snug [text-shadow:_3px_3px_6px_rgb(0_0_0_/_0.70)]">
+                        ON HISTORY
+                    </p>
+                </div>
+
+                <!-- Buttons -->
+                <div class="mt-40 flex flex-col sm:flex-row justify-center items-center gap-x-10 gap-y-4 pointer-events-auto">
+                    <a href="/your-visit">
+                        <button class="font-['Roboto'] border border-white text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 hover:border-transparent rounded-full py-3 px-10 cursor-pointer transition-all duration-300 ease-in-out">
+                            TAKE A TOUR
+                        </button>
+                    </a>
+                    <a href="/donate">
+                        <button class="font-['Roboto'] border border-white text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 hover:border-transparent rounded-full py-3 px-15 cursor-pointer transition-all duration-300 ease-in-out">
+                            DONATE
+                        </button>
+                    </a>
+                </div>
+
+                <!-- Description -->
+                <p class="mt-20 font-['Roboto'] text-white text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
+                    The Virginia Guides Service at UVA is an entirely student-run independent volunteer organization. 
+                    If you would like to provide additional support, please consider donating to our day-to-day operations 
+                    <a href="/donate" class="underline">here</a>. We appreciate your time and thank you for continuing to support our mission.
                 </p>
-            </div>
-
-            <!-- Buttons -->
-            <div class="mt-40 flex flex-col sm:flex-row justify-center items-center gap-x-10 gap-y-4 pointer-events-auto">
-                <a href="/your-visit">
-                    <button class="font-['Roboto'] border border-white text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 hover:border-transparent rounded-full py-3 px-10 cursor-pointer transition-all duration-300 ease-in-out">
-                        PLAN YOUR VISIT
-                    </button>
-                </a>
-                <a href="/donate">
-                    <button class="font-['Roboto'] border border-white text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 hover:border-transparent rounded-full py-3 px-18 cursor-pointer transition-all duration-300 ease-in-out">
-                        DONATE
-                    </button>
-                </a>
-            </div>
-
-            <!-- Description -->
-            <p class="mt-20 font-['Roboto'] text-white text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
-                The Virginia Guides Service at UVA is an entirely student-run independent volunteer organization. 
-                If you would like to provide additional support, please consider donating to our day-to-day operations 
-                <a href="/donate" class="underline">here</a>. We appreciate your time and thank you for continuing to support our mission.
-            </p>
 
             </div>
         </div>

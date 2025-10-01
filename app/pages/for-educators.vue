@@ -2,8 +2,8 @@
     <!--Header Section-->
     <header class="relative bg-[url('/Header_ForEducators.jpg')] w-full bg-cover bg-center bg-no-repeat h-[60vh] sm:h-[75vh] bg-">
         <!-- Centered Text -->
-        <div class="absolute top-1/2 left-1/2 w-full max-w-8xl px-10 -translate-x-1/2 -translate-y-1/2 text-white">
-            <h1 class="font-['Playfair_Display'] italic text-center xl:text-right whitespace-nowrap text-[clamp(1rem,7vw,3rem)] lg:text-[clamp(1rem,8vw,4rem)] leading-tight [text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)]">
+        <div class="absolute top-1/2 left-1/2 w-full max-w-7xl px-10 -translate-x-1/2 -translate-y-1/2 text-white">
+            <h1 class="font-['Playfair_Display'] italic text-center xl:text-right text-[clamp(2.5rem,7vw,3rem)] lg:text-[clamp(1rem,8vw,4rem)] leading-tight [text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)]">
                 BEYOND THE CLASSROOM
             </h1>
             <p class="font-['Roboto'] text-base sm:text-md md:text-lg font-semibold leading-snug text-center xl:text-right uppercase [text-shadow:_3px_3px_6px_rgb(0_0_0_/_0.70)]">
@@ -36,60 +36,62 @@
     </section>
 
     <!-- Info Section for different age groups -->
-    <section class="p-5 sm:p-8 md:p-6 mb-5">
-        <!--Section Header-->
-        <div class="flex flex-col justify-center text-center lg:text-left max-w-7xl mx-auto gap-3 mb-5 lg:mb-10">
-            <h1 class="uppercase font-['Playfair_Display'] italic font-medium text-dark-green text-4xl sm:text-5xl">
-                History for all ages
-            </h1>
-            <p class="font-['Montserrat'] text-dark-green text-lg sm:text-xl">
-                Whether you're visiting with young learners, future students, or fellow scholars, we offer tours tailored to every stage of the educational journey.
-            </p>
-        </div>
-
-        <!--Info Section For Different Age Groups-->
-        <div class="flex flex-col lg:flex-row justify-center items-stretch max-w-7xl mx-auto gap-10">
-            <!--Image-->
-            <div class="w-full lg:w-[40%] flex"> 
-                <img 
-                    src="/for-educators-page/ChildrensTour.jpg" 
-                    alt="Childrens Tour at the Amphiteather steps" 
-                    class="w-full object-cover rounded-md shadow-md"
-                />
+    <section>
+        <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <!--Section Header-->
+            <div class="flex flex-col justify-center text-left gap-3 pb-5 lg:pb-10">
+                <h1 class="uppercase font-['Playfair_Display'] italic font-medium text-dark-green text-4xl sm:text-5xl">
+                    History for all ages
+                </h1>
+                <p class="font-['Montserrat'] text-dark-green text-lg sm:text-xl">
+                    Whether you're visiting with young learners, future students, or fellow scholars, we offer tours tailored to every stage of the educational journey.
+                </p>
             </div>
-            <!--Text Info-->
-            <div class="w-full lg:w-[60%] flex flex-col gap-5"> 
-                <!--Kids-->
-                <div class="flex flex-col">
-                    <h1 class="font-['Montserrat'] text-lg sm:text-xl font-semibold">
-                        Kids (K-5) 
-                    </h1>
-                    <p class="font-['Montserrat'] text-base sm:text-lg font-light">
-                        A one-hour introduction to UVA that blends key moments in history with what college life is like today. Kids will hear about the University's founding vision, 
-                        explore the Academical Village's architecture, learn about the 1895 burning of the Rotunda, and see how the University and its community 
-                        have changed over time through resilience and creativity.
-                    </p>
+
+            <!--Info Section For Different Age Groups-->
+            <div class="flex flex-col lg:flex-row justify-center items-stretch gap-5 lg:gap-10">
+                <!--Image-->
+                <div class="w-full lg:w-[40%] flex"> 
+                    <img 
+                        src="/for-educators-page/ChildrensTour.jpg" 
+                        alt="Childrens Tour at the Amphiteather steps" 
+                        class="w-full object-cover rounded-md shadow-md"
+                    />
                 </div>
-                <!--Middle and High School-->
-                <div class="flex flex-col">
-                    <h1 class="font-['Montserrat'] text-lg sm:text-xl font-semibold">
-                        Middle and High School Groups
-                    </h1>
-                    <p class="font-['Montserrat']  text-base sm:text-lg font-light">
-                        Explore UVA's traditions, architecture, and the history of student activism and community leadership, including the legacies of slavery, the Civil War, 
-                        and Civil Rights movement after, alongside at the opportunities, culture, and student life that has developed on Grounds today.
-                    </p>
-                </div>
-                <!--College Students-->
-                <div class="flex flex-col">
-                    <h1 class="font-['Montserrat'] text-lg sm:text-xl font-semibold">
-                        College Students 
-                    </h1>
-                    <p class="font-['Montserrat']  text-base sm:text-lg font-light">
-                        A deeper, more detailed examination of UVA's past and present, tracing its founding ideals through periods marked by slavery, the Civil War, 
-                        the 20th century eugenics movement, and progress in Civil Rights. From the 1800s to the present day, this tour reflects on how the University 
-                        has acknowledged and responded to these histories through community resistance and efforts to address complex social, political, and cultural challenges still shaping the world today.
-                    </p>
+                <!--Text Info-->
+                <div class="w-full lg:w-[60%] flex flex-col gap-5"> 
+                    <!--Kids-->
+                    <div class="flex flex-col">
+                        <h1 class="font-['Montserrat'] text-lg sm:text-xl font-semibold">
+                            Kids (K-5) 
+                        </h1>
+                        <p class="font-['Montserrat'] text-base sm:text-lg font-light">
+                            A one-hour introduction to UVA that blends key moments in history with what college life is like today. Kids will hear about the University's founding vision, 
+                            explore the Academical Village's architecture, learn about the 1895 burning of the Rotunda, and see how the University and its community 
+                            have changed over time through resilience and creativity.
+                        </p>
+                    </div>
+                    <!--Middle and High School-->
+                    <div class="flex flex-col">
+                        <h1 class="font-['Montserrat'] text-lg sm:text-xl font-semibold">
+                            Middle and High School Groups
+                        </h1>
+                        <p class="font-['Montserrat']  text-base sm:text-lg font-light">
+                            Explore UVA's traditions, architecture, and the history of student activism and community leadership, including the legacies of slavery, the Civil War, 
+                            and Civil Rights movement after, alongside at the opportunities, culture, and student life that has developed on Grounds today.
+                        </p>
+                    </div>
+                    <!--College Students-->
+                    <div class="flex flex-col">
+                        <h1 class="font-['Montserrat'] text-lg sm:text-xl font-semibold">
+                            College Students 
+                        </h1>
+                        <p class="font-['Montserrat']  text-base sm:text-lg font-light">
+                            A deeper, more detailed examination of UVA's past and present, tracing its founding ideals through periods marked by slavery, the Civil War, 
+                            the 20th century eugenics movement, and progress in Civil Rights. From the 1800s to the present day, this tour reflects on how the University 
+                            has acknowledged and responded to these histories through community resistance and efforts to address complex social, political, and cultural challenges still shaping the world today.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -132,8 +134,8 @@
     </section>
 
     <!-- Last Info Section -->
-    <section class="p-5 sm:p-8 md:p-6 m-2 lg:m-8">
-        <div class="flex flex-col justify-center text-left max-w-6xl mx-auto gap-3">
+    <section>
+        <div class="flex flex-col justify-center text-left max-w-7xl mx-auto px-10 sm:px-12 lg:px-12 py-12 gap-3">
             <ul class="list-disc font-['Montserrat'] text-base sm:text-lg space-y-2">
                 <li>
                     <span class="font-bold">
@@ -257,42 +259,42 @@
             <NuxtImg 
             src="/Header_PageFooters.jpg"
             alt="My image file description"
-            class="w-full min-h-screen sm:h-[120vh] object-cover"
+            class="w-full min-h-screen sm:h-[120vh] object-cover object-top"
             />
 
             <!-- Overlay Content -->
-            <div class="absolute top-1/2 left-1/2 w-full max-w-6xl px-4 -translate-x-1/2 -translate-y-1/2 text-center z-10">
+            <div class="absolute top-1/2 left-1/2 w-full max-w-6xl px-4 sm:px-6 lg:px-8 -translate-x-1/2 -translate-y-1/2 text-center z-10">
 
-            <!-- Header -->
-            <div class="mt-[-6rem] sm:mt-[-8rem] md:mt-[-10rem]">
-                <h1 class="font-['Playfair_Display'] text-white italic text-[clamp(2.5rem,9vw,5rem)] leading-tight">
-                    SHED LIGHT
-                </h1>
-                <p class="font-['Roboto'] text-white text-base sm:text-lg md:text-xl font-semibold leading-snug">
-                    ON HISTORY
+                <!-- Header -->
+                <div class="absolute left-1/2 w-full max-w-6xl px-4 -translate-x-1/2 -translate-y-1/2 text-white text-center">
+                    <h1 class="font-['Playfair_Display'] italic text-center xl:text-left whitespace-nowrap text-[clamp(3rem,9.5vw,4rem)] leading-tight [text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)]">
+                        SHED LIGHT
+                    </h1>
+                    <p class="font-Roboto text-center xl:max-w-sm xl:text-right text-xl sm:text-2xl md:text-3xl font-extralight leading-snug [text-shadow:_3px_3px_6px_rgb(0_0_0_/_0.70)]">
+                        ON HISTORY
+                    </p>
+                </div>
+
+                <!-- Buttons -->
+                <div class="mt-40 flex flex-col sm:flex-row justify-center items-center gap-x-10 gap-y-4 pointer-events-auto">
+                    <a href="/your-visit">
+                        <button class="font-['Roboto'] border border-white text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 hover:border-transparent rounded-full py-3 px-10 cursor-pointer transition-all duration-300 ease-in-out">
+                            TAKE A TOUR
+                        </button>
+                    </a>
+                    <a href="/donate">
+                        <button class="font-['Roboto'] border border-white text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 hover:border-transparent rounded-full py-3 px-15 cursor-pointer transition-all duration-300 ease-in-out">
+                            DONATE
+                        </button>
+                    </a>
+                </div>
+
+                <!-- Description -->
+                <p class="mt-20 font-['Roboto'] text-white text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
+                    The Virginia Guides Service at UVA is an entirely student-run independent volunteer organization. 
+                    If you would like to provide additional support, please consider donating to our day-to-day operations 
+                    <a href="/donate" class="underline">here</a>. We appreciate your time and thank you for continuing to support our mission.
                 </p>
-            </div>
-
-            <!-- Buttons -->
-            <div class="mt-40 flex flex-col sm:flex-row justify-center items-center gap-x-10 gap-y-4 pointer-events-auto">
-                <a href="/your-visit">
-                    <button class="font-['Roboto'] border border-white text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 hover:border-transparent rounded-full py-3 px-10 cursor-pointer transition-all duration-300 ease-in-out">
-                        PLAN YOUR VISIT
-                    </button>
-                </a>
-                <a href="/donate">
-                    <button class="font-['Roboto'] border border-white text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 hover:border-transparent rounded-full py-3 px-18 cursor-pointer transition-all duration-300 ease-in-out">
-                        DONATE
-                    </button>
-                </a>
-            </div>
-
-            <!-- Description -->
-            <p class="mt-20 font-['Roboto'] text-white text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
-                The Virginia Guides Service at UVA is an entirely student-run independent volunteer organization. 
-                If you would like to provide additional support, please consider donating to our day-to-day operations 
-                <a href="/donate" class="underline">here</a>. We appreciate your time and thank you for continuing to support our mission.
-            </p>
 
             </div>
         </div>

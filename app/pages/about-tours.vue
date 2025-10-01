@@ -1,7 +1,6 @@
 <template>
     <!--Header Section-->
     <header class="relative bg-[url('/Header_Tours.jpg')] w-full bg-cover bg-right bg-no-repeat h-[60vh] sm:h-[75vh]">
-        <!-- Centered Text -->
         <div class="absolute top-1/2 left-1/2 w-full max-w-6xl px-4 -translate-x-1/2 -translate-y-1/2 text-white text-center">
             <h1 class="font-['Playfair_Display'] italic text-center xl:text-left whitespace-nowrap text-[clamp(3rem,9.5vw,5.5rem)] leading-tight [text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)]">
                 SHED LIGHT
@@ -13,7 +12,7 @@
     </header>
 
     <!-- Overlapping Section With Buttons for Navigations-->
-    <section class="relative z-20 -mt-12 px-4 mb-5">
+    <section class="relative z-20 -mt-10 px-4 mb-5">
         <!-- Blue Line in Background -->
         <div class="absolute top-1/2 left-0 w-full h-2 bg-royal-blue -z-10 hidden sm:block"></div>
 
@@ -33,59 +32,60 @@
     </section>
 
     <!-- Historical Tour Info Section -->
-    <section id="about-tours" class="p-4 sm:p-8 md:p-6">
-        <div class="flex flex-col lg:flex-row justify-center items-center max-w-7xl mx-auto gap-10">
+    <section id="about-tours">
+        <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="flex flex-col lg:flex-row justify-center items-center gap-10">
+                <!-- Right: Image -->
+                <div class="w-full lg:w-1/2 flex justify-center items-center">
+                    <img src="/about-tours-page/Tourpage_LawnRooms.jpg" alt="Historical Tour Image" class="w-full max-w-xl h-auto rounded-md shadow-md">
+                </div>
 
-            <!-- Right: Image -->
-            <div class="w-full lg:w-1/2 flex justify-center items-center">
-                <img src="/about-tours-page/Tourpage_LawnRooms.jpg" alt="Historical Tour Image" class="w-full max-w-xl h-auto rounded-md shadow-md">
-            </div>
-
-            <!-- Left: Text -->
-            <div class="w-full lg:w-1/2 px-5 lg:px-0">
-                <p class="font-['Playfair_Display'] italic text-center font-medium text-dark-green text-4xl sm:text-5xl leading-tight mb-6">
-                HISTORICAL TOURS
-                </p>
-                <p class="font-['Montserrat'] text-base sm:text-lg leading-relaxed text-gray-900">
-                    Founded in 1819 by Thomas Jefferson to promote education as a defense against tyranny, 
-                    UVA's history is more than its founding ideals. It is also shaped by the labor, activism, 
-                    and voices of those once excluded. Built and maintained by an estimated 4,000 enslaved 
-                    laborers between 1817 and 1865, the University's grounds hold stories long overlooked.
-                </p>
-                <p class="font-['Montserrat'] text-base sm:text-lg leading-relaxed text-gray-900 pt-2">
-                    From its founding to construction, from the Civil War to Civil Rights, our student-led tours 
-                    explore 200+ years of change, resistance, and community that shape the present. Tours navigate 
-                    the outdoor grounds of the UNESCO World Heritage Site and are written by students after a 
-                    semester of intensive training, research, and critical reflection.
-                </p>
-                <div class="flex flex-col justify-center items-center pt-5">
-                    <div class="flex flex-col justify-center items-center border-4 border-double border-dark-green rounded-md p-3">
-                        <ul class="list-disc font-['Montserrat'] text-base sm:text-lg leading-relaxed text-gray-900 max-w-xl px-4">
-                            <li>
-                            Standard History Tours last around <span class="font-bold">1 hour</span>.
-                            </li>
-                            <li>
-                            All tours are <span class="font-bold">free of charge</span>, regardless of group size.
-                            </li>
-                            <li>
-                            Donations to support work are welcome at this link
-                            <a href="https://www.givecampus.com/campaigns/21200/donations/new?designation=universityguides">
-                                <span class="underline cursor-pointer">here</span>.
-                            </a>
-                            </li>
-                        </ul>
-                        <!--Button-->
-                        <NuxtLink to="/your-visit#times-and-registration" class="justify-center items-center mt-2">
-                            <button class="rounded-full bg-dark-green px-6 py-3 sm:px-6 sm:py-2 md:px-8 md:py-3 shadow-md hover:shadow-lg hover:bg-green-700 hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer">
-                                <p class="font-['Roboto'] text-white text-sm sm:text-base md:text-lg">
-                                    Register Here
-                                </p>
-                            </button>
-                        </NuxtLink>
+                <!-- Left: Text -->
+                <div class="w-full lg:w-1/2 px-5 lg:px-0">
+                    <p class="font-['Playfair_Display'] italic text-center font-medium text-dark-green text-4xl sm:text-5xl leading-tight mb-6">
+                    HISTORICAL TOURS
+                    </p>
+                    <p class="font-['Montserrat'] text-base sm:text-lg leading-relaxed text-gray-900">
+                        Founded in 1819 by Thomas Jefferson to promote education as a defense against tyranny, 
+                        UVA's history is more than its founding ideals. It is also shaped by the labor, activism, 
+                        and voices of those once excluded. Built and maintained by an estimated 4,000 enslaved 
+                        laborers between 1817 and 1865, the University's grounds hold stories long overlooked.
+                    </p>
+                    <p class="font-['Montserrat'] text-base sm:text-lg leading-relaxed text-gray-900 pt-2">
+                        From its founding to construction, from the Civil War to Civil Rights, our student-led tours 
+                        explore 200+ years of change, resistance, and community that shape the present. Tours navigate 
+                        the outdoor grounds of the UNESCO World Heritage Site and are written by students after a 
+                        semester of intensive training, research, and critical reflection.
+                    </p>
+                    <div class="flex flex-col justify-center items-center pt-5">
+                        <div class="flex flex-col justify-center items-center border-4 border-double border-dark-green rounded-md p-3">
+                            <ul class="list-disc font-['Montserrat'] text-base sm:text-lg leading-relaxed text-gray-900 max-w-xl px-4">
+                                <li>
+                                Standard History Tours last around <span class="font-bold">1 hour</span>.
+                                </li>
+                                <li>
+                                All tours are <span class="font-bold">free of charge</span>, regardless of group size.
+                                </li>
+                                <li>
+                                Donations to support work are welcome at this link
+                                <a href="https://www.givecampus.com/campaigns/21200/donations/new?designation=universityguides">
+                                    <span class="underline cursor-pointer">here</span>.
+                                </a>
+                                </li>
+                            </ul>
+                            <!--Button-->
+                            <NuxtLink to="/your-visit#times-and-registration" class="justify-center items-center pt-3">
+                                <button class="rounded-full bg-dark-green px-6 py-2 shadow-md hover:shadow-lg hover:bg-green-700 hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer">
+                                    <p class="font-['Roboto'] text-white text-base">
+                                        Register Here
+                                    </p>
+                                </button>
+                            </NuxtLink>
+                        </div>
                     </div>
                 </div>
-            </div>
 
+            </div>
         </div>
     </section>
 
@@ -131,11 +131,11 @@
     </section>
 
     <!--Specialty Tours Section-->
-    <section id="specialty-tours" class="py-4 sm:py-8 md:py-6">
+    <section id="specialty-tours" class="pt-6 pb-12">
         <div class="flex flex-col justify-center items-center">
 
             <!--Heading-->
-            <div class="flex flex-col justify-center items-center mb-5">
+            <div class="flex flex-col justify-center items-center pb-10">
                 <h1 class="font-['Playfair_Display'] italic text-center font-medium text-dark-green text-5xl sm:text-6xl leading-tight mb-2">
                     SPECIALTY TOURS
                 </h1>
@@ -390,42 +390,42 @@
             <NuxtImg 
             src="/Header_PageFooters.jpg"
             alt="My image file description"
-            class="w-full min-h-screen sm:h-[120vh] object-cover"
+            class="w-full min-h-screen sm:h-[120vh] object-cover object-top"
             />
 
             <!-- Overlay Content -->
-            <div class="absolute top-1/2 left-1/2 w-full max-w-6xl px-4 -translate-x-1/2 -translate-y-1/2 text-center z-10">
+            <div class="absolute top-1/2 left-1/2 w-full max-w-6xl px-4 sm:px-6 lg:px-8 -translate-x-1/2 -translate-y-1/2 text-center z-10">
 
-            <!-- Header -->
-            <div class="mt-[-6rem] sm:mt-[-8rem] md:mt-[-10rem]">
-                <h1 class="font-['Playfair_Display'] text-white italic text-[clamp(2.5rem,9vw,5rem)] leading-tight">
-                    SHED LIGHT
-                </h1>
-                <p class="font-['Roboto'] text-white text-base sm:text-lg md:text-xl font-semibold leading-snug">
-                    ON HISTORY
+                <!-- Header -->
+                <div class="absolute left-1/2 w-full max-w-6xl px-4 -translate-x-1/2 -translate-y-1/2 text-white text-center">
+                    <h1 class="font-['Playfair_Display'] italic text-center xl:text-left whitespace-nowrap text-[clamp(3rem,9.5vw,4rem)] leading-tight [text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)]">
+                        SHED LIGHT
+                    </h1>
+                    <p class="font-Roboto text-center xl:max-w-sm xl:text-right text-xl sm:text-2xl md:text-3xl font-extralight leading-snug [text-shadow:_3px_3px_6px_rgb(0_0_0_/_0.70)]">
+                        ON HISTORY
+                    </p>
+                </div>
+
+                <!-- Buttons -->
+                <div class="mt-40 flex flex-col sm:flex-row justify-center items-center gap-x-10 gap-y-4 pointer-events-auto">
+                    <a href="/your-visit">
+                        <button class="font-['Roboto'] border border-white text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 hover:border-transparent rounded-full py-3 px-10 cursor-pointer transition-all duration-300 ease-in-out">
+                            TAKE A TOUR
+                        </button>
+                    </a>
+                    <a href="/donate">
+                        <button class="font-['Roboto'] border border-white text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 hover:border-transparent rounded-full py-3 px-15 cursor-pointer transition-all duration-300 ease-in-out">
+                            DONATE
+                        </button>
+                    </a>
+                </div>
+
+                <!-- Description -->
+                <p class="mt-20 font-['Roboto'] text-white text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
+                    The Virginia Guides Service at UVA is an entirely student-run independent volunteer organization. 
+                    If you would like to provide additional support, please consider donating to our day-to-day operations 
+                    <a href="/donate" class="underline">here</a>. We appreciate your time and thank you for continuing to support our mission.
                 </p>
-            </div>
-
-            <!-- Buttons -->
-            <div class="mt-40 flex flex-col sm:flex-row justify-center items-center gap-x-10 gap-y-4 pointer-events-auto">
-                <a href="/your-visit">
-                    <button class="font-['Roboto'] border border-white text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 hover:border-transparent rounded-full py-3 px-10 cursor-pointer transition-all duration-300 ease-in-out">
-                        PLAN YOUR VISIT
-                    </button>
-                </a>
-                <a href="/donate">
-                    <button class="font-['Roboto'] border border-white text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 hover:border-transparent rounded-full py-3 px-18 cursor-pointer transition-all duration-300 ease-in-out">
-                        DONATE
-                    </button>
-                </a>
-            </div>
-
-            <!-- Description -->
-            <p class="mt-20 font-['Roboto'] text-white text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
-                The Virginia Guides Service at UVA is an entirely student-run independent volunteer organization. 
-                If you would like to provide additional support, please consider donating to our day-to-day operations 
-                <a href="/donate" class="underline">here</a>. We appreciate your time and thank you for continuing to support our mission.
-            </p>
 
             </div>
         </div>

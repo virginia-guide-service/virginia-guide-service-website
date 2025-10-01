@@ -95,9 +95,9 @@
         </div>
     </section>
 
-    <!-- Tour Schedule -->
+    <!-- Tour Schedule + Banner + Registration Form -->
     <section id="times-and-registration" class="relative bg-neutral-100 pt-5">
-        <div class="flex flex-col lg:flex-row items-start max-w-7xl mx-auto gap-10 p-8 sm:p-6 md:p-4">
+        <div class="flex flex-col lg:flex-row items-start max-w-7xl mx-auto gap-10 px-4 sm:px-6 lg:px-8 py-6">
             <!-- Left: Tour Schedule Text -->
             <div class="w-full lg:w-1/2 flex flex-col items-center lg:items-start">
                 <p class="font-['Montserrat'] text-left font-medium text-UVA-orange text-4xl sm:text-5xl leading-tight mb-6">
@@ -124,82 +124,87 @@
                     </li>
                 </ul>
             </div>
+        </div>
 
-            <!-- Right: Registration Form (overlapping the section) -->
-            <div class="w-full lg:w-1/2 relative">
-                <div class="relative lg:absolute lg:-bottom-190 z-20 w-full">
-                    <div class="flex flex-col shadow-[0px_2px_16px_0px_rgba(14,30,37,0.32)] rounded-xl p-6 bg-white">
-                        <h1 class="font=['Montserrat'] font-medium text-3xl text-royal-blue mb-4">
-                            Register Here for a Historical Tour
-                        </h1>
-                        <form class="flex flex-col">
-                            <label for="fname" class="font-[Montserrat] font-light text-royal-blue">First Name</label>
-                            <input type="text" id="fname" name="fname" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+        <!-- Banner + Registraton Form -->
+        <div class="bg-royal-blue w-full relative z-10 py-6">
+            <div class="flex flex-col lg:flex-row items-start px-4 sm:px-6 lg:px-8">
+                <!--Left: Banner Text-->
+                <div class="w-full lg:w-1/2 flex flex-col justify-center items-center max-w-7xl mx-auto">
+                    <p class="font-['Montserrat'] font-light text-base sm:text-lg leading-relaxed text-white">
+                        <span class="font-semibold">Registration for Standard History Tours are not required but encouraged to receive possible updates on your tour. </span>
+                        Standard Historical tours are public for anyone to join and occur regularly throughout the school year.
+                    </p>
+                    <a href="/contact-us">
+                        <button class="rounded-full border-2 border-white text-white font-semibold text-base px-6 py-2 mt-3 cursor-pointer hover:bg-gray-200 hover:text-black hover:border-gray-200 transition-all duration-300 ease-in-out">
+                            Contact Us
+                        </button>
+                    </a>
+                </div>
 
-                            <label for="lname" class="font-[Montserrat] font-light text-royal-blue">Last Name</label>
-                            <input type="text" id="lname" name="lname" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                <!-- Right: Registration Form (overlapping the section) -->
+                <div class="w-full lg:w-1/2 relative pt-10 md:pt-0">
+                    <div class="relative lg:absolute lg:-bottom-110 z-20 w-full">
+                        <div class="flex flex-col shadow-[0px_2px_16px_0px_rgba(14,30,37,0.32)] rounded-xl p-6 bg-white">
+                            <h1 class="font=['Montserrat'] font-medium text-3xl text-royal-blue mb-4">
+                                Register Here for a Historical Tour
+                            </h1>
+                            <form class="flex flex-col">
+                                <label for="fname" class="font-[Montserrat] font-light text-royal-blue">First Name</label>
+                                <input type="text" id="fname" name="fname" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
 
-                            <label for="email" class="font-[Montserrat] font-light text-royal-blue">Email</label>
-                            <input type="email" id="email" name="email" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                                <label for="lname" class="font-[Montserrat] font-light text-royal-blue">Last Name</label>
+                                <input type="text" id="lname" name="lname" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
 
-                            <label for="number" class="font-[Montserrat] font-light text-royal-blue">Phone Number</label>
-                            <input type="tel" id="number" name="number" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                                <label for="email" class="font-[Montserrat] font-light text-royal-blue">Email</label>
+                                <input type="email" id="email" name="email" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
 
-                            <div class="flex flex-col lg:flex-row justify-between lg:gap-4">
-                                <div class="flex flex-col">
-                                    <label for="date" class="font-[Montserrat] font-light text-royal-blue">Date</label>
-                                    <input type="date" id="date" name="date" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                                <label for="number" class="font-[Montserrat] font-light text-royal-blue">Phone Number</label>
+                                <input type="tel" id="number" name="number" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+
+                                <div class="flex flex-col lg:flex-row justify-between lg:gap-4">
+                                    <div class="flex flex-col">
+                                        <label for="date" class="font-[Montserrat] font-light text-royal-blue">Date</label>
+                                        <input type="date" id="date" name="date" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <label for="guestNum" class="font-[Montserrat] font-light text-royal-blue">Guest(s)</label>
+                                        <input type="number" id="guestNum" name="guestNum" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                                    </div>
                                 </div>
-                                <div class="flex flex-col">
-                                    <label for="guestNum" class="font-[Montserrat] font-light text-royal-blue">Guest(s)</label>
-                                    <input type="number" id="guestNum" name="guestNum" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
-                                </div>
-                            </div>
 
-                            <label for="guestNum" class="font-[Montserrat] font-light text-royal-blue">How many minors are in your group?</label>
-                            <input type="number" id="guestNum" name="guestNum" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                                <label for="guestNum" class="font-[Montserrat] font-light text-royal-blue">How many minors are in your group?</label>
+                                <input type="number" id="guestNum" name="guestNum" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
 
 
-                            <label for="tour" class="font-[Montserrat] font-light text-royal-blue">Type of Tour</label>
-                            <input type="text" id="tour" name="tour" value="Standard Historical Tour" readonly class="font-[Montserrat] text-royal-blue border border-gray-300 bg-gray-100 cursor-not-allowed rounded-lg px-4 py-2 focus:outline-none mb-5"/>
+                                <label for="tour" class="font-[Montserrat] font-light text-royal-blue">Type of Tour</label>
+                                <input type="text" id="tour" name="tour" value="Standard Historical Tour" readonly class="font-[Montserrat] text-royal-blue border border-gray-300 bg-gray-100 cursor-not-allowed rounded-lg px-4 py-2 focus:outline-none mb-5"/>
 
 
-                            <label for="notes" class="font-[Montserrat] font-light text-royal-blue">Notes for the Tour</label>
-                            <textarea id="notes" class="flex-grow font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-4"></textarea>
+                                <label for="notes" class="font-[Montserrat] font-light text-royal-blue">Notes for the Tour</label>
+                                <textarea id="notes" class="flex-grow font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-4"></textarea>
 
-                            <button type="submit" class="font-[Montserrat] bg-royal-blue text-white font-semibold rounded-lg px-4 py-2 hover:bg-blue-900 transition-all duration-300 ease-in-out cursor-pointer">
-                                Register
-                            </button>
-                        </form>
+                                <button type="submit" class="font-[Montserrat] bg-royal-blue text-white font-semibold rounded-lg px-4 py-2 hover:bg-blue-900 transition-all duration-300 ease-in-out cursor-pointer">
+                                    Register
+                                </button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- Banner -->
-        <div class="bg-royal-blue w-full p-8 relative z-10">
-            <div class="w-full lg:w-1/2 flex flex-col justify-center items-center">
-                <p class="font-['Montserrat'] font-light text-base sm:text-lg leading-relaxed text-white">
-                    <span class="font-semibold">Registration for Standard History Tours are not required but encouraged to receive possible updates on your tour. </span>
-                    Standard Historical tours are public for anyone to join and occur regularly throughout the school year.
-                </p>
-                <a href="/contact-us">
-                    <button class="rounded-full border-2 border-white text-white font-semibold text-base sm:text-lg px-6 py-2 mt-5 cursor-pointer hover:bg-gray-200 hover:text-black hover:border-gray-200 transition-all duration-300 ease-in-out">
-                        Contact Us
-                    </button>
-                </a>
-            </div>
-        </div>
-    </section>
+</section>
 
     <!-- Location and Parking -->
     <section id="location-and-parking" class="bg-neutral-100">
-        <div class="flex flex-col lg:flex-row justify-center gap-10 p-10 sm:p-8 md:p-6 w-full lg:w-1/2">
-            <!-- Left: Tour Schedule Text -->
-            <div class="flex flex-col items-center lg:items-start">
+        <div class="flex flex-col lg:flex-row items-start max-w-7xl mx-auto gap-10 px-4 sm:px-6 lg:px-8 pt-12 pb-6">
+            <!-- Left: Parking Text -->
+            <div class="w-full lg:w-1/2 flex flex-col items-center lg:items-start">
+                <!--Header-->
                 <p class="font-['Montserrat'] text-left font-medium text-UVA-orange text-4xl sm:text-5xl leading-tight mb-6">
                     LOCATION & PARKING
                 </p>
+                <!--Bullet Points-->
                 <ul class="list-disc font-['Montserrat'] text-base sm:text-lg leading-relaxed text-gray-900 max-w-3xl lg:max-w-xl px-4">
                     <li>
                         We recommend 
@@ -225,18 +230,15 @@
         </div>
     </section>
 
-    <!--Switch to leaflet-->
     <!-- Map Section -->
-    <section class="w-full flex justify-center px-10 p-5 lg:p-5 bg-neutral-100">
-        <div class="w-full max-w-5xl aspect-video">
-
-            <!-- John's Map -->
-            <iframe 
-                src="https://www.google.com/maps/d/embed?mid=16Uf_oN9AUEKhU3pVgavoqg6AHNG1o-o&ehbc=2E312F&noprof=1" 
+    <section class="w-full flex justify-center px-10 pb-12 bg-neutral-100">
+        <div class="w-full max-w-7xl mx-auto h-64 sm:h-80 md:h-96 lg:h-[600px]">
+            <iframe
+                src="https://www.google.com/maps/d/embed?mid=16Uf_oN9AUEKhU3pVgavoqg6AHNG1o-o&ehbc=2E312F&noprof=1"
                 class="w-full h-full border-0"
                 loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe> 
+                referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
 
             <!--General Map-->
             <!-- <iframe
@@ -261,9 +263,9 @@
                 <!-- FAQ Item -->
 
                 <details class="group border-b pb-4">
-                    <summary class="cursor-pointer text-xl sm:text-2xl font-medium flex justify-between items-center">
-                        <span>What is the tour about?</span>
-                        <span class="text-UVA-orange group-open:rotate-45 transition-transform">+</span>
+                    <summary class="cursor-pointer text-xl sm:text-2xl font-medium xl:flex xl:justify-between xl:items-start">
+                        <span class="pl-5 xl:pl-0">What is the tour about?</span>
+                        <span class="text-UVA-orange group-open:rotate-45 transition-transform hidden xl:block">+</span>
                     </summary>
                     <p class="mt-3 text-base sm:text-lg text-gray-700 leading-relaxed">
                         UVA's student-led tours trace over 200 years of history, from its founding through decades of change, resistance, 
@@ -280,9 +282,9 @@
                 </details>
 
                 <details class="group border-b pb-4">
-                    <summary class="cursor-pointer text-xl sm:text-2xl font-medium flex justify-between items-center">
-                        <span>How much does a tour cost per guest?</span>
-                        <span class="text-UVA-orange group-open:rotate-45 transition-transform">+</span>
+                    <summary class="cursor-pointer text-xl sm:text-2xl font-medium xl:flex xl:justify-between xl:items-start">
+                        <span class="pl-5 xl:pl-0">How much does a tour cost per guest?</span>
+                        <span class="text-UVA-orange group-open:rotate-45 transition-transform hidden xl:block">+</span>
                     </summary>
                     <p class="mt-3 text-base sm:text-lg text-gray-700 leading-relaxed">
                         <span class="font-semibold">
@@ -298,9 +300,9 @@
                 </details>
 
                 <details class="group border-b pb-4">
-                    <summary class="cursor-pointer text-xl sm:text-2xl font-medium flex justify-between items-center">
-                        <span>How long should I plan for my tour?</span>
-                        <span class="text-UVA-orange group-open:rotate-45 transition-transform">+</span>
+                    <summary class="cursor-pointer text-xl sm:text-2xl font-medium xl:flex xl:justify-between xl:items-start">
+                        <span class="pl-5 xl:pl-0">How long should I plan for my tour?</span>
+                        <span class="text-UVA-orange group-open:rotate-45 transition-transform hidden xl:block">+</span>
                     </summary>
                     <p class="mt-3 text-base sm:text-lg text-gray-700 leading-relaxed">
                         Tours typically last around 1-1.5 hours. Please meet at the tour-start location around 5-10 minutes before your tour.
@@ -308,9 +310,9 @@
                 </details>
 
                 <details class="group border-b pb-4">
-                    <summary class="cursor-pointer text-xl sm:text-2xl font-medium flex justify-between items-center">
-                        <span>Can I bring water to the site?</span>
-                        <span class="text-UVA-orange group-open:rotate-45 transition-transform">+</span>
+                    <summary class="cursor-pointer text-xl sm:text-2xl font-medium xl:flex xl:justify-between xl:items-start">
+                        <span class="pl-5 xl:pl-0">Can I bring water to the site?</span>
+                        <span class="text-UVA-orange group-open:rotate-45 transition-transform hidden xl:block">+</span>
                     </summary>
                     <p class="mt-3 text-base sm:text-lg text-gray-700 leading-relaxed">
                         Water is encouraged, especially on warm days, as most of the tour is outdoors with some shaded areas. Food is not allowed inside historic buildings, but the Lawn and “The Corner” nearby are great places to eat before or after your visit.
@@ -318,9 +320,9 @@
                 </details>
 
                 <details class="group border-b pb-4">
-                    <summary class="cursor-pointer text-xl sm:text-2xl font-medium flex justify-between items-center">
-                        <span>Is photography allowed?</span>
-                        <span class="text-UVA-orange group-open:rotate-45 transition-transform">+</span>
+                    <summary class="cursor-pointer text-xl sm:text-2xl font-medium xl:flex xl:justify-between xl:items-start">
+                        <span class="pl-5 xl:pl-0">Is photography allowed?</span>
+                        <span class="text-UVA-orange group-open:rotate-45 transition-transform hidden xl:block">+</span>
                     </summary>
                     <p class="mt-3 text-base sm:text-lg text-gray-700 leading-relaxed">
                         Personal photography of the site is welcome. To respect privacy and intellectual property, recording of tours, tour content, or identifiable individuals (including students) is not permitted without prior written consent.
@@ -328,9 +330,9 @@
                 </details>
 
                 <details class="group border-b pb-4">
-                    <summary class="cursor-pointer text-xl sm:text-2xl font-medium flex justify-between items-center">
-                        <span>Do I need to register for large groups?</span>
-                        <span class="text-UVA-orange group-open:rotate-45 transition-transform">+</span>
+                    <summary class="cursor-pointer text-xl sm:text-2xl font-medium xl:flex xl:justify-between xl:items-start">
+                        <span class="pl-5 xl:pl-0">Do I need to register for large groups?</span>
+                        <span class="text-UVA-orange group-open:rotate-45 transition-transform hidden xl:block">+</span>
                     </summary>
                     <p class="mt-3 text-base sm:text-lg text-gray-700 leading-relaxed">
                         Yes. For groups over 10 visitors, please complete the tour registration form so we can prepare for your needs. School groups should see the 
@@ -373,9 +375,9 @@
         <div class="space-y-6 text-[#DC8051] font-['Montserrat']">
             <!-- FAQ Item -->
             <details class="group border-b pb-4">
-                <summary class="cursor-pointer text-xl sm:text-2xl font-medium flex justify-between items-center">
-                    <span class="text-[#DC8051]">Is the Academical Village wheelchair-accessible from the parking garage?</span>
-                    <span class="text-[#DC8051] group-open:rotate-45 transition-transform">+</span>
+                <summary class="cursor-pointer text-xl sm:text-2xl font-medium xl:flex xl:justify-between xl:items-start">
+                    <span class="text-[#DC8051] pl-5 xl:pl-0">Is the Academical Village wheelchair-accessible from the parking garage?</span>
+                    <span class="text-[#DC8051] group-open:rotate-45 transition-transform hidden xl:block">+</span>
                 </summary>
                 <ul class="list-disc mt-3 ml-10 text-base sm:text-lg text-white leading-relaxed">
                     <li>
@@ -388,9 +390,9 @@
             </details>
 
             <details class="group border-b pb-4">
-                <summary class="cursor-pointer text-xl sm:text-2xl font-medium flex justify-between items-center">
-                    <span class="text-[#DC8051]">What accommodations are available for deaf or hard-of-hearing visitors?</span>
-                    <span class="text-[#DC8051] group-open:rotate-45 transition-transform">+</span>
+                <summary class="cursor-pointer text-xl sm:text-2xl xl:flex xl:justify-between xl:items-start">
+                    <span class="text-[#DC8051] pl-5 xl:pl-0">What accommodations are available for deaf or hard-of-hearing visitors?</span>
+                    <span class="text-[#DC8051] group-open:rotate-45 transition-transform hidden xl:block">+</span>
                 </summary>
                 <p class="mt-3 text-base sm:text-lg text-white leading-relaxed">
                     Our guided tours are not currently interpreted for deaf or hard-of-hearing visitors.
@@ -504,42 +506,42 @@
             <NuxtImg 
             src="/Header_PageFooters.jpg"
             alt="My image file description"
-            class="w-full min-h-screen sm:h-[120vh] object-cover"
+            class="w-full min-h-screen sm:h-[120vh] object-cover object-top"
             />
 
             <!-- Overlay Content -->
-            <div class="absolute top-1/2 left-1/2 w-full max-w-6xl px-4 -translate-x-1/2 -translate-y-1/2 text-center z-10">
+            <div class="absolute top-1/2 left-1/2 w-full max-w-6xl px-4 sm:px-6 lg:px-8 -translate-x-1/2 -translate-y-1/2 text-center z-10">
 
-            <!-- Header -->
-            <div class="mt-[-6rem] sm:mt-[-8rem] md:mt-[-10rem]">
-                <h1 class="font-['Playfair_Display'] text-white italic text-[clamp(2.5rem,9vw,5rem)] leading-tight">
-                    SHED LIGHT
-                </h1>
-                <p class="font-['Roboto'] text-white text-base sm:text-lg md:text-xl font-semibold leading-snug">
-                    ON HISTORY
+                <!-- Header -->
+                <div class="absolute left-1/2 w-full max-w-6xl px-4 -translate-x-1/2 -translate-y-1/2 text-white text-center">
+                    <h1 class="font-['Playfair_Display'] italic text-center xl:text-left whitespace-nowrap text-[clamp(3rem,9.5vw,4rem)] leading-tight [text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)]">
+                        SHED LIGHT
+                    </h1>
+                    <p class="font-Roboto text-center xl:max-w-sm xl:text-right text-xl sm:text-2xl md:text-3xl font-extralight leading-snug [text-shadow:_3px_3px_6px_rgb(0_0_0_/_0.70)]">
+                        ON HISTORY
+                    </p>
+                </div>
+
+                <!-- Buttons -->
+                <div class="mt-40 flex flex-col sm:flex-row justify-center items-center gap-x-10 gap-y-4 pointer-events-auto">
+                    <a href="/your-visit">
+                        <button class="font-['Roboto'] border border-white text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 hover:border-transparent rounded-full py-3 px-10 cursor-pointer transition-all duration-300 ease-in-out">
+                            TAKE A TOUR
+                        </button>
+                    </a>
+                    <a href="/donate">
+                        <button class="font-['Roboto'] border border-white text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 hover:border-transparent rounded-full py-3 px-15 cursor-pointer transition-all duration-300 ease-in-out">
+                            DONATE
+                        </button>
+                    </a>
+                </div>
+
+                <!-- Description -->
+                <p class="mt-20 font-['Roboto'] text-white text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
+                    The Virginia Guides Service at UVA is an entirely student-run independent volunteer organization. 
+                    If you would like to provide additional support, please consider donating to our day-to-day operations 
+                    <a href="/donate" class="underline">here</a>. We appreciate your time and thank you for continuing to support our mission.
                 </p>
-            </div>
-
-            <!-- Buttons -->
-            <div class="mt-40 flex flex-col sm:flex-row justify-center items-center gap-x-10 gap-y-4 pointer-events-auto">
-                <a href="/your-visit">
-                    <button class="font-['Roboto'] border border-white text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 hover:border-transparent rounded-full py-3 px-10 cursor-pointer transition-all duration-300 ease-in-out">
-                        PLAN YOUR VISIT
-                    </button>
-                </a>
-                <a href="/donate">
-                    <button class="font-['Roboto'] border border-white text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 hover:border-transparent rounded-full py-3 px-18 cursor-pointer transition-all duration-300 ease-in-out">
-                        DONATE
-                    </button>
-                </a>
-            </div>
-
-            <!-- Description -->
-            <p class="mt-20 font-['Roboto'] text-white text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
-                The Virginia Guides Service at UVA is an entirely student-run independent volunteer organization. 
-                If you would like to provide additional support, please consider donating to our day-to-day operations 
-                <a href="/donate" class="underline">here</a>. We appreciate your time and thank you for continuing to support our mission.
-            </p>
 
             </div>
         </div>
