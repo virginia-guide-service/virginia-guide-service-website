@@ -41,7 +41,7 @@
                 </div>
 
                 <!-- Left: Text -->
-                <div class="w-full lg:w-1/2 px-5 lg:px-0">
+                <div class="w-full lg:w-1/2 px-5 lg:px-0 justify-between items-center">
                     <p class="font-['Playfair_Display'] italic text-center font-medium text-dark-green text-4xl sm:text-5xl leading-tight mb-6">
                     HISTORICAL TOURS
                     </p>
@@ -58,7 +58,7 @@
                         semester of intensive training, research, and critical reflection.
                     </p>
                     <div class="flex flex-col justify-center items-center pt-5">
-                        <div class="flex flex-col justify-center items-center border-4 border-double border-dark-green rounded-md p-3">
+                        <div class="flex flex-col justify-center items-center border-3 border-dark-green p-4">
                             <ul class="list-disc font-['Montserrat'] text-base sm:text-lg leading-relaxed text-gray-900 max-w-xl px-4">
                                 <li>
                                 Standard History Tours last around <span class="font-bold">1 hour</span>.
@@ -139,7 +139,7 @@
                 <h1 class="font-['Playfair_Display'] italic text-center font-medium text-dark-green text-5xl sm:text-6xl leading-tight mb-2">
                     SPECIALTY TOURS
                 </h1>
-                <p class="font-['Playfair_Display'] w-full sm:w-[70%] text-center font-light text-black text-base sm:text-xl px-10">
+                <p class="font-['Montserrat'] w-full sm:w-[70%] text-center font-light text-black text-base sm:text-xl px-10">
                     In addition to our regularly scheduled historical tours, we also offer Specialty Tours by request,
                     which focus on a specific aspect of UVA's extensive 200 year history.
                 </p>
@@ -183,7 +183,7 @@
                 <div id="history-of-african-americans-tour" class="flex flex-col md:flex-row lg:h-[50vh] justify-center gap-1 sm:gap-3 md:gap-2 items-stretch">
                     <!--Picture-->
                     <div class="w-full md:w-1/2 px-2 sm:px-6 md:px-0">
-                        <img src="/about-tours-page/specialty-tours/HistoryofAfricanAmericansatUVA.jpg" class="w-full h-full object-cover object-center" alt="History of African Americans at UVA">
+                        <img src="/about-tours-page/specialty-tours/HAA.jpg" class="w-full h-full object-cover object-center" alt="History of African Americans at UVA">
                     </div>
                     <!--Text-->
                     <div class="md:w-1/2 flex flex-col justify-start space-y-2 md:space-y-6 px-2 sm:px-6 md:px-4">
@@ -215,7 +215,7 @@
                 <div id="MEL-tour" class="flex flex-col md:flex-row lg:h-[50vh] justify-center gap-1 sm:gap-3 md:gap-2 items-stretch">
                     <!--Picture-->
                     <div class="w-full md:w-1/2 px-2 sm:px-6 md:px-0">
-                        <img src="/about-tours-page/specialty-tours/MemorialtoEnslavedLaborers.jpg" class="w-full h-full object-cover object-center" alt="History of African Americans at UVA">
+                        <img src="/about-tours-page/specialty-tours/MEL.jpeg" class="w-full h-full object-cover object-center" alt="History of African Americans at UVA">
                     </div>
                     <!--Text-->
                     <div class="md:w-1/2 flex flex-col justify-start space-y-3 md:space-y-6 px-2 sm:px-6 md:px-4">

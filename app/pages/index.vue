@@ -131,7 +131,7 @@
             class="mySwiper"
             :breakpoints="{
                 320: { slidesPerView: 1, slidesPerGroup: 1, spaceBetween: 10 },
-                640: { slidesPerView: 2, slidesPerGroup: 3, spaceBetween: 35 },
+                640: { slidesPerView: 2, slidesPerGroup: 2, spaceBetween: 35 },
                 1024: { slidesPerView: 3, slidesPerGroup: 3, spaceBetween: 25 },
                 1280: { slidesPerView: 4, slidesPerGroup: 4, spaceBetween: 30 }
             }"
@@ -146,7 +146,7 @@
                         class="w-full rounded-lg transition-all duration-300 ease-in-out group-hover:brightness-75"
                     />
                     <p class="absolute inset-0 flex items-center justify-center font-['Montserrat'] text-center px-2 text-white font-bold text-base sm:text-lg md:text-xl">
-                        Our Tours
+                        About Tours
                     </p>
                     </div>
                 </a>
@@ -297,7 +297,7 @@
                 <div class="mt-10 flex flex-col md:flex-row justify-center items-center gap-x-6 gap-y-4 pointer-events-auto">
                     <!-- Button 1: Learn More -->
                     <a href="/join-guides">
-                        <button class="font-['Roboto'] bg-royal-blue hover:bg-blue-950 text-white rounded-full
+                        <button class="font-['Roboto'] bg-royal-blue hover:bg-gray-200 hover:shadow-md hover:text-royal-blue text-white rounded-full
                                     py-3 px-10 text-sm
                                     sm:py-4 sm:px-10 sm:text-base
                                     md:px-14 md:text-lg
@@ -308,7 +308,7 @@
 
                     <!-- Button 2: Donate -->
                     <a href="/donate">
-                        <button class="font-['Roboto'] bg-royal-blue hover:bg-blue-950 text-white rounded-full
+                        <button class="font-['Roboto'] bg-royal-blue hover:bg-gray-200 hover:shadow-md hover:text-royal-blue text-white rounded-full
                                     py-3 px-13 text-sm
                                     sm:py-4 sm:px-16 sm:text-base
                                     md:px-18 md:text-lg
@@ -319,7 +319,7 @@
 
                     <!-- Button 3: Become a Guide -->
                     <a href="/join-guides#join-guides">
-                        <button class="font-['Roboto'] bg-royal-blue hover:bg-blue-950 text-white rounded-full
+                        <button class="font-['Roboto'] bg-royal-blue hover:bg-gray-200 hover:shadow-md hover:text-royal-blue text-white rounded-full
                                     py-3 px-6 text-sm
                                     sm:py-4 sm:px-8 sm:text-base
                                     md:px-9 md:text-lg
