@@ -79,92 +79,107 @@
 
                 <!-- Right: Contact Us Form -->
                 <div class="w-full lg:w-[60%] flex flex-col h-full">
-                    <form class="flex flex-col p-6 sm:p-8 lg:p-10 h-full">
-                    <label for="fname" class="font-[Montserrat] font-light text-royal-blue">First Name</label>
-                    <input type="text" id="fname" name="fname"
-                        class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                    <form @submit="submitForm" class="flex flex-col p-6 sm:p-8 lg:p-10 h-full">
+                        <label for="fname" class="font-[Montserrat] font-light text-royal-blue">First Name</label>
+                        <input type="text" id="fname" name="fname" v-model="form.first_name"
+                            class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
 
-                    <label for="lname" class="font-[Montserrat] font-light text-royal-blue">Last Name</label>
-                    <input type="text" id="lname" name="lname"
-                        class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                        <label for="lname" class="font-[Montserrat] font-light text-royal-blue">Last Name</label>
+                        <input type="text" id="lname" name="lname" v-model="form.last_name"
+                            class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
 
-                    <label for="email" class="font-[Montserrat] font-light text-royal-blue">Email</label>
-                    <input type="email" id="email" name="email"
-                        class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                        <label for="email" class="font-[Montserrat] font-light text-royal-blue">Email</label>
+                        <input type="email" id="email" name="email" v-model="form.email"
+                            class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
 
-                    <label for="number" class="font-[Montserrat] font-light text-royal-blue">Phone Number</label>
-                    <input type="tel" id="number" name="number" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                        <label for="number" class="font-[Montserrat] font-light text-royal-blue">Phone Number</label>
+                        <input type="tel" id="number" name="number" v-model="form.phone_number" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
 
-                    <label for="rating" class="font-[Montserrat] font-light text-royal-blue">How satisified were you with the tour overall? (Scale of 1-10)</label>
-                    <select name="rating" id="rating" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-4">>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                    </select>
+                        <label for="rating" class="font-[Montserrat] font-light text-royal-blue">How satisified were you with the tour overall? (Scale of 1-10)</label>
+                        <select name="rating" id="rating" v-model="form.rating" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-4">>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
 
-                    <div class="flex flex-col lg:flex-row justify-between lg:gap-4">
-                        <div class="flex flex-col">
-                            <label for="date" class="font-[Montserrat] font-light text-royal-blue">Intended Date of Tour</label>
-                            <input type="date" id="date" name="date" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                        <div class="flex flex-col lg:flex-row justify-between lg:gap-4">
+                            <div class="flex flex-col">
+                                <label for="date" class="font-[Montserrat] font-light text-royal-blue">Intended Date of Tour</label>
+                                <input type="date" id="date" name="date" v-model="form.date" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                            </div>
+                            <div class="flex flex-col">
+                                <label for="time" class="font-[Montserrat] font-light text-royal-blue">Time of Tour</label>
+                                <input type="time" id="time" name="time" v-model="form.time" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                            </div>
                         </div>
-                        <div class="flex flex-col">
-                            <label for="time" class="font-[Montserrat] font-light text-royal-blue">Time of Tour</label>
-                            <input type="time" id="time" name="time" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+
+                        <label for="tour-type" class="font-[Montserrat] font-light text-royal-blue">Type of Tour</label>
+                        <select name="tour-type" id="tour-type" v-model="form.tour_type" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-4">>
+                            <option value="Standard Historical">Standard Historical Tour</option>
+                            <option value="History of African Americans at UVA">History of African Americans at UVA</option>
+                            <option value="Memorial to Enslaved Laborers">Memorial to Enslaved Laborers</option>
+                            <option value="History of Women">History of Women at UVA</option>
+                            <option value="Children's Tour">Children's Tour</option>
+                            <option value="Private Admissions Tours">Private Admissions Tours</option>
+                            <option value="Garden Tours">Garden Tours</option>
+                        </select>
+
+                        <label for="best-part" class="font-[Montserrat] font-light text-royal-blue">Best part of the tour?</label>
+                        <textarea id="best-part" v-model="form.best_part_message"
+                            class="flex-grow font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-4">
+                        </textarea>
+
+                        <label for="improvement" class="font-[Montserrat] font-light text-royal-blue">Part of the tour that needs more improvement?</label>
+                        <textarea id="improvement" v-model="form.improvement_message"
+                            class="flex-grow font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-4">
+                        </textarea>
+
+                        <label for="length" class="font-[Montserrat] font-light text-royal-blue">How was the length of the tour?</label>
+                        <textarea id="length" v-model="form.length_message"
+                            class="flex-grow font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-4">
+                        </textarea>
+
+                        <label for="topics" class="font-[Montserrat] font-light text-royal-blue">Were there topics or places you wish your Guide went to or discussed?</label>
+                        <textarea id="topics" v-model="form.topics_message"
+                            class="flex-grow font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-4">
+                        </textarea>
+
+                        <label for="source" class="font-[Montserrat] font-light text-royal-blue">How did you hear about our tours?</label>
+                        <textarea id="source" v-model="form.source_message"
+                            class="flex-grow font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-4">
+                        </textarea>
+
+                        <label for="comments" class="font-[Montserrat] font-light text-royal-blue">Feel free to add any other comments you have. Thank you!</label>
+                        <textarea id="comments" v-model="form.other_comments"
+                            class="flex-grow font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-4">
+                        </textarea>
+
+                        <button type="submit"
+                            class="font-[Montserrat] bg-dark-green text-white font-semibold rounded-lg px-4 py-2 hover:bg-green-700 transition-all duration-300 ease-in-out cursor-pointer">
+                            Submit Feedback
+                        </button>
+
+                        <!-- Success Toast -->
+                        <div v-if="success" class="fixed inset-0 flex items-center justify-center z-50 pointer-events-none">
+                            <div class="font-[Montserrat] bg-green-600 text-white px-6 py-4 rounded-md shadow-lg pointer-events-auto">
+                                Thank you! Your Feedback has been recieved!
+                            </div>
                         </div>
-                    </div>
 
-                    <label for="tour-type" class="font-[Montserrat] font-light text-royal-blue">Type of Tour</label>
-                    <select name="tour-type" id="tour-type" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-4">>
-                        <option value="StandardHistorical">Standard Historical Tour</option>
-                        <option value="HistoryofAfricanAmericansatUVA">History of African Americans at UVA</option>
-                        <option value="MemorialtoEnslavedLaborer">Memorial to Enslaved Laborers</option>
-                        <option value="HistoryofWomen">History of Women at UVA</option>
-                        <option value="ChildrensTour">Children's Tour</option>
-                        <option value="PrivateAdmissionsTours">Private Admissions Tours</option>
-                        <option value="GardenTours">Garden Tours</option>
-                    </select>
+                        <!-- Error Toast -->
+                        <div v-if="errorMsg" class="fixed inset-0 flex items-center justify-center z-50 pointer-events-none">
+                            <div class="font-[Montserrat] bg-red-600 text-white px-6 py-4 rounded-md shadow-lg pointer-events-auto">
+                                {{ errorMsg }}
+                            </div>
+                        </div>
 
-                    <label for="best-part" class="font-[Montserrat] font-light text-royal-blue">Best part of the tour?</label>
-                    <textarea id="best-part"
-                        class="flex-grow font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-4">
-                    </textarea>
-
-                    <label for="improvement" class="font-[Montserrat] font-light text-royal-blue">Part of the tour that needs more improvement?</label>
-                    <textarea id="improvement"
-                        class="flex-grow font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-4">
-                    </textarea>
-
-                    <label for="length" class="font-[Montserrat] font-light text-royal-blue">How was the length of the tour?</label>
-                    <textarea id="length"
-                        class="flex-grow font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-4">
-                    </textarea>
-
-                    <label for="topics" class="font-[Montserrat] font-light text-royal-blue">Were there topics or places you wish your Guide went to or discussed?</label>
-                    <textarea id="topics"
-                        class="flex-grow font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-4">
-                    </textarea>
-
-                    <label for="source" class="font-[Montserrat] font-light text-royal-blue">How did you hear about our tours?</label>
-                    <textarea id="source"
-                        class="flex-grow font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-4">
-                    </textarea>
-
-                    <label for="comments" class="font-[Montserrat] font-light text-royal-blue">Feel free to add any other comments you have. Thank you!</label>
-                    <textarea id="comments"
-                        class="flex-grow font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-4">
-                    </textarea>
-
-                    <button type="submit"
-                        class="font-[Montserrat] bg-dark-green text-white font-semibold rounded-lg px-4 py-2 hover:bg-green-700 transition-all duration-300 ease-in-out cursor-pointer">
-                        Submit Feedback
-                    </button>
                     </form>
                 </div>
             </div>
@@ -518,11 +533,89 @@
         </div>
     </section>
 
-
 </template>
 
-<script setup>
+<script setup lang="ts">
     import { onMounted } from "vue"
+    import { ref } from 'vue'
+
+    const form = ref({
+        first_name: '',
+        last_name: '',
+        email: '',
+        phone_number: '',
+        rating: '',
+        date: '',
+        time: '',
+        tour_type: '',
+        best_part_message: '',
+        improvement_message: '',
+        length_message: '',
+        topics_message: '',
+        source_message: '',
+        other_comments: ''
+    })
+
+    const success = ref(false)
+    const errorMsg = ref('')
+    const fieldErrors = ref<Record<string, string[]>>({})
+
+    async function submitForm(e: Event) {
+    e.preventDefault()
+    fieldErrors.value = {}
+    errorMsg.value = ''
+    success.value = false
+
+    try {
+        const { data, error } = await useFetch('http://127.0.0.1:8000/submit-feedback/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form.value)
+        })
+
+        if (error.value) {
+        if (error.value.data) {
+            fieldErrors.value = error.value.data
+        } else {
+            errorMsg.value = 'Something went wrong. Please try again later.'
+        }
+        return
+        }
+
+        success.value = true
+
+        // Clear the form
+        form.value = {
+        first_name: '',
+        last_name: '',
+        email: '',
+        phone_number: '',
+        rating: '',
+        date: '',
+        time: '',
+        tour_type: '',
+        best_part_message: '',
+        improvement_message: '',
+        length_message: '',
+        topics_message: '',
+        source_message: '',
+        other_comments: ''
+        }
+
+    } catch (err) {
+        errorMsg.value = 'Network error. Please try again later.'
+    }
+    }
+
+    // fade out success toast
+    watch(success, (val) => {
+        if (val) setTimeout(() => (success.value = false), 3000)
+    })
+
+    // fade out error toast
+    watch(errorMsg, (val) => {
+        if (val) setTimeout(() => (errorMsg.value = ''), 3000)
+    })
 
     onMounted(() => {
     const observer = new IntersectionObserver((entries) => {

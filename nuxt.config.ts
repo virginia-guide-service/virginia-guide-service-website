@@ -8,6 +8,12 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['../assets/css/main.css'],
   modules: ['@nuxt/image', '@nuxt/fonts'],
+  // backend: django
+  runtimeConfig: {
+    public: {
+      apiBase: 'http://127.0.0.1:8000/api'
+    }
+  },
   vite: {
     plugins: [
       tailwindcss(),

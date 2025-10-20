@@ -2,7 +2,7 @@
     <!--Header Section-->
     <header class="relative bg-[url('/Header_SpecialtyToursRequest.jpeg')] w-full bg-cover bg-center bg-no-repeat h-[60vh] sm:h-[75vh] bg-">
         <!-- Centered Text -->
-        <div class="absolute top-1/2 left-1/2 w-full max-w-8xl px-10 -translate-x-1/2 -translate-y-1/2 text-white">
+        <div class="absolute top-[40%] left-1/2 w-full max-w-8xl px-10 -translate-x-1/2 -translate-y-1/2 text-white">
             <h1 class="font-['Playfair_Display'] text-center xl:text-right italic text-[clamp(2rem,9.5vw,5rem)] leading-tight [text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)]">
                 VIRGINIA GUIDES
             </h1>
@@ -10,10 +10,20 @@
                 HISTORICAL TOURS OF THE UNIVERSITY OF VIRGINIA
             </p>
         </div>
+        <!--Banner-->
+        <div class="absolute top-[70%] left-1/2 w-full -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-evenly gap-1 shadow-md bg-dark-green/80 py-6 px-4 sm:px-6 lg:px-8">
+            <!-- Description -->
+            <div class="font-['Montserrat'] text-white text-center justify-start text-sm md:text-base max-w-6xl">
+                <a class="italic">To ensure guide availability for special topic or large tour groups, all tour requests. should be submitted at least</a>
+                    <a class="underline">two to three weeks in advance</a>. 
+                <a class="italic"> Complete this form and we can get back to you with more details on your tour!</a> 
+                Standard Historical tours occur regularly throughout the school year and do not require a special request.
+            </div>
+        </div>
     </header> 
 
     <!-- Overlapping Section For Feedback Form-->
-    <section class="relative z-20 -mt-20 px-4 sm:px-6 lg:px-8">
+    <section class="relative z-20 -mt-10 md:-mt-15 px-4 sm:px-6 lg:px-8">
         <div class="shadow-xl p-6 max-w-7xl mx-auto bg-white mb-10">
             <div class="flex flex-col lg:flex-row justify-between gap-y-8 gap-x-10">
                 <!-- Left: Information Section -->
@@ -89,53 +99,110 @@
 
                 <!-- Right: Contact Us Form -->
                 <div class="w-full lg:w-[60%] flex flex-col h-full">
-                    <form class="flex flex-col p-6 sm:p-8 lg:p-10 h-full">
-                    <label for="fname" class="font-[Montserrat] font-light text-royal-blue">First Name</label>
-                    <input type="text" id="fname" name="fname"
-                        class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                    <form @submit="submitForm" class="flex flex-col p-6 sm:p-8 lg:p-10 h-full">
+                        <label for="fname" class="font-[Montserrat] font-light text-royal-blue">First Name</label>
+                        <input v-if="!fieldErrors.first_name" type="text" id="fname" name="fname" v-model="form.first_name" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                        <input v-if="fieldErrors.first_name" type="text" id="fname" name="fname" v-model="form.first_name" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue" />
+                        <p v-if="fieldErrors.first_name" class="text-red-500 text-sm p-0 mb-2">
+                            {{ fieldErrors.first_name[0] }}
+                        </p>
 
-                    <label for="lname" class="font-[Montserrat] font-light text-royal-blue">Last Name</label>
-                    <input type="text" id="lname" name="lname"
-                        class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                        <label for="lname" class="font-[Montserrat] font-light text-royal-blue">Last Name</label>
+                        <input v-if="!fieldErrors.last_name" type="text" id="lname" name="lname" v-model="form.last_name" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                        <input v-if="fieldErrors.last_name" type="text" id="lname" name="lname" v-model="form.last_name" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue" />
+                        <p v-if="fieldErrors.last_name" class="text-red-500 text-sm p-0 mb-2">
+                            {{ fieldErrors.last_name[0] }}
+                        </p>
 
-                    <label for="email" class="font-[Montserrat] font-light text-royal-blue">Email</label>
-                    <input type="email" id="email" name="email"
-                        class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                        <label for="email" class="font-[Montserrat] font-light text-royal-blue">Email</label>
+                        <input v-if="!fieldErrors.email" type="email" id="email" name="email" v-model="form.email" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                        <input v-if="fieldErrors.email" type="email" id="email" name="email" v-model="form.email" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue" />
+                        <p v-if="fieldErrors.email" class="text-red-500 text-sm p-0 mb-2">
+                            {{ fieldErrors.email[0] }}
+                        </p>
 
-                    <label for="number" class="font-[Montserrat] font-light text-royal-blue">Phone Number</label>
-                    <input type="tel" id="number" name="number" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                        <label for="number" class="font-[Montserrat] font-light text-royal-blue">Phone Number</label>
+                        <input v-if="!fieldErrors.phone_number" type="tel" id="number" name="number" v-model="form.phone_number" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                        <input v-if="fieldErrors.phone_number" type="tel" id="number" name="number" v-model="form.phone_number" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue" />
+                        <p v-if="fieldErrors.phone_number" class="text-red-500 text-sm p-0 mb-2">
+                            {{ fieldErrors.phone_number[0] }}
+                        </p>
 
-                    <div class="flex flex-col lg:flex-row justify-between lg:gap-4">
-                        <div class="flex flex-col">
-                            <label for="date" class="font-[Montserrat] font-light text-royal-blue">Date</label>
-                            <input type="date" id="date" name="date" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                        <div class="flex flex-col lg:flex-row justify-between lg:gap-4">
+                            <div class="flex flex-col">
+                                <label for="date" class="font-[Montserrat] font-light text-royal-blue">Date</label>
+                                <input v-if="!fieldErrors.date" type="date" id="date" name="date" v-model="form.date" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                                <input v-if="fieldErrors.date" type="date" id="date" name="date" v-model="form.date" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue" />
+                                <p v-if="fieldErrors.date" class="text-red-500 text-sm p-0 mb-2">
+                                    {{ fieldErrors.date[0] }}
+                                </p>
+                            </div>
+                            <div class="flex flex-col">
+                                <label for="guestNum" class="font-[Montserrat] font-light text-royal-blue">Guest(s)</label>
+                                <input v-if="!fieldErrors.guests" type="number" id="guestNum" name="guestNum" v-model="form.guests" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                                <input v-if="fieldErrors.guests" type="number" id="guestNum" name="guestNum" v-model="form.guests" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue" />
+                                <p v-if="fieldErrors.guests" class="text-red-500 text-sm p-0 mb-2">
+                                    {{ fieldErrors.guests[0] }}
+                                </p>
+                            </div>
                         </div>
-                        <div class="flex flex-col">
-                            <label for="guestNum" class="font-[Montserrat] font-light text-royal-blue">Guest(s)</label>
-                            <input type="number" id="guestNum" name="guestNum" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+
+                        <label for="minorNum" class="font-[Montserrat] font-light text-royal-blue">How many minors are in your group?</label>
+                        <input v-if="!fieldErrors.minors" type="number" id="minorNum" name="minorNum" v-model="form.minors" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                        <input v-if="fieldErrors.minors" type="number" id="minorNum" name="minorNum" v-model="form.minors" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue" />
+                        <p v-if="fieldErrors.minors" class="text-red-500 text-sm p-0 mb-2">
+                            {{ fieldErrors.minors[0] }}
+                        </p>
+
+                        <label for="tour-type" class="font-[Montserrat] font-light text-royal-blue">Type of Tour</label>
+                        <select v-if="!fieldErrors.tour_type" name="tour-type" id="tour-type" v-model="form.tour_type" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5">>
+                            <option value="Standard Historical">Standard Historical Tour</option>
+                            <option value="History of African Americans at UVA">History of African Americans at UVA</option>
+                            <option value="Memorial to Enslaved Laborers">Memorial to Enslaved Laborers</option>
+                            <option value="History of Women">History of Women at UVA</option>
+                            <option value="Children's Tour">Children's Tour</option>
+                            <option value="Private Admissions Tours">Private Admissions Tours</option>
+                            <option value="Garden Tours">Garden Tours</option>
+                        </select>
+                        <select v-if="fieldErrors.tour_type" name="tour-type" id="tour-type" v-model="form.tour_type" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5">>
+                            <option value="Standard Historical">Standard Historical Tour</option>
+                            <option value="History of African Americans at UVA">History of African Americans at UVA</option>
+                            <option value="Memorial to Enslaved Laborers">Memorial to Enslaved Laborers</option>
+                            <option value="History of Women">History of Women at UVA</option>
+                            <option value="Children's Tour">Children's Tour</option>
+                            <option value="Private Admissions Tours">Private Admissions Tours</option>
+                            <option value="Garden Tours">Garden Tours</option>
+                        </select>
+                        <p v-if="fieldErrors.tour_type" class="text-red-500 text-sm p-0 mb-2">
+                            {{ fieldErrors.tour_type[0] }}
+                        </p>
+
+                        <label for="notes" class="font-[Montserrat] font-light text-royal-blue">Tour Group Information & Details</label>
+                        <textarea v-if="!fieldErrors.notes" id="notes" v-model="form.notes" class="flex-grow font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5"> </textarea>
+                        <textarea v-if="fieldErrors.notes" id="notes" v-model="form.notes" class="flex-grow font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue"> </textarea>
+                        <p v-if="fieldErrors.notes" class="text-red-500 text-sm p-0 mb-2">
+                            {{ fieldErrors.notes[0] }}
+                        </p>
+
+                        <button type="submit"
+                            class="font-[Montserrat] bg-dark-green text-white font-semibold rounded-lg px-4 py-2 hover:bg-green-700 transition-all duration-300 ease-in-out cursor-pointer">
+                            Request Tour
+                        </button>
+                        
+                        <!-- Success Toast -->
+                        <div v-if="success" class="fixed inset-0 flex items-center justify-center z-50 pointer-events-none">
+                            <div class="font-[Montserrat] bg-green-600 text-white px-6 py-4 rounded-md shadow-lg pointer-events-auto">
+                                Thank you! Your message has been sent!
+                            </div>
                         </div>
-                    </div>
 
-                    <label for="tour-type" class="font-[Montserrat] font-light text-royal-blue">Type of Tour</label>
-                    <select name="tour-type" id="tour-type" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5">>
-                        <option value="StandardHistorical">Standard Historical Tour</option>
-                        <option value="HistoryofAfricanAmericansatUVA">History of African Americans at UVA</option>
-                        <option value="MemorialtoEnslavedLaborer">Memorial to Enslaved Laborers</option>
-                        <option value="HistoryofWomen">History of Women at UVA</option>
-                        <option value="ChildrensTour">Children's Tour</option>
-                        <option value="PrivateAdmissionsTours">Private Admissions Tours</option>
-                        <option value="GardenTours">Garden Tours</option>
-                    </select>
-
-                    <label for="notes" class="font-[Montserrat] font-light text-royal-blue">Tour Group Information & Details</label>
-                    <textarea id="notes"
-                        class="flex-grow font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5">
-                    </textarea>
-
-                    <button type="submit"
-                        class="font-[Montserrat] bg-dark-green text-white font-semibold rounded-lg px-4 py-2 hover:bg-green-700 transition-all duration-300 ease-in-out cursor-pointer">
-                        Request Tour
-                    </button>
+                        <!-- Error Toast -->
+                        <div v-if="errorMsg" class="fixed inset-0 flex items-center justify-center z-50 pointer-events-none">
+                            <div class="font-[Montserrat] bg-red-600 text-white px-6 py-4 rounded-md shadow-lg pointer-events-auto">
+                                {{ errorMsg }}
+                            </div>
+                        </div>
+                        
                     </form>
                 </div>
             </div>
@@ -363,8 +430,95 @@
         </div>
     </section>
 
-
 </template>
+
+<script setup lang="ts">
+    import { onMounted } from "vue"
+    import { ref } from 'vue'
+
+    const form = ref({
+        first_name: '',
+        last_name: '',
+        email: '',
+        phone_number: '',
+        date: '',
+        guests: 1,
+        minors: 0,
+        tour_type: '', // can set a default
+        notes: ''
+    })
+
+    const success = ref(false)
+    const errorMsg = ref('')
+    const fieldErrors = ref<Record<string, string[]>>({})
+
+    async function submitForm(e: Event) {
+        e.preventDefault()
+        fieldErrors.value = {}
+        errorMsg.value = ''
+        success.value = false
+
+        try {
+            const { data, error } = await useFetch('http://127.0.0.1:8000/register-specialty-tour/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(form.value)
+            })
+
+            if (error.value) {
+                if (error.value.data) {
+                    fieldErrors.value = error.value.data // store per-field errors
+                } else {
+                    errorMsg.value = 'Something went wrong. Please try again. If the issue persist, feel free to contact our schedulers (schedulersofugs@gmail.com) personally to schedule a tour!'
+                }
+                return
+            }
+
+            success.value = true
+        
+            // clear form fields
+            form.value = {
+                first_name: '',
+                last_name: '',
+                email: '',
+                phone_number: '',
+                date: '',
+                guests: 1,
+                minors: 0,
+                tour_type: '',
+                notes: ''
+            }
+
+        } catch (err) {
+            errorMsg.value = 'Network error. Please try again. If the issue persist, feel free to contact our schedulers (schedulersofugs@gmail.com) personally to schedule a tour!'
+        }
+    }
+
+    // fade out success toast
+    watch(success, (val) => {
+        if (val) setTimeout(() => (success.value = false), 3000)
+    })
+
+    // fade out error toast
+    watch(errorMsg, (val) => {
+        if (val) setTimeout(() => (errorMsg.value = ''), 3000)
+    })
+
+    onMounted(() => {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show")
+        } else {
+            entry.target.classList.remove("show")
+        }
+        })
+    })
+
+    const scrollElements = document.querySelectorAll(".scrollElement")
+    scrollElements.forEach((element) => observer.observe(element))
+    })
+</script>
 
 <style>
     /* Carousel for Explore UVA History Section */

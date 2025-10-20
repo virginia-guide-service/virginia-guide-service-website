@@ -83,31 +83,61 @@
 
                 <!-- Right: Contact Us Form -->
                 <div class="w-full lg:w-[60%] flex flex-col h-full">
-                    <form class="flex flex-col p-6 sm:p-8 lg:p-10 h-full">
-                    <label for="fname" class="font-[Montserrat] font-light text-royal-blue">First Name</label>
-                    <input type="text" id="fname" name="fname"
-                        class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                    <form @submit="submitForm" class="flex flex-col p-6 sm:p-8 lg:p-10 h-full">
+                        <label for="fname" class="font-[Montserrat] font-light text-royal-blue">First Name</label>
+                        <input v-if="!fieldErrors.first_name" type="text" id="fname" name="fname" v-model="form.first_name" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                        <input v-if="fieldErrors.first_name" type="text" id="fname" name="fname" v-model="form.first_name" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue" />
+                        <p v-if="fieldErrors.first_name" class="text-red-500 text-sm p-0 mb-2">
+                            {{ fieldErrors.first_name[0] }}
+                        </p>
 
-                    <label for="lname" class="font-[Montserrat] font-light text-royal-blue">Last Name</label>
-                    <input type="text" id="lname" name="lname"
-                        class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                        <label for="lname" class="font-[Montserrat] font-light text-royal-blue">Last Name</label>
+                        <input v-if="!fieldErrors.last_name" type="text" id="lname" name="lname" v-model="form.last_name" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                        <input v-if="fieldErrors.last_name" type="text" id="lname" name="lname" v-model="form.last_name" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue" />
+                        <p v-if="fieldErrors.last_name" class="text-red-500 text-sm p-0 mb-2">
+                            {{ fieldErrors.last_name[0] }}
+                        </p>
 
-                    <label for="email" class="font-[Montserrat] font-light text-royal-blue">Email</label>
-                    <input type="email" id="email" name="email"
-                        class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                        <label for="email" class="font-[Montserrat] font-light text-royal-blue">Email</label>
+                        <input v-if="!fieldErrors.email" type="email" id="email" name="email" v-model="form.email" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                        <input v-if="fieldErrors.email" type="email" id="email" name="email" v-model="form.email" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue" />
+                        <p v-if="fieldErrors.email" class="text-red-500 text-sm p-0 mb-2">
+                            {{ fieldErrors.email[0] }}
+                        </p>
 
-                    <label for="subject" class="font-[Montserrat] font-light text-royal-blue">Subject</label>
-                    <input type="text" id="subject" name="subject"
-                        class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                        <label for="subject" class="font-[Montserrat] font-light text-royal-blue">Subject</label>
+                        <input v-if="!fieldErrors.subject" type="text" id="subject" name="subject" v-model="form.subject" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                        <input v-if="fieldErrors.subject" type="text" id="subject" name="subject" v-model="form.subject" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue" />
+                        <p v-if="fieldErrors.subject" class="text-red-500 text-sm p-0 mb-2">
+                            {{ fieldErrors.subject[0] }}
+                        </p>
 
-                    <label for="notes" class="font-[Montserrat] font-light text-royal-blue">Message</label>
-                    <textarea id="notes"
-                        class="flex-grow font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-4"></textarea>
+                        <label for="message" class="font-[Montserrat] font-light text-royal-blue">Message</label>
+                        <textarea v-if="!fieldErrors.message" id="message" v-model="form.message" class="flex-grow font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-4"></textarea>
+                        <textarea v-if="fieldErrors.message" id="message"  v-model="form.message" class="flex-grow font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue"></textarea>
+                        <p v-if="fieldErrors.message" class="text-red-500 text-sm p-0 mb-2">
+                            {{ fieldErrors.message[0] }}
+                        </p>
 
-                    <button type="submit"
-                        class="font-[Montserrat] bg-dark-green text-white font-semibold rounded-lg px-4 py-2 hover:bg-green-700 transition-all duration-300 ease-in-out cursor-pointer">
-                        Send Message
-                    </button>
+                        <button type="submit"
+                            class="font-[Montserrat] bg-dark-green text-white font-semibold rounded-lg px-4 py-2 hover:bg-green-700 transition-all duration-300 ease-in-out cursor-pointer">
+                            Send Message
+                        </button>
+
+                        <!-- Success Toast -->
+                        <div v-if="success" class="fixed inset-0 flex items-center justify-center z-50 pointer-events-none">
+                            <div class="font-[Montserrat] bg-green-600 text-white px-6 py-4 rounded-md shadow-lg pointer-events-auto">
+                                Thank you! Your message has been sent!
+                            </div>
+                        </div>
+
+                        <!-- Error Toast -->
+                        <div v-if="errorMsg" class="fixed inset-0 flex items-center justify-center z-50 pointer-events-none">
+                            <div class="font-[Montserrat] bg-red-600 text-white px-6 py-4 rounded-md shadow-lg pointer-events-auto">
+                                {{ errorMsg }}
+                            </div>
+                        </div>
+
                     </form>
                 </div>
             </div>
@@ -140,7 +170,6 @@
 
             </div>
         </div>
-
     </section>
 
     <!-- Explore UVA History Section -->
@@ -364,11 +393,71 @@
         </div>
     </section>
 
-
 </template>
 
-<script setup>
+<script setup lang="ts">
     import { onMounted } from "vue"
+    import { ref } from 'vue'
+
+    const form = ref({
+        first_name: '',
+        last_name: '',
+        email: '',
+        subject: '',
+        message: ''
+    })
+
+    const success = ref(false)
+    const errorMsg = ref('')
+    const fieldErrors = ref<Record<string, string[]>>({})
+
+    async function submitForm(e: Event) {
+        e.preventDefault()
+        fieldErrors.value = {}
+        errorMsg.value = ''
+        success.value = false
+
+        try {
+            const { data, error } = await useFetch('http://127.0.0.1:8000/contact-us/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(form.value)
+            })
+
+            if (error.value) {
+                if (error.value.data) {
+                    fieldErrors.value = error.value.data // store per-field errors
+                } else {
+                    errorMsg.value = 'Something went wrong. Please try again. If the issue persist, feel free to contact our chairs or schedulers personally!'
+                }
+                return
+            }
+
+            success.value = true
+
+            // clear form fields
+            form.value = {
+                first_name: '',
+                last_name: '',
+                email: '',
+                subject: '',
+                message: ''
+            }
+
+        } catch (err) {
+            errorMsg.value = 'Network error. Please try again. If the issue persist, feel free to contact our chairs or schedulers personally!'
+        }
+    }
+
+    // fade out success toast
+    watch(success, (val) => {
+        if (val) setTimeout(() => (success.value = false), 3000)
+    })
+
+    // fade out error toast
+    watch(errorMsg, (val) => {
+        if (val) setTimeout(() => (errorMsg.value = ''), 3000)
+    })
 
     onMounted(() => {
     const observer = new IntersectionObserver((entries) => {

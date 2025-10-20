@@ -34,7 +34,7 @@
 
     <!--Banner-->
     <section class="pt-5 sm:pt-10 md:pt-8">
-        <div class="w-full bg-gray-300 textpcenter py-6 px-4 flex justify-center items-center">
+        <div class="w-full bg-gray-300 textpcenter py-6 px-4 sm:px-6 lg:px-8 flex justify-center items-center">
             <p class="scrollElement font-['Roboto'] text-royal-blue italic text-center font-medium text-base sm:text-lg md:text-md">
                 Because Virginia Guides is student-run, we do not provide tours during exam periods, reading days, or student breaks, which are specified 
                 <a href="https://registrar.virginia.edu/calendar/academic">
@@ -71,7 +71,7 @@
 
         <!-- Left: Text -->
         <div class="w-full lg:w-1/2 px-5 lg:px-0">
-            <p class="scrollElement font-['Montserrat'] text-center lg:text-left font-medium text-dark-green text-4xl sm:text-5xl leading-tight mb-6">
+            <p class="scrollElement font-['Montserrat'] text-center lg:text-left font-medium text-dark-green text-4xl sm:text-5xl leading-tight mb-4">
             HISTORICAL TOURS
             </p>
             <p class="scrollElement font-['Montserrat'] text-base sm:text-lg leading-relaxed text-gray-900">
@@ -83,6 +83,11 @@
                 <span class="scrollElement font-bold">
                     All tours are free of charge,
                 </span> regardless of group size. Donations to support work are welcome.
+                <br /><br />
+                <span class="scrollElement font-bold italic">
+                    The University of Virginia expects parents or guardians to provide supervision over minors on University property. 
+                    Parents or guardians should not leave minors unsupervised on University property.
+                </span>
             </p>
             <br /><br />
             <div class="scrollElement flex justify-center items-center px-4">
@@ -130,14 +135,14 @@
 
         <!-- Banner + Registraton Form -->
         <div class="bg-royal-blue w-full relative z-10 py-6">
-            <div class="flex flex-col lg:flex-row items-start px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-start px-4 sm:px-6 md:px-8">
                 <!--Left: Banner Text-->
                 <div class="w-full lg:w-1/2 flex flex-col justify-center items-center max-w-7xl mx-auto">
                     <p class="scrollElement font-['Montserrat'] font-light text-base sm:text-lg leading-relaxed text-white">
                         <span class="font-semibold">Registration for Standard History Tours are not required but encouraged to receive possible updates on your tour. </span>
-                        Standard Historical tours are public for anyone to join and occur regularly throughout the school year.
+                        Standard Historical tours are public for anyone to join and occur regularly throughout the school year. You can request specialty tours <a href="/request-specialty-tours" class="underline"> here.</a>
                     </p>
-                    <a href="/contact-us">
+                    <a href="/contact-us" class="md:py-5">
                         <button class="scrollElement rounded-full border-2 border-white text-white font-semibold text-base px-6 py-2 mt-3 cursor-pointer hover:bg-gray-200 hover:text-black hover:border-gray-200 transition-all duration-300 ease-in-out">
                             Contact Us
                         </button>
@@ -145,50 +150,92 @@
                 </div>
 
                 <!-- Right: Registration Form (overlapping the section) -->
-                <div class="scrollElement w-full lg:w-1/2 relative pt-10 md:pt-0">
+                <div class="w-full lg:w-1/2 relative pt-10 md:pt-0">
                     <div class="relative lg:absolute lg:-bottom-110 z-20 w-full">
                         <div class="flex flex-col shadow-[0px_2px_16px_0px_rgba(14,30,37,0.32)] rounded-xl p-6 bg-white">
                             <h1 class="font=['Montserrat'] font-medium text-3xl text-royal-blue mb-4">
                                 Register Here for a Historical Tour
                             </h1>
-                            <form class="flex flex-col">
+                            <form @submit="submitForm" class="flex flex-col">
                                 <label for="fname" class="font-[Montserrat] font-light text-royal-blue">First Name</label>
-                                <input type="text" id="fname" name="fname" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                                <input v-if="!fieldErrors.first_name" type="text" id="fname" name="fname" v-model="form.first_name" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                                <input v-if="fieldErrors.first_name" type="text" id="fname" name="fname" v-model="form.first_name" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue" />
+                                <p v-if="fieldErrors.first_name" class="text-red-500 text-sm p-0 mb-2">
+                                    {{ fieldErrors.first_name[0] }}
+                                </p>
 
                                 <label for="lname" class="font-[Montserrat] font-light text-royal-blue">Last Name</label>
-                                <input type="text" id="lname" name="lname" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                                <input v-if="!fieldErrors.last_name" type="text" id="lname" name="lname" v-model="form.last_name" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                                <input v-if="fieldErrors.last_name" type="text" id="lname" name="lname" v-model="form.last_name" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue" />
+                                <p v-if="fieldErrors.last_name" class="text-red-500 text-sm p-0 mb-2">
+                                    {{ fieldErrors.last_name[0] }}
+                                </p>
 
                                 <label for="email" class="font-[Montserrat] font-light text-royal-blue">Email</label>
-                                <input type="email" id="email" name="email" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                                <input v-if="!fieldErrors.email" ype="email" id="email" name="email" v-model="form.email" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                                <input v-if="fieldErrors.email" ype="email" id="email" name="email" v-model="form.email" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue" />
+                                <p v-if="fieldErrors.email" class="text-red-500 text-sm p-0 mb-2">
+                                    {{ fieldErrors.email[0] }}
+                                </p>
 
                                 <label for="number" class="font-[Montserrat] font-light text-royal-blue">Phone Number</label>
-                                <input type="tel" id="number" name="number" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                                <input v-if="!fieldErrors.phone_number" type="tel" id="number" name="number" v-model="form.phone_number" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                                <input v-if="fieldErrors.phone_number" type="tel" id="number" name="number" v-model="form.phone_number" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue" />
+                                <p v-if="fieldErrors.phone_number" class="text-red-500 text-sm p-0 mb-2">
+                                    {{ fieldErrors.phone_number[0] }}
+                                </p>
 
                                 <div class="flex flex-col lg:flex-row justify-between lg:gap-4">
                                     <div class="flex flex-col">
-                                        <label for="date" class="font-[Montserrat] font-light text-royal-blue">Date</label>
-                                        <input type="date" id="date" name="date" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                                        <label for="date" class="font-[Montserrat] font-light text-royal-blue">Requested Date of Tour</label>
+                                        <input v-if="!fieldErrors.date" type="date" id="date" name="date" v-model="form.date" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                                        <input v-if="fieldErrors.date" type="date" id="date" name="date" v-model="form.date" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue" />
+                                        <p v-if="fieldErrors.date" class="text-red-500 text-sm p-0 mb-2">
+                                            {{ fieldErrors.date[0] }}
+                                        </p>
                                     </div>
                                     <div class="flex flex-col">
                                         <label for="guestNum" class="font-[Montserrat] font-light text-royal-blue">Guest(s)</label>
-                                        <input type="number" id="guestNum" name="guestNum" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                                        <input v-if="!fieldErrors.guests" type="number" id="guestNum" name="guestNum" v-model="form.guests" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                                        <input v-if="fieldErrors.guests" type="number" id="guestNum" name="guestNum" v-model="form.guests" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue" />
+                                        <p v-if="fieldErrors.guests" class="text-red-500 text-sm p-0 mb-2">
+                                            {{ fieldErrors.guests[0] }}
+                                        </p>
                                     </div>
                                 </div>
 
-                                <label for="guestNum" class="font-[Montserrat] font-light text-royal-blue">How many minors are in your group?</label>
-                                <input type="number" id="guestNum" name="guestNum" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
-
+                                <label for="minorNum" class="font-[Montserrat] font-light text-royal-blue">How many minors are in your group?</label>
+                                <input v-if="!fieldErrors.minors" type="number" id="minorNum" name="minorNum" v-model="form.minors" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                                <input v-if="fieldErrors.minors" type="number" id="minorNum" name="minorNum" v-model="form.minors" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue" />
+                                <p v-if="fieldErrors.minors" class="text-red-500 text-sm p-0 mb-2">
+                                    {{ fieldErrors.minors[0] }}
+                                </p>
 
                                 <label for="tour" class="font-[Montserrat] font-light text-royal-blue">Type of Tour</label>
                                 <input type="text" id="tour" name="tour" value="Standard Historical Tour" readonly class="font-[Montserrat] text-royal-blue border border-gray-300 bg-gray-100 cursor-not-allowed rounded-lg px-4 py-2 focus:outline-none mb-5"/>
 
 
                                 <label for="notes" class="font-[Montserrat] font-light text-royal-blue">Notes for the Tour</label>
-                                <textarea id="notes" class="flex-grow font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-4"></textarea>
+                                <textarea id="notes" v-model="form.notes" class="flex-grow font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-4"></textarea>
 
                                 <button type="submit" class="font-[Montserrat] bg-royal-blue text-white font-semibold rounded-lg px-4 py-2 hover:bg-blue-900 transition-all duration-300 ease-in-out cursor-pointer">
                                     Register
                                 </button>
+
+                                <!-- Success Toast -->
+                                <div v-if="success" class="fixed inset-0 flex items-center justify-center z-50 pointer-events-none">
+                                    <div class="font-[Montserrat] bg-green-600 text-white px-6 py-4 rounded-md shadow-lg pointer-events-auto">
+                                        Thank you! Your registration has been submitted.
+                                    </div>
+                                </div>
+
+                                <!-- Error Toast -->
+                                <div v-if="errorMsg" class="fixed inset-0 flex items-center justify-center z-50 pointer-events-none">
+                                    <div class="font-[Montserrat] bg-red-600 text-white px-6 py-4 rounded-md shadow-lg pointer-events-auto">
+                                        {{ errorMsg }}
+                                    </div>
+                                </div>
+
                             </form>
                         </div>
                     </div>
@@ -234,7 +281,7 @@
 
     <!-- Map Section -->
     <section class="w-full flex justify-center px-10 pb-12 bg-neutral-100">
-        <div class="scrollElement w-full max-w-7xl mx-auto h-64 sm:h-80 md:h-96 lg:h-[600px]">
+        <div class="scrollElement w-full max-w-6xl mx-auto h-64 sm:h-80 md:h-96 lg:h-[600px]">
             <iframe
                 src="https://www.google.com/maps/d/embed?mid=16Uf_oN9AUEKhU3pVgavoqg6AHNG1o-o&ehbc=2E312F&noprof=1"
                 class="w-full h-full border-0"
@@ -628,8 +675,77 @@
 
 </template>
 
-<script setup>
+<script setup lang="ts">
     import { onMounted } from "vue"
+    import { ref } from 'vue'
+
+    const form = ref({
+        first_name: '',
+        last_name: '',
+        email: '',
+        phone_number: '',
+        date: '',
+        guests: 1,
+        minors: 0,
+        tour_type: 'Standard Historical Tour',
+        notes: ''
+    })
+
+    const success = ref(false)
+    const errorMsg = ref('')
+    const fieldErrors = ref<Record<string, string[]>>({})
+
+    async function submitForm(e: Event) {
+        e.preventDefault()
+        fieldErrors.value = {}
+        errorMsg.value = ''
+        success.value = false
+
+        try {
+            const { data, error } = await useFetch('http://127.0.0.1:8000/register-tour/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(form.value)
+            })
+
+            if (error.value) {
+            if (error.value.data) {
+                fieldErrors.value = error.value.data // store per-field errors
+            } else {
+                errorMsg.value = 'Something went wrong. Please try again. If the issue persist, feel free to contact our schedulers (schedulersofugs@gmail.com) personally to schedule a tour!'
+            }
+            return
+            }
+
+            success.value = true
+        
+            // clear form fields
+            form.value = {
+                first_name: '',
+                last_name: '',
+                email: '',
+                phone_number: '',
+                date: '',
+                guests: 1,
+                minors: 0,
+                tour_type: 'Standard Historical Tour',
+                notes: ''
+            }
+
+        } catch (err) {
+            errorMsg.value = 'Network error. Please try again. If the issue persist, feel free to contact our schedulers (schedulersofugs@gmail.com) personally to schedule a tour!'
+        }
+    }
+
+    // fade out success toast
+    watch(success, (val) => {
+        if (val) setTimeout(() => (success.value = false), 3000)
+    })
+
+    // fade out error toast
+    watch(errorMsg, (val) => {
+        if (val) setTimeout(() => (errorMsg.value = ''), 3000)
+    })
 
     onMounted(() => {
     const observer = new IntersectionObserver((entries) => {
