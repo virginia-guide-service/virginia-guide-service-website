@@ -22,10 +22,9 @@ export default defineNuxtConfig({
   app: {
     head: {
       link: [
-          { rel: 'stylesheet' },
-          { rel: 'icon', type: 'image/png', href: 'https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/favicon.png' },
-          { href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500;600;700;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap'}
+        { rel: 'icon', type: 'image/png', href: 'https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/favicon.png' },
+        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500;600;700;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap' }
       ]
     }
-  }
+  }  
 })
