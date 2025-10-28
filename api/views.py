@@ -4,7 +4,7 @@ from rest_framework.decorators import api_view
 from rest_framework import status, generics, permissions
 from .models import Feedback
 from .serializers import TourRegistrationSerializer, ContactUsFormSerializer, SpecialtyTourRegistrationSerializer, FeedbackSerializer
-from django.core.mail import send_mail
+from django.core.mail import send_mail, BadHeaderError
 from django.conf import settings
 from datetime import date
 from django.shortcuts import render
@@ -164,26 +164,41 @@ def register_specialty_tour(request):
 
 @api_view(['POST'])
 def contact_us(request):
-    print("Incoming request data:", request.data)
     serializer = ContactUsFormSerializer(data=request.data)
     if serializer.is_valid():
         contact_us = serializer.save()
-    
-        # Send email to chairs
-        send_mail(
-            subject=f"[GUIDES WEBSITE - CONTACT US] {contact_us.subject}",
-            message=(
-                f"From: {contact_us.first_name} {contact_us.last_name} ({contact_us.email})\n\n"
-                f"{contact_us.message}"
-            ),
-            from_email=settings.DEFAULT_FROM_EMAIL,
-            recipient_list=[settings.CHAIR_EMAIL],  # change the chair email in .env
-        )
+        email_sent = False
 
-        print(serializer.errors)
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
-    
-    print(serializer.errors)
+        # Try sending the email, but catch any exceptions
+        try:
+            send_mail(
+                subject=f"[GUIDES WEBSITE - CONTACT US] {contact_us.subject}",
+                message=(
+                    f"From: {contact_us.first_name} {contact_us.last_name} ({contact_us.email})\n\n"
+                    f"{contact_us.message}"
+                ),
+                from_email=settings.DEFAULT_FROM_EMAIL,
+                recipient_list=[settings.CHAIR_EMAIL],
+                fail_silently=False,
+            )
+            email_sent = True
+        except BadHeaderError:
+            return Response(
+                {"detail": "Invalid header found in email."},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+        except Exception as e:
+            # Log the error for debugging (Render will show this in logs)
+            print("Email sending failed:", e)
+
+        # Return success even if email fails (frontend won't break)
+        return Response({
+            "message": "Form submitted successfully.",
+            "email_sent": email_sent,
+            "data": serializer.data
+        }, status=status.HTTP_201_CREATED)
+
+    # Validation failed
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class FeedbackCreateView(generics.CreateAPIView):
