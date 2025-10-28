@@ -1,6 +1,6 @@
 <template>
     <!--Header Section-->
-    <header class="relative bg-[url('/Header_JoinGuides.jpg')] w-full bg-cover bg-center bg-no-repeat h-[60vh] sm:h-[100vh]">
+    <header class="relative bg-[url('https://virginia-guides-website-images.s3.amazonaws.com/public/Header_JoinGuides.jpg')] w-full bg-cover bg-center bg-no-repeat h-[60vh] sm:h-[100vh]">
         <!-- Centered Text -->
         <div class="absolute top-1/2 left-1/2 w-full max-w-7xl px-10 -translate-x-1/2 -translate-y-1/2 text-white">
             <p class="font-Roboto text-xs sm:text-sm md:text-md text-royal-blue font-semibold leading-snug text-center xl:text-right uppercase">
@@ -26,7 +26,7 @@
             <div class="flex justify-center items-center flex-col lg:flex-row gap-x-10">
                 <!-- Left: Image -->
                 <div class="scrollElement w-full lg:w-1/2 flex justify-center items-center">
-                    <img src="/join-guides-page/TourTaking2.jpg" alt="Historical Tour Image" loading="lazy" class="object-cover w-full rounded-md max-w-sm md:max-w-md lg:max-w-lg shadow-md">
+                    <img src="https://virginia-guides-website-images.s3.amazonaws.com/public/join-guides-page/TourTaking2.jpg" alt="Historical Tour Image" loading="lazy" class="object-cover w-full rounded-md max-w-sm md:max-w-md lg:max-w-lg shadow-md">
                 </div>
 
                 <!-- Right: Text -->
@@ -350,7 +350,7 @@
                         <!-- Image with overlay -->
                         <div class="relative group flex flex-col w-full lg:w-1/2 justify-center items-center">
                             <img 
-                                src="/join-guides-page/beingaguide_mtnview.png" 
+                                src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/join-guides-page/beingaguide_mtnview.png" 
                                 class="object-cover w-full max-w-xs md:max-w-sm lg:max-w-md p-2 transition duration-500 filter group-hover:opacity-50"
                                 loading="lazy"
                             >
@@ -380,7 +380,7 @@
                     <!-- Image -->
                     <div class="p-2 border-4 border-dotted border-dark-green">
                         <img 
-                            src="/join-guides-page/4girls.jpeg" 
+                            src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/join-guides-page/4girls.JPEG" 
                             class="object-cover w-full max-w-2xs md:max-wxs lg:max-w-sm transition duration-400 group-hover:opacity-30"
                             loading="lazy"
                         >
@@ -414,7 +414,7 @@
                     <!-- Image -->
                     <div class="p-2 bg-dark-green ">
                         <img 
-                            src="/join-guides-page/beingaguide_metthebanner.jpeg" 
+                            src="https://virginia-guides-website-images.s3.amazonaws.com/public/join-guides-page/beingaguide_metthebanner.jpeg" 
                             class="object-cover w-full max-w-3xs md:max-w-2xs lg:max-w-xs transition duration-500 filter group-hover:opacity-50"
                             loading="lazy"
                         >
@@ -447,65 +447,65 @@
             <div class="about-slider">
                 <div class="about-slide-track">
                     <div class="about-slide flex flex-col justify-start">
-                        <img class="about-carousel-img" src="/join-guides-page/gpcar.JPEG" loading="lazy" alt="">
+                        <img class="about-carousel-img" src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/join-guides-page/gpcar.JPEG" loading="lazy" alt="">
                     </div>
                     <div class="about-slide flex flex-col">
-                        <img class="about-carousel-img object-top" src="/join-guides-page/phoneinception.JPEG" loading="lazy" alt="">
+                        <img class="about-carousel-img object-top" src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/join-guides-page/phoneinception.jpeg" loading="lazy" alt="">
                     </div>
                     <div class="about-slide flex flex-col">
-                        <img class="about-carousel-img" src="/join-guides-page/bamboo.JPEG" loading="lazy" alt="">
+                        <img class="about-carousel-img" src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/join-guides-page/bamboo.jpeg" loading="lazy" alt="">
                     </div>
                     <div class="about-slide flex flex-col">
-                        <img class="about-carousel-img" src="/join-guides-page/lawnroom.JPEG" loading="lazy" alt="">
+                        <img class="about-carousel-img" src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/join-guides-page/lawnroom.jpeg" loading="lazy" alt="">
                     </div>
                     <div class="about-slide flex flex-col">
-                        <img class="about-carousel-img" src="/join-guides-page/grouphoto.JPEG" loading="lazy" alt="">
+                        <img class="about-carousel-img" src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/join-guides-page/grouphoto.jpeg" loading="lazy" alt="">
                     </div>
                     <div class="about-slide flex flex-col">
-                        <img class="about-carousel-img" src="/join-guides-page/lawn2.JPEG" loading="lazy" alt="">
+                        <img class="about-carousel-img" src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/join-guides-page/lawn2.JPEG" loading="lazy" alt="">
                     </div>
                     <div class="about-slide flex flex-col">
-                        <img class="about-carousel-img" src="/join-guides-page/meetthe.JPG" loading="lazy" alt="">
+                        <img class="about-carousel-img" src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/join-guides-page/meetthe.JPG" loading="lazy" alt="">
                     </div>
                     <div class="about-slide flex flex-col">
-                        <img class="about-carousel-img" src="/join-guides-page/formal.JPG" loading="lazy" alt="">
+                        <img class="about-carousel-img" src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/join-guides-page/formal.JPG" loading="lazy" alt="">
                     </div>
                     <div class="about-slide flex flex-col">
-                        <img class="about-carousel-img" src="/join-guides-page/cookout.JPG" loading="lazy" alt="">
+                        <img class="about-carousel-img" src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/join-guides-page/cookout.JPG" loading="lazy" alt="">
                     </div>
                     <div class="about-slide flex flex-col">
-                        <img class="about-carousel-img" src="/join-guides-page/yellow.JPG" loading="lazy" alt="">
+                        <img class="about-carousel-img" src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/join-guides-page/yellow.JPG" loading="lazy" alt="">
                     </div>
                     <!--Same 10 slides (doubled)-->
                     <div class="about-slide flex flex-col justify-start">
-                        <img class="about-carousel-img" src="/join-guides-page/gpcar.JPEG" loading="lazy" alt="">
+                        <img class="about-carousel-img" src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/join-guides-page/gpcar.JPEG" loading="lazy" alt="">
                     </div>
                     <div class="about-slide flex flex-col">
-                        <img class="about-carousel-img object-top" src="/join-guides-page/phoneinception.JPEG" loading="lazy" alt="">
+                        <img class="about-carousel-img object-top" src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/join-guides-page/phoneinception.jpeg" loading="lazy" alt="">
                     </div>
                     <div class="about-slide flex flex-col">
-                        <img class="about-carousel-img" src="/join-guides-page/bamboo.JPEG" loading="lazy" alt="">
+                        <img class="about-carousel-img" src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/join-guides-page/bamboo.jpeg" loading="lazy" alt="">
                     </div>
                     <div class="about-slide flex flex-col">
-                        <img class="about-carousel-img" src="/join-guides-page/lawnroom.JPEG" loading="lazy" alt="">
+                        <img class="about-carousel-img" src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/join-guides-page/lawnroom.jpeg" loading="lazy" alt="">
                     </div>
                     <div class="about-slide flex flex-col">
-                        <img class="about-carousel-img" src="/join-guides-page/grouphoto.JPEG" loading="lazy" alt="">
+                        <img class="about-carousel-img" src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/join-guides-page/grouphoto.jpeg" loading="lazy" alt="">
                     </div>
                     <div class="about-slide flex flex-col">
-                        <img class="about-carousel-img" src="/join-guides-page/lawn2.JPEG" loading="lazy" alt="">
+                        <img class="about-carousel-img" src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/join-guides-page/lawn2.JPEG" loading="lazy" alt="">
                     </div>
                     <div class="about-slide flex flex-col">
-                        <img class="about-carousel-img" src="/join-guides-page/meetthe.JPG" loading="lazy" alt="">
+                        <img class="about-carousel-img" src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/join-guides-page/meetthe.JPG" loading="lazy" alt="">
                     </div>
                     <div class="about-slide flex flex-col">
-                        <img class="about-carousel-img" src="/join-guides-page/formal.JPG" loading="lazy" alt="">
+                        <img class="about-carousel-img" src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/join-guides-page/formal.JPG" loading="lazy" alt="">
                     </div>
                     <div class="about-slide flex flex-col">
-                        <img class="about-carousel-img" src="/join-guides-page/cookout.JPG" loading="lazy" alt="">
+                        <img class="about-carousel-img" src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/join-guides-page/cookout.JPG" loading="lazy" alt="">
                     </div>
                     <div class="about-slide flex flex-col">
-                        <img class="about-carousel-img" src="/join-guides-page/yellow.JPG" loading="lazy" alt="">
+                        <img class="about-carousel-img" src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/join-guides-page/yellow.JPG" loading="lazy" alt="">
                     </div>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 <template>
     <!--Header Section-->
-    <header class="relative bg-[url('/Header_ContactUS.jpg')] w-full bg-cover bg-center bg-no-repeat h-[60vh] sm:h-[75vh] bg-">
+    <header class="relative bg-[url('https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/Header_ContactUs.jpg')] w-full bg-cover bg-center bg-no-repeat h-[60vh] sm:h-[75vh] bg-">
         <!-- Centered Text -->
         <div class="absolute top-1/2 left-1/2 w-full max-w-7xl px-10 -translate-x-1/2 -translate-y-1/2 text-white">
             <h1 class="font-['Playfair_Display'] text-center xl:text-right italic text-[clamp(2rem,9.5vw,5rem)] leading-tight [text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)]">

@@ -1,6 +1,6 @@
 <template>
     <!--Header Section-->
-    <header class="relative bg-[url('/Header_Tours.jpg')] w-full bg-cover bg-right bg-no-repeat h-[60vh] sm:h-[75vh]">
+    <header class="relative bg-[url('https://virginia-guides-website-images.s3.amazonaws.com/public/Header_Tours.jpg')] w-full bg-cover bg-right bg-no-repeat h-[60vh] sm:h-[75vh]">
         <div class="absolute top-1/2 left-1/2 w-full max-w-6xl px-4 -translate-x-1/2 -translate-y-1/2 text-white text-center">
             <h1 class="font-['Playfair_Display'] italic text-center xl:text-left whitespace-nowrap text-[clamp(3rem,9.5vw,5.5rem)] leading-tight [text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)]">
                 SHED LIGHT
@@ -37,7 +37,7 @@
             <div class="flex flex-col lg:flex-row justify-center items-center gap-10">
                 <!-- Right: Image -->
                 <div class="scrollElement w-full lg:w-1/2 flex justify-center items-center">
-                    <img src="/about-tours-page/TourTaking1.jpg" alt="Historical Tour Image" loading="lazy" class="w-full max-w-lg h-auto rounded-md shadow-md">
+                    <img src="https://virginia-guides-website-images.s3.amazonaws.com/public/about-tours-page/TourTaking1.jpg" alt="Historical Tour Image" loading="lazy" class="w-full max-w-lg h-auto rounded-md shadow-md">
                 </div>
 
                 <!-- Left: Text -->
@@ -95,35 +95,35 @@
             <div class="about-slider">
                 <div class="about-slide-track">
                     <div class="about-slide flex flex-col justify-start">
-                        <img class="about-carousel-img" src="/about-tours-page/carousel-history/UVAhistoryCarousel_womenatuva.jpg" loading="lazy" alt="">
+                        <img class="about-carousel-img" src="https://virginia-guides-website-images.s3.amazonaws.com/public/about-tours-page/carousel-history/UVAhistoryCarousel_womenatuva.jpg" loading="lazy" alt="">
                     </div>
                     <div class="about-slide flex flex-col">
-                        <img class="about-carousel-img object-top" src="/about-tours-page/carousel-history/UVAhistoryCarousel_africanamericansatuva.jpg" loading="lazy" alt="">
+                        <img class="about-carousel-img object-top" src="https://virginia-guides-website-images.s3.amazonaws.com/public/about-tours-page/carousel-history/UVAhistoryCarousel_africanamericansatuva.jpg" loading="lazy" alt="">
                     </div>
                     <div class="about-slide flex flex-col">
-                        <img class="about-carousel-img" src="/about-tours-page/carousel-history/UVAhistoryCarousel_GardenTours.jpg" loading="lazy" alt="">
+                        <img class="about-carousel-img" src="https://virginia-guides-website-images.s3.amazonaws.com/public/about-tours-page/carousel-history/UVAhistoryCarousel_GardenTours.jpg" loading="lazy" alt="">
                     </div>
                     <div class="about-slide flex flex-col">
-                        <img class="about-carousel-img" src="/about-tours-page/carousel-history/UVAhistoryCarousel_MEL.jpeg" loading="lazy" alt="">
+                        <img class="about-carousel-img" src="https://virginia-guides-website-images.s3.amazonaws.com/public/about-tours-page/carousel-history/UVAhistoryCarousel_MEL.jpeg" loading="lazy" alt="">
                     </div>
                     <div class="about-slide flex flex-col">
-                        <img class="about-carousel-img" src="/about-tours-page/carousel-history/UVAhistoryCarousel_childrenstour.jpg" loading="lazy" alt="">
+                        <img class="about-carousel-img" src="https://virginia-guides-website-images.s3.amazonaws.com/public/about-tours-page/carousel-history/UVAhistoryCarousel_childrenstour.jpg" loading="lazy" alt="">
                     </div>
                     <!--Same 5 slides (doubled)-->
                     <div class="about-slide flex flex-col justify-start">
-                        <img class="about-carousel-img" src="/about-tours-page/carousel-history/UVAhistoryCarousel_womenatuva.jpg" loading="lazy" alt="">
+                        <img class="about-carousel-img" src="https://virginia-guides-website-images.s3.amazonaws.com/public/about-tours-page/carousel-history/UVAhistoryCarousel_womenatuva.jpg" loading="lazy" alt="">
                     </div>
                     <div class="about-slide flex flex-col">
-                        <img class="about-carousel-img object-top" src="/about-tours-page/carousel-history/UVAhistoryCarousel_africanamericansatuva.jpg" loading="lazy" alt="">
+                        <img class="about-carousel-img object-top" src="https://virginia-guides-website-images.s3.amazonaws.com/public/about-tours-page/carousel-history/UVAhistoryCarousel_africanamericansatuva.jpg" loading="lazy" alt="">
                     </div>
                     <div class="about-slide flex flex-col">
-                        <img class="about-carousel-img" src="/about-tours-page/carousel-history/UVAhistoryCarousel_GardenTours.jpg" loading="lazy" alt="">
+                        <img class="about-carousel-img" src="https://virginia-guides-website-images.s3.amazonaws.com/public/about-tours-page/carousel-history/UVAhistoryCarousel_GardenTours.jpg" loading="lazy" alt="">
                     </div>
                     <div class="about-slide flex flex-col">
-                        <img class="about-carousel-img" src="/about-tours-page/carousel-history/UVAhistoryCarousel_MEL.jpeg" loading="lazy" alt="">
+                        <img class="about-carousel-img" src="https://virginia-guides-website-images.s3.amazonaws.com/public/about-tours-page/carousel-history/UVAhistoryCarousel_MEL.jpeg" loading="lazy" alt="">
                     </div>
                     <div class="about-slide flex flex-col">
-                        <img class="about-carousel-img" src="/about-tours-page/carousel-history/UVAhistoryCarousel_childrenstour.jpg" loading="lazy" alt="">
+                        <img class="about-carousel-img" src="https://virginia-guides-website-images.s3.amazonaws.com/public/about-tours-page/carousel-history/UVAhistoryCarousel_childrenstour.jpg" loading="lazy" alt="">
                     </div>
                 </div>
             </div>
@@ -179,7 +179,7 @@
                 <div id="history-of-african-americans-tour" class="scrollElement flex flex-col md:flex-row lg:h-[50vh] justify-center gap-1 sm:gap-3 md:gap-2 items-stretch">
                     <!--Picture-->
                     <div class="w-full md:w-1/2 px-2 sm:px-6 md:px-0">
-                        <img src="/about-tours-page/specialty-tours/HAA.jpg" loading="lazy" class="w-full h-full object-cover object-center" alt="History of African Americans at UVA">
+                        <img src="https://virginia-guides-website-images.s3.amazonaws.com/public/about-tours-page/specialty-tours/HAA.jpg" loading="lazy" class="w-full h-full object-cover object-center" alt="History of African Americans at UVA">
                     </div>
                     <!--Text-->
                     <div class="md:w-1/2 flex flex-col justify-start space-y-2 md:space-y-6 px-2 sm:px-6 md:px-4">
@@ -211,7 +211,7 @@
                 <div id="MEL-tour" class="scrollElement flex flex-col md:flex-row lg:h-[50vh] justify-center gap-1 sm:gap-3 md:gap-2 items-stretch">
                     <!--Picture-->
                     <div class="w-full md:w-1/2 px-2 sm:px-6 md:px-0">
-                        <img src="/about-tours-page/specialty-tours/MEL.jpeg" loading="lazy" class="w-full h-full object-cover object-center" alt="History of African Americans at UVA">
+                        <img src="https://virginia-guides-website-images.s3.amazonaws.com/public/about-tours-page/specialty-tours/MEL.jpeg" loading="lazy" class="w-full h-full object-cover object-center" alt="History of African Americans at UVA">
                     </div>
                     <!--Text-->
                     <div class="md:w-1/2 flex flex-col justify-start space-y-3 md:space-y-6 px-2 sm:px-6 md:px-4">
@@ -244,7 +244,7 @@
                 <div id="history-of-women-at-uva-tour" class="scrollElement flex flex-col md:flex-row lg:h-[50vh] justify-center gap-1 sm:gap-3 md:gap-2 items-stretch">
                     <!--Picture-->
                     <div class="w-full md:w-1/2 px-2 sm:px-6 md:px-0">
-                        <img src="/about-tours-page/specialty-tours/HistoryofWomen.jpg" loading="lazy" class="w-full h-full object-cover object-top" alt="History of African Americans at UVA">
+                        <img src="https://virginia-guides-website-images.s3.amazonaws.com/public/about-tours-page/specialty-tours/HistoryofWomen.jpg" loading="lazy" class="w-full h-full object-cover object-top" alt="History of African Americans at UVA">
                     </div>
                     <!--Text-->
                     <div class="md:w-1/2 flex flex-col justify-start space-y-3 md:space-y-6 px-2 sm:px-6 md:px-4">
@@ -276,7 +276,7 @@
                 <div id="childrens-tours" class="scrollElement flex flex-col md:flex-row lg:h-[50vh] justify-center gap-1 sm:gap-3 md:gap-2 items-stretch">
                     <!--Picture-->
                     <div class="w-full md:w-1/2 px-2 sm:px-6 md:px-0">
-                        <img src="/about-tours-page/specialty-tours/ChildrensTour.jpg" loading="lazy" class="w-full h-full object-cover object-bottom" alt="History of African Americans at UVA">
+                        <img src="https://virginia-guides-website-images.s3.amazonaws.com/public/about-tours-page/specialty-tours/ChildrensTour.jpg" loading="lazy" class="w-full h-full object-cover object-bottom" alt="History of African Americans at UVA">
                     </div>
                     <!--Text-->
                     <div class="md:w-1/2 flex flex-col justify-start space-y-3 md:space-y-6 px-2 sm:px-6 md:px-4">
@@ -309,7 +309,7 @@
                 <div id="private-admissions-tour" class="scrollElement flex flex-col md:flex-row lg:h-[50vh] justify-center gap-1 sm:gap-3 md:gap-2 items-stretch">
                     <!--Picture-->
                     <div class="w-full md:w-1/2 px-2 sm:px-6 md:px-0">
-                        <img src="/about-tours-page/specialty-tours/PrivateTour.jpg" loading="lazy" class="w-full h-full object-cover object-bottom" alt="History of African Americans at UVA">
+                        <img src="https://virginia-guides-website-images.s3.amazonaws.com/public/about-tours-page/specialty-tours/PrivateTour.jpg" loading="lazy" class="w-full h-full object-cover object-bottom" alt="History of African Americans at UVA">
                     </div>
                     <!--Text-->
                     <div class="md:w-1/2 flex flex-col justify-start space-y-3 md:space-y-6 px-2 sm:px-6 md:px-4">
@@ -344,7 +344,7 @@
                 <div id="garden-tours" class="scrollElement flex flex-col md:flex-row lg:h-[50vh] justify-center gap-1 sm:gap-3 md:gap-2 items-stretch">
                     <!--Picture-->
                     <div class="w-full md:w-1/2 px-2 sm:px-6 md:px-0">
-                        <img src="/about-tours-page/specialty-tours/GardenTour.jpg" loading="lazy" class="w-full h-full object-cover object-center" alt="History of African Americans at UVA">
+                        <img src="https://virginia-guides-website-images.s3.amazonaws.com/public/about-tours-page/specialty-tours/GardenTour.jpg" loading="lazy" class="w-full h-full object-cover object-center" alt="History of African Americans at UVA">
                     </div>
                     <!--Text-->
                     <div class="md:w-1/2 flex flex-col justify-start space-y-3 md:space-y-6 px-2 sm:px-6 md:px-4">

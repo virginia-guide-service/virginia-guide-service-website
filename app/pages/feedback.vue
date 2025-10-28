@@ -1,6 +1,6 @@
 <template>
     <!--Header Section-->
-    <header class="relative bg-[url('/Rotundabasementhall.jpeg')] w-full bg-cover bg-center bg-no-repeat h-[60vh] sm:h-[75vh]">
+    <header class="relative bg-[url('https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/Rotundabasementhall.jpeg')] w-full bg-cover bg-center bg-no-repeat h-[60vh] sm:h-[75vh]">
         <!-- Centered Text -->
         <div class="absolute top-1/2 left-1/2 w-full max-w-screen-2xl px-10 -translate-x-1/2 -translate-y-1/2 text-white">
             <h1 class="font-['Playfair_Display'] italic text-center xl:text-left text-[clamp(2.5rem,6vw,3rem)] lg:text-[clamp(1rem,8vw,4rem)] [text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)]">

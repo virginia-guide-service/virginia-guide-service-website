@@ -31,62 +31,62 @@
                 <div class="slide-track">
                     <a href="/about-tours/#history-of-women-at-uva">
                         <div class="slide flex flex-col justify-start">
-                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_womenatuva.jpg" loading="lazy" alt="">
+                            <img class="carousel-img" src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/carousel-history-tours/UVAhistoryCarousel_womenatuva.jpg" loading="lazy" alt="">
                             <p class="carousel-text self-start text-white font-['Roboto']">History of Women at UVA</p>
                         </div>
                     </a>
                     <a href="/about-tours/#history-of-african-americans-tour">
                         <div class="slide flex flex-col">
-                            <img class="carousel-img object-top" src="/index-page/carousel-history-tours/UVAhistoryCarousel_africanamericansatuva.jpg" loading="lazy" alt="">
+                            <img class="carousel-img object-top" src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/carousel-history-tours/UVAhistoryCarousel_africanamericansatuva.jpg" loading="lazy" alt="">
                             <p class="carousel-text self-start text-white  font-['Roboto']">History of African-Americans at UVA</p>
                         </div>
                     </a>
                     <a href="/about-tours/#garden-tours">
                         <div class="slide flex flex-col">
-                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_GardenTours.jpg" loading="lazy" alt="">
+                            <img class="carousel-img" src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/carousel-history-tours/UVAhistoryCarousel_GardenTours.jpg" loading="lazy" alt="">
                             <p class="carousel-text self-start text-white  font-['Roboto']">Garden Tours</p>
                         </div>
                     </a>
                     <a href="/about-tours/#MEL-tour">
                         <div class="slide flex flex-col">
-                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_MEL.jpeg" loading="lazy" alt="">
+                            <img class="carousel-img" src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/carousel-history-tours/UVAhistoryCarousel_MEL.jpeg" loading="lazy" alt="">
                             <p class="carousel-text self-start text-white font-['Roboto']">Memorial to Enslaved Laborers</p>
                         </div>
                     </a>
                     <a href="/about-tours/#childrens-tours">
                         <div class="slide flex flex-col">
-                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_childrenstour.jpg" loading="lazy" alt="">
+                            <img class="carousel-img" src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/carousel-history-tours/UVAhistoryCarousel_childrenstour.jpg" loading="lazy" alt="">
                             <p class="carousel-text self-start text-white font-['Roboto']">Children's Tour</p>
                         </div>
                     </a>
                     <!--Same 5 slides (doubled)-->
                     <a href="/about-tours/#history-of-women-at-uva">
                         <div class="slide flex flex-col justify-start">
-                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_womenatuva.jpg" loading="lazy" alt="">
+                            <img class="carousel-img" src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/carousel-history-tours/UVAhistoryCarousel_womenatuva.jpg" loading="lazy" alt="">
                             <p class="carousel-text self-start text-white font-['Roboto']">History of Women at UVA</p>
                         </div>
                     </a>
                     <a href="/about-tours/#history-of-african-americans-tour">
                         <div class="slide flex flex-col">
-                            <img class="carousel-img object-top" src="/index-page/carousel-history-tours/UVAhistoryCarousel_africanamericansatuva.jpg" loading="lazy" alt="">
+                            <img class="carousel-img object-top" src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/carousel-history-tours/UVAhistoryCarousel_africanamericansatuva.jpg" loading="lazy" alt="">
                             <p class="carousel-text self-start text-white font-['Roboto']">History of African-Americans at UVA</p>
                         </div>
                     </a>
                     <a href="/about-tours/#garden-tours">
                         <div class="slide flex flex-col">
-                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_GardenTours.jpg" loading="lazy" alt="">
+                            <img class="carousel-img" src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/carousel-history-tours/UVAhistoryCarousel_GardenTours.jpg" loading="lazy" alt="">
                             <p class="carousel-text self-start text-white font-['Roboto']">Garden Tours</p>
                         </div>
                     </a>
                     <a href="/about-tours/#MEL-tour">
                         <div class="slide flex flex-col">
-                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_MEL.jpeg" loading="lazy" alt="">
+                            <img class="carousel-img" src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/carousel-history-tours/UVAhistoryCarousel_MEL.jpeg" loading="lazy" alt="">
                             <p class="carousel-text self-start text-white font-['Roboto']">Memorial to Enslaved Laborers</p>
                         </div>
                     </a>
                     <a href="/about-tours/#childrens-tours">
                         <div class="slide flex flex-col">
-                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_childrenstour.jpg" loading="lazy" alt="">
+                            <img class="carousel-img" src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/carousel-history-tours/UVAhistoryCarousel_childrenstour.jpg" loading="lazy" alt="">
                             <p class="carousel-text self-start text-white font-['Roboto']">Children's Tour</p>
                         </div>
                     </a>

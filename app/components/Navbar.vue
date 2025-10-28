@@ -9,7 +9,7 @@
     >
       <!-- Logo (Left) -->
       <a href="/" class="flex items-center space-x-2">
-        <img class="h-12 w-12" src="/guides-logo.png" alt="Virginia Guides Logo" />
+        <img class="h-12 w-12" src="https://virginia-guides-website-images.s3.amazonaws.com/public/guides-logo.png" alt="Virginia Guides Logo" />
       </a>
 
       <!-- Hamburger Button (Right) -->
@@ -113,7 +113,7 @@
     >
       <!-- Logo (Left Side) -->
       <a href="/" class="flex items-center space-x-2">
-        <img class="h-12 w-12" src="/guides-logo.png" alt="Virginia Guides Logo" />
+        <img class="h-12 w-12" src="https://virginia-guides-website-images.s3.amazonaws.com/public/guides-logo.png" alt="Virginia Guides Logo" />
       </a>
 
       <!-- Navigation Links (Right Side) -->

@@ -1,6 +1,6 @@
 <template>
     <!--Header Section-->
-    <header class="relative overflow-visible h-[115vh] w-full bg-[url('/Header_FrontPageNew.jpg')] bg-cover bg-center" aria-label="Virginia Guides Hero Section">
+    <header class="relative overflow-visible h-[115vh] w-full bg-[url('https://virginia-guides-website-images.s3.amazonaws.com/public/Header_FrontPageNew.jpg')] bg-cover bg-center" aria-label="Virginia Guides Hero Section">
         <div class="absolute top-[52%] left-[50%] lg:left-[48%] w-full max-w-7xl px-4 -translate-x-1/2 -translate-y-1/2 text-white text-center">
             <h1 class="font-['Playfair_Display'] text-center xl:text-right italic text-[clamp(2.5rem,9.5vw,6rem)] leading-tight [text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)]">
                 <span class="text-[clamp(3.5rem,10.5vw,7rem)]">V</span>IRGINIA 
@@ -60,7 +60,7 @@
 
                             <!-- Background Image -->
                             <img
-                                src="/index-page/TourTaking1_Blurry.jpg"
+                                src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/TourTaking1_Blurry.jpg"
                                 alt="Tour illustration"
                                 class="absolute inset-0 w-full h-full object-cover rounded-[35px]"
                                 loading="lazy"
@@ -149,7 +149,7 @@
                 <a href="/about-tours">
                     <div class="relative w-full p-4 group cursor-pointer">
                     <NuxtImg
-                        src="/index-page/carousel-cards/TourTaking3_Cropped.jpg"
+                        src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/carousel-cards/TourTaking3_Cropped.jpg"
                         alt="Columns at the Academical Village"
                         class="w-full rounded-lg transition-all duration-300 ease-in-out group-hover:brightness-75"
                     />
@@ -165,7 +165,7 @@
                 <a href="/your-visit">
                     <div class="relative w-full p-4 group cursor-pointer">
                     <NuxtImg
-                        src="/index-page/carousel-cards/Carousel_YourVisit.jpg"
+                        src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/carousel-cards/Carousel_YourVisit.jpg"
                         alt="Panels of a Pavillion at the Academical Village"
                         class="w-full rounded-lg transition-all duration-300 ease-in-out group-hover:brightness-75"
                     />
@@ -181,7 +181,7 @@
                 <a href="/for-educators">
                     <div class="relative w-full p-4 group cursor-pointer">
                     <NuxtImg
-                        src="/index-page/carousel-cards/Carousel_ForEducators.jpg"
+                        src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/carousel-cards/Carousel_ForEducators.jpg"
                         alt="Close up of bottom of the columns at the Academical Village"
                         class="w-full rounded-lg transition-all duration-300 ease-in-out group-hover:brightness-75"
                     />
@@ -197,7 +197,7 @@
                 <a href="/contact-us">
                     <div class="relative w-full p-4 group cursor-pointer">
                     <NuxtImg
-                        src="/index-page/carousel-cards/Carousel_ContactUs.jpg"
+                        src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/carousel-cards/Carousel_ContactUs.jpg"
                         alt="Image of a tree and an arch made of brick"
                         class="w-full rounded-lg transition-all duration-300 ease-in-out group-hover:brightness-75"
                     />
@@ -213,7 +213,7 @@
                 <a href="/join-guides">
                     <div class="relative w-full p-4 group cursor-pointer">
                     <NuxtImg
-                        src="/index-page/carousel-cards/Carousel_AboutOurGuides.jpeg"
+                        src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/carousel-cards/Carousel_AboutOurGuides.jpeg"
                         alt="Columns at the Academical Village"
                         class="w-full rounded-lg transition-all duration-300 ease-in-out group-hover:brightness-75"
                     />
@@ -229,7 +229,7 @@
                 <a href="/feedback">
                     <div class="relative w-full p-4 group cursor-pointer">
                     <NuxtImg
-                        src="/index-page/carousel-cards/Carousel_Feedback.jpeg"
+                        src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/carousel-cards/Carousel_Feedback.jpeg"
                         alt="Panels of a Pavillion at the Academical Village"
                         class="w-full rounded-lg transition-all duration-300 ease-in-out group-hover:brightness-75"
                     />
@@ -245,7 +245,7 @@
                 <a href="/join-guides#join-guides">
                     <div class="relative w-full p-4 group cursor-pointer">
                     <NuxtImg
-                        src="/index-page/carousel-cards/Carousel_BecomeAGuide.jpeg"
+                        src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/carousel-cards/Carousel_BecomeAGuide.jpeg"
                         alt="Close up of bottom of the columns at the Academical Village"
                         class="w-full rounded-lg transition-all duration-300 ease-in-out brightness-70 group-hover:brightness-60"
                     />
@@ -261,7 +261,7 @@
                 <a href="/donate">
                     <div class="relative w-full p-4 group cursor-pointer">
                     <NuxtImg
-                        src="/index-page/carousel-cards/Carousel_Donate.jpeg"
+                        src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/carousel-cards/Carousel_Donate.jpeg"
                         alt="Image of a tree and an arch made of brick"
                         class="w-full rounded-lg transition-all duration-300 ease-in-out group-hover:brightness-75"
                     />
@@ -281,7 +281,7 @@
 
             <!--Background Image-->
             <NuxtImg 
-                src="/index-page/FrontPage_WhoWeAre.jpg"
+                src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/FrontPage_WhoWeAre.jpg"
                 alt="My image file description"
                 class="overflow-visible h-screen w-full object-cover mask-t-from-10% opacity-40"
             >
@@ -573,7 +573,7 @@
     <section class="relative w-full">
         <!-- Background image with opacity -->
         <div class="absolute inset-0">
-            <div class="w-full h-full bg-[url('/index-page/OurEvents_Background.jpg')] bg-cover bg-center opacity-50"></div>
+            <div class="w-full h-full bg-[url('https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/OurEvents_Background.jpg')] bg-cover bg-center opacity-50"></div>
         </div>
 
         <!-- Content above background -->
@@ -608,7 +608,7 @@
                 <!-- Card 1 -->
                 <swiper-slide class="flex justify-end items-center">
                     <div class="relative max-w-2xl mx-auto p-4 pb-10 group cursor-pointer">
-                        <img class="events-image mb-2" loading="lazy" src="/index-page/OurEvents_Tour.jpg">
+                        <img class="events-image mb-2" loading="lazy" src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/OurEvents_Tour.jpg">
                         <p class="font-['Montserrat'] font-bold text-black text-2xl sm:text-3xl leading-tight mb-2">
                         Summer Tours: History of UVA and Prospective Student Tour*
                         </p>
@@ -621,7 +621,7 @@
                 <!-- Card 2 -->
                 <swiper-slide class="flex justify-center items-center">
                     <div class="relative max-w-2xl mx-auto p-4 pb-10 group cursor-pointer">
-                        <img class="events-image mb-2" loading="lazy" src="/index-page/OurEvents_Fundraising.jpg">
+                        <img class="events-image mb-2" loading="lazy" src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/OurEvents_Fundraising.jpg">
                         <p class="font-['Montserrat'] font-bold text-black text-2xl sm:text-3xl leading-tight mb-2">
                         Fundraising Event Title Here
                         </p>
@@ -634,7 +634,7 @@
                 <!-- Card 3 -->
                 <swiper-slide class="flex justify-center items-center">
                     <div class="relative max-w-2xl mx-auto p-4 pb-10 group cursor-pointer">
-                        <img class="events-image mb-2" loading="lazy" src="/index-page/OurEvents_SpecialtyTours.jpg">
+                        <img class="events-image mb-2" loading="lazy" src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/OurEvents_SpecialtyTours.jpg">
                         <p class="font-['Montserrat'] font-bold text-black text-2xl sm:text-3xl leading-tight mb-2">
                         Specialty Tours Returning in the Fall
                         </p>

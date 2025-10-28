@@ -1,6 +1,6 @@
 <template>
     <!--Header Section-->
-    <header class="relative bg-[url('/Header_ForEducators.jpg')] w-full bg-cover bg-center bg-no-repeat h-[60vh] sm:h-[75vh] bg-">
+    <header class="relative bg-[url('https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/Header_ForEducators.jpg')] w-full bg-cover bg-center bg-no-repeat h-[60vh] sm:h-[75vh] bg-">
         <!-- Centered Text -->
         <div class="absolute top-1/2 left-1/2 w-full max-w-7xl px-10 -translate-x-1/2 -translate-y-1/2 text-white">
             <h1 class="font-['Playfair_Display'] italic text-center xl:text-right text-[clamp(2.5rem,7vw,3rem)] lg:text-[clamp(1rem,8vw,4rem)] leading-tight [text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)]">
@@ -53,7 +53,7 @@
                 <!--Image-->
                 <div class="scrollElement w-full lg:w-[40%] flex"> 
                     <img 
-                        src="/for-educators-page/ChildrensTour.jpg" 
+                        src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/for-educators-page/ChildrensTour.jpg" 
                         alt="Childrens Tour at the Amphiteather steps" 
                         class="w-full object-cover rounded-md shadow-md"
                         loading="lazy"

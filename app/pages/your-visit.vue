@@ -1,6 +1,6 @@
 <template>
     <!--Header Section-->
-    <header class="relative bg-[url('/Header_YourVisit.jpg')] w-full bg-cover bg-center bg-no-repeat h-[60vh] sm:h-[90vh]">
+    <header class="relative bg-[url('https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/Header_YourVisit.jpg')] w-full bg-cover bg-center bg-no-repeat h-[60vh] sm:h-[90vh]">
         <!-- Centered Text -->
         <div class="absolute top-1/2 xl:top-[45%] left-1/2 w-full max-w-6xl px-4 -translate-x-1/2 -translate-y-1/2 text-white">
             <h1 class="font-['Playfair_Display'] text-center xl:text-right italic whitespace-nowrap text-[clamp(3rem,9.5vw,5.5rem)] leading-tight [text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)]">
@@ -54,7 +54,7 @@
         <div class="scrollElement w-full lg:w-1/2 flex justify-center items-center relative">
             <!-- Base Image -->
             <img 
-                src="/your-visit-page/YourVisit_Image.jpg" 
+                src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/your-visit-page/YourVisit_Image.jpg" 
                 alt="Historical Tour Image" 
                 class="w-full max-w-lg h-auto rounded-md shadow-md"
                 loading="lazy"
@@ -62,7 +62,7 @@
 
             <!-- Overlay Image (half size, shifted) -->
             <img 
-                src="/your-visit-page/YourVisit_Image.jpg" 
+                src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/your-visit-page/YourVisit_Image.jpg" 
                 alt="Overlay Image" 
                 class="hidden lg:block absolute w-full max-w-lg top-35 rounded-md"
                 loading="lazy"
