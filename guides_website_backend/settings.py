@@ -59,6 +59,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    # backend api
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -66,21 +68,22 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    # backend api
-    'corsheaders.middleware.CorsMiddleware',
-
 ]
 # backend api
 CORS_ALLOW_ALL_ORIGINS = False 
+
 CORS_ALLOWED_ORIGINS = [
-    "https://virginiaguides.org",
-    "https://www.virginiaguides.org",
     "https://www.uguides.org",
     "https://uguides.org",
+    "https://virginiaguides.org",
+    "https://www.virginiaguides.org"
     "http://localhost:3000",
     "http://localhost:3001",
     "http://localhost:3002",
 ]
+
+# If using cookies/session auth
+CORS_ALLOW_CREDENTIALS = True
 
 ROOT_URLCONF = 'guides_website_backend.urls'
 
