@@ -209,7 +209,8 @@
         success.value = false
 
         try {
-            const { data, error } = await useFetch('https://guides-website-backend-1.onrender.com', {
+            const config = useRuntimeConfig()
+            const { data, error } = await useFetch(`${config.public.apiBase}/contact-us/`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(form.value)
