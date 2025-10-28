@@ -1,80 +1,204 @@
 <template>
-    <!-- Header container with padding and flexbox for layout -->
+  <div>
+    <!-- Mobile Navbar -->
+    <div
+      :class="[
+        'xl:hidden flex items-center justify-between w-full px-4 py-2 transition-all duration-500 ease-in-out bg-white/30 backdrop-blur-lg text-black',
+        navOpen ? 'opacity-0 pointer-events-none translate-y-[-10px]' : 'opacity-100 translate-y-0'
+      ]"
+    >
+      <!-- Logo (Left) -->
+      <a href="/" class="flex items-center space-x-2">
+        <img class="h-12 w-12" src="/guides-logo.png" alt="Virginia Guides Logo" />
+      </a>
+
+      <!-- Hamburger Button (Right) -->
+      <button @click="navOpen = !navOpen" class="focus:outline-none">
+        <svg
+          v-if="!navOpen"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="text-black size-7"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <transition
+      name="fade-slide"
+      appear
+    >
+      <nav
+        v-if="navOpen"
+        class="fixed inset-0 z-50 xl:hidden bg-white/80 backdrop-blur-lg text-black flex flex-col justify-center items-center space-y-6 transition-all duration-500 ease-in-out"
+      >
+        <!-- Close Button (Top Right) -->
+        <div class="absolute top-6 right-6">
+          <button @click="navOpen = false" class="focus:outline-none">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-8 h-8 text-black hover:text-orange-500 transition-colors duration-200"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="flex flex-col justify-center items-center h-full text-center space-y-6">
+          <a
+            href="/about-tours"
+            class="text-2xl font-medium hover:text-orange-500 transition-colors duration-200"
+            @click="navOpen = false"
+          >
+            About Tours
+          </a>
+          <a
+            href="/join-guides"
+            class="text-2xl font-medium hover:text-orange-500 transition-colors duration-200"
+            @click="navOpen = false"
+          >
+            Join Guides
+          </a>
+          <a
+            href="/for-educators"
+            class="text-2xl font-medium hover:text-orange-500 transition-colors duration-200"
+            @click="navOpen = false"
+          >
+            For Educators
+          </a>
+          <a
+            href="/feedback"
+            class="text-2xl font-medium hover:text-orange-500 transition-colors duration-200"
+            @click="navOpen = false"
+          >
+            Feedback
+          </a>
+          <a
+            href="/donate"
+            class="text-2xl font-medium hover:text-orange-500 transition-colors duration-200"
+            @click="navOpen = false"
+          >
+            Donate
+          </a>
+          <a
+            href="/your-visit"
+            class="text-2xl font-semibold text-orange-600 hover:text-orange-700 transition-colors duration-200 pt-4 border-t border-orange-300"
+            @click="navOpen = false"
+          >
+            Take a Tour
+          </a>
+        </div>
+      </nav>
+    </transition>
+
+    <!-- Desktop Navbar (with scroll effect) -->
     <header
       :class="[
-        'fixed top-0 left-0 w-full z-50 transition duration-350',
-        isScrolled ? 'bg-white/30 shadow-md backdrop-blur-md text-black' : 'bg-transparent text-white'
+        'hidden xl:flex w-full z-50 transition duration-350 items-center justify-between px-4 py-2',
+        isScrolled
+          ? 'bg-white/30 shadow-md backdrop-blur-md text-black'
+          : 'bg-transparent text-white'
       ]"
-      class="flex items-center justify-between px-4 py-2"
-    >  
-      <!-- Logo (Right side) -->
-      <div class="flex items-center space-x-2">
-        <a href="/">
-          <img class="h-15 w-15" src="/guides-logo.png" alt="Virginia Guides Logo">
-        </a>
-        <!-- <button class="font-['Montserrat']font-medium bg-transparent hover:bg-royal-blue hover:text-white hover:border-none cursor-pointer rounded-sm px-5 py-1 transition duration-300">
-          HOME
-        </button> -->
-      </div>
-  
-      <!-- Navigation Link Container (Left Side) -->
-      <div class="flex items-center space-x-6">
-  
+    >
+      <!-- Logo (Left Side) -->
+      <a href="/" class="flex items-center space-x-2">
+        <img class="h-12 w-12" src="/guides-logo.png" alt="Virginia Guides Logo" />
+      </a>
+
+      <!-- Navigation Links (Right Side) -->
+      <div class="flex items-center gap-x-6">
         <a href="/about-tours">
-          <button class="font-['Montserrat'] font-medium bg-transparent hover:bg-royal-blue hover:text-white cursor-pointer rounded-full px-5 py-2 transition duration-250">
+          <button
+            class="font-['Montserrat'] font-medium bg-transparent hover:bg-royal-blue hover:text-white rounded-full px-5 py-2 transition duration-250"
+          >
             ABOUT TOURS
           </button>
         </a>
-  
         <a href="/join-guides">
-          <button class="font-['Montserrat'] font-medium bg-transparent hover:bg-royal-blue hover:text-white cursor-pointer rounded-full px-5 py-2 transition duration-250">
+          <button
+            class="font-['Montserrat'] font-medium bg-transparent hover:bg-royal-blue hover:text-white rounded-full px-5 py-2 transition duration-250"
+          >
             JOIN GUIDES
           </button>
         </a>
-
         <a href="/for-educators">
-          <button class="font-['Montserrat'] font-medium bg-transparent hover:bg-royal-blue hover:text-white cursor-pointer rounded-full px-5 py-2 transition duration-250">
+          <button
+            class="font-['Montserrat'] font-medium bg-transparent hover:bg-royal-blue hover:text-white rounded-full px-5 py-2 transition duration-250"
+          >
             FOR EDUCATORS
           </button>
         </a>
-  
         <a href="/feedback">
-          <button class="font-['Montserrat'] font-medium bg-transparent hover:bg-royal-blue hover:text-white cursor-pointer rounded-full px-5 py-2 transition duration-250">
+          <button
+            class="font-['Montserrat'] font-medium bg-transparent hover:bg-royal-blue hover:text-white rounded-full px-5 py-2 transition duration-250"
+          >
             FEEDBACK
           </button>
         </a>
-
         <a href="/donate">
-          <button class="font-['Montserrat'] font-medium bg-transparent hover:bg-royal-blue hover:text-white cursor-pointer rounded-full px-5 py-2 transition duration-250">
+          <button
+            class="font-['Montserrat'] font-medium bg-transparent hover:bg-royal-blue hover:text-white rounded-full px-5 py-2 transition duration-250"
+          >
             DONATE
           </button>
         </a>
-  
         <a href="/your-visit">
-          <button class="font-['Montserrat'] font-medium text-white bg-UVA-orange hover:bg-orange-800 hover:scale-105 cursor-pointer rounded-full px-5 py-2 transition duration-250">
+          <button
+            class="font-['Montserrat'] font-medium text-white bg-UVA-orange hover:bg-orange-800 hover:scale-105 rounded-full px-5 py-2 transition duration-250"
+          >
             TAKE A TOUR
           </button>
-      </a>
+        </a>
       </div>
-  
     </header>
-  </template>
-  
-  <script setup>
-  import { ref, onMounted, onUnmounted } from 'vue'
-  
-  const isScrolled = ref(false)
-  
-  const handleScroll = () => {
-    isScrolled.value = window.scrollY > 200 // adjust threshold as needed
+  </div>
+</template>
+
+<script setup>
+import { ref, onMounted, onUnmounted } from 'vue'
+
+const navOpen = ref(false)
+const isScrolled = ref(false)
+
+// only affects desktop header
+const handleScroll = () => {
+  isScrolled.value = window.scrollY > 200
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
+</script>
+
+<style>
+  /* Vue transition for dropdown */
+  .fade-slide-enter-active,
+  .fade-slide-leave-active {
+    transition: opacity 0.5s ease, transform 0.5s ease;
   }
-  
-  onMounted(() => {
-    window.addEventListener('scroll', handleScroll)
-  })
-  
-  onUnmounted(() => {
-    window.removeEventListener('scroll', handleScroll)
-  })
-  </script>
-  
+  .fade-slide-enter-from,
+  .fade-slide-leave-to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  .fade-slide-enter-to,
+  .fade-slide-leave-from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>

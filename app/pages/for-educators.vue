@@ -136,7 +136,7 @@
 
     <!-- Last Info Section -->
     <section>
-        <div class="flex flex-col justify-center text-left max-w-7xl mx-auto px-10 sm:px-12 lg:px-12 py-12 gap-3">
+        <div class="flex flex-col justify-center text-left max-w-7xl mx-auto px-10 sm:px-12 lg:px-12 pt-12 gap-3">
             <ul class="list-disc font-['Montserrat'] text-base sm:text-lg space-y-2">
                 <li class="scrollElement">
                     <span class="font-bold">
@@ -156,231 +156,214 @@
         </div>
     </section>
 
-    <!-- Explore UVA History Section -->
-    <section class="bg-royal-blue py-16 sm:py-20 md:py-24">
-        <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-10">
+    <!--Carousel: Tour Review Section-->
+    <div class="scrollElement review-carousel-body">
+        <div class="review-slider">
+            <div class="review-slide-track grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-            <!-- Header -->
-            <h1 class="scrollElement font-['Playfair_Display'] text-UVA-orange text-3xl sm:text-4xl md:text-5xl font-medium">
-                Explore UVA History
-            </h1>
-
-            <!-- Description -->
-            <p class="scrollElement font-['Montserrat'] text-white text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
-                In addition to our regularly scheduled historical tours, we also offer Specialty Tours by request,
-                which focus on a specific aspect of UVA's extensive 200 year history.
-            </p>
-
-            <!-- Button -->
-            <a href="/about-tours" class="scrollElement">
-                <button class="inline-flex items-center space-x-3 rounded-full border-1 border-gray-300 text-white font-['Montserrat'] text-base sm:text-lg md:text-xl py-3 px-6 hover:text-royal-blue hover:bg-gray-100 hover:scale-105 transition-all duration-300 ease-in-out hover:cursor-pointer">
-                    <p>HISTORY TOURS</p>
-                    <svg class="flex-shrink-0" height="25px" width="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M6 12H18M18 12L13 7M18 12L13 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
-            </a>
-        </div>
-
-        <!-- Carousel: Our Tours-->
-        <div class="scrollElement carousel-body">
-            <div class="slider">
-                <div class="slide-track">
-                    <a href="/about-tours/#history-of-women-at-uva">
-                        <div class="slide flex flex-col justify-start">
-                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_womenatuva.jpg" loading="lazy" alt="">
-                            <p class="carousel-text self-start text-white font-['Roboto']">History of Women</p>
-                        </div>
-                    </a>
-                    <a href="/about-tours/#history-of-african-americans-tour">
-                        <div class="slide flex flex-col">
-                            <img class="carousel-img object-top" src="/index-page/carousel-history-tours/UVAhistoryCarousel_africanamericansatuva.jpg" loading="lazy" alt="">
-                            <p class="carousel-text self-start text-white  font-['Roboto']">History of African-Americans</p>
-                        </div>
-                    </a>
-                    <a href="/about-tours/#garden-tours">
-                        <div class="slide flex flex-col">
-                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_GardenTours.jpg" loading="lazy" alt="">
-                            <p class="carousel-text self-start text-white  font-['Roboto']">Garden Tours</p>
-                        </div>
-                    </a>
-                    <a href="/about-tours/#MEL-tour">
-                        <div class="slide flex flex-col">
-                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_MEL.jpeg" loading="lazy" alt="">
-                            <p class="carousel-text self-start text-white font-['Roboto']">Memorial to Enslaved Laborers</p>
-                        </div>
-                    </a>
-                    <a href="/about-tours/#childrens-tours">
-                        <div class="slide flex flex-col">
-                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_childrenstour.jpg" loading="lazy" alt="">
-                            <p class="carousel-text self-start text-white font-['Roboto']">Children's Tour</p>
-                        </div>
-                    </a>
-                    <!--Same 5 slides (doubled)-->
-                    <a href="/about-tours/#history-of-women-at-uva">
-                        <div class="slide flex flex-col justify-start">
-                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_womenatuva.jpg" loading="lazy" alt="">
-                            <p class="carousel-text self-start text-white font-['Roboto']">History of Women</p>
-                        </div>
-                    </a>
-                    <a href="/about-tours/#history-of-african-americans-tour">
-                        <div class="slide flex flex-col">
-                            <img class="carousel-img object-top" src="/index-page/carousel-history-tours/UVAhistoryCarousel_africanamericansatuva.jpg" loading="lazy" alt="">
-                            <p class="carousel-text self-start text-white font-['Roboto']">History of African-Americans</p>
-                        </div>
-                    </a>
-                    <a href="/about-tours/#garden-tours">
-                        <div class="slide flex flex-col">
-                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_GardenTours.jpg" loading="lazy" alt="">
-                            <p class="carousel-text self-start text-white font-['Roboto']">Garden Tours</p>
-                        </div>
-                    </a>
-                    <a href="/about-tours/#MEL-tour">
-                        <div class="slide flex flex-col">
-                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_MEL.jpeg" loading="lazy" alt="">
-                            <p class="carousel-text self-start text-white font-['Roboto']">Memorial to Enslaved Laborers</p>
-                        </div>
-                    </a>
-                    <a href="/about-tours/#childrens-tours">
-                        <div class="slide flex flex-col">
-                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_childrenstour.jpg" loading="lazy" alt="">
-                            <p class="carousel-text self-start text-white font-['Roboto']">Children's Tour</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!--Footer Section-->
-    <section>
-        <div class="relative overflow-hidden">
-
-            <!-- Background Image -->
-            <NuxtImg 
-            src="/Header_PageFooters.jpg"
-            alt="My image file description"
-            class="w-full min-h-screen sm:h-[120vh] object-cover object-top"
-            />
-
-            <!-- Overlay Content -->
-            <div class="absolute top-1/2 left-1/2 w-full max-w-6xl px-4 sm:px-6 lg:px-8 -translate-x-1/2 -translate-y-1/2 text-center z-10">
-
-                <!-- Header -->
-                <div class="absolute left-1/2 w-full max-w-6xl px-4 -translate-x-1/2 -translate-y-1/2 text-white text-center">
-                    <h1 class="scrollElement font-['Playfair_Display'] italic text-center xl:text-left whitespace-nowrap text-[clamp(3rem,9.5vw,4rem)] leading-tight [text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)]">
-                        SHED LIGHT
-                    </h1>
-                    <p class="scrollElement font-Roboto text-center xl:max-w-sm xl:text-right text-xl sm:text-2xl md:text-3xl font-extralight leading-snug [text-shadow:_3px_3px_6px_rgb(0_0_0_/_0.70)]">
-                        ON HISTORY
+                <!-- Review 1 -->
+                <div class="review-slide flex flex-col w-full h-64 bg-white rounded-lg shadow-[0px_2px_16px_0px_rgba(14,30,37,0.32)] p-4 relative">
+                    <!-- Date -->
+                    <p class="absolute top-2 right-4 text-black text-sm sm:text-base font-semibold font-['Montserrat']">
+                        January 2024
+                    </p>
+                    <!-- Review Text -->
+                    <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] overflow-auto">
+                        “[Guide name]—he was so well informed and thoughtful in explaining the historical
+                        relationship to history and the importance of understanding it in the present.”
                     </p>
                 </div>
 
-                <!-- Buttons -->
-                <div class="scrollElement mt-35 md:mt-40 flex flex-col sm:flex-row justify-center items-center gap-x-10 gap-y-4 pointer-events-auto">
-                    <a href="/your-visit">
-                        <button class="font-['Roboto'] border-1 border-gray-300 text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-gray-100 hover:scale-105 rounded-full py-3 px-10 cursor-pointer transition-all duration-300 ease-in-out">
-                            TAKE A TOUR
-                        </button>
-                    </a>
-                    <a href="/donate">
-                        <button class="font-['Roboto'] border-1 border-gray-300 text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-gray-100 hover:scale-105 rounded-full py-3 px-15 cursor-pointer transition-all duration-300 ease-in-out">
-                            DONATE
-                        </button>
-                    </a>
+                <!-- Review 2 -->
+                <div class="review-slide flex flex-col w-full h-64 bg-white rounded-lg shadow-[0px_2px_16px_0px_rgba(14,30,37,0.32)]  p-4 relative">
+                    <p class="absolute top-2 right-4 text-black text-sm sm:text-base font-semibold font-['Montserrat']">
+                        February 2024
+                    </p>
+                    <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] overflow-auto">
+                        “Well researched presentation. She did a great job putting various events onto a timeline, 
+                        which in turned helped to explain the contemporary mindset. She also communicated her love of the university.”
+                    </p>
                 </div>
 
-                <!-- Description -->
-                <p class="scrollElement mt-20 font-['Roboto'] text-white text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
-                    The Virginia Guides Service at UVA is an entirely student-run independent volunteer organization. 
-                    If you would like to provide additional support, please consider donating to our day-to-day operations 
-                    <a href="/donate" class="underline">here</a>. We appreciate your time and thank you for continuing to support our mission.
-                </p>
+                <!-- Review 3 -->
+                <div class="review-slide flex flex-col w-full h-64 bg-white rounded-lg shadow-[0px_2px_16px_0px_rgba(14,30,37,0.32)] p-4 relative">
+                    <p class="absolute top-2 right-4 text-black text-sm sm:text-base font-semibold font-['Montserrat']">
+                        February 2024
+                    </p>
+                    <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] overflow-auto">
+                        “I was very impressed with how well the event was organized. 
+                        I reached out in January when most students were still on break and got a response within 2 days! 
+                        It was a real pleasure to see such professionalism coming from young people! Bravo and thank you for all you do.”
+                    </p>
+                </div>
 
+                <!-- Review 4 -->
+                <div class="review-slide flex flex-col w-full h-64 bg-white rounded-lg shadow-[0px_2px_16px_0px_rgba(14,30,37,0.32)] p-4 relative">
+                    <p class="absolute top-2 right-4 text-black text-sm sm:text-base font-semibold font-['Montserrat']">
+                        February 2024
+                    </p>
+                    <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] overflow-auto">
+                        “Our tour guide, [guide], was incredibly knowledgeable and engaging. 
+                        We learned a lot about UVA, Charlottesville, and Virginia through her fantastic storytelling.”
+                    </p>
+                </div>
+
+                <!-- Review 5 -->
+                <div class="review-slide flex flex-col w-full h-64 bg-white rounded-lg shadow-[0px_2px_16px_0px_rgba(14,30,37,0.32)] p-4 relative">
+                    <p class="absolute top-2 right-4 text-black text-sm sm:text-base font-semibold font-['Montserrat']">
+                        February 2024
+                    </p>
+                    <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] overflow-auto">
+                        “[Guide], the tour guide, was knowledgeable, enthusiastic, and articulate. 
+                        The tour itself was well-balanced and managed, in a well-structured way, to cover a variety of interesting subjects.”
+                    </p>
+                </div>
+
+                <!-- Review 6 -->
+                <div class="review-slide flex flex-col w-full h-64 bg-white rounded-lg shadow-[0px_2px_16px_0px_rgba(14,30,37,0.32)] p-4 relative">
+                    <p class="absolute top-2 right-4 text-black text-sm sm:text-base font-semibold font-['Montserrat']">
+                        October 2025
+                    </p>
+                    <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] overflow-auto">
+                        “This critical/complicated understanding and connection to the institutions 
+                        we come from are so essential to figuring out how we move forward.“
+                    </p>
+                </div>
+            
+                <!-- Review 7 -->
+                <div class="review-slide flex flex-col w-full h-64 bg-white rounded-lg shadow-[0px_2px_16px_0px_rgba(14,30,37,0.32)] p-4 relative">
+                    <p class="absolute top-2 right-4 text-black text-sm sm:text-base font-semibold font-['Montserrat']">
+                        October 2025
+                    </p>
+                    <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] overflow-auto">
+                        "Going to Monticello after UVa was really important and looking back at the Rotunda from Monticello 
+                        to see how the organization of the house is related to the organization of the institution, citizenship, 
+                        and the nation which makes you really question how these spaces normalized what they stood for.”
+                    </p>
+                </div>
+            
+                <!-- Review 8 -->
+                <div class="review-slide flex flex-col w-full h-64 bg-white rounded-lg shadow-[0px_2px_16px_0px_rgba(14,30,37,0.32)] p-4 relative">
+                    <p class="absolute top-2 right-4 text-black text-sm sm:text-base font-semibold font-['Montserrat']">
+                        October 2025
+                    </p>
+                    <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] overflow-auto">
+                        “Thank you for your outstanding tour and extraordinarily generous hospitality. I think our students got 
+                        a chance to see through your example what an exemplary UVa student sounds like. You also allowed me to 
+                        reconnect with where I come from. So I can't thank you enough.”
+                    </p>
+                </div>
+
+                <!--Same 8 slides (doubled)-->
+
+                <!-- Review 1 -->
+                <div class="review-slide flex flex-col w-full h-64 bg-white rounded-lg shadow-[0px_2px_16px_0px_rgba(14,30,37,0.32)] p-4 relative">
+                    <!-- Date -->
+                    <p class="absolute top-2 right-4 text-black text-sm sm:text-base font-semibold font-['Montserrat']">
+                        January 2024
+                    </p>
+                    <!-- Review Text -->
+                    <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] overflow-auto">
+                        “[Guide name]—he was so well informed and thoughtful in explaining the historical
+                        relationship to history and the importance of understanding it in the present.”
+                    </p>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="review-slide flex flex-col w-full h-64 bg-white rounded-lg shadow-[0px_2px_16px_0px_rgba(14,30,37,0.32)] p-4 relative">
+                    <p class="absolute top-2 right-4 text-black text-sm sm:text-base font-semibold font-['Montserrat']">
+                        February 2024
+                    </p>
+                    <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] overflow-auto">
+                        “Well researched presentation. She did a great job putting various events onto a timeline, 
+                        which in turned helped to explain the contemporary mindset. She also communicated her love of the university.”
+                    </p>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="review-slide flex flex-col w-full h-64 bg-white rounded-lg shadow-[0px_2px_16px_0px_rgba(14,30,37,0.32)] p-4 relative">
+                    <p class="absolute top-2 right-4 text-black text-sm sm:text-base font-semibold font-['Montserrat']">
+                        February 2024
+                    </p>
+                    <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] overflow-auto">
+                        “I was very impressed with how well the event was organized. 
+                        I reached out in January when most students were still on break and got a response within 2 days! 
+                        It was a real pleasure to see such professionalism coming from young people! Bravo and thank you for all you do.”
+                    </p>
+                </div>
+
+                <!-- Review 4 -->
+                <div class="review-slide flex flex-col w-full h-64 bg-white rounded-lg shadow-[0px_2px_16px_0px_rgba(14,30,37,0.32)] p-4 relative">
+                    <p class="absolute top-2 right-4 text-black text-sm sm:text-base font-semibold font-['Montserrat']">
+                        February 2024
+                    </p>
+                    <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] overflow-auto">
+                        “Our tour guide, [guide], was incredibly knowledgeable and engaging. 
+                        We learned a lot about UVA, Charlottesville, and Virginia through her fantastic storytelling.”
+                    </p>
+                </div>
+
+                <!-- Review 5 -->
+                <div class="review-slide flex flex-col w-full h-64 bg-white rounded-lg shadow-[0px_2px_16px_0px_rgba(14,30,37,0.32)] p-4 relative">
+                    <p class="absolute top-2 right-4 text-black text-sm sm:text-base font-semibold font-['Montserrat']">
+                        February 2024
+                    </p>
+                    <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] overflow-auto">
+                        “[Guide], the tour guide, was knowledgeable, enthusiastic, and articulate. 
+                        The tour itself was well-balanced and managed, in a well-structured way, to cover a variety of interesting subjects.”
+                    </p>
+                </div>
+            
+                <!-- Review 6 -->
+                <div class="review-slide flex flex-col w-full h-64 bg-white rounded-lg shadow-[0px_2px_16px_0px_rgba(14,30,37,0.32)] p-4 relative">
+                    <p class="absolute top-2 right-4 text-black text-sm sm:text-base font-semibold font-['Montserrat']">
+                        October 2025
+                    </p>
+                    <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] overflow-auto">
+                        “This critical/complicated understanding and connection to the institutions 
+                        we come from are so essential to figuring out how we move forward.“
+                    </p>
+                </div>
+            
+                <!-- Review 7 -->
+                <div class="review-slide flex flex-col w-full h-64 bg-white rounded-lg shadow-[0px_2px_16px_0px_rgba(14,30,37,0.32)] p-4 relative">
+                    <p class="absolute top-2 right-4 text-black text-sm sm:text-base font-semibold font-['Montserrat']">
+                        October 2025
+                    </p>
+                    <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] overflow-auto">
+                        "Going to Monticello after UVa was really important and looking back at the Rotunda from Monticello 
+                        to see how the organization of the house is related to the organization of the institution, citizenship, 
+                        and the nation which makes you really question how these spaces normalized what they stood for.”
+                    </p>
+                </div>
+            
+                <!-- Review 8 -->
+                <div class="review-slide flex flex-col w-full h-64 bg-white rounded-lg shadow-[0px_2px_16px_0px_rgba(14,30,37,0.32)] p-4 relative">
+                    <p class="absolute top-2 right-4 text-black text-sm sm:text-base font-semibold font-['Montserrat']">
+                        October 2025
+                    </p>
+                    <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] overflow-auto">
+                        “Thank you for your outstanding tour and extraordinarily generous hospitality. I think our students got 
+                        a chance to see through your example what an exemplary UVa student sounds like. You also allowed me to 
+                        reconnect with where I come from. So I can't thank you enough.”
+                    </p>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!--Footer Link Section-->
-    <section>
-        <div class="relative w-full bg-black py-10 px-6">
-            <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row gap-10">
+    <!-- Explore UVA History Section -->
+    <ExploreUVAHistoryBlue />
 
-                <!-- Left Side Footer -->
-                <div class="scrollElement basis-1/2 flex flex-wrap justify-between gap-6 text-sm text-zinc-400 font-['Roboto']">
-                    <!-- Column 1 -->
-                    <ul class="flex flex-col gap-2 min-w-[100x]">
-                        <li class="font-['Playfair_Display'] italic underline text-white text-lg">Visit</li>
-                        <a href="your-visit">
-                            <li class="cursor-pointer">Directions + FAQ</li>
-                        </a>
-                        <a href="about-tours#about-tours">
-                            <li class="cursor-pointer">History Tours</li>
-                        </a>
-                        <a href="/about-tours#specialty-tours">
-                            <li class="cursor-pointer">Specialty Tours</li>
-                        </a>
-                        <a href="/request-specialty-tours">
-                            <li class="cursor-pointer">Specialty Tour Request</li>
-                        </a>
-                    </ul>
-
-                    <!-- Column 2 -->
-                    <ul class="flex flex-col gap-2 min-w-[100px]">
-                        <li class="font-['Playfair_Display'] italic underline text-white text-lg">About Us</li>
-                        <a href="/join-guides">
-                            <li class="cursor-pointer">Our Mission</li>
-                        </a>
-                        <a href="/join-guides#join-guides">
-                            <li class="cursor-pointer">Become a Guide</li>
-                        </a>
-                        <a href="/feedback">
-                            <li class="cursor-pointer">Feedback</li>
-                        </a>
-                        <a href="https://www.instagram.com/virginiaguides/">
-                            <li class="cursor-pointer">Instagram</li>
-                        </a>
-                    </ul>
-
-                    <!-- Column 3 -->
-                    <ul class="flex flex-col gap-2 min-w-[100px]">
-                        <li class="font-['Playfair_Display'] italic underline text-white text-lg">More</li>
-                        <a href="/for-educators">
-                            <li class="cursor-pointer">For Educators</li>
-                        </a>
-                        <a href="/donate">
-                            <li class="cursor-pointer">Donate</li>
-                        </a>
-                    </ul>
-                </div>
-
-                <!-- Right Side Footer -->
-                <div class="scrollElement basis-1/2 flex flex-col gap-3 text-zinc-400 text-sm md:text-base font-light">
-                    <div class="flex items-start gap-4 font-['Roboto']">
-                        <img class="h-12 w-12 obSject-contain" loading="lazy" src="/guides-logo.png" alt="Virginia Guides Logo" />
-                        <p>
-                            The Virginia Guides continues 75 years of guiding visitors through UVA in Charlottesville VA. The Guides Service is a 
-                            student-run organization independent of the University of Virginia, carrying forward tradition while bringing a more complete light to the past.
-                        </p>
-                    </div>
-
-                    <div class="flex justify-center md:justify-end">
-                        <a href="/contact-us">
-                            <button class="border-1 border-gray-300 text-white rounded-full px-6 py-2 font-['Montserrat'] hover:bg-gray-100 hover:scale-105 hover:text-black transition-all duration-300 ease-in-out cursor-pointer">
-                                CONTACT US
-                            </button>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
+    <!--Footer Section-->
+    <Footer />
 
 </template>
 
 <script setup>
     import { onMounted } from "vue"
+    import Footer from '~/components/Footer.vue'
+    import ExploreUVAHistoryBlue from '~/components/ExploreUVAHistoryBlue.vue';
 
     onMounted(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -407,6 +390,47 @@
     .scrollElement.show {
         opacity: 1;
         transform: translateY(0);
+    }
+    /* Carousel for the Tour Reviews Section */
+    .review-carousel-body {
+        width: 100%;
+        height: var(--height);
+        display: grid;
+        place-items: center;
+    }
+    .review-slider{
+        height: 400px;
+        margin: auto;
+        position: relative;
+        width: 100%;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+    }
+    .review-slide-track{
+        display: flex;
+        width: calc(350px * 16);
+        animation: scroll-right 20s linear infinite;
+    }
+    /* Right to left */
+    @keyframes scroll-right {
+        0% {
+            transform: translateX(calc(-350px * 8));
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+    .review-slide-track:hover{
+        animation-play-state: paused;
+    }
+    .review-slide{
+        height: 250px;
+        width: 350px;
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        perspective: 100px;
     }
     /* Carousel for Explore UVA History Section */
     .carousel-body {
