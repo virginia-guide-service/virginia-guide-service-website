@@ -39,8 +39,15 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = [
+    "127.0.0.1",
+    "localhost",
+    "guides-website-backend-1.onrender.com",
+    "www.uguides.org",
+    "uguides.org",
+    "www.virginiaguides.org",
+    "virginiaguides.org",
+]
 
 # Application definition
 
@@ -73,8 +80,6 @@ MIDDLEWARE = [
 CORS_ALLOW_ALL_ORIGINS = False 
 
 CORS_ALLOWED_ORIGINS = [
-    "guides-website-backend-1.onrender.com",
-    "https://guides-website-backend-1.onrender.com/",
     "https://www.uguides.org",
     "https://uguides.org",
     "https://virginiaguides.org",
