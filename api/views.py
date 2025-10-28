@@ -19,7 +19,7 @@ from django.contrib.auth.decorators import user_passes_test
 from django.shortcuts import render
 from .models import Feedback
 from django.db.models import Avg, Count
-from datetime import date
+from datetime import date, time
 
 # Create your views here.
 
@@ -28,6 +28,16 @@ def submit_feedback(request):
     if request.method == 'POST':
         data = json.loads(request.body.decode('utf-8'))
 
+        time_str = data.get('time', '').strip()  # e.g., "11:00"
+        feedback_time = None
+
+        if time_str:
+            try:
+                hours, minutes = map(int, time_str.split(":"))
+                feedback_time = time(hour=hours, minute=minutes)
+            except ValueError:
+                feedback_time = None  # or handle invalid input
+
         feedback = Feedback.objects.create(
             first_name=data.get('first_name'),
             last_name=data.get('last_name'),
@@ -35,7 +45,7 @@ def submit_feedback(request):
             phone_number=data.get('phone_number'),
             rating=data.get('rating'),
             date=data.get('date'),
-            time=data.get('time'),
+            time=feedback_time,
             tour_type=data.get('tour_type'),
             best_part_message=data.get('best_part_message', ''),
             improvement_message=data.get('improvement_message', ''),
@@ -43,6 +53,28 @@ def submit_feedback(request):
             topics_message=data.get('topics_message', ''),
             source_message=data.get('source_message', ''),
             other_comments=data.get('other_comments', ''),
+        )
+
+        # Send feedback to chairs
+        send_mail(
+            subject=f"[FEEDBACK] Feedback for {feedback.tour_type} ({feedback.date})",
+            message=(
+                f"Feedback From {feedback.first_name or 'N/A'} {feedback.last_name or 'N/A'}\n"
+                f"Email: {feedback.email or 'N/A'}\n"
+                f"Phone: {feedback.phone_number or 'N/A'}\n"
+                f"Tour Type: {feedback.tour_type or 'N/A'}\n"
+                f"Date of Tour: {feedback.date or 'N/A'}\n"
+                f"Time of Tour: {feedback.time or 'N/A'}\n"
+                f"Rating: {feedback.rating or 'N/A'}\n"
+                f"Best Part: {feedback.best_part_message or 'N/A'}\n"
+                f"What needs improvement: {feedback.improvement_message or 'N/A'}\n"
+                f"How was the length of the tour?: {feedback.length_message or 'N/A'}\n"
+                f"Wanted topics or places: {feedback.topics_message or 'N/A'}\n"
+                f"How did you hear about Guides: {feedback.source_message or 'N/A'}\n"
+                f"Other comments: {feedback.other_comments or 'N/A'}\n"
+            ),
+            from_email=settings.DEFAULT_FROM_EMAIL,
+            recipient_list=[settings.CHAIR_EMAIL],  # change the chair email in .env if needed
         )
         return JsonResponse({'status': 'success', 'message': 'Feedback submitted successfully!'})
     return JsonResponse({'status': 'error', 'message': 'Invalid request'}, status=400)
@@ -68,10 +100,6 @@ def feedback_dashboard(request):
         'stats': stats,
     })
 
-@api_view(['GET'])
-def hello_world(request):
-    return Response({"message": "Hello from Django!"})
-
 @api_view(['POST'])
 def register_tour(request):
     serializer = TourRegistrationSerializer(data=request.data)
@@ -86,13 +114,14 @@ def register_tour(request):
                 f"Registered on: {date.today()}\n"
                 f"Email: {registration.email}\n"
                 f"Phone: {registration.phone_number}\n"
-                f"Requested Date of Tour: {registration.date}\n"
+                f"Date of Tour: {registration.date}\n"
                 f"Guests: {registration.guests}\n"
                 f"Minors: {registration.minors}\n"
                 f"Notes: {registration.notes or 'None'}"
             ),
             from_email=settings.DEFAULT_FROM_EMAIL,
-            recipient_list=[settings.SCHEDULER_EMAIL],  # change the scheduler email in .env
+            # recipient_list=[settings.SCHEDULER_EMAIL, settings.CHAIR_EMAIL], # change the scheduler email in .env if needed
+            recipient_list=[settings.SCHEDULER_EMAIL],  # change the scheduler email in .env if needed
         )
 
         print(serializer.errors)
@@ -109,7 +138,7 @@ def register_specialty_tour(request):
 
         # Send email to scheduler
         send_mail(
-            subject=f"[TOUR REGISTRATION] New {specialty_registration.tour_type} Tour Registration",
+            subject=f"[REQUESTED TOUR] New {specialty_registration.tour_type} Tour Request",
             message=(
                 f"Specialty Tour Registration From {specialty_registration.first_name} {specialty_registration.last_name}\n"
                 f"Registered on: {date.today()}\n"
@@ -122,7 +151,9 @@ def register_specialty_tour(request):
                 f"Tour Group Information & Details: {specialty_registration.notes or 'None'}"
             ),
             from_email=settings.DEFAULT_FROM_EMAIL,
-            recipient_list=[settings.SCHEDULER_EMAIL],  # change the scheduler email in .env
+            # recipient_list=[settings.SCHEDULER_EMAIL, settings.CHAIR_EMAIL],  # change the scheduler email in .env if needed
+            recipient_list=[settings.SCHEDULER_EMAIL],  # change the scheduler email in .env if needed
+
         )
 
         print(serializer.errors)
