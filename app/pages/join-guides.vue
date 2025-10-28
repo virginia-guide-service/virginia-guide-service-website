@@ -519,7 +519,7 @@
                 <div class="scrollElement relative group flex flex-col w-full lg:w-1/2 items-center justify-center">
                     <div class=" p-2 border-4 border-dotted border-dark-green">
                         <img
-                            src="/join-guides-page/beingaguide_metthepicnic.jpg" 
+                            src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/join-guides-page/beingaguide_metthepicnic.JPG" 
                             class="object-cover w-full max-w-sm md:max-w-md lg:max-w-lg transition duration-400 group-hover:opacity-30"
                             loading="lazy"
                         >
@@ -548,12 +548,12 @@
 
             <!--fourth flex row-->
             <div class="flex flex-col lg:flex-row gap-x-5 pt-5">
-                <!-- Manmayi and Mercy Image with Overlay -->
+                <!-- MM Image with Overlay -->
                 <div class="scrollElement relative group flex flex-col w-full lg:w-[35%] justify-center items-center mb-5 lg:mb-0">
                     <!-- Image -->
                     <div class="p-3 border-4 border-UVA-orange ">
                         <img 
-                            src="/join-guides-page/manmayiandmercy.JPEG" 
+                            src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/join-guides-page/doubleM.JPEG" 
                             class="object-cover w-full max-w-xs md:max-w-sm lg:max-w-mdtransition duration-400 group-hover:opacity-30"
                             loading="lazy"
                         >
@@ -576,12 +576,12 @@
                         Develop friendships that last a lifetime. So many of our members have found best friends, mentors, roommates, or even just a friendly face in class. Virginia Guides feels like a family to us all and the relationships we make here last us for years beyond our time on Grounds.
                     </p>
                 </div>
-                <!-- Yukta and Sanjitha Image with Overlay -->
+                <!-- YS Image with Overlay -->
                 <div class="scrollElement relative group flex flex-col w-full lg:w-[35%] justify-center items-center mt-5 lg:mt-0">
                     <!-- Image -->
                     <div class="p-3 border-4 border-UVA-orange ">
                         <img 
-                            src="/join-guides-page/yuktaandsanjitha.jpeg" 
+                            src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/join-guides-page/YS.JPEG" 
                             class="object-cover w-full max-w-xs md:max-w-sm lg:max-w-md transition duration-400 group-hover:opacity-30"
                             loading="lazy"
                         >
