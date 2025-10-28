@@ -258,6 +258,7 @@
             })
 
             if (error.value) {
+                console.log('Form submission error:', error.value)
                 if (error.value.data) {
                     fieldErrors.value = error.value.data // store per-field errors
                 } else {

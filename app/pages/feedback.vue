@@ -436,12 +436,13 @@
         })
 
         if (error.value) {
-        if (error.value.data) {
-            fieldErrors.value = error.value.data
-        } else {
-            errorMsg.value = 'Something went wrong. Please try again later.'
-        }
-        return
+            console.log('Form submission error:', error.value)
+            if (error.value.data) {
+                fieldErrors.value = error.value.data
+            } else {
+                errorMsg.value = 'Something went wrong. Please try again later.'
+            }
+            return
         }
 
         success.value = true

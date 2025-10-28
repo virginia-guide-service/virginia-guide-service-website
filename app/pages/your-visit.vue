@@ -504,12 +504,13 @@
             })
 
             if (error.value) {
-            if (error.value.data) {
-                fieldErrors.value = error.value.data // store per-field errors
-            } else {
-                errorMsg.value = 'Something went wrong. Please try again. If the issue persist, feel free to contact our schedulers (schedulersofugs@gmail.com) personally to schedule a tour!'
-            }
-            return
+                console.log('Form submission error:', error.value)
+                if (error.value.data) {
+                    fieldErrors.value = error.value.data // store per-field errors
+                } else {
+                    errorMsg.value = 'Something went wrong. Please try again. If the issue persist, feel free to contact our schedulers (schedulersofugs@gmail.com) personally to schedule a tour!'
+                }
+                return
             }
 
             success.value = true
