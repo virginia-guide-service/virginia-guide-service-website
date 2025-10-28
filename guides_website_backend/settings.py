@@ -71,13 +71,15 @@ MIDDLEWARE = [
 
 ]
 # backend api
-# CORS_ALLOW_ALL_ORIGINS = True 
+CORS_ALLOW_ALL_ORIGINS = False 
 CORS_ALLOWED_ORIGINS = [
-    "https://www.virginiaguides.org",  # frontend domain
-    "https://www.uguides.org",  # frontend domain testing
-    "http://localhost:3000",  # for local testing
-    "http://localhost:3001",  # for local testing
-    "http://localhost:3002",  # for local testing
+    "https://virginiaguides.org",
+    "https://www.virginiaguides.org",
+    "https://www.uguides.org",
+    "https://uguides.org",
+    "http://localhost:3000",
+    "http://localhost:3001",
+    "http://localhost:3002",
 ]
 
 ROOT_URLCONF = 'guides_website_backend.urls'
