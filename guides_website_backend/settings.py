@@ -17,13 +17,10 @@ from dotenv import load_dotenv
 load_dotenv()  # loads .env file values into environment
 
 EMAIL_BACKEND = os.getenv('EMAIL_BACKEND')
-EMAIL_HOST = os.getenv("EMAIL_HOST")
-EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS') == 'True'
-EMAIL_USE_SSL = os.getenv('EMAIL_USE_SSL') == 'True'
-EMAIL_PORT = int(os.getenv('EMAIL_PORT', 465))
-EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER")
-EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD")
-DEFAULT_FROM_EMAIL = os.getenv("DEFAULT_FROM_EMAIL")
+# mailgun settings
+MAILGUN_API_KEY=os.getenv("MAILGUN_API_KEY")
+MAILGUN_DOMAIN=os.getenv("MAILGUN_DOMAIN")
+DEFAULT_FROM_EMAIL= os.getenv("DEFAULT_FROM_EMAIL")
 SCHEDULER_EMAIL = os.getenv("EMAIL_SCHEDULER_RECEIVER")
 CHAIR_EMAIL = os.getenv("EMAIL_CHAIR_RECEIVER")
 
