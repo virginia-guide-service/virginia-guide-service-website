@@ -162,33 +162,28 @@ def register_specialty_tour(request):
     print(serializer.errors)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+from utils.mailgun import send_mailgun_email
+import os
+
 @api_view(['POST'])
 def contact_us(request):
     serializer = ContactUsFormSerializer(data=request.data)
     if serializer.is_valid():
         contact_us = serializer.save()
-        email_sent = False
 
-        # Send email to chairs
-        send_mail(
+        # Send email to chairs via Mailgun
+        response = send_mailgun_email(
             subject=f"[GUIDES WEBSITE - CONTACT US] {contact_us.subject}",
-            message=(
-                f"From: {contact_us.first_name} {contact_us.last_name} ({contact_us.email})\n\n"
-                f"{contact_us.message}"
-            ),
-            from_email=settings.DEFAULT_FROM_EMAIL,
-            recipient_list=[settings.CHAIR_EMAIL],  # change the chair email in .env
+            text=f"From: {contact_us.first_name} {contact_us.last_name} ({contact_us.email})\n\n{contact_us.message}",
+            to_email=os.getenv("CHAIR_EMAIL")
         )
 
-        print("send_mail called successfully")  # <- Add this
-        print("Email content:")
-        print(f"Subject: [GUIDES WEBSITE - CONTACT US] {contact_us.subject}")
-        print(f"Message: {contact_us.message}")
+        if response.status_code != 200:
+            return Response({"error": "Failed to send email"}, status=500)
 
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
-    
-    print(serializer.errors)
-    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        return Response(serializer.data, status=201)
+
+    return Response(serializer.errors, status=400)
 
 class FeedbackCreateView(generics.CreateAPIView):
     queryset = Feedback.objects.all()
