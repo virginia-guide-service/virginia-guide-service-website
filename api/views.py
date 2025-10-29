@@ -180,7 +180,11 @@ def contact_us(request):
             recipient_list=[settings.CHAIR_EMAIL],  # change the chair email in .env
         )
 
-        print(serializer.errors)
+        print("send_mail called successfully")  # <- Add this
+        print("Email content:")
+        print(f"Subject: [GUIDES WEBSITE - CONTACT US] {contact_us.subject}")
+        print(f"Message: {contact_us.message}")
+
         return Response(serializer.data, status=status.HTTP_201_CREATED)
     
     print(serializer.errors)
