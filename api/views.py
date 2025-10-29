@@ -162,28 +162,45 @@ def register_specialty_tour(request):
     print(serializer.errors)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-from utils.mailgun import send_mailgun_email
 import os
+import requests
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from rest_framework import status
+from .serializers import ContactUsFormSerializer
 
-@api_view(['POST'])
+@api_view(["POST"])
 def contact_us(request):
     serializer = ContactUsFormSerializer(data=request.data)
     if serializer.is_valid():
         contact_us = serializer.save()
 
-        # Send email to chairs via Mailgun
-        response = send_mailgun_email(
-            subject=f"[GUIDES WEBSITE - CONTACT US] {contact_us.subject}",
-            text=f"From: {contact_us.first_name} {contact_us.last_name} ({contact_us.email})\n\n{contact_us.message}",
-            to_email=os.getenv("CHAIR_EMAIL")
-        )
+        MAILGUN_DOMAIN = os.getenv("MAILGUN_DOMAIN")
+        MAILGUN_API_KEY = os.getenv("API_KEY")
 
-        if response.status_code != 200:
-            return Response({"error": "Failed to send email"}, status=500)
+        # send email via Mailgun
+        try:
+            response = requests.post(
+                f"https://api.mailgun.net/v3/{MAILGUN_DOMAIN}/messages",
+                auth=("api", MAILGUN_API_KEY),
+                data={
+                    "from": f"{contact_us.first_name} {contact_us.last_name} <postmaster@{MAILGUN_DOMAIN}>",
+                    "to": "rjd8wv@virginia.edu",
+                    "subject": f"[GUIDES WEBSITE - CONTACT US] {contact_us.subject}",
+                    "text": contact_us.message,
+                }
+            )
+            response.raise_for_status()
+        except requests.exceptions.RequestException as e:
+            return Response(
+                {"error": f"Failed to send email: {str(e)}"},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )
 
-        return Response(serializer.data, status=201)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+    
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-    return Response(serializer.errors, status=400)
 
 class FeedbackCreateView(generics.CreateAPIView):
     queryset = Feedback.objects.all()
