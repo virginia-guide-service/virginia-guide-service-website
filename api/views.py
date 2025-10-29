@@ -169,36 +169,21 @@ def contact_us(request):
         contact_us = serializer.save()
         email_sent = False
 
-        # Try sending the email, but catch any exceptions
-        try:
-            send_mail(
-                subject=f"[GUIDES WEBSITE - CONTACT US] {contact_us.subject}",
-                message=(
-                    f"From: {contact_us.first_name} {contact_us.last_name} ({contact_us.email})\n\n"
-                    f"{contact_us.message}"
-                ),
-                from_email=settings.DEFAULT_FROM_EMAIL,
-                recipient_list=[settings.CHAIR_EMAIL],
-                fail_silently=False,
-            )
-            email_sent = True
-        except BadHeaderError:
-            return Response(
-                {"detail": "Invalid header found in email."},
-                status=status.HTTP_400_BAD_REQUEST
-            )
-        except Exception as e:
-            # Log the error for debugging (Render will show this in logs)
-            print("Email sending failed:", e)
+        # Send email to chairs
+        send_mail(
+            subject=f"[GUIDES WEBSITE - CONTACT US] {contact_us.subject}",
+            message=(
+                f"From: {contact_us.first_name} {contact_us.last_name} ({contact_us.email})\n\n"
+                f"{contact_us.message}"
+            ),
+            from_email=settings.DEFAULT_FROM_EMAIL,
+            recipient_list=[settings.CHAIR_EMAIL],  # change the chair email in .env
+        )
 
-        # Return success even if email fails (frontend won't break)
-        return Response({
-            "message": "Form submitted successfully.",
-            "email_sent": email_sent,
-            "data": serializer.data
-        }, status=status.HTTP_201_CREATED)
-
-    # Validation failed
+        print(serializer.errors)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+    
+    print(serializer.errors)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class FeedbackCreateView(generics.CreateAPIView):
