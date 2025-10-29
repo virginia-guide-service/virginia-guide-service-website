@@ -178,6 +178,14 @@ def contact_us(request):
         MAILGUN_DOMAIN = os.getenv("MAILGUN_DOMAIN")
         MAILGUN_API_KEY = os.getenv("API_KEY")
 
+        # Debug logging before sending
+        print("Attempting to send email via Mailgun...")
+        print("From:", f"{contact_us.first_name} {contact_us.last_name} <postmaster@{MAILGUN_DOMAIN}>")
+        print("To: rjd8wv@virginia.edu")
+        print("Subject:", f"[GUIDES WEBSITE - CONTACT US] {contact_us.subject}")
+        print("Message:", contact_us.message)
+        print("MAILGUN_API_KEY exists?", MAILGUN_API_KEY is not None)
+
         # send email via Mailgun
         try:
             response = requests.post(
@@ -190,8 +198,11 @@ def contact_us(request):
                     "text": contact_us.message,
                 }
             )
+
+            print("Mailgun response:", response.status_code, response.text)
             response.raise_for_status()
         except requests.exceptions.RequestException as e:
+            print("Mailgun error:", str(e))
             return Response(
                 {"error": f"Failed to send email: {str(e)}"},
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR
