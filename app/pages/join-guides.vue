@@ -196,13 +196,15 @@
                         historical fact sheet
                     </a> we have put together for you. 
                     Once you have written your tour, we recommend practicing giving your tour before you do so officially. 
-                    As you prepare, please reach out to our Recruitment Co-Chairs, 
+                    As you prepare, please reach out to our Recruitment Co-Chairs, Natalie
                     <a href="mailto:gwm6vu@virginia.edu" class="underline">
-                        Goretty
-                    </a> and 
+                        (wmz4hj@virginia.edu)
+                    </a>
+                    and Molly
                     <a href="mailto:tzk9jr@virginia.edu" class="underline">
-                        Molly,
-                    </a> for any help you may need. 
+                        (tzk9jr@virginia.edu)
+                    </a>,
+                    for any help you may need. 
                     They are equipped to offer you advice on how to go about your tours, suggestions for what to include, 
                     and any help you might need to prepare! The Recruitment Co-Chairs have no say in the selection process, 
                     meaning that you can truly ask them anything - they're here to make sure you have the best possible experience trying out.

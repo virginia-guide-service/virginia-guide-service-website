@@ -118,10 +118,7 @@
                         </a>
                     </li>
                     <li class="scrollElement">
-                        Exceptions include 
-                        <a class="underline" href="https://virginiasports.com/sports/football/schedule/">
-                            home football game days
-                        </a> and 
+                        Exceptions to our schedule is
                         <a class="underline" href="https://registrar.virginia.edu/calendar/academic">
                             when classes are not in session.
                         </a>
