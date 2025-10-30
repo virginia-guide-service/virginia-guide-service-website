@@ -282,7 +282,9 @@ def submit_feedback(request):
                 f"Hi {feedback.first_name},\n\n"
                 f"Your feedback has been received successfully.\n\n"
                 f"Thank you for taking the time to provide feedback for your {feedback.tour_type} tour on {feedback.date}.\n\n"
-                f"We truly value your input and use it to improve our tours and experiences."
+                f"We truly value your input and use it to improve our tours and experiences.\n\n"
+                "Thank you again,\n"
+                "Virginia Guide Service"
             )
 
             requests.post(
