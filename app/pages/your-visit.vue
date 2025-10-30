@@ -220,17 +220,30 @@
                                     Register
                                 </button>
 
+                                <!-- Loading Spinner Overlay -->
+                                <div v-if="loading" class="fixed inset-0 flex items-center justify-center z-50 bg-black/30">
+                                    <div class="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+                                </div>
+
                                 <!-- Success Toast -->
-                                <div v-if="success" class="fixed inset-0 flex items-center justify-center z-50 pointer-events-none">
-                                    <div class="font-[Montserrat] bg-green-600 text-white px-6 py-4 rounded-md shadow-lg pointer-events-auto">
-                                        Thank you! Your registration has been submitted.
+                                <div v-if="success && showToast" class="fixed inset-0 bg-black/30 flex items-center justify-center z-50 transition-opacity duration-500">
+                                    <div class="pointer-events-auto backdrop-blur-md bg-white/70 text-green-700 px-6 py-4 sm:px-8 sm:py-5 rounded-xl shadow-lg flex flex-row justify-center items-center sm:space-x-3 space-y-2 sm:space-y-0 w-[90%] sm:w-auto sm:max-w-sm max-w-2xs text-center sm:text-left animate-fade-in">
+                                        <svg class="w-6 h-6 text-green-600 shrink-0 hidden sm:block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                        </svg>
+                                        <span class="font-semibold text-sm sm:text-base">Message sent successfully!</span>
                                     </div>
                                 </div>
 
                                 <!-- Error Toast -->
-                                <div v-if="errorMsg" class="fixed inset-0 flex items-center justify-center z-50 pointer-events-none">
-                                    <div class="font-[Montserrat] bg-red-600 text-white px-6 py-4 rounded-md shadow-lg pointer-events-auto">
-                                        {{ errorMsg }}
+                                <div v-if="errorMsg && showToast" class="fixed inset-0 bg-black/30 flex items-center justify-center z-50 transition-opacity duration-500">
+                                    <div class="pointer-events-auto backdrop-blur-md bg-white/70 text-red-700 px-6 py-4 sm:px-8 sm:py-5 rounded-xl shadow-lg flex flex-row justify-center items-center sm:space-x-3 space-y-2 sm:space-y-0 w-[90%] sm:w-auto sm:max-w-sm max-w-2xs text-center sm:text-left animate-fade-in">
+                                        <svg class="w-6 h-6 text-red-600 shrink-0 hidden sm:block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                        </svg>
+                                        <div class="flex flex-col font-semibold text-sm sm:text-base leading-tight">
+                                            <span>Something went wrong. If the error persists, feel free to email our chairs personally!</span>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -485,9 +498,13 @@
     const success = ref(false)
     const errorMsg = ref('')
     const fieldErrors = ref<Record<string, string[]>>({})
+    const loading = ref(false)
+    const showToast = ref(false)
 
     async function submitForm(e: Event) {
         e.preventDefault()
+        loading.value = true
+        showToast.value = false
         fieldErrors.value = {}
         errorMsg.value = ''
         success.value = false
@@ -526,18 +543,29 @@
             }
 
         } catch (err) {
-            errorMsg.value = 'Network error. Please try again. If the issue persist, feel free to contact our schedulers (schedulersofugs@gmail.com) personally to schedule a tour!'
+            console.error('Network error:', err)
+            errorMsg.value = 'Network error. Please try again. If the issue persists, feel free to contact our schedulers (scheduler@virginiaguides.org) personally to schedule a tour!'
+        } finally {
+            loading.value = false
+            await nextTick()
+            showToast.value = true
         }
     }
 
     // fade out success toast
     watch(success, (val) => {
-        if (val) setTimeout(() => (success.value = false), 3000)
+        if (val) setTimeout(() => {
+            success.value = false
+            showToast.value = false
+        }, 3000)
     })
 
     // fade out error toast
     watch(errorMsg, (val) => {
-        if (val) setTimeout(() => (errorMsg.value = ''), 3000)
+        if (val) setTimeout(() => {
+            errorMsg.value = ''
+            showToast.value = false
+        }, 3000)
     })
 
     onMounted(() => {
@@ -557,6 +585,14 @@
 </script>
 
 <style>
+    /* Animation for toasts */
+    @keyframes fade-in {
+        from { opacity: 0; transform: scale(0.95); }
+        to { opacity: 1; transform: scale(1); }
+    }
+    .animate-fade-in {
+        animation: fade-in 0.4s ease-out;
+    }
     .scrollElement {
         opacity: 0;
         transform: translateY(30px);

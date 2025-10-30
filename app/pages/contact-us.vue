@@ -4,7 +4,8 @@
         <!-- Centered Text -->
         <div class="absolute top-1/2 left-1/2 w-full max-w-7xl px-10 -translate-x-1/2 -translate-y-1/2 text-white">
             <h1 class="font-['Playfair_Display'] text-center xl:text-right italic text-[clamp(2rem,9.5vw,5rem)] leading-tight [text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)]">
-                VIRGINIA GUIDES
+                <span class="text-[clamp(1rem,8.5vw,6rem)]">V</span>IRGINIA
+                <span class="text-[clamp(1rem,8.5vw,6rem)]">G</span>UIDES
             </h1>
             <p class="font-Roboto text-center xl:text-right text-sm sm:text-lg md:text-md font-semibold leading-snug [text-shadow:_3px_3px_6px_rgb(0_0_0_/_0.70)]">
                 HISTORICAL TOURS OF THE UNIVERSITY OF VIRGINIA
@@ -26,13 +27,7 @@
                         <div class="text-base md:text-lg font-light flex flex-col gap-3">
                             <p>Got questions or want to plan a tour with us? We'd love to hear from you!</p>
                             <p>Let's get in touch.</p>
-                            <p>
-                            If you would like to personally contact our chairs,
-                            <a href="mailto:jyr7db@virginia.edu, xuy8gc@virginia.edu" class="underline">
-                                Nina and Rose,
-                            </a>
-                            feel free to do so as well!
-                            </p>
+                            <p>If you would like to personally contact our chairs, <a href="mailto:jyr7db@virginia.edu, xuy8gc@virginia.edu" class="underline">Nina and Rose</a>, feel free to do so as well!</p>
                         </div>
                     </div>
 
@@ -124,17 +119,35 @@
                             Send Message
                         </button>
 
+                        <!-- Another Load Style -->
+                        <!-- <div class="fixed inset-0 flex items-center justify-center z-50 bg-black/30">
+                            <div class="animate-spin rounded-full h-12 w-12 border-t-4 border-b-4 border-white"></div>
+                        </div> -->
+
+                        <!-- Loading Spinner Overlay -->
+                        <div v-if="loading" class="fixed inset-0 flex items-center justify-center z-50 bg-black/20">
+                            <div class="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+                        </div>
+
                         <!-- Success Toast -->
-                        <div v-if="success" class="fixed inset-0 flex items-center justify-center z-50 pointer-events-none">
-                            <div class="font-[Montserrat] bg-green-600 text-white px-6 py-4 rounded-md shadow-lg pointer-events-auto">
-                                Thank you! Your message has been sent!
+                        <div v-if="success && showToast" class="fixed inset-0 bg-black/30 flex items-center justify-center z-50 transition-opacity duration-500">
+                            <div class="pointer-events-auto backdrop-blur-md bg-white/70 text-green-700 px-6 py-4 sm:px-8 sm:py-5 rounded-xl shadow-lg flex flex-row justify-center items-center sm:space-x-3 space-y-2 sm:space-y-0 w-[90%] sm:w-auto sm:max-w-sm max-w-2xs text-center sm:text-left animate-fade-in">
+                                <svg class="w-6 h-6 text-green-600 shrink-0 hidden sm:block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span class="font-semibold text-sm sm:text-base">Message sent successfully!</span>
                             </div>
                         </div>
 
                         <!-- Error Toast -->
-                        <div v-if="errorMsg" class="fixed inset-0 flex items-center justify-center z-50 pointer-events-none">
-                            <div class="font-[Montserrat] bg-red-600 text-white px-6 py-4 rounded-md shadow-lg pointer-events-auto">
-                                {{ errorMsg }}
+                        <div v-if="errorMsg && showToast" class="fixed inset-0 bg-black/30 flex items-center justify-center z-50 transition-opacity duration-500">
+                            <div class="pointer-events-auto backdrop-blur-md bg-white/70 text-red-700 px-6 py-4 sm:px-8 sm:py-5 rounded-xl shadow-lg flex flex-row justify-center items-center sm:space-x-3 space-y-2 sm:space-y-0 w-[90%] sm:w-auto sm:max-w-sm max-w-2xs text-center sm:text-left animate-fade-in">
+                                <svg class="w-6 h-6 text-red-600 shrink-0 hidden sm:block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                                <div class="flex flex-col font-semibold text-sm sm:text-base leading-tight">
+                                    <span>Something went wrong. If the error persists, feel free to email our chairs personally!</span>
+                                </div>
                             </div>
                         </div>
 
@@ -201,9 +214,13 @@
     const success = ref(false)
     const errorMsg = ref('')
     const fieldErrors = ref<Record<string, string[]>>({})
+    const loading = ref(false)
+    const showToast = ref(false)
 
     async function submitForm(e: Event) {
         e.preventDefault()
+        loading.value = true
+        showToast.value = false
         fieldErrors.value = {}
         errorMsg.value = ''
         success.value = false
@@ -239,18 +256,29 @@
             }
 
         } catch (err) {
-            errorMsg.value = 'Network error. Please try again. If the issue persist, feel free to contact our chairs or schedulers personally!'
+            console.error('Network error:', err)
+            errorMsg.value = 'Network error. Please try again. If the issue persists, feel free to contact our schedulers (scheduler@virginiaguides.org) personally to schedule a tour!'
+        } finally {
+            loading.value = false
+            await nextTick()
+            showToast.value = true
         }
     }
 
     // fade out success toast
     watch(success, (val) => {
-        if (val) setTimeout(() => (success.value = false), 3000)
+        if (val) setTimeout(() => {
+            success.value = false
+            showToast.value = false
+        }, 3000)
     })
 
     // fade out error toast
     watch(errorMsg, (val) => {
-        if (val) setTimeout(() => (errorMsg.value = ''), 3000)
+        if (val) setTimeout(() => {
+            errorMsg.value = ''
+            showToast.value = false
+        }, 3000)
     })
 
     onMounted(() => {
@@ -270,6 +298,14 @@
 </script>
 
 <style>
+    /* Animation for toasts */
+    @keyframes fade-in {
+        from { opacity: 0; transform: scale(0.95); }
+        to { opacity: 1; transform: scale(1); }
+    }
+    .animate-fade-in {
+        animation: fade-in 0.4s ease-out;
+    }
     /* Carousel for Explore UVA History Section */
     .carousel-body {
         width: 100%;

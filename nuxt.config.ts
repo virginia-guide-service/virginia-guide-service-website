@@ -14,6 +14,8 @@ export default defineNuxtConfig({
       // http://127.0.0.1:8000
       // https://guides-website-backend-1.onrender.com
       apiBase: process.env.NUXT_PUBLIC_API_BASE || 'http://127.0.0.1:8000'
+      // apiBase: process.env.NUXT_PUBLIC_API_BASE
+      // apiBase: 'http://127.0.0.1:8000' // USE THIS FOR LOCAL DEV !!!!
     }
   },
   vite: {

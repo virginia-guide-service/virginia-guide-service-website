@@ -4,7 +4,8 @@
         <!-- Centered Text -->
         <div class="absolute top-[40%] left-1/2 w-full max-w-8xl px-10 -translate-x-1/2 -translate-y-1/2 text-white">
             <h1 class="font-['Playfair_Display'] text-center xl:text-right italic text-[clamp(2rem,9.5vw,5rem)] leading-tight [text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)]">
-                VIRGINIA GUIDES
+                <span class="text-[clamp(1rem,8.5vw,6rem)]">V</span>IRGINIA
+                <span class="text-[clamp(1rem,8.5vw,6rem)]">G</span>UIDES
             </h1>
             <p class="font-Roboto text-center xl:text-right text-sm sm:text-lg md:text-md font-semibold leading-snug [text-shadow:_3px_3px_6px_rgb(0_0_0_/_0.70)]">
                 HISTORICAL TOURS OF THE UNIVERSITY OF VIRGINIA
@@ -139,14 +140,21 @@
                                 </p>
                             </div>
                             <div class="flex flex-col">
-                                <label for="guestNum" class="font-[Montserrat] font-light text-royal-blue">Guest(s)</label>
-                                <input v-if="!fieldErrors.guests" type="number" id="guestNum" name="guestNum" v-model="form.guests" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
-                                <input v-if="fieldErrors.guests" type="number" id="guestNum" name="guestNum" v-model="form.guests" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue" />
-                                <p v-if="fieldErrors.guests" class="text-red-500 text-sm p-0 mb-2">
-                                    {{ fieldErrors.guests[0] }}
+                                <label for="time" class="font-[Montserrat] font-light text-royal-blue">Time of Tour</label>
+                                <input  v-if="!fieldErrors.time" type="time" id="time" name="time" v-model="form.time" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                                <input  v-if="fieldErrors.time" type="time" id="time" name="time" v-model="form.time" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue" />
+                                <p v-if="fieldErrors.time" class="text-red-500 text-sm p-0 mb-2">
+                                    {{ fieldErrors.time[0] }}
                                 </p>
                             </div>
                         </div>
+
+                        <label for="guestNum" class="font-[Montserrat] font-light text-royal-blue">Guest(s)</label>
+                        <input v-if="!fieldErrors.guests" type="number" id="guestNum" name="guestNum" v-model="form.guests" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                        <input v-if="fieldErrors.guests" type="number" id="guestNum" name="guestNum" v-model="form.guests" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue" />
+                        <p v-if="fieldErrors.guests" class="text-red-500 text-sm p-0 mb-2">
+                            {{ fieldErrors.guests[0] }}
+                        </p>
 
                         <label for="minorNum" class="font-[Montserrat] font-light text-royal-blue">Number of Children in Grade K-8?</label>
                         <input v-if="!fieldErrors.minors" type="number" id="minorNum" name="minorNum" v-model="form.minors" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
@@ -165,7 +173,7 @@
                             <option value="Private Admissions Tours">Private Admissions Tours</option>
                             <option value="Garden Tours">Garden Tours</option>
                         </select>
-                        <select v-if="fieldErrors.tour_type" name="tour-type" id="tour-type" v-model="form.tour_type" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5">>
+                        <select v-if="fieldErrors.tour_type" name="tour-type" id="tour-type" v-model="form.tour_type" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue">>
                             <option value="Standard Historical">Standard Historical Tour</option>
                             <option value="History of African Americans at UVA">History of African Americans at UVA</option>
                             <option value="Memorial to Enslaved Laborers">Memorial to Enslaved Laborers</option>
@@ -190,20 +198,33 @@
                             Request Tour
                         </button>
                         
+                        <!-- Loading Spinner Overlay -->
+                        <div v-if="loading" class="fixed inset-0 flex items-center justify-center z-50 bg-black/30">
+                            <div class="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+                        </div>
+                        
                         <!-- Success Toast -->
-                        <div v-if="success" class="fixed inset-0 flex items-center justify-center z-50 pointer-events-none">
-                            <div class="font-[Montserrat] bg-green-600 text-white px-6 py-4 rounded-md shadow-lg pointer-events-auto">
-                                Thank you! Your message has been sent!
+                        <div v-if="success && showToast" class="fixed inset-0 bg-black/30 flex items-center justify-center z-50 transition-opacity duration-500">
+                            <div class="pointer-events-auto backdrop-blur-md bg-white/70 text-green-700 px-6 py-4 sm:px-8 sm:py-5 rounded-xl shadow-lg flex flex-row justify-center items-center sm:space-x-3 space-y-2 sm:space-y-0 w-[90%] sm:w-auto sm:max-w-sm max-w-2xs text-center sm:text-left animate-fade-in">
+                                <svg class="w-6 h-6 text-green-600 shrink-0 hidden sm:block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span class="font-semibold text-sm sm:text-base">Message sent successfully!</span>
                             </div>
                         </div>
 
                         <!-- Error Toast -->
-                        <div v-if="errorMsg" class="fixed inset-0 flex items-center justify-center z-50 pointer-events-none">
-                            <div class="font-[Montserrat] bg-red-600 text-white px-6 py-4 rounded-md shadow-lg pointer-events-auto">
-                                {{ errorMsg }}
+                        <div v-if="errorMsg && showToast" class="fixed inset-0 bg-black/30 flex items-center justify-center z-50 transition-opacity duration-500">
+                            <div class="pointer-events-auto backdrop-blur-md bg-white/70 text-red-700 px-6 py-4 sm:px-8 sm:py-5 rounded-xl shadow-lg flex flex-row justify-center items-center sm:space-x-3 space-y-2 sm:space-y-0 w-[90%] sm:w-auto sm:max-w-sm max-w-2xs text-center sm:text-left animate-fade-in">
+                                <svg class="w-6 h-6 text-red-600 shrink-0 hidden sm:block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                                <div class="flex flex-col font-semibold text-sm sm:text-base leading-tight">
+                                    <span>Something went wrong. If the error persists, feel free to email our chairs personally!</span>
+                                </div>
                             </div>
                         </div>
-                        
+
                     </form>
                 </div>
             </div>
@@ -219,10 +240,9 @@
 </template>
 
 <script setup lang="ts">
-    import { onMounted } from "vue"
-    import { ref } from 'vue'
+    import { onMounted, ref, watch, nextTick } from "vue"
     import Footer from '~/components/Footer.vue'
-    import ExploreUVAHistoryWhite from '~/components/ExploreUVAHistoryWhite.vue';
+    import ExploreUVAHistoryWhite from '~/components/ExploreUVAHistoryWhite.vue'
 
     useHead({
         title: 'Specialty Tour Request | Virginia Guides Service',
@@ -234,18 +254,23 @@
         email: '',
         phone_number: '',
         date: '',
+        time: '',
         guests: 1,
         minors: 0,
-        tour_type: '', // can set a default
+        tour_type: '',
         notes: ''
     })
 
     const success = ref(false)
     const errorMsg = ref('')
     const fieldErrors = ref<Record<string, string[]>>({})
+    const loading = ref(false)
+    const showToast = ref(false)
 
     async function submitForm(e: Event) {
         e.preventDefault()
+        loading.value = true
+        showToast.value = false
         fieldErrors.value = {}
         errorMsg.value = ''
         success.value = false
@@ -261,15 +286,15 @@
             if (error.value) {
                 console.log('Form submission error:', error.value)
                 if (error.value.data) {
-                    fieldErrors.value = error.value.data // store per-field errors
+                    fieldErrors.value = error.value.data
                 } else {
-                    errorMsg.value = 'Something went wrong. Please try again. If the issue persist, feel free to contact our schedulers (scheduler@virginiaguides.org) personally to schedule a tour!'
+                    errorMsg.value = 'Something went wrong. Please try again. If the issue persists, feel free to contact our schedulers (scheduler@virginiaguides.org) personally to schedule a tour!'
                 }
                 return
             }
 
             success.value = true
-        
+
             // clear form fields
             form.value = {
                 first_name: '',
@@ -277,6 +302,7 @@
                 email: '',
                 phone_number: '',
                 date: '',
+                time: '',
                 guests: 1,
                 minors: 0,
                 tour_type: '',
@@ -284,37 +310,56 @@
             }
 
         } catch (err) {
-            errorMsg.value = 'Network error. Please try again. If the issue persist, feel free to contact our schedulers (schedulersofugs@gmail.com) personally to schedule a tour!'
+            console.error('Network error:', err)
+            errorMsg.value = 'Network error. Please try again. If the issue persists, feel free to contact our schedulers (scheduler@virginiaguides.org) personally to schedule a tour!'
+        } finally {
+            loading.value = false
+            await nextTick()
+            showToast.value = true
         }
     }
 
     // fade out success toast
     watch(success, (val) => {
-        if (val) setTimeout(() => (success.value = false), 3000)
+        if (val) setTimeout(() => {
+            success.value = false
+            showToast.value = false
+        }, 3000)
     })
 
     // fade out error toast
     watch(errorMsg, (val) => {
-        if (val) setTimeout(() => (errorMsg.value = ''), 3000)
+        if (val) setTimeout(() => {
+            errorMsg.value = ''
+            showToast.value = false
+        }, 3000)
     })
 
     onMounted(() => {
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show")
-        } else {
-            entry.target.classList.remove("show")
-        }
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show")
+                } else {
+                    entry.target.classList.remove("show")
+                }
+            })
         })
-    })
 
-    const scrollElements = document.querySelectorAll(".scrollElement")
-    scrollElements.forEach((element) => observer.observe(element))
+        const scrollElements = document.querySelectorAll(".scrollElement")
+        scrollElements.forEach((element) => observer.observe(element))
     })
 </script>
 
 <style>
+    /* Animation for toasts */
+    @keyframes fade-in {
+        from { opacity: 0; transform: scale(0.95); }
+        to { opacity: 1; transform: scale(1); }
+    }
+    .animate-fade-in {
+        animation: fade-in 0.4s ease-out;
+    }
     /* Carousel for Explore UVA History Section */
     .carousel-body {
         width: 100%;

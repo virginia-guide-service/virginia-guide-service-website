@@ -25,7 +25,7 @@
         <a href="#more-info">
             <div ref="iconWrap" :class="['absolute flex flex-col items-center top-[75%] lg:pt-8 left-1/2 w-full max-w-4xl px-4 -translate-x-1/2 text-white text-center transition-all duration-500', isAtTop ? 'opacity-100 scale-100 pointer-events-auto' : 'opacity-0 scale-90 pointer-events-none']" aria-hidden="!isAtTop">
                 <svg
-                    class="pt-3 w-14 h-14 cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out"
+                    class="animate-bounce pt-3 w-14 h-14 cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out"
                     viewBox="0 0 24 24"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"

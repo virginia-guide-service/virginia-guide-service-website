@@ -96,7 +96,7 @@
                         <input type="tel" id="number" name="number" v-model="form.phone_number" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
 
                         <label for="rating" class="font-[Montserrat] font-light text-royal-blue">How satisified were you with the tour overall? (Scale of 1-10)</label>
-                        <select name="rating" id="rating" v-model="form.rating" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-4">>
+                        <select v-if="!fieldErrors.rating" name="rating" id="rating" v-model="form.rating" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5">>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -108,20 +108,43 @@
                             <option value="9">9</option>
                             <option value="10">10</option>
                         </select>
+                        <select v-if="fieldErrors.rating" name="rating" id="rating" v-model="form.rating" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue">>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                        <p v-if="fieldErrors.rating" class="text-red-500 text-sm p-0 mb-2">
+                            {{ fieldErrors.rating[0] }}
+                        </p>
 
                         <div class="flex flex-col lg:flex-row justify-between lg:gap-4">
                             <div class="flex flex-col">
                                 <label for="date" class="font-[Montserrat] font-light text-royal-blue">Intended Date of Tour</label>
-                                <input type="date" id="date" name="date" v-model="form.date" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                                <input v-if="!fieldErrors.date" type="date" id="date" name="date" v-model="form.date" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                                <input v-if="fieldErrors.date" type="date" id="date" name="date" v-model="form.date" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue" />
+                                <p v-if="fieldErrors.date" class="text-red-500 text-sm p-0 mb-2">
+                                    {{ fieldErrors.date[0] }}
+                                </p>
                             </div>
                             <div class="flex flex-col">
                                 <label for="time" class="font-[Montserrat] font-light text-royal-blue">Time of Tour</label>
-                                <input type="time" id="time" name="time" v-model="form.time" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                                <input  v-if="!fieldErrors.time" type="time" id="time" name="time" v-model="form.time" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                                <input  v-if="fieldErrors.time" type="time" id="time" name="time" v-model="form.time" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue" />
+                                <p v-if="fieldErrors.time" class="text-red-500 text-sm p-0 mb-2">
+                                    {{ fieldErrors.time[0] }}
+                                </p>
                             </div>
                         </div>
 
                         <label for="tour-type" class="font-[Montserrat] font-light text-royal-blue">Type of Tour</label>
-                        <select name="tour-type" id="tour-type" v-model="form.tour_type" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-4">>
+                        <select  v-if="!fieldErrors.tour_type" name="tour-type" id="tour-type" v-model="form.tour_type" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5">>
                             <option value="Standard Historical">Standard Historical Tour</option>
                             <option value="History of African Americans at UVA">History of African Americans at UVA</option>
                             <option value="Memorial to Enslaved Laborers">Memorial to Enslaved Laborers</option>
@@ -130,35 +153,47 @@
                             <option value="Private Admissions Tours">Private Admissions Tours</option>
                             <option value="Garden Tours">Garden Tours</option>
                         </select>
+                        <select v-if="fieldErrors.tour_type" name="tour-type" id="tour-type" v-model="form.tour_type" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue">>
+                            <option value="Standard Historical">Standard Historical Tour</option>
+                            <option value="History of African Americans at UVA">History of African Americans at UVA</option>
+                            <option value="Memorial to Enslaved Laborers">Memorial to Enslaved Laborers</option>
+                            <option value="History of Women">History of Women at UVA</option>
+                            <option value="Children's Tour">Children's Tour</option>
+                            <option value="Private Admissions Tours">Private Admissions Tours</option>
+                            <option value="Garden Tours">Garden Tours</option>
+                        </select>
+                        <p v-if="fieldErrors.tour_type" class="text-red-500 text-sm p-0 mb-2">
+                            {{ fieldErrors.tour_type[0] }}
+                        </p>
 
                         <label for="best-part" class="font-[Montserrat] font-light text-royal-blue">Best part of the tour?</label>
                         <textarea id="best-part" v-model="form.best_part_message"
-                            class="flex-grow font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-4">
+                            class="flex-grow font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5">
                         </textarea>
 
                         <label for="improvement" class="font-[Montserrat] font-light text-royal-blue">Part of the tour that needs more improvement?</label>
                         <textarea id="improvement" v-model="form.improvement_message"
-                            class="flex-grow font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-4">
+                            class="flex-grow font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5">
                         </textarea>
 
                         <label for="length" class="font-[Montserrat] font-light text-royal-blue">How was the length of the tour?</label>
                         <textarea id="length" v-model="form.length_message"
-                            class="flex-grow font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-4">
+                            class="flex-grow font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5">
                         </textarea>
 
                         <label for="topics" class="font-[Montserrat] font-light text-royal-blue">Were there topics or places you wish your Guide went to or discussed?</label>
                         <textarea id="topics" v-model="form.topics_message"
-                            class="flex-grow font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-4">
+                            class="flex-grow font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5">
                         </textarea>
 
                         <label for="source" class="font-[Montserrat] font-light text-royal-blue">How did you hear about our tours?</label>
                         <textarea id="source" v-model="form.source_message"
-                            class="flex-grow font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-4">
+                            class="flex-grow font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5">
                         </textarea>
 
                         <label for="comments" class="font-[Montserrat] font-light text-royal-blue">Feel free to add any other comments you have. Thank you!</label>
                         <textarea id="comments" v-model="form.other_comments"
-                            class="flex-grow font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-4">
+                            class="flex-grow font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5">
                         </textarea>
 
                         <button type="submit"
@@ -166,17 +201,40 @@
                             Submit Feedback
                         </button>
 
+                        <!-- Loading Spinner Overlay -->
+                        <div v-if="loading" class="fixed inset-0 flex items-center justify-center z-50 bg-black/30">
+                            <div class="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+                        </div>
+
                         <!-- Success Toast -->
-                        <div v-if="success" class="fixed inset-0 flex items-center justify-center z-50 pointer-events-none">
-                            <div class="font-[Montserrat] bg-green-600 text-white px-6 py-4 rounded-md shadow-lg pointer-events-auto">
-                                Thank you! Your feedback has been recieved!
+                        <div v-if="success && showToast" class="fixed bottom-6 right-6 z-50 pointer-events-auto animate-slide-in max-w-[90%] sm:w-80 sm:right-6 sm:bottom-6 w-full px-4 sm:px-0 flex justify-center sm:justify-end">
+                            <div class="backdrop-blur-lg bg-green-700 text-white px-5 sm:px-6 py-3 sm:py-4 rounded-xl shadow-lg flex items-center justify-between space-x-3 sm:space-x-4 w-full sm:w-80">
+                            <span class="font-[Montserrat] flex items-center space-x-2 text-sm sm:text-base">
+                                <svg
+                                    class="w-5 h-5 text-white flex-shrink-0"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Message sent successfully!</span>
+                            </span>
+                            <button @click="showToast = false" class="text-white hover:text-gray-200 text-lg leading-none cursor-pointer">&times;</button>
                             </div>
                         </div>
 
                         <!-- Error Toast -->
-                        <div v-if="errorMsg" class="fixed inset-0 flex items-center justify-center z-50 pointer-events-none">
-                            <div class="font-[Montserrat] bg-red-600 text-white px-6 py-4 rounded-md shadow-lg pointer-events-auto">
-                                {{ errorMsg }}
+                        <div v-if="errorMsg && showToast" class="fixed bottom-6 right-6 z-50 pointer-events-auto animate-slide-in max-w-[90%] sm:w-[28rem] sm:right-6 sm:bottom-6 w-full px-4 sm:px-0 flex justify-center sm:justify-end">
+                            <div class="backdrop-blur-lg bg-red-700 text-white px-5 sm:px-6 py-3 sm:py-4 rounded-xl shadow-lg flex items-center justify-between space-x-3 sm:space-x-4 w-full sm:w-[28rem]">
+                                <svg class="w-5 h-5 text-white justify-center items-center flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
+                                </svg>
+                                <span class="text-sm sm:text-base flex-1">
+                                    Something went wrong. Please try again later.
+                                </span>
+                                <button @click="showToast = false" class="text-white hover:text-gray-200 text-lg leading-none cursor-pointer">&times;</button>
                             </div>
                         </div>
 
@@ -420,9 +478,13 @@
     const success = ref(false)
     const errorMsg = ref('')
     const fieldErrors = ref<Record<string, string[]>>({})
+    const loading = ref(false)
+    const showToast = ref(false)
 
     async function submitForm(e: Event) {
     e.preventDefault()
+    loading.value = true
+    showToast.value = false
     fieldErrors.value = {}
     errorMsg.value = ''
     success.value = false
@@ -465,19 +527,30 @@
         other_comments: ''
         }
 
-    } catch (err) {
-        errorMsg.value = 'Network error. Please try again later.'
-    }
+        } catch (err) {
+            console.error('Network error:', err)
+            errorMsg.value = 'Network error. Please try again. If the issue persists, feel free to contact our schedulers (scheduler@virginiaguides.org) personally to schedule a tour!'
+        } finally {
+            loading.value = false
+            await nextTick()
+            showToast.value = true
+        }
     }
 
     // fade out success toast
     watch(success, (val) => {
-        if (val) setTimeout(() => (success.value = false), 3000)
+        if (val) setTimeout(() => {
+            success.value = false
+            showToast.value = false
+        }, 3000)
     })
 
     // fade out error toast
     watch(errorMsg, (val) => {
-        if (val) setTimeout(() => (errorMsg.value = ''), 3000)
+        if (val) setTimeout(() => {
+            errorMsg.value = ''
+            showToast.value = false
+        }, 3000)
     })
 
     onMounted(() => {
