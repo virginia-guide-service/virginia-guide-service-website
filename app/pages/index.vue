@@ -1,34 +1,57 @@
 <template>
-    <!--Header Section-->
+    <!-- tiny invisible element near the top to observe -->
+    <div ref="topSentinel" class="w-full"></div>
+
+    <!-- Header Section -->
     <header class="relative overflow-visible h-[115vh] w-full bg-[url('https://virginia-guides-website-images.s3.amazonaws.com/public/Header_FrontPageNew.jpg')] bg-cover bg-center" aria-label="Virginia Guides Hero Section">
-        <div class="absolute top-[52%] left-[50%] lg:left-[48%] w-full max-w-7xl px-4 -translate-x-1/2 -translate-y-1/2 text-white text-center">
-            <h1 class="font-['Playfair_Display'] text-center xl:text-right italic text-[clamp(2.5rem,9.5vw,6rem)] leading-tight [text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)]">
-                <span class="text-[clamp(3.5rem,10.5vw,7rem)]">V</span>IRGINIA 
-                <span class="text-[clamp(3.5rem,10.5vw,7rem)]">G</span>UIDES
-            </h1>
+        <div class="absolute top-[52%] left-[50%] xl:left-[48%] w-full max-w-7xl px-4 -translate-x-1/2 -translate-y-1/2 text-white text-center">
+                <h1 class="font-['Playfair_Display'] text-center xl:text-right italic text-[clamp(2.5rem,9.5vw,6rem)] leading-tight [text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)]">
+                    <span class="text-[clamp(3.5rem,10.5vw,7rem)]">V</span>IRGINIA
+                    <span class="text-[clamp(3.5rem,10.5vw,7rem)]">G</span>UIDES
+                </h1>
             <p class="font-Roboto text-center xl:text-right text-sm sm:text-lg md:text-md font-semibold leading-snug [text-shadow:_3px_3px_6px_rgb(0_0_0_/_0.70)]">
                 HISTORICAL TOURS OF THE UNIVERSITY OF VIRGINIA
             </p>
             <div class="text-center xl:text-right xl:pr-25">
                 <a href="/your-visit">
-                    <button class="font-Roboto font-medium mt-10 px-10 py-2 text-lg md:px-15 md:py-3 md:text-2xl text-white hover:text-royal-blue bg-[rgba(0,0,0,0.45)] hover:bg-gray-100 border hover:border-gray-100 rounded-full cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out"
-                    aria-label="Explore Virginia Guides">
+                    <button class="font-Roboto font-medium mt-10 px-10 py-2 text-lg md:px-15 md:py-3 md:text-2xl text-white hover:text-royal-blue bg-[rgba(0,0,0,0.45)] hover:bg-gray-100 border hover:border-gray-100 rounded-full cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out" aria-label="Explore Virginia Guides">
                         Take a Tour
-                    </button>   
+                    </button>
                 </a>
             </div>
         </div>
-        <div class="absolute flex flex-col items-center top-[83%] lg:pt-8 md:top-5/6 left-1/2 w-full max-w-4xl px-4 -translate-x-1/2 text-white text-center">
+
+        <!-- Scroll Icon -->
+        <a href="#more-info">
+            <div ref="iconWrap" :class="['absolute flex flex-col items-center top-[75%] lg:pt-8 left-1/2 w-full max-w-4xl px-4 -translate-x-1/2 text-white text-center transition-all duration-500', isAtTop ? 'opacity-100 scale-100 pointer-events-auto' : 'opacity-0 scale-90 pointer-events-none']" aria-hidden="!isAtTop">
+                <svg
+                    class="pt-3 w-14 h-14 cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                <path
+                    d="M12 17L12 7M12 17L8 13M12 17L16 13M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+                    stroke="#ffffff"
+                    stroke-width="1.25"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                ></path>
+                </svg>
+            </div>
+        </a>
+    
+        <!-- Scroll Text -->
+        <div ref="textWrap" :class="['absolute flex flex-col items-center top-[83%] lg:pt-8 md:top-5/6 left-1/2 w-full max-w-4xl px-4 -translate-x-1/2 text-white text-center transition-all duration-500', isAtTop ? 'opacity-0 translate-y-3 pointer-events-none' : 'opacity-100 translate-y-0 pointer-events-auto']" aria-hidden="isAtTop">
             <p class="font-['Montserrat'] italic text-base sm:text-lg md:text-xl font-light leading-snug">
                 The Virginia Guides Service continues 75 years of students guiding visitors through UVA,
                 carrying forward tradition while bringing new light to the past.
             </p>
-            <!-- <svg class="pt-3 w-12 h-12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 17L12 7M12 17L8 13M12 17L16 13M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg> -->
         </div>
     </header>
 
     <!-- More Tour Info Section -->
-    <section class="bg-white">
+    <section id="more-info" class="bg-white">
         <div class="mx-auto px-4 sm:px-6 lg:px-8 pt-12">
             <div class="flex flex-col lg:flex-row items-center gap-10 max-w-7xl mx-auto">
             
@@ -62,7 +85,7 @@
                             <img
                                 src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/TourTaking1_Blurry.jpg"
                                 alt="Tour illustration"
-                                class="absolute inset-0 w-full h-full object-cover rounded-[35px]"
+                                class="absolute inset-0 w-full h-full object-cover rounded-[35px] opacity-80"
                                 loading="lazy"
                             />
 
@@ -76,8 +99,8 @@
 
                                 <!-- Text Block -->
                                 <div class="flex flex-col">
-                                    <p class="text-stone-800 text-2xl font-bold font-['Montserrat']">TOUR TIMES*</p>
-                                    <p class="text-stone-700 text-sm font-medium font-['Montserrat']">
+                                    <p class="text-black text-2xl font-bold font-['Montserrat']">TOUR TIMES*</p>
+                                    <p class="text-black text-sm font-medium font-['Montserrat']">
                                         All tours leave from the front Rotunda steps
                                     </p>
                                 </div>
@@ -86,15 +109,15 @@
                             <!-- Overlay: Days and Times -->
                             <div class="absolute top-[179px] left-15 w-36 text-left">
                                 <p class="text-UVA-orange text-2xl font-semibold font-['Montserrat']">FRIDAY</p>
-                                <p class="text-stone-700 text-base font-medium font-['Montserrat'] relative left-[25px]">11:00am-12:15PM</p>
+                                <p class="text-black text-base font-medium font-['Montserrat'] relative left-[25px]">11:00am-12:15PM</p>
                             </div>
                             <div class="absolute top-[234px] left-15 w-36 text-left">
                                 <p class="text-UVA-orange text-2xl font-semibold font-['Montserrat']">SATURDAY</p>
-                                <p class="text-stone-700 text-base font-medium font-['Montserrat'] relative left-[25px]">11:00am-12:15PM</p>
+                                <p class="text-black text-base font-medium font-['Montserrat'] relative left-[25px]">11:00am-12:15PM</p>
                             </div>
                             <div class="absolute top-[289px] left-15 w-36 text-left">
                                 <p class="text-UVA-orange text-2xl font-semibold font-['Montserrat']">SUNDAY</p>
-                                <p class="text-stone-700 text-base font-medium font-['Montserrat'] relative left-[25px]">11:00am-12:15PM</p>
+                                <p class="text-black text-base font-medium font-['Montserrat'] relative left-[25px]">11:00am-12:15PM</p>
                             </div>
                             <!--Button-->
                             <div class="absolute left-1/2 bottom-20 -translate-x-1/2">
@@ -347,14 +370,14 @@
             <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center justify-evenly gap-5">
 
                 <!-- Description -->
-                <div class="font-['Montserrat'] text-white italic text-center justify-start text-sm md:text-base md:text-left max-w-xl">
+                <div class="scrollElement font-['Montserrat'] text-white italic text-center justify-start text-sm md:text-base md:text-left max-w-xl">
                     Follow us on 
                     <a href="https://www.instagram.com/virginiaguides/" class="underline cursor-pointer">Instagram</a>
                      for updates on Virginia history, mission and development tours, scheduling, and inclement weather alerts. Stay connected and never miss important news or events!
                 </div>
 
                 <!-- Logo Text -->
-                <div class="font-['Montserrat'] text-white flex items-center justify-between gap-3 text-2xl md:text-3xl font-semibold">
+                <div class="scrollElement font-['Montserrat'] text-white flex items-center justify-between gap-3 text-2xl md:text-3xl font-semibold">
                     <a href="https://instagram.com/virginiaguides">
                         <svg class="h-10 w-10" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
@@ -374,8 +397,8 @@
     <ExploreUVAHistoryBlue />
 
     <!--Carousel: Tour Review Section-->
-    <div class="scrollElement review-carousel-body">
-        <div class="review-slider">
+    <div class="review-carousel-body bg-royal-blue">
+        <div class="scrollElement review-slider">
             <div class="review-slide-track grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
                 <!-- Review 1 -->
@@ -569,86 +592,6 @@
         </div>
     </div>
 
-    <!--Our Events Section-->
-    <section class="relative w-full">
-        <!-- Background image with opacity -->
-        <div class="absolute inset-0">
-            <div class="w-full h-full bg-[url('https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/OurEvents_Background.jpg')] bg-cover bg-center opacity-50"></div>
-        </div>
-
-        <!-- Content above background -->
-        <div class="relative px-6 sm:px-8 lg:px-16 py-12 sm:py-16">
-            <div class="flex flex-col md:flex-row items-start gap-10">
-            
-            <!-- Left: Column Information -->
-            <div class="w-full md:w-2/5 flex justify-start">
-                <div class="relative w-full">
-                <p class="scrollElement font-['Playfair_Display'] font-bold text-black text-4xl sm:text-5xl leading-tight mb-6">
-                    Our Events
-                </p>
-                <p class="scrollElement font-['Montserrat'] font-semibold text-base sm:text-lg leading-relaxed text-black">
-                    Join us in our work of telling a more honest, just, and complete telling of UVA's history.
-                </p>
-                </div>
-            </div>
-
-            <!-- Right: Event Image Slider -->
-            <swiper
-                :slides-per-view="1"
-                :slides-per-group="1"
-                :space-between="30"
-                :pagination="{ clickable: true }"
-                :grabCursor="true"
-                :autoplay="{ delay: 10000, disableOnInteraction: false, pauseOnMouseEnter: true }"
-                :loop="true"
-                :speed="800"
-                :modules="modules"
-                class="scrollElement events-swiper mx-auto max-w-4xl"
-            >
-                <!-- Card 1 -->
-                <swiper-slide class="flex justify-end items-center">
-                    <div class="relative max-w-2xl mx-auto p-4 pb-10 group cursor-pointer">
-                        <img class="events-image mb-2" loading="lazy" src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/OurEvents_Tour.jpg">
-                        <p class="font-['Montserrat'] font-bold text-black text-2xl sm:text-3xl leading-tight mb-2">
-                        Summer Tours: History of UVA and Prospective Student Tour*
-                        </p>
-                        <p class="font-['Montserrat'] font-medium text-base sm:text-lg leading-relaxed text-gray-900">
-                        Our commitment to providing a more complete history of the University of Virginia carries on this summer.
-                        </p>
-                    </div>
-                </swiper-slide>
-
-                <!-- Card 2 -->
-                <swiper-slide class="flex justify-center items-center">
-                    <div class="relative max-w-2xl mx-auto p-4 pb-10 group cursor-pointer">
-                        <img class="events-image mb-2" loading="lazy" src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/OurEvents_Fundraising.jpg">
-                        <p class="font-['Montserrat'] font-bold text-black text-2xl sm:text-3xl leading-tight mb-2">
-                        Fundraising Event Title Here
-                        </p>
-                        <p class="font-['Montserrat'] font-medium text-base sm:text-lg leading-relaxed text-gray-900">
-                        Insert fundraising information here.
-                        </p>
-                    </div>
-                </swiper-slide>
-
-                <!-- Card 3 -->
-                <swiper-slide class="flex justify-center items-center">
-                    <div class="relative max-w-2xl mx-auto p-4 pb-10 group cursor-pointer">
-                        <img class="events-image mb-2" loading="lazy" src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/OurEvents_SpecialtyTours.jpg">
-                        <p class="font-['Montserrat'] font-bold text-black text-2xl sm:text-3xl leading-tight mb-2">
-                        Specialty Tours Returning in the Fall
-                        </p>
-                        <p class="font-['Montserrat'] font-medium text-base sm:text-lg leading-relaxed text-gray-900">
-                        Our specialty tours dive deeper into a specific aspect of UVA's history such as Women's History and the History of African Americans at UVA.
-                        </p>
-                    </div>
-                </swiper-slide>
-            </swiper>
-
-            </div>
-        </div>
-    </section>
-
     <Footer />
 
 </template>
@@ -656,7 +599,7 @@
 <style>
     html {
         scroll-behavior: smooth;
-        scroll-padding-top: 8rem;
+        scroll-padding-top: 4rem;
     }
     /* Scrolling Effect */
     .scrollElement {
@@ -809,35 +752,84 @@
 </style>
 
 <script setup>
-    import { Swiper, SwiperSlide } from "swiper/vue";
-    import "swiper/css";
-    import "swiper/css/pagination";
-    import "swiper/css/navigation";
-    import { Pagination, Navigation, Autoplay } from "swiper/modules";
-    import { onMounted } from "vue";
-    import Footer from '~/components/Footer.vue';
-    import ExploreUVAHistoryBlue from '~/components/ExploreUVAHistoryBlue.vue';
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Pagination, Navigation, Autoplay } from "swiper/modules";
+import { ref, onMounted, onBeforeUnmount } from 'vue'
+import Footer from '~/components/Footer.vue';
+import ExploreUVAHistoryBlue from '~/components/ExploreUVAHistoryBlue.vue';
 
-    useHead({
-        title: 'Tours of the University of Virginia | Virginia Guides Service',
+useHead({
+  title: 'Tours of the University of Virginia | Virginia Guides Service',
+})
+
+// Swiper modules for this component
+const modules = [Pagination, Navigation, Autoplay]
+
+// IntersectionObserver logic for .scrollElement
+onMounted(() => {
+  if (typeof window === "undefined") return // SSR check
+
+  const observerElements = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show")
+      } else {
+        entry.target.classList.remove("show")
+      }
     })
+  })
 
-    // IntersectionObserver logic
-    onMounted(() => {
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-        } else {
-            entry.target.classList.remove("show");
-        }
-        });
-    });
+  const scrollElements = document.querySelectorAll(".scrollElement")
+  scrollElements.forEach((el) => observerElements.observe(el))
+})
 
-    const scrollElements = document.querySelectorAll(".scrollElement");
-    scrollElements.forEach((element) => observer.observe(element));
-    });
+// Scroll icon / text logic
+const topSentinel = ref(null)
+const iconWrap = ref(null)
+const textWrap = ref(null)
+const isAtTop = ref(true) // true = show icon
+let observerSentinel = null
 
-    // Swiper modules for this component
-    const modules = [Pagination, Navigation, Autoplay];
+onMounted(() => {
+  if (typeof window === "undefined") return // SSR check
+
+  const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0
+  }
+
+  observerSentinel = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      isAtTop.value = entry.isIntersecting
+    })
+  }, options)
+
+  if (topSentinel.value) observerSentinel.observe(topSentinel.value)
+
+  // Optional: also handle immediate scroll with IDs
+  const scrollIcon = document.getElementById("scroll-icon")
+  const scrollText = document.getElementById("scroll-text")
+
+  function handleScroll() {
+    if (window.scrollY > 20) {
+      if (scrollIcon) scrollIcon.style.opacity = "0"
+      if (scrollText) scrollText.style.opacity = "1"
+    } else {
+      if (scrollIcon) scrollIcon.style.opacity = "1"
+      if (scrollText) scrollText.style.opacity = "0"
+    }
+  }
+
+  handleScroll()
+  window.addEventListener("scroll", handleScroll)
+
+  onBeforeUnmount(() => {
+    window.removeEventListener("scroll", handleScroll)
+    if (observerSentinel && topSentinel.value) observerSentinel.unobserve(topSentinel.value)
+  })
+})
 </script>

@@ -120,42 +120,42 @@
       <div class="flex items-center gap-x-6">
         <a href="/about-tours">
           <button
-            class="font-['Montserrat'] font-medium bg-transparent hover:bg-royal-blue hover:text-white rounded-full px-5 py-2 transition duration-250"
+            class="font-['Montserrat'] font-medium bg-transparent hover:bg-royal-blue hover:text-white rounded-full px-5 py-2 cursor-pointer transition duration-250"
           >
             ABOUT TOURS
           </button>
         </a>
         <a href="/join-guides">
           <button
-            class="font-['Montserrat'] font-medium bg-transparent hover:bg-royal-blue hover:text-white rounded-full px-5 py-2 transition duration-250"
+            class="font-['Montserrat'] font-medium bg-transparent hover:bg-royal-blue hover:text-white rounded-full px-5 py-2 cursor-pointer transition duration-250"
           >
             JOIN GUIDES
           </button>
         </a>
         <a href="/for-educators">
           <button
-            class="font-['Montserrat'] font-medium bg-transparent hover:bg-royal-blue hover:text-white rounded-full px-5 py-2 transition duration-250"
+            class="font-['Montserrat'] font-medium bg-transparent hover:bg-royal-blue hover:text-white rounded-full px-5 py-2 cursor-pointer transition duration-250"
           >
             FOR EDUCATORS
           </button>
         </a>
         <a href="/feedback">
           <button
-            class="font-['Montserrat'] font-medium bg-transparent hover:bg-royal-blue hover:text-white rounded-full px-5 py-2 transition duration-250"
+            class="font-['Montserrat'] font-medium bg-transparent hover:bg-royal-blue hover:text-white rounded-full px-5 py-2 cursor-pointer transition duration-250"
           >
             FEEDBACK
           </button>
         </a>
         <a href="/donate">
           <button
-            class="font-['Montserrat'] font-medium bg-transparent hover:bg-royal-blue hover:text-white rounded-full px-5 py-2 transition duration-250"
+            class="font-['Montserrat'] font-medium bg-transparent hover:bg-royal-blue hover:text-white rounded-full px-5 py-2 cursor-pointer transition duration-250"
           >
             DONATE
           </button>
         </a>
         <a href="/your-visit">
           <button
-            class="font-['Montserrat'] font-medium text-white bg-UVA-orange hover:bg-orange-800 hover:scale-105 rounded-full px-5 py-2 transition duration-250"
+            class="font-['Montserrat'] font-medium text-white bg-UVA-orange hover:bg-orange-800 hover:scale-105 rounded-full px-5 py-2 cursor-pointer transition duration-250"
           >
             TAKE A TOUR
           </button>

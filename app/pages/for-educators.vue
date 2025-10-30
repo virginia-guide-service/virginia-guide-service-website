@@ -103,17 +103,11 @@
         <div class="scrollElement flex flex-col lg:flex-row w-full gap-y-3 gap-x-3 bg-gray-300 text-center py-6 px-10 lg:px-20 justify-center items-center">
             <p class="w-full lg:w-3/4 font-Roboto text-royal-blue italic text-center text-base sm:text-lg md:text-md">
                 <span class="font-bold">
-                    Because Virginia Guides is student-run, we do not provide tours during exam periods, reading days, or student breaks, which are specified 
-                    <a href="https://registrar.virginia.edu/calendar/academic" class="underline">
-                        here
-                    </a>
-                </span>. 
+                    Because Virginia Guides is student-run, we do not provide tours during exam periods, reading days, or student breaks, which are specified <a href="https://registrar.virginia.edu/calendar/academic" class="underline">here</a>.
+                </span>
                 If interested in a student tour group, 
                 <span class="font-bold">
-                    please complete the
-                    <a href="/request-specialty-tours" class="underline">
-                        specialty tour form 
-                    </a> at least 3 weeks in advance,
+                    please complete the <a href="/request-specialty-tours" class="underline">specialty tour form</a> at least 3 weeks in advance,
                 </span> to better plan with you for your tour group size, 
                 interests, and needs.
             </p>
