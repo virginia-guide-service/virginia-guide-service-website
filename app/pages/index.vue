@@ -4,7 +4,7 @@
 
     <!-- Header Section -->
     <header class="relative overflow-visible h-[115vh] w-full bg-[url('https://virginia-guides-website-images.s3.amazonaws.com/public/Header_FrontPageNew.jpg')] bg-cover bg-center" aria-label="Virginia Guides Hero Section">
-        <div class="absolute top-[52%] left-[50%] xl:left-[48%] w-full max-w-7xl px-4 -translate-x-1/2 -translate-y-1/2 text-white text-center">
+        <div class="absolute top-[50%] xl:top-[52%] left-[50%] xl:left-[48%] w-full max-w-7xl px-4 -translate-x-1/2 -translate-y-1/2 text-white text-center">
                 <h1 class="font-['Playfair_Display'] text-center xl:text-right italic text-[clamp(2.5rem,9.5vw,6rem)] leading-tight [text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)]">
                     <span class="text-[clamp(3.5rem,10.5vw,7rem)]">V</span>IRGINIA
                     <span class="text-[clamp(3.5rem,10.5vw,7rem)]">G</span>UIDES
@@ -12,9 +12,9 @@
             <p class="font-Roboto text-center xl:text-right text-sm sm:text-lg md:text-md font-semibold leading-snug [text-shadow:_3px_3px_6px_rgb(0_0_0_/_0.70)]">
                 HISTORICAL TOURS OF THE UNIVERSITY OF VIRGINIA
             </p>
-            <div class="text-center xl:text-right xl:pr-25">
+            <div class="text-center xl:text-right xl:pr-30">
                 <a href="/your-visit">
-                    <button class="font-Roboto font-medium mt-10 px-10 py-2 text-lg md:px-15 md:py-3 md:text-2xl text-white hover:text-royal-blue bg-[rgba(0,0,0,0.45)] hover:bg-gray-100 border hover:border-gray-100 rounded-full cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out" aria-label="Explore Virginia Guides">
+                    <button class="font-Roboto font-medium mt-10 px-6 py-2 sm:px-8 sm:py-2 text-lg md:px-12 md:py-3 md:text-2xl text-white hover:text-royal-blue bg-[rgba(0,0,0,0.45)] hover:bg-gray-100 border hover:border-gray-100 rounded-full cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out" aria-label="Explore Virginia Guides">
                         Take a Tour
                     </button>
                 </a>
