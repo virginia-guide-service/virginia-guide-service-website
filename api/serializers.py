@@ -252,7 +252,10 @@ class ContactUsFormSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class FeedbackSerializer(serializers.ModelSerializer):
-    
+    first_name = serializers.CharField(required=False, allow_blank=True)
+    last_name = serializers.CharField(required=False, allow_blank=True)
+    email = serializers.EmailField(required=False, allow_blank=True)
+    phone_number = serializers.CharField(required=False, allow_blank=True)
     rating = serializers.IntegerField(
         required=True,
         error_messages={
@@ -284,7 +287,13 @@ class FeedbackSerializer(serializers.ModelSerializer):
             'required': 'Tour type is required.'
         }
     )
-
+    best_part_message = serializers.CharField(required=False, allow_blank=True)
+    improvement_message = serializers.CharField(required=False, allow_blank=True)
+    length_message = serializers.CharField(required=False, allow_blank=True)
+    topics_message = serializers.CharField(required=False, allow_blank=True)
+    source_message = serializers.CharField(required=False, allow_blank=True)
+    other_comments = serializers.CharField(required=False, allow_blank=True)
+    
     class Meta:
         model = Feedback
         fields = '__all__'
