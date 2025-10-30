@@ -36,6 +36,7 @@ MAILGUN_API_KEY = os.getenv("MAILGUN_API_KEY")
 SCHEDULER_EMAIL = os.getenv("EMAIL_SCHEDULER_RECEIVER")
 CHAIR_EMAIL = os.getenv("EMAIL_CHAIR_RECEIVER")
 
+
 def is_exec_team(user):
     return user.is_staff  # or use a custom field for exec access
 
@@ -67,9 +68,9 @@ def register_tour(request):
 
         reply_to = f"{registration.first_name} {registration.last_name} <{registration.email}>"
 
-        # Build full message with reply note
+        # full message with reply note to scheduler
         full_message = (
-            f"Standard Historical Tour Registration From {registration.first_name} {registration.last_name}\n"
+            f"Standard Historical Tour Registration from {registration.first_name} {registration.last_name}\n\n"
             f"Registered on: {date.today()}\n"
             f"Email: {registration.email}\n"
             f"Phone: {registration.phone_number}\n"
@@ -77,9 +78,8 @@ def register_tour(request):
             f"Guests: {registration.guests}\n"
             f"Minors: {registration.minors}\n"
             f"Notes: {registration.notes or 'None'}\n\n"
-            f"---\n[You can reply directly to this email, and it will go to "
-            f"{registration.first_name} {registration.last_name} <{registration.email}>, "
-            f"but do not email no-reply@virginiaguides.org]"
+            f"---\n[You can reply directly to this email and it will go to "
+            f"{registration.first_name} {registration.last_name} <{registration.email}>]"
         )
 
         print("Sending standard tour registration email...")
@@ -87,6 +87,7 @@ def register_tour(request):
         print("Subject: [TOUR REGISTRATION] New Standard Historical Tour Registration")
         print("Message:", full_message)
 
+        # send to scheduler
         try:
             response = requests.post(
                 f"https://api.mailgun.net/v3/{MAILGUN_DOMAIN}/messages",
@@ -104,6 +105,33 @@ def register_tour(request):
         except requests.exceptions.RequestException as e:
             print("Mailgun error:", str(e))
             return Response({"error": f"Failed to send email: {str(e)}"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        
+        # confirmation email to user
+        confirmation_message = (
+            f"Hi {registration.first_name},\n\n"
+            "Thank you for registering for a Standard Historical Tour with the Virginia Guides Service!\n\n"
+            "We have received your submission. If you have any questions or need to make changes, please email our schedulers (scheduler@virginiaguides.org).\n\n"
+            f"Your submitted information:\n"
+            f"Date of Tour: {registration.date}\n"
+            f"Guests: {registration.guests}\n"
+            f"Number of Children in Grade K-8: {registration.minors}\n"
+            f"Notes: {registration.notes or 'None'}\n\n"
+        )
+
+        # send to user that registered
+        try:
+            requests.post(
+                f"https://api.mailgun.net/v3/{MAILGUN_DOMAIN}/messages",
+                auth=("api", MAILGUN_API_KEY),
+                data={
+                    "from": f"Virginia Guides <no-reply@{MAILGUN_DOMAIN}>",
+                    "to": registration.email,
+                    "subject": "[TOUR REGISTRATION CONFIRMATION]",
+                    "text": confirmation_message
+                }
+            )
+        except requests.exceptions.RequestException as e:
+            print("Failed to send confirmation email to user:", str(e))
 
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
@@ -119,19 +147,20 @@ def register_specialty_tour(request):
 
         reply_to = f"{specialty_registration.first_name} {specialty_registration.last_name} <{specialty_registration.email}>"
 
+        # full message for schedulers
         full_message = (
-            f"Specialty Tour Registration From {specialty_registration.first_name} {specialty_registration.last_name}\n"
+            f"Specialty Tour Registration from {specialty_registration.first_name} {specialty_registration.last_name}\n\n"
             f"Registered on: {date.today()}\n"
             f"Email: {specialty_registration.email}\n"
             f"Phone: {specialty_registration.phone_number}\n"
             f"Requested Date of Tour: {specialty_registration.date}\n"
+            f"Time of Tour: {specialty_registration.time}\n"
             f"Guests: {specialty_registration.guests}\n"
             f"Minors: {specialty_registration.minors}\n"
             f"Tour Type: {specialty_registration.tour_type}\n"
             f"Tour Group Information & Details: {specialty_registration.notes or 'None'}\n\n"
-            f"---\n[You can reply directly to this email, and it will go to "
-            f"{specialty_registration.first_name} {specialty_registration.last_name} <{specialty_registration.email}>, "
-            f"but do not email no-reply@virginiaguides.org]"
+            f"---\n[You can reply directly to this email and it will go to "
+            f"{specialty_registration.first_name} {specialty_registration.last_name} <{specialty_registration.email}>]"
         )
 
         print("Sending specialty tour registration email...")
@@ -139,6 +168,7 @@ def register_specialty_tour(request):
         print("Subject:", f"[REQUESTED TOUR] New {specialty_registration.tour_type} Tour Request")
         print("Message:", full_message)
 
+        # send to scheduler
         try:
             response = requests.post(
                 f"https://api.mailgun.net/v3/{MAILGUN_DOMAIN}/messages",
@@ -156,6 +186,35 @@ def register_specialty_tour(request):
         except requests.exceptions.RequestException as e:
             print("Mailgun error:", str(e))
             return Response({"error": f"Failed to send email: {str(e)}"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        
+        # confirmation email to user
+        confirmation_message = (
+            f"Hi {specialty_registration.first_name},\n\n"
+            f"Thank you for requesting a {specialty_registration.tour_type} Tour with the Virginia Guides Service!\n\n"
+            "We have received your submission and will be in touch soon to confirm your tour details. If you have any questions or need to make changes, please email our schedulers (scheduler@virginiaguides.org).\n\n"
+            f"Your submitted information:\n"
+            f"Tour Type: {specialty_registration.tour_type}\n"
+            f"Date of Tour: {specialty_registration.date}\n"
+            f"Time of Tour: {specialty_registration.time}\n"
+            f"Guests: {specialty_registration.guests}\n"
+            f"Number of Children in Grade K-8: {specialty_registration.minors}\n"
+            f"Notes: {specialty_registration.notes or 'None'}\n\n"
+        )
+
+        # send to user that registered
+        try:
+            requests.post(
+                f"https://api.mailgun.net/v3/{MAILGUN_DOMAIN}/messages",
+                auth=("api", MAILGUN_API_KEY),
+                data={
+                    "from": f"Virginia Guides <no-reply@{MAILGUN_DOMAIN}>",
+                    "to": specialty_registration.email,
+                    "subject": "[SPECIALTY TOUR REQUEST RECIEVED]",
+                    "text": confirmation_message
+                }
+            )
+        except requests.exceptions.RequestException as e:
+            print("Failed to send confirmation email to user:", str(e))
 
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
@@ -165,37 +224,17 @@ def register_specialty_tour(request):
 
 @api_view(['POST'])
 def submit_feedback(request):
-    data = request.data
-    feedback_time = None
-    time_str = data.get('time', '').strip()
-    if time_str:
-        try:
-            hours, minutes = map(int, time_str.split(":"))
-            feedback_time = time(hour=hours, minute=minutes)
-        except ValueError:
-            feedback_time = None
-
-    feedback = Feedback.objects.create(
-        first_name=data.get('first_name'),
-        last_name=data.get('last_name'),
-        email=data.get('email'),
-        phone_number=data.get('phone_number'),
-        rating=data.get('rating'),
-        date=data.get('date'),
-        time=feedback_time,
-        tour_type=data.get('tour_type'),
-        best_part_message=data.get('best_part_message', ''),
-        improvement_message=data.get('improvement_message', ''),
-        length_message=data.get('length_message', ''),
-        topics_message=data.get('topics_message', ''),
-        source_message=data.get('source_message', ''),
-        other_comments=data.get('other_comments', ''),
-    )
-
+    serializer = FeedbackSerializer(data=request.data)
+    if not serializer.is_valid():
+        # Return field-level validation errors
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
+    feedback = serializer.save()  # This automatically creates the Feedback instance
+    
+    # Email sending logic (unchanged)
     reply_to = f"{feedback.first_name or ''} {feedback.last_name or ''} <{feedback.email or ''}>"
-
     full_message = (
-        f"Feedback From {feedback.first_name or 'N/A'} {feedback.last_name or 'N/A'}\n"
+        f"Feedback from {feedback.first_name or 'N/A'} {feedback.last_name or 'N/A'}\n\n"
         f"Email: {feedback.email or 'N/A'}\n"
         f"Phone: {feedback.phone_number or 'N/A'}\n"
         f"Tour Type: {feedback.tour_type or 'N/A'}\n"
@@ -208,15 +247,8 @@ def submit_feedback(request):
         f"Wanted topics or places: {feedback.topics_message or 'N/A'}\n"
         f"How did you hear about Guides: {feedback.source_message or 'N/A'}\n"
         f"Other comments: {feedback.other_comments or 'N/A'}\n\n"
-        f"---\n[You can reply directly to this email, and it will go to "
-        f"{feedback.first_name or 'N/A'} {feedback.last_name or 'N/A'} <{feedback.email or 'N/A'}>, "
-        f"but do not email no-reply@virginiaguides.org]"
+        f"---\n[If the person who submitted the form provided their contact information, you can reply directly to this email and it will send to their email ({feedback.first_name or 'N/A'} {feedback.last_name or 'N/A'} <{feedback.email or 'N/A'})>"
     )
-
-    print("Sending feedback email...")
-    print("To:", CHAIR_EMAIL)
-    print("Subject:", f"[FEEDBACK] Feedback for {feedback.tour_type} ({feedback.date})")
-    print("Message:", full_message)
 
     try:
         response = requests.post(
@@ -230,11 +262,31 @@ def submit_feedback(request):
                 "h:Reply-To": reply_to
             }
         )
-        print("Mailgun response:", response.status_code, response.text)
         response.raise_for_status()
     except requests.exceptions.RequestException as e:
-        print("Mailgun error:", str(e))
         return Response({"error": f"Failed to send email: {str(e)}"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+    
+    # Confirmation email to the user
+    try:
+        confirmation_message = (
+            f"Hi {feedback.first_name},\n\n"
+            f"Your feedback has been received successfully.\n\n"
+            f"Thank you for taking the time to provide feedback for your {feedback.tour_type} tour on {feedback.date}.\n\n"
+            f"We truly value your input and use it to improve our tours and experiences."
+        )
+
+        requests.post(
+            f"https://api.mailgun.net/v3/{MAILGUN_DOMAIN}/messages",
+            auth=("api", MAILGUN_API_KEY),
+            data={
+                "from": f"Virginia Guides <no-reply@{MAILGUN_DOMAIN}>",
+                "to": feedback.email,
+                "subject": "Feedback Received",
+                "text": confirmation_message
+            }
+        )
+    except requests.exceptions.RequestException as e:
+        print("Failed to send confirmation email to user:", str(e))
 
     return Response({"status": "success"}, status=status.HTTP_201_CREATED)
 
@@ -254,9 +306,9 @@ def contact_us(request):
         print("MAILGUN_API_KEY exists?", MAILGUN_API_KEY is not None)
 
         reply_to = f"{contact_us.first_name} {contact_us.last_name} <{contact_us.email}>"
-        full_message = f"{contact_us.message}\n\n---\n[You can reply directly to this email, and it will go to {contact_us.first_name} {contact_us.last_name} <{contact_us.email}>, but do not email no-reply@virginiaguides.org]"
+        full_message = f"{contact_us.message}\n\n---\n[You can reply directly to this email, and it will go to {contact_us.first_name} {contact_us.last_name} <{contact_us.email}>]"
 
-        # Send email via Mailgun
+        # Send email to chairs via Mailgun
         try:
             response = requests.post(
                 f"https://api.mailgun.net/v3/{MAILGUN_DOMAIN}/messages",
@@ -264,7 +316,7 @@ def contact_us(request):
                 data={
                     "from": f"{contact_us.first_name} {contact_us.last_name} via Virginia Guides Website <no-reply@{MAILGUN_DOMAIN}>",
                     "to": CHAIR_EMAIL,
-                    "subject": f"[GUIDES WEBSITE - CONTACT US] {contact_us.subject}",
+                    "subject": f"[GUIDES WEBSITE - CONTACT US FORM] {contact_us.subject}",
                     "text": full_message,
                     "h:Reply-To": reply_to,
                 }
@@ -279,6 +331,30 @@ def contact_us(request):
                 {"error": f"Failed to send email: {str(e)}"},
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
+        
+        # confirmation email to user
+        confirmation_message = (
+            f"Hi {contact_us.first_name},\n\n"
+            f"Thank you for reaching out to us. We have received your message:\n\n"
+            f"Subject: {contact_us.subject}\n"
+            f"Message: {contact_us.message}\n\n"
+            "Our chairs will review your message and get back to you as soon as possible."
+        )
+
+        # send to user that registered
+        try:
+            requests.post(
+                f"https://api.mailgun.net/v3/{MAILGUN_DOMAIN}/messages",
+                auth=("api", MAILGUN_API_KEY),
+                data={
+                    "from": f"Virginia Guides <no-reply@{MAILGUN_DOMAIN}>",
+                    "to": contact_us.email,
+                    "subject": "Contact Us Message Recieved",
+                    "text": confirmation_message
+                }
+            )
+        except requests.exceptions.RequestException as e:
+            print("Failed to send confirmation email to user:", str(e))
 
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
@@ -286,6 +362,29 @@ def contact_us(request):
     print(serializer.errors)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+# TESTING ALL THINGS MAIL -- LOCAL DEV ONLY
+# @api_view(['POST'])
+# def contact_us(request):
+#     serializer = ContactUsFormSerializer(data=request.data)
+#     if serializer.is_valid():
+#         contact_us = serializer.save()
+    
+#         # Send email to chairs
+#         send_mail(
+#             subject=f"[GUIDES WEBSITE - CONTACT US] {contact_us.subject}",
+#             message=(
+#                 f"From: {contact_us.first_name} {contact_us.last_name} ({contact_us.email})\n\n"
+#                 f"{contact_us.message}"
+#             ),
+#             from_email=settings.DEFAULT_FROM_EMAIL,
+#             recipient_list=[settings.CHAIR_EMAIL],  # change the chair email in .env
+#         )
+
+#         print(serializer.errors)
+#         return Response(serializer.data, status=status.HTTP_201_CREATED)
+    
+#     print(serializer.errors)
+#     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class FeedbackCreateView(generics.CreateAPIView):
     queryset = Feedback.objects.all()

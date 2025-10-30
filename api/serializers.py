@@ -44,7 +44,7 @@ class TourRegistrationSerializer(serializers.ModelSerializer):
         required=True,
         error_messages={
             'invalid': 'Please enter a valid date (MM-DD-YYYY).',
-            'required': 'Date is required.'
+            'required': 'Date is required.',
         }
     )
 
@@ -133,7 +133,15 @@ class SpecialtyTourRegistrationSerializer(serializers.ModelSerializer):
         required=True,
         error_messages={
             'invalid': 'Please enter a valid date (MM-DD-YYYY).',
-            'required': 'Date is required.'
+            'required': 'Date is required.',
+        }
+    )
+
+    time = serializers.TimeField(
+        required=True,
+        error_messages={
+            'invalid': 'Please enter a valid time.',
+            'required': 'Time is required.',
         }
     )
 
@@ -244,6 +252,39 @@ class ContactUsFormSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class FeedbackSerializer(serializers.ModelSerializer):
+    
+    rating = serializers.IntegerField(
+        required=True,
+        error_messages={
+            'required': 'Rating is required.'
+        }
+    )
+
+    date = serializers.DateField(
+        required=True,
+        error_messages={
+            'invalid': 'Please enter a valid date (MM-DD-YYYY).',
+            'required': 'Date is required.',
+        }
+    )
+
+    time = serializers.TimeField(
+        required=True,
+        error_messages={
+            'invalid': 'Please enter a valid time.',
+            'required': 'Time is required.',
+        }
+    )
+
+    tour_type = serializers.CharField(
+        required=True,
+        allow_blank=False,
+        error_messages={
+            'blank': 'Please select a tour type.',
+            'required': 'Tour type is required.'
+        }
+    )
+
     class Meta:
         model = Feedback
         fields = '__all__'

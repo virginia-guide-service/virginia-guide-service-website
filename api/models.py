@@ -23,6 +23,7 @@ class SpecialtyTourRegistration(models.Model):
     email = models.EmailField()
     phone_number = models.CharField(max_length=20)
     date = models.DateField()
+    time = models.TimeField()
     guests = models.PositiveIntegerField()
     minors = models.PositiveIntegerField(default=0)
     tour_type = models.CharField(max_length=100, default="Standard Historical Tour")
