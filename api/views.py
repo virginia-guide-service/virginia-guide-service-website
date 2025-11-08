@@ -34,8 +34,10 @@ from datetime import date, datetime
 MAILGUN_DOMAIN = os.getenv("MAILGUN_DOMAIN")
 MAILGUN_API_KEY = os.getenv("MAILGUN_API_KEY")
 MAILGUN_API_KEY = os.getenv("MAILGUN_API_KEY")
-SCHEDULER_EMAIL = os.getenv("EMAIL_SCHEDULER_RECEIVER")
-CHAIR_EMAIL = os.getenv("EMAIL_CHAIR_RECEIVER")
+SCHEDULER_EMAIL1 = os.getenv("EMAIL_SCHEDULER_RECEIVER")
+SCHEDULER_EMAIL2 = os.getenv("EMAIL_SCHEDULER_RECEIVER2")
+CHAIR_EMAIL1 = os.getenv("EMAIL_CHAIR_RECEIVER")
+CHAIR_EMAIL2 = os.getenv("EMAIL_CHAIR_RECEIVER2")
 
 
 def is_exec_team(user):
@@ -85,7 +87,7 @@ def register_tour(request):
         )
 
         print("Sending standard tour registration email...")
-        print("To:", SCHEDULER_EMAIL)
+        print("To:", SCHEDULER_EMAIL1)
         print("Subject: [TOUR REGISTRATION] New Standard Historical Tour Registration")
         print("Message:", full_message)
 
@@ -96,7 +98,7 @@ def register_tour(request):
                 auth=("api", MAILGUN_API_KEY),
                 data={
                     "from": f"Virginia Guides Website <no-reply@{MAILGUN_DOMAIN}>",
-                    "to": SCHEDULER_EMAIL,
+                    "to": [SCHEDULER_EMAIL1, SCHEDULER_EMAIL2],
                     "subject": "[TOUR REGISTRATION] New Standard Historical Tour Registration",
                     "text": full_message,
                     "h:Reply-To": reply_to
@@ -168,7 +170,7 @@ def register_specialty_tour(request):
         )
 
         print("Sending specialty tour registration email...")
-        print("To:", SCHEDULER_EMAIL)
+        print("To:", SCHEDULER_EMAIL1)
         print("Subject:", f"[REQUESTED TOUR] New {specialty_registration.tour_type} Tour Request")
         print("Message:", full_message)
 
@@ -179,7 +181,7 @@ def register_specialty_tour(request):
                 auth=("api", MAILGUN_API_KEY),
                 data={
                     "from": f"Virginia Guides Website <no-reply@{MAILGUN_DOMAIN}>",
-                    "to": SCHEDULER_EMAIL,
+                    "to": [SCHEDULER_EMAIL1, SCHEDULER_EMAIL2],
                     "subject": f"[REQUESTED TOUR] New {specialty_registration.tour_type} Tour Request",
                     "text": full_message,
                     "h:Reply-To": reply_to
@@ -266,7 +268,7 @@ def submit_feedback(request):
                 auth=("api", MAILGUN_API_KEY),
                 data={
                     "from": f"Virginia Guides Website <no-reply@{MAILGUN_DOMAIN}>",
-                    "to": CHAIR_EMAIL,
+                    "to": [CHAIR_EMAIL1, CHAIR_EMAIL2],
                     "subject": f"[FEEDBACK] Feedback for {feedback.tour_type} ({feedback.date})",
                     "text": full_message,
                     "h:Reply-To": reply_to
@@ -283,7 +285,7 @@ def submit_feedback(request):
                 f"Your feedback has been received successfully.\n\n"
                 f"Thank you for taking the time to provide feedback for your {feedback.tour_type} tour on {feedback.date}.\n\n"
                 f"We truly value your input and use it to improve our tours and experiences.\n\n"
-                "Thank you again,\n"
+                "Thank you,\n"
                 "Virginia Guide Service"
             )
 
@@ -330,7 +332,7 @@ def contact_us(request):
                 auth=("api", MAILGUN_API_KEY),
                 data={
                     "from": f"{contact_us.first_name} {contact_us.last_name} via Virginia Guides Website <no-reply@{MAILGUN_DOMAIN}>",
-                    "to": CHAIR_EMAIL,
+                    "to": [CHAIR_EMAIL1, CHAIR_EMAIL2],
                     "subject": f"[GUIDES WEBSITE - CONTACT US FORM] {contact_us.subject}",
                     "text": full_message,
                     "h:Reply-To": reply_to,
