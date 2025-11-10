@@ -133,8 +133,11 @@
                             leave-from-class="opacity-100 translate-y-0"
                             leave-to-class="opacity-0 translate-y-3"
                         >
-                            <div v-if="loading" class="fixed inset-0 flex items-center justify-center z-50 bg-black/20">
-                                <div class="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+                            <div v-if="loading" class="fixed inset-0 flex flex-col items-center justify-center z-50 bg-gray-900/60">
+                                <div class="w-12 h-12 border-4 border-gray-300 border-t-transparent rounded-full animate-spin mb-4"></div>
+                                <p class="text-gray-100 text-center text-sm sm:text-base px-4">
+                                    Our server is waking up… this may take a few seconds. Please do not refresh or close this page.
+                                </p>
                             </div>
                         </transition>
 
@@ -258,7 +261,8 @@
             const { data, error } = await useFetch(`${config.public.apiBase}/contact-us/`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(form.value)
+                body: JSON.stringify(form.value),
+                timeout: 60000 // 60 seconds
             })
 
             if (error.value) {
@@ -283,8 +287,8 @@
             }
 
         } catch (err) {
-            console.error('Network error:', err)
-            errorMsg.value = 'Network error. Please try again. If the issue persists, feel free to contact our schedulers (scheduler@virginiaguides.org) personally to schedule a tour!'
+            console.error('Network error or timeout:', err)
+            errorMsg.value = 'Request timed out or network error. Please try again or email scheduler@virginiaguides.org to schedule a tour!'
         } finally {
             loading.value = false
             await nextTick()
