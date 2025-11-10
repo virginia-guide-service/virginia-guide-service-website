@@ -1,0 +1,122 @@
+<h1 class="text-3xl font-bold mb-6 text-center">Form Submissions Backup</h1>
+
+<!-- Specialty Tours -->
+<section class="mb-10">
+    <h2 class="text-2xl font-semibold mb-2">Specialty Tours ({{ tours|length }})</h2>
+    <div class="overflow-x-auto border rounded-lg">
+        <table class="table-auto w-full border-collapse border border-gray-300 text-sm">
+            <thead class="bg-gray-100">
+                <tr>
+                    <th class="border p-2">Name</th>
+                    <th class="border p-2">Email</th>
+                    <th class="border p-2">Phone</th>
+                    <th class="border p-2">Tour Type</th>
+                    <th class="border p-2">Date</th>
+                    <th class="border p-2">Time</th>
+                    <th class="border p-2">Guests</th>
+                    <th class="border p-2">Minors</th>
+                    <th class="border p-2">Notes</th>
+                    <th class="border p-2">Submitted At</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for tour in tours %}
+                <tr class="even:bg-gray-50">
+                    <td class="border p-2">{{ tour.first_name }} {{ tour.last_name }}</td>
+                    <td class="border p-2">{{ tour.email }}</td>
+                    <td class="border p-2">{{ tour.phone_number|default:"-" }}</td>
+                    <td class="border p-2">{{ tour.tour_type }}</td>
+                    <td class="border p-2">{{ tour.date|date:"M d, Y" }}</td>
+                    <td class="border p-2">{{ tour.time|time:"h:i A" }}</td>
+                    <td class="border p-2">{{ tour.guests }}</td>
+                    <td class="border p-2">{{ tour.minors|default:"-" }}</td>
+                    <td class="border p-2">{{ tour.notes|default:"-" }}</td>
+                    <td class="border p-2">{{ tour.submitted_at|date:"M d, Y H:i" }}</td>
+                </tr>
+                {% empty %}
+                <tr><td colspan="10" class="border p-2 text-center">No submissions yet</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- Feedback -->
+<section class="mb-10">
+    <h2 class="text-2xl font-semibold mb-2">Feedback ({{ feedbacks|length }})</h2>
+    <div class="overflow-x-auto border rounded-lg">
+        <table class="table-auto w-full border-collapse border border-gray-300 text-sm">
+            <thead class="bg-gray-100">
+                <tr>
+                    <th class="border p-2">Name</th>
+                    <th class="border p-2">Email</th>
+                    <th class="border p-2">Phone</th>
+                    <th class="border p-2">Tour Type</th>
+                    <th class="border p-2">Date</th>
+                    <th class="border p-2">Time</th>
+                    <th class="border p-2">Rating</th>
+                    <th class="border p-2">Best Part</th>
+                    <th class="border p-2">Improvement</th>
+                    <th class="border p-2">Length</th>
+                    <th class="border p-2">Topics</th>
+                    <th class="border p-2">Source</th>
+                    <th class="border p-2">Other Comments</th>
+                    <th class="border p-2">Submitted At</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for fb in feedbacks %}
+                <tr class="even:bg-gray-50">
+                    <td class="border p-2">{{ fb.first_name }} {{ fb.last_name }}</td>
+                    <td class="border p-2">{{ fb.email }}</td>
+                    <td class="border p-2">{{ fb.phone_number|default:"-" }}</td>
+                    <td class="border p-2">{{ fb.tour_type|default:"-" }}</td>
+                    <td class="border p-2">{{ fb.date|date:"M d, Y" }}</td>
+                    <td class="border p-2">{{ fb.time|time:"h:i A" }}</td>
+                    <td class="border p-2">{{ fb.rating|default:"-" }}</td>
+                    <td class="border p-2">{{ fb.best_part_message|default:"-" }}</td>
+                    <td class="border p-2">{{ fb.improvement_message|default:"-" }}</td>
+                    <td class="border p-2">{{ fb.length_message|default:"-" }}</td>
+                    <td class="border p-2">{{ fb.topics_message|default:"-" }}</td>
+                    <td class="border p-2">{{ fb.source_message|default:"-" }}</td>
+                    <td class="border p-2">{{ fb.other_comments|default:"-" }}</td>
+                    <td class="border p-2">{{ fb.submitted_at|date:"M d, Y H:i" }}</td>
+                </tr>
+                {% empty %}
+                <tr><td colspan="14" class="border p-2 text-center">No submissions yet</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- Contact Us -->
+<section class="mb-10">
+    <h2 class="text-2xl font-semibold mb-2">Contact Us ({{ contacts|length }})</h2>
+    <div class="overflow-x-auto border rounded-lg">
+        <table class="table-auto w-full border-collapse border border-gray-300 text-sm">
+            <thead class="bg-gray-100">
+                <tr>
+                    <th class="border p-2">Name</th>
+                    <th class="border p-2">Email</th>
+                    <th class="border p-2">Subject</th>
+                    <th class="border p-2">Message</th>
+                    <th class="border p-2">Submitted At</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for c in contacts %}
+                <tr class="even:bg-gray-50">
+                    <td class="border p-2">{{ c.first_name }} {{ c.last_name }}</td>
+                    <td class="border p-2">{{ c.email }}</td>
+                    <td class="border p-2">{{ c.subject }}</td>
+                    <td class="border p-2">{{ c.message }}</td>
+                    <td class="border p-2">{{ c.submitted_at|date:"M d, Y H:i" }}</td>
+                </tr>
+                {% empty %}
+                <tr><td colspan="5" class="border p-2 text-center">No submissions yet</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>

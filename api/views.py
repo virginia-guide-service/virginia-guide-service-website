@@ -4,6 +4,7 @@ from rest_framework.decorators import api_view
 from rest_framework import status, generics, permissions
 from .models import Feedback
 from .serializers import TourRegistrationSerializer, ContactUsFormSerializer, SpecialtyTourRegistrationSerializer, FeedbackSerializer
+from .models import SpecialtyTourBackup, FeedbackBackup, ContactUsBackup
 from django.core.mail import send_mail, BadHeaderError
 from django.conf import settings
 from datetime import date
@@ -35,31 +36,24 @@ MAILGUN_DOMAIN = os.getenv("MAILGUN_DOMAIN")
 MAILGUN_API_KEY = os.getenv("MAILGUN_API_KEY")
 MAILGUN_API_KEY = os.getenv("MAILGUN_API_KEY")
 SCHEDULER_EMAIL1 = os.getenv("EMAIL_SCHEDULER_RECEIVER")
-SCHEDULER_EMAIL2 = os.getenv("EMAIL_SCHEDULER_RECEIVER2")
 CHAIR_EMAIL1 = os.getenv("EMAIL_CHAIR_RECEIVER")
 CHAIR_EMAIL2 = os.getenv("EMAIL_CHAIR_RECEIVER2")
 
 
 def is_exec_team(user):
-    return user.is_staff  # or use a custom field for exec access
+    return user.is_staff
 
-
+@login_required
 @user_passes_test(is_exec_team)
-def feedback_dashboard(request):
-    today = date.today()
-    month_feedback = Feedback.objects.filter(
-        submitted_at__month=today.month,
-        submitted_at__year=today.year
-    )
+def backups_dashboard(request):
+    tours = SpecialtyTourBackup.objects.order_by('-submitted_at')
+    feedbacks = FeedbackBackup.objects.order_by('-submitted_at')
+    contacts = ContactUsBackup.objects.order_by('-submitted_at')
 
-    stats = month_feedback.aggregate(
-        avg_rating=Avg('rating'),
-        total_feedback=Count('id')
-    )
-
-    return render(request, 'feedback_dashboard.html', {
-        'feedback_list': month_feedback.order_by('-submitted_at'),
-        'stats': stats,
+    return render(request, 'backups_dashboard.html', {
+        'tours': tours,
+        'feedbacks': feedbacks,
+        'contacts': contacts,
     })
 
 
@@ -98,7 +92,7 @@ def register_tour(request):
                 auth=("api", MAILGUN_API_KEY),
                 data={
                     "from": f"Virginia Guides Website <no-reply@{MAILGUN_DOMAIN}>",
-                    "to": [SCHEDULER_EMAIL1, SCHEDULER_EMAIL2],
+                    "to": SCHEDULER_EMAIL1,
                     "subject": "[TOUR REGISTRATION] New Standard Historical Tour Registration",
                     "text": full_message,
                     "h:Reply-To": reply_to
@@ -149,6 +143,20 @@ def register_specialty_tour(request):
     if serializer.is_valid():
         specialty_registration = serializer.save()
 
+        # BACKUP: save submission in DB
+        SpecialtyTourBackup.objects.create(
+            first_name=specialty_registration.first_name,
+            last_name=specialty_registration.last_name,
+            email=specialty_registration.email,
+            phone_number=specialty_registration.phone_number,
+            date=specialty_registration.date,
+            time=specialty_registration.time,
+            guests=specialty_registration.guests,
+            minors=specialty_registration.minors,
+            tour_type=specialty_registration.tour_type,
+            notes=specialty_registration.notes
+        )
+
         reply_to = f"{specialty_registration.first_name} {specialty_registration.last_name} <{specialty_registration.email}>"
 
         time_formatted = specialty_registration.time.strftime("%-I:%M %p")
@@ -181,7 +189,7 @@ def register_specialty_tour(request):
                 auth=("api", MAILGUN_API_KEY),
                 data={
                     "from": f"Virginia Guides Website <no-reply@{MAILGUN_DOMAIN}>",
-                    "to": [SCHEDULER_EMAIL1, SCHEDULER_EMAIL2],
+                    "to": SCHEDULER_EMAIL1,
                     "subject": f"[REQUESTED TOUR] New {specialty_registration.tour_type} Tour Request",
                     "text": full_message,
                     "h:Reply-To": reply_to
@@ -239,6 +247,24 @@ def register_specialty_tour(request):
 def submit_feedback(request):
     serializer = FeedbackSerializer(data=request.data)
     if serializer.is_valid():
+
+        # BACKUP: save submission in DB
+        FeedbackBackup.objects.create(
+            first_name=feedback.first_name,
+            last_name=feedback.last_name,
+            email=feedback.email,
+            phone_number=feedback.phone_number,
+            tour_type=feedback.tour_type,
+            date=feedback.date,
+            time=feedback.time,
+            rating=feedback.rating,
+            best_part_message=feedback.best_part_message,
+            improvement_message=feedback.improvement_message,
+            length_message=feedback.length_message,
+            topics_message=feedback.topics_message,
+            source_message=feedback.source_message,
+            other_comments=feedback.other_comments
+        )
     
         feedback = serializer.save()
         time_formatted = feedback.time.strftime("%-I:%M %p")
@@ -313,6 +339,15 @@ def contact_us(request):
     serializer = ContactUsFormSerializer(data=request.data)
     if serializer.is_valid():
         contact_us = serializer.save()
+
+        # BACKUP: save submission in DB
+        ContactUsBackup.objects.create(
+            first_name=contact_us.first_name,
+            last_name=contact_us.last_name,
+            email=contact_us.email,
+            subject=contact_us.subject,
+            message=contact_us.message
+        )
 
         # Debug logging before sending
         print("Attempting to send email via Mailgun...")
