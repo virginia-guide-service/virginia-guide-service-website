@@ -138,7 +138,7 @@
                     <p class="scrollElement font-['Montserrat'] font-light text-base sm:text-lg leading-relaxed text-white">
                         <span class="font-semibold">Registration for Standard History Tours are encouraged to receive possible updates on your tour. Standard Historical tours are public for anyone to join and occur regularly throughout the school year.</span>
                         <br>
-                        <span>To ensure guide availability for special topic or large tour groups, all tour requests. should be submitted at least <a class="underline italic">two to three weeks in advance</a>. Complete this form and we can get back to you with more details on your tour!</span>
+                        <span>To ensure guide availability for special topic or large tour groups, all tour requests should be submitted at least <a class="underline italic">two to three weeks in advance</a>. Complete this form and we can get back to you with more details on your tour!</span>
                     </p>
                     <a href="/contact-us" class="scrollElement">
                         <button class="rounded-full border-2 border-white text-white font-semibold text-base px-6 py-2 mt-3 cursor-pointer hover:bg-gray-200 hover:text-black hover:border-gray-200 hover:scale-105 transition-all duration-300 ease-in-out">
@@ -204,11 +204,11 @@
                                         >
                                             <option value="" disabled>Select a time</option>
                                             <option
-                                            v-for="time in times"
-                                            :key="time.value"
-                                            :value="time.value"
+                                                v-for="time in filteredTimes"
+                                                :key="time.value"
+                                                :value="time.value"
                                             >
-                                            {{ time.display }}
+                                                {{ time.display }}
                                             </option>
                                         </select>
 
@@ -221,11 +221,11 @@
                                         >
                                             <option value="" disabled>Select a time</option>
                                             <option
-                                            v-for="time in times"
-                                            :key="time.value"
-                                            :value="time.value"
+                                                v-for="time in filteredTimes"
+                                                :key="time.value"
+                                                :value="time.value"
                                             >
-                                            {{ time.display }}
+                                                {{ time.display }}
                                             </option>
                                         </select>
 
@@ -250,8 +250,18 @@
                                     {{ fieldErrors.minors[0] }}
                                 </p>
 
-                                <label for="tour-type" class="font-[Montserrat] font-light text-royal-blue">Type of Tour</label>
-                                <select v-if="!fieldErrors.tour_type" name="tour-type" id="tour-type" v-model="form.tour_type" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5">>
+                                <label for="tour-type" class="font-[Montserrat] font-light text-royal-blue">
+                                    Type of Tour
+                                </label>
+
+                                <select
+                                    id="tour-type"
+                                    name="tour-type"
+                                    v-model="form.tour_type"
+                                    :class="[
+                                        'font-[Montserrat] text-royal-blue border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue border-gray-300'
+                                    ]"
+                                >
                                     <option value="Standard Historical">Standard Historical Tour</option>
                                     <option value="History of African Americans at UVA">History of African Americans at UVA</option>
                                     <option value="Memorial to Enslaved Laborers">Memorial to Enslaved Laborers</option>
@@ -260,20 +270,18 @@
                                     <option value="Private Admissions Tours">Private Admissions Tours</option>
                                     <option value="Garden Tours">Garden Tours</option>
                                 </select>
-                                <select v-if="fieldErrors.tour_type" name="tour-type" id="tour-type" v-model="form.tour_type" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue">>
-                                    <option value="Standard Historical">Standard Historical Tour</option>
-                                    <option value="History of African Americans at UVA">History of African Americans at UVA</option>
-                                    <option value="Memorial to Enslaved Laborers">Memorial to Enslaved Laborers</option>
-                                    <option value="History of Women">History of Women at UVA</option>
-                                    <option value="Children's Tour">Children's Tour</option>
-                                    <option value="Private Admissions Tours">Private Admissions Tours</option>
-                                    <option value="Garden Tours">Garden Tours</option>
-                                </select>
-                                <p v-if="fieldErrors.tour_type" class="text-red-500 text-sm p-0 mb-2">
+
+                                <p v-if="fieldErrors.tour_type" class="text-red-500 text-sm">
                                     {{ fieldErrors.tour_type[0] }}
                                 </p>
 
-                                <label for="notes" class="font-[Montserrat] font-light text-royal-blue">Tour Group Information & Details</label>
+                                <!-- Hint for Standard Historical Tour -->
+                                <p v-if="showHistoricalHint" class="text-sm text-royal-blue mt-2 italic">
+                                    The Standard Historical Tour is offered only at 11:00 AM.
+                                </p>
+
+
+                                <label for="notes" class="font-[Montserrat] font-light text-royal-blue mt-5">Tour Group Information & Details</label>
                                 <textarea v-if="!fieldErrors.notes" id="notes" v-model="form.notes" class="flex-grow font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5"> </textarea>
                                 <textarea v-if="fieldErrors.notes" id="notes" v-model="form.notes" class="flex-grow font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue"> </textarea>
                                 <p v-if="fieldErrors.notes" class="text-red-500 text-sm p-0 mb-2">
@@ -333,7 +341,7 @@
                                                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                                             </svg>
                                             <div class="flex flex-col font-semibold text-sm sm:text-base leading-tight">
-                                                <span>Something went wrong. If the error persists, feel free to email our chairs personally!</span>
+                                                <span>Something went wrong. If the error persists, feel free to email our schedulers (scheduler@virginiaguides.org) personally!</span>
                                             </div>
                                         </div>
                                     </div>
@@ -592,18 +600,45 @@
     const times = ref<{ display: string; value: string }[]>([])
 
     for (let h = 11; h <= 18; h++) {
-    const hour12 = h > 12 ? h - 12 : h
-    const period = h >= 12 && h < 24 ? 'PM' : 'AM'
+        const hour12 = h > 12 ? h - 12 : h
+        const period = h >= 12 && h < 24 ? 'PM' : 'AM'
 
-    const display0 = `${hour12}:00 ${period}`
-    const display30 = `${hour12}:30 ${period}`
+        const display0 = `${hour12}:00 ${period}`
+        const display30 = `${hour12}:30 ${period}`
 
-    const value0 = `${h.toString().padStart(2, '0')}:00`
-    const value30 = `${h.toString().padStart(2, '0')}:30`
+        const value0 = `${h.toString().padStart(2, '0')}:00`
+        const value30 = `${h.toString().padStart(2, '0')}:30`
 
-    times.value.push({ display: display0, value: value0 })
-    if (!(h === 18)) times.value.push({ display: display30, value: value30 }) // skip 6:30 PM
+        times.value.push({ display: display0, value: value0 })
+        if (!(h === 18)) times.value.push({ display: display30, value: value30 }) // skip 6:30 PM
     }
+
+    // filtered times: only show 11 AM for "Standard Historical"
+    const filteredTimes = computed(() => {
+    if (form.value.tour_type === "Standard Historical") {
+        return [{ display: "11:00 AM", value: "11:00" }]
+    }
+        return times.value
+    })
+
+    watch(() => form.value.tour_type, (newType) => {
+        // standard Historical → auto-set time to 11:00 if invalid
+        if (newType === "Standard Historical") {
+            if (form.value.time !== "11:00") {
+                form.value.time = "11:00";
+            }
+        } else {
+            // other tours: if time is empty and they haven't picked one → allow blank
+            // if they already picked 11:00, keep it
+            // if the filteredTimes contain the current time, keep it
+            const allowedTimes = filteredTimes.value.map(t => t.value);
+            if (!allowedTimes.includes(form.value.time)) {
+                form.value.time = "";
+            }
+        }
+    });
+
+    const showHistoricalHint = computed(() => form.value.tour_type === "Standard Historical");
 
     async function submitForm(e: Event) {
         e.preventDefault()
