@@ -277,7 +277,7 @@
 
                                 <!-- Hint for Standard Historical Tour -->
                                 <p v-if="showHistoricalHint" class="text-sm text-royal-blue mt-2 italic">
-                                    The Standard Historical Tour is offered only at 11:00 AM.
+                                    The Standard Historical Tour is offered only at 11:00 AM on Fridays, Saturdays, and Sundays.
                                 </p>
 
 
