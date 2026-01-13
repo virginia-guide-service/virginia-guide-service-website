@@ -57,7 +57,7 @@ def backups_dashboard(request):
     })
 
 
-# not used in production
+# NOT USED IN PRODUCTION
 @api_view(['POST'])
 def register_tour(request):
     serializer = TourRegistrationSerializer(data=request.data)
@@ -204,12 +204,14 @@ def register_specialty_tour(request):
         # Confirmation email to user
         confirmation_message = (
             f"Hello {specialty_registration.first_name},\n\n"
-            f"Thank you for registering for a {specialty_registration.tour_type} with the Virginia Guide Service at the University of Virginia! "
-            "We’ve received your submission and are currently pairing you with one of our volunteer student tour guides.\n\n"
-            "On the day of your tour, please arrive on time and meet your guide on the Lawn side of the Rotunda steps. "
-            "Directions, parking information, and frequently asked questions can be found under the “Take a Tour” tab on our website: "
-            "https://virginiaguides.org/your-visit\n\n"
-            "Your submitted information:\n"
+            f"Thank you for submitting a {specialty_registration.tour_type} request with the Virginia Guide Service at the University of Virginia! "
+            "We've received your submission and are currently pairing you with a volunteer student tour guide.\n\n"
+            "Please verify your request falls during periods when academic courses are in session for the Fall and Spring terms, as"
+            "indicated here: https://registrar.virginia.edu/calendar/academic/2025-2026. During examination periods, reading periods, and recesses, we do not schedule tour requests. "
+            "We also cannot guarantee tour guide availability for parties under 8. One of our schedulers will be in contact with you once your request has been scheduled.\n\n"
+            "If you have registered for one of our Standard Tour times, which occur at 11:00 AM every Friday, Saturday, and Sunday during the academic year (https://registrar.virginia.edu/calendar/academic), "
+            "then you do not need to wait for another confirmation. On the day of your tour, please arrive on time and meet your guide on the Lawn side of the Rotunda steps. "
+            "Directions, parking information, and frequently asked questions can be found under the “Take a Tour” tab on our website: https://virginiaguides.org/your-visit.\n\n"
             f"Date of Tour: {specialty_registration.date}\n"
             f"Time: {time_formatted}\n"
             f"Guests: {specialty_registration.guests}\n"
@@ -218,7 +220,7 @@ def register_specialty_tour(request):
             "If you have any questions or need to make changes, please email our scheduling team at scheduler@virginiaguides.org.\n\n"
             "Thank you for choosing the Virginia Guide Service and for taking part in the tradition of student-told history at the University of Virginia! "
             "We look forward to welcoming you!\n\n"
-            "See you soon,\n"
+            "Warmlys,\n"
             "Virginia Guide Service"
         )
 
