@@ -110,28 +110,37 @@
             <div class="flex flex-col lg:flex-row">
                 <div class="w-full text-center sm:text-start">
                     <p class="scrollElement font-Roboto font-light text-base sm:text-lg italic pt-5 pb-2">
-                        <span class="font-bold">
-                            Info Sessions:
-                        </span>
+                        <span class="font-bold">Info Sessions:</span>
                         We ask that you attend an information session to learn more about the Virginia Guides Service and 
                         speak to current Guides. Attending information and Q&A sessions will help you learn about the try-out process, get tips from current guides, 
-                        and learn more about what is expected of UGS members. Information sessions are mandatory and a great way to get your questions 
-                        answered and better understand what makes UGS so great! Our general sessions this semester are:
+                        and learn more about what is expected of UGS members. Information sessions are <span class="font-bold underline">mandatory</span> and a great way to get your questions 
+                        answered and better understand what makes UGS so great!
                     </p>
-                    <p class="scrollElement font-Roboto text-UVA-orange font-bold text-base sm:text-lg italic">
-                        The Rotunda Multipurpose Room is located in the hallway underneath the Rotunda Lawn-side before you enter the building itself.
+                    <ul class="scrollElement text-center font-Roboto font-bold text-base sm:text-lg pb-2">
+                        <li>Info Session Schedule:</li>
+                        <li>January 26th 6:30 PM - 7:30 PM</li>
+                        <li>January 27th 7:30 PM - 8:30 PM</li>
+                        <li>January 28th 6:30 PM - 7:30 PM</li>
+                        <li>January 29th 6:30 PM - 7:30 PM</li>
+                        <li>January 30th 4:00 PM - 5:00 PM</li>
+                        <li>January 31st 12:00 PM - 1:00 PM</li>
+                        <li>Location: Lower West Oval Room (hallway underneath the Rotunda Lawn-side)</li>
+                    </ul>
+                    <p class="scrollElement font-Roboto font-light text-base sm:text-lg italic">
+                        For additional Preparation we encourage all those planning on trying out to attend a tour the week of <span class="font-bold underline">January 18th</span> to get a better understanding of all our 
+                        tours encapsulate. While this is not a requirement by any means, the best way to learn what we do is to see it in action!
                     </p>
                     <div class="scrollElement">
                         <h1 class="font-Roboto text-lg sm:text-xl font-bold italic mb-2 pt-5">
                             Step 2: Prepare to Try Out
                         </h1>
                         <p class="font-Roboto font-light text-base sm:text-lg pb-2">
-                            For our Fall 2024 recruitment season, you will give a 15 minute historical “trial tour” of the Lawn area to two current Guides 
+                            For our Spring 2026 recruitment season, you will give a 15 minute historical “trial tour” of the Lawn area to two current Guides 
                             (who will act as your "tourists"). The trial tour is meant to see how well you can craft an organized and meaningful tour, 
                             as well as to assess your public speaking abilities.
                         </p>
                         <p class="font-Roboto font-light text-base sm:text-lg">
-                            You will be able to sign up for a time slot between February 3rd through the 7th for your trial tour at one of our 
+                            You will be able to sign up for a time slot between <span class="font-bold underline italic">February 2nd through the 7th</span> for your trial tour at one of our 
                             info sessions (which is why it is important to attend a session)! Other sign-up opportunities may be offered, 
                             and will be announced via Instagram. If you can't make it to the sign-up times, or need to cancel or reschedule 
                             your trial tour for any reason, you can reach out to our Recruitment Co-Chairs to see what slots are available.
@@ -148,7 +157,7 @@
                     To begin writing, we encourage you to refer to this <a href="https://docs.google.com/document/d/1SgT3gxmUICInw1gs1LGYnTQ4pzVWFVgJZrtIZ2Z4Mes/edit?usp=sharing" class="underline">historical fact sheet</a>
                     we have put together for you. Once you have written your tour, we recommend practicing giving your tour before you do so officially. 
                     As you prepare, please reach out to our Recruitment Co-Chairs, Natalie <a href="mailto:wmz4hj@virginia.edu" class="underline">(wmz4hj@virginia.edu)</a>
-                     and Molly <a href="mailto:tzk9jr@virginia.edu" class="underline">(tzk9jr@virginia.edu)</a>, for any help you may need. 
+                     and Menna <a href="mailto:wab7sk@vriginia.edu" class="underline">(wab7sk@vriginia.edu)</a>, for any help you may need. 
                     They are equipped to offer you advice on how to go about your tours, suggestions for what to include, 
                     and any help you might need to prepare! The Recruitment Co-Chairs have no say in the selection process, 
                     meaning that you can truly ask them anything - they're here to make sure you have the best possible experience trying out.

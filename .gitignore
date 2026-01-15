@@ -13,8 +13,11 @@ yarn-error.log*
 # Env files
 .env
 
-# Large Files
+# Large Files (Images)
 public/
+
+# Mac Files
+.DS_Store
 
 # not used in production
 app/pages/request-specialty-tours.vue

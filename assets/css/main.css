@@ -2,6 +2,7 @@
 
 
 /* custom colors for the project */
+/* to import a custom color, give it a name and a hex number*/
 @theme {
     --color-dark-green: #32532B;
     --color-sandstone: #F7F8EA;
