@@ -3,7 +3,7 @@
 FRONT PAGE (virginiaguides.org)
 ============================================================================
   
-  Main landing page for the Virginia Guides Service website
+  Main landing page for the Virginia Guide Service website
   
   Page Structure:
   1. Hero Section - Full-screen header with branding and scroll animations
@@ -89,7 +89,7 @@ FRONT PAGE (virginiaguides.org)
         -->
         <div ref="textWrap" :class="['absolute flex flex-col items-center top-[83%] lg:pt-8 md:top-5/6 left-1/2 w-full max-w-4xl px-4 -translate-x-1/2 text-white text-center transition-all duration-500', isAtTop ? 'opacity-0 translate-y-3 pointer-events-none' : 'opacity-100 translate-y-0 pointer-events-auto']" aria-hidden="isAtTop">
             <p class="font-['Montserrat'] italic text-base sm:text-lg md:text-xl font-light leading-snug">
-                The Virginia Guides Service continues 75 years of students guiding visitors through UVA,
+                The Virginia Guide Service continues 75 years of students guiding visitors through UVA,
                 carrying forward tradition while bringing new light to the past.
             </p>
         </div>
@@ -409,7 +409,7 @@ FRONT PAGE (virginiaguides.org)
     <!-- ========================================
          WHO WE ARE SECTION
          Organization overview with background image
-         Explains Virginia Guides Service mission and structure
+         Explains Virginia Guide Service mission and structure
          Features three CTA buttons for engagement
          ======================================== -->
     <section>
@@ -432,7 +432,7 @@ FRONT PAGE (virginiaguides.org)
 
                 <!-- Organization Description - Paragraph 1 -->
                 <p class="scrollElement font-['Montserrat'] text-black sm:text-lg md:text-xl leading-relaxed mx-auto mt-10">
-                    The Virginia Guides Service is an independent student-run volunteer tour-giving organization that provides the historical and admissions tours of the University of Virginia.
+                    The Virginia Guide Service is an independent student-run volunteer tour-giving organization that provides the historical and admissions tours of the University of Virginia.
                     Virginia Guides is an organization that embodies a spirit of student self-governance and seeks to foster a sense of unity and cohesion among its members. 
                 </p>
                 <!-- Organization Description - Paragraph 2: Training and Free Tours -->

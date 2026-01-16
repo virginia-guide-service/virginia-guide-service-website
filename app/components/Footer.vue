@@ -39,7 +39,7 @@
 
                 <!-- Description -->
                 <p class="scrollElement mt-20 font-['Roboto'] text-white text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
-                    The Virginia Guides Service at UVA is an entirely student-run independent volunteer organization. 
+                    The Virginia Guide Service at UVA is an entirely student-run independent volunteer organization. 
                     If you would like to provide additional support, please consider donating to our day-to-day operations 
                     <a href="/donate" class="underline">here</a>. We appreciate your time and thank you for continuing to support our mission.
                 </p>
@@ -109,7 +109,7 @@
                     <div class="flex items-start gap-4 font-['Roboto']">
                         <img class="h-12 w-12 obSject-contain" loading="lazy" src="https://virginia-guides-website-images.s3.amazonaws.com/public/guides-logo.png" alt="Virginia Guides Logo" />
                         <p>
-                            The Virginia Guides Service continues 75 years of guiding visitors through UVA in Charlottesville VA. The Guides Service is a 
+                            The Virginia Guide Service continues 75 years of guiding visitors through UVA in Charlottesville VA. The Guides Service is a 
                             student-run organization independent of the University of Virginia, carrying forward tradition while bringing a more complete light to the past.
                         </p>
                     </div>

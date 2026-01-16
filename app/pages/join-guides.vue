@@ -47,7 +47,7 @@
 
             <!--Volunteer Statement-->
             <span class="scrollElement font-['Montserrat'] text-base sm:text-lg leading-relaxed text-dark-green text-center pt-5 lg:pt-10">
-                The Guide Service is independent and volunteer-based, which gives each guide the opportunity to craft their own tour. 
+                The Virginia Guide Service is independent and volunteer-based, which gives each guide the opportunity to craft their own tour. 
                 Students are encouraged to follow their passion and engage deeply with history. If you would like to provide additional support, please consider 
                 donating to our day-to-day operations <a href="/donate" class="underline p-0 m-0">here</a>. We appreciate your time and thank you for continuing to support our mission.
             </span>
@@ -111,20 +111,24 @@
                 <div class="w-full text-center sm:text-start">
                     <p class="scrollElement font-Roboto font-light text-base sm:text-lg italic pt-5 pb-2">
                         <span class="font-bold">Info Sessions:</span>
-                        We ask that you attend an information session to learn more about the Virginia Guides Service and 
+                        We ask that you attend an information session to learn more about the Virginia Guide Service and 
                         speak to current Guides. Attending information and Q&A sessions will help you learn about the try-out process, get tips from current guides, 
-                        and learn more about what is expected of UGS members. Information sessions are <span class="font-bold underline">mandatory</span> and a great way to get your questions 
-                        answered and better understand what makes UGS so great!
+                        and learn more about what is expected of VGS members. Information sessions are <span class="font-bold underline">mandatory</span> and a great way to get your questions 
+                        answered and better understand what makes VGS so great! In addition to our general information sessions, we have <span class="font-bold">BIPOC-centered information sessions</span>
+                        as well. BIPOC Guides will be at these specialized info sessions to answer questions and discuss what it's like to identify within these communities while being part of VGS.
+                        Below is our info session schedule for Spring 2026.
                     </p>
-                    <ul class="scrollElement text-center font-Roboto font-bold text-base sm:text-lg pb-2">
-                        <li>Info Session Schedule:</li>
-                        <li>January 26th 6:30 PM - 7:30 PM</li>
-                        <li>January 27th 7:30 PM - 8:30 PM</li>
-                        <li>January 28th 6:30 PM - 7:30 PM</li>
-                        <li>January 29th 6:30 PM - 7:30 PM</li>
-                        <li>January 30th 4:00 PM - 5:00 PM</li>
-                        <li>January 31st 12:00 PM - 1:00 PM</li>
-                        <li>Location: Lower West Oval Room (hallway underneath the Rotunda Lawn-side)</li>
+                    <ul class="scrollElement text-center font-Roboto text-base sm:text-lg pb-2">
+                        <li class="font-bold ">General Information Sessions:</li>
+                        <li>Monday, January 26th 6:30 PM - 7:30 PM @ LW</li>
+                        <li>Wednesday, January 28th 6:30 PM - 7:30 PM @ MPR</li>
+                        <li>Friday, January 30th 4:00 PM - 5:00 PM @ MPR</li>
+                        <li>Saturday, January 31st 12:00 PM - 1:00 PM @ MPR</li>
+                        <li class="font-bold pt-2">BIPOC Centered Information Sessions:</li>
+                        <li>Tuesday, January 27th 7:30 PM - 8:30 PM @ MPR</li>
+                        <li>Thursday, January 29th 6:30 PM - 7:30 PM @ MPR</li>
+                        <li class="text-UVA-orange italic font-bold pt-2">LW: Lower West Oval Room (inside the Rotunda basement)</li>
+                        <li class="text-UVA-orange italic font-bold">MPR: Multipurpose Room (beneath Rotunda steps)</li>
                     </ul>
                     <p class="scrollElement font-Roboto font-light text-base sm:text-lg italic">
                         For additional Preparation we encourage all those planning on trying out to attend a tour the week of <span class="font-bold underline">January 18th</span> to get a better understanding of all our 

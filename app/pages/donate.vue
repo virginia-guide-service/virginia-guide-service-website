@@ -10,7 +10,7 @@
 
             <div class="flex flex-col justify-evenly items-center gap-4 bg-royal-blue px-10 py-12">
                 <p class="text-white font-['Montserrat'] text-base sm:text-lg">
-                    The Virginia Guides Service at UVA is an entirely student-run independent volunteer organization. All tours are given free of charge.
+                    The Virginia Guide Service at UVA is an entirely student-run independent volunteer organization. All tours are given free of charge.
                 </p>
                 <p class="text-white font-['Montserrat'] text-base sm:text-lg pt-3 pb-5">
                     If you would like to provide additional support, please consider donating to our day-to-day operations. We appreciate your time and thank you for continuing to support our mission.
