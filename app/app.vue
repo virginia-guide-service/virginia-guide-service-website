@@ -10,7 +10,7 @@
     <Navbar
       :class="[
         'fixed left-0 w-full z-50 transition-all duration-300',
-        showBanner ? 'top-[157px]' : 'top-0'
+        showBanner ? 'top-[154px]' : 'top-0'
       ]"
     />
 

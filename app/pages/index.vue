@@ -787,36 +787,59 @@ FRONT PAGE (virginiaguides.org)
                 :modules="modules"
                 class="scrollElement events-swiper mx-auto max-w-4xl"
             >
-                <!-- Event Card 1: Monticello Student Tour -->
-                <swiper-slide class="flex justify-end items-center">
-                    <a href="https://www.instagram.com/p/DQDBmTEjbOH/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
+                <!-- Event Card 1: INCLEMENT WEATHER -->
+                <swiper-slide class="flex justify-center items-center">
+                    <a href="https://www.instagram.com/p/DT6DdoiidTO/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
                         <div class="relative max-w-2xl mx-auto p-4 pb-10 group cursor-pointer">
-                            <!-- Event Image - 450px height, object-center crop -->
-                            <img class="events-image mb-2 object-center" loading="lazy" src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/monticello_tour.jpg">
-                            <!-- Event Title -->
+                            <img class="events-image mb-2 object-top" loading="lazy" src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/weather-recruitment-update.jpg">
                             <p class="font-['Montserrat'] font-bold text-black text-2xl sm:text-3xl leading-tight mb-2">
-                                Monticello Student Tour
+                                Inclement Weather Recruitment Updates
                             </p>
-                            <!-- Event Description -->
                             <p class="font-['Montserrat'] font-medium text-base sm:text-lg leading-relaxed text-gray-900">
-                                Monticello isn’t just a part of Jefferson’s legacy, it's a key chapter in understanding Jefferson and slavery’s deep roots at 
-                                UVA and beyond. All are created equal, and in that, we learn and seek the histories of lives that have been overlooked, 
-                                bringing the full story into light.
+                                Despite the inclement weather, we're excited about what's ahead. Recruiting new guides, sharing history, and more. Check out
+                                our Instagram to see new dates for our recruitment events this season and stay warm!
                             </p>
                         </div>
                     </a>
                 </swiper-slide>
 
-                <!-- Event Card 2: Special Collections Tour -->
-                <swiper-slide class="flex justify-center items-center">
-                    <a href="https://www.instagram.com/p/DP1wUr-Ca3n/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
+                <!-- Event Card 2: Shine with Guides -->
+                <swiper-slide class="flex justify-end items-center">
+                    <a href="https://www.instagram.com/p/DTqzVa_CfFw/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
                         <div class="relative max-w-2xl mx-auto p-4 pb-10 group cursor-pointer">
-                            <img class="events-image mb-2 object-top" loading="lazy" src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/special_collections.jpg">
+                            <!-- Event Image - 450px height, object-center crop -->
+                            <img class="events-image mb-2 object-center" loading="lazy" src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/shine-with-guides.jpg">
+                            <!-- Event Title -->
                             <p class="font-['Montserrat'] font-bold text-black text-2xl sm:text-3xl leading-tight mb-2">
-                                Special Collections Tour: Albert and Shirley Small Sepcial Collections Library
+                                Shine with Guides: Spring 2026 Recruitment
+                            </p>
+                            <!-- Event Description -->
+                            <p class="font-['Montserrat'] font-medium text-base sm:text-lg leading-relaxed text-gray-900">
+                                Join us on the of last week of January to hear from current guides about what we do and how you can become a guide!
+                                Learn more about the recruitment process, ask questions, meet current tour guides, and sign up for your trial tour.
+                                Info sessions are mandatory for potential guides to sign up for the next step in recruitment. Learn more about the process
+                                on our <a class="underline text-blue-500" href="/join-guides">"Join Guides"</a> page.
+                            </p>
+                        </div>
+                    </a>
+                </swiper-slide>
+
+                <!-- Event Card 3: Meet the -->
+                <swiper-slide class="flex justify-center items-center">
+                    <a href="https://www.instagram.com/p/DTyJN4yCfyo/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
+                        <div class="relative max-w-2xl mx-auto p-4 pb-10 group cursor-pointer">
+                            <img class="events-image mb-2 object-top" loading="lazy" src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/meet-guides.jpg">
+                            <p class="font-['Montserrat'] font-bold text-black text-2xl sm:text-3xl leading-tight mb-2">
+                                Meet Guides 
                             </p>
                             <p class="font-['Montserrat'] font-medium text-base sm:text-lg leading-relaxed text-gray-900">
-                                Join Guides on Oct. 22 from 5 PM to 6PM to learn about how to use Special Collections and explore their primary resources on UVA history and past student life. This is open to all UVA students interested in history or learning more about Special Collections.                        </p>
+                                DUE TO THE WINTER STORM THIS EVENT HAS BEEN MADE <a class="underline text-blue-500" href="https://virginia.zoom.us/j/93711736752?pwd=245K9MhR4PbbUrbdUSf1ptMVCKbaUm.1">VIRTUAL</a> (Passcode: 930753): 
+                                Come hang out with current Guides on January 25 
+                                from 4–6 PM! This is a great chance to learn more about the 
+                                Virginia Guide Service, hear from current members, and ask any questions you have about finding your place 
+                                in Guides. We’ll be hosting multiple sessions created with and for APID, Black, Latinx, and Queer students, 
+                                so you can join the space that feels right for you.
+                            </p>
                         </div>
                     </a>
                 </swiper-slide>
