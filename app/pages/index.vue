@@ -779,7 +779,6 @@ FRONT PAGE (virginiaguides.org)
                     :slides-per-view="1"
                     :slides-per-group="1"
                     :space-between="30"
-                    :autoHeight="true"
                     :pagination="{ clickable: true }"
                     :grabCursor="true"
                     :autoplay="{ delay: 10000, disableOnInteraction: false, pauseOnMouseEnter: true }"
@@ -789,7 +788,7 @@ FRONT PAGE (virginiaguides.org)
                     class="scrollElement events-swiper mx-auto max-w-4xl"
                 >
                     <!-- Event Card 1: INCLEMENT WEATHER -->
-                    <swiper-slide class="flex justify-center items-center">
+                    <swiper-slide class="flex justify-center items-start">
                         <a href="https://www.instagram.com/p/DT6DdoiidTO/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
                             <div class="relative max-w-2xl mx-auto p-4 pb-10 group cursor-pointer">
                                 <img class="events-image mb-2 object-top" loading="lazy" src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/weather-recruitment-update.jpg">
@@ -805,7 +804,7 @@ FRONT PAGE (virginiaguides.org)
                     </swiper-slide>
 
                     <!-- Event Card 2: Shine with Guides -->
-                    <swiper-slide class="flex justify-center items-center">
+                    <swiper-slide class="flex justify-center items-start">
                         <a href="https://www.instagram.com/p/DTqzVa_CfFw/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
                             <div class="relative max-w-2xl mx-auto p-4 pb-10 group cursor-pointer">
                                 <!-- Event Image - 450px height, object-center crop -->
@@ -826,7 +825,7 @@ FRONT PAGE (virginiaguides.org)
                     </swiper-slide>
 
                     <!-- Event Card 3: Meet the -->
-                    <swiper-slide class="flex justify-center items-center">
+                    <swiper-slide class="flex justify-center items-start">
                         <a href="https://www.instagram.com/p/DTyJN4yCfyo/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
                             <div class="relative max-w-2xl mx-auto p-4 pb-10 group cursor-pointer">
                                 <img class="events-image mb-2 object-top" loading="lazy" src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/meet-guides.jpg">
