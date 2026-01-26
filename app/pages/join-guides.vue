@@ -120,12 +120,12 @@
                     </p>
                     <ul class="scrollElement text-center font-Roboto text-base sm:text-lg pb-2">
                         <li class="font-bold ">General Information Sessions:</li>
-                        <li>Monday, January 26th 6:30 PM - 7:30 PM @ LW</li>
+                        <li>Monday, January 26th 6:30 PM - 7:30 PM (MOVED <a class="underline text-blue-500" href="https://virginia.zoom.us/j/97903234893?pwd=gSXbR9jGhdDznmM4aZJ9fkbaA8afPC.1">ONLINE</a>)</li>
                         <li>Wednesday, January 28th 6:30 PM - 7:30 PM @ MPR</li>
                         <li>Friday, January 30th 4:00 PM - 5:00 PM @ MPR</li>
                         <li>Saturday, January 31st 12:00 PM - 1:00 PM @ MPR</li>
                         <li class="font-bold pt-2">BIPOC Centered Information Sessions:</li>
-                        <li>Tuesday, January 27th 7:30 PM - 8:30 PM @ MPR</li>
+                        <li>Tuesday, January 27th 7:30 PM - 8:30 PM (MOVED ONLINE)</li>
                         <li>Thursday, January 29th 6:30 PM - 7:30 PM @ MPR</li>
                         <li class="text-UVA-orange italic font-bold pt-2">LW: Lower West Oval Room (inside the Rotunda basement)</li>
                         <li class="text-UVA-orange italic font-bold">MPR: Multipurpose Room (beneath Rotunda steps)</li>

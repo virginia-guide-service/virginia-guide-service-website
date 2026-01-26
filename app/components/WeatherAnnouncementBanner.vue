@@ -13,14 +13,12 @@
     </h1>
 
     <h2 class="details font-bold">
-      Upcoming Modified Hours:
+      Upcoming Modifications:
     </h2>
 
     <p class="details">
-      Saturday, Jan. 24: Tours will run in the morning.<br />
-      Sunday, Jan. 25: There will be
-      <span class="font-bold">no tours on Sunday</span>.<br />
-      <a class="underline text-blue-500" href="https://virginia.zoom.us/j/93711736752?pwd=245K9MhR4PbbUrbdUSf1ptMVCKbaUm.1">Meet Guides 4-6pm 1/25 is now online</a> (Passcode: 930753)
+      <span><a class="font-bold">Jan. 26th, 6:30-7:30pm:</a> Info Session is now <a class="underline text-blue-500" href="https://virginia.zoom.us/j/97903234893?pwd=gSXbR9jGhdDznmM4aZJ9fkbaA8afPC.1">online</a> (Passcode: 235296)</span><br />
+      <span><a class="font-bold">Jan. 27th, 7:30-8:30pm:</a> Info Session is now online (link will be posted soon)</span>
     </p>
   </div>
 </template>
