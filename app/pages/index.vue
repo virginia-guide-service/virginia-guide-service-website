@@ -776,7 +776,6 @@ FRONT PAGE (virginiaguides.org)
                     Swiper slider with event cards linking to Instagram posts
                     Wrapped in ClientOnly to prevent hydration mismatches
                     ======================================== -->
-                <ClientOnly>
                     <swiper
                         :slides-per-view="1"
                         :slides-per-group="1"
@@ -846,15 +845,6 @@ FRONT PAGE (virginiaguides.org)
                             </a>
                         </swiper-slide>
                     </swiper>
-                    
-                    <!-- Fallback content while loading (optional but recommended) -->
-                    <template #fallback>
-                        <div class="scrollElement events-swiper mx-auto max-w-4xl h-96 flex items-center justify-center">
-                            <p class="text-gray-500">Loading events...</p>
-                        </div>
-                    </template>
-                </ClientOnly>
-
             </div>
         </div>
     </section>
