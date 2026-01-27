@@ -776,70 +776,69 @@ FRONT PAGE (virginiaguides.org)
                     Swiper slider with event cards linking to Instagram posts
                     Wrapped in ClientOnly to prevent hydration mismatches
                     ======================================== -->
-                    <swiper
-                        :slides-per-view="1"
-                        :slides-per-group="1"
-                        :space-between="30"
-                        :pagination="{ clickable: true }"
-                        :grabCursor="true"
-                        :autoplay="{ delay: 10000, disableOnInteraction: false, pauseOnMouseEnter: true }"
-                        :loop="true"
-                        :speed="800"
-                        :auto-height="true"
-                        :modules="modules"
-                        class="scrollElement events-swiper mx-auto max-w-4xl"
-                    >
-                        <!-- Event Card 1: INCLEMENT WEATHER -->
-                        <swiper-slide class="flex justify-center items-start">
-                            <a href="https://www.instagram.com/p/DT6DdoiidTO/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
-                                <div class="relative max-w-2xl mx-auto p-4 pb-10 group cursor-pointer">
-                                    <img class="events-image mb-2 object-top" loading="lazy" src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/weather-recruitment-update.jpg" alt="Weather Recruitment Update">
-                                    <p class="font-['Montserrat'] font-bold text-black text-2xl sm:text-3xl leading-tight mb-2">
-                                        Inclement Weather Recruitment Updates
-                                    </p>
-                                    <p class="font-['Montserrat'] font-medium text-base sm:text-lg leading-relaxed text-gray-900">
-                                        Despite the inclement weather, we're excited about what's ahead. Recruiting new guides, sharing history, and more. Check out
-                                        our Instagram to see new dates for our recruitment events this season and stay warm!
-                                    </p>
-                                </div>
-                            </a>
-                        </swiper-slide>
+                <swiper
+                    :slides-per-view="1"
+                    :slides-per-group="1"
+                    :space-between="30"
+                    :pagination="{ clickable: true }"
+                    :grabCursor="true"
+                    :autoplay="{ delay: 10000, disableOnInteraction: false, pauseOnMouseEnter: true }"
+                    :loop="true"
+                    :speed="800"
+                    :modules="modules"
+                    class="scrollElement events-swiper mx-auto max-w-4xl"
+                >
+                    <!-- Event Card 1: INCLEMENT WEATHER -->
+                    <swiper-slide class="flex justify-center items-start">
+                        <a href="https://www.instagram.com/p/DT6DdoiidTO/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
+                            <div class="relative max-w-2xl mx-auto p-4 pb-10 group cursor-pointer">
+                                <img class="events-image mb-2 object-top" loading="lazy" src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/weather-recruitment-update.jpg" alt="Weather Recruitment Update">
+                                <p class="font-['Montserrat'] font-bold text-black text-2xl sm:text-3xl leading-tight mb-2">
+                                    Inclement Weather Recruitment Updates
+                                </p>
+                                <p class="font-['Montserrat'] font-medium text-base sm:text-lg leading-relaxed text-gray-900">
+                                    Despite the inclement weather, we're excited about what's ahead. Recruiting new guides, sharing history, and more. Check out
+                                    our Instagram to see new dates for our recruitment events this season and stay warm!
+                                </p>
+                            </div>
+                        </a>
+                    </swiper-slide>
 
-                        <!-- Event Card 2: Shine with Guides -->
-                        <swiper-slide class="flex justify-center items-start">
-                            <a href="https://www.instagram.com/p/DTqzVa_CfFw/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
-                                <div class="relative max-w-2xl mx-auto p-4 pb-10 group cursor-pointer">
-                                    <img class="events-image mb-2 object-top" loading="lazy" src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/shine-with-guides.jpg" alt="Shine with Guides Infographic">
-                                    <p class="font-['Montserrat'] font-bold text-black text-2xl sm:text-3xl leading-tight mb-2">
-                                        Shine with Guides: Spring 2026 Recruitment
-                                    </p>
-                                    <p class="font-['Montserrat'] font-medium text-base sm:text-lg leading-relaxed text-gray-900">
-                                        Join us on the of last week of January to hear from current guides about what we do and how you can become a guide!
-                                        Learn more about the recruitment process, ask questions, meet current tour guides, and sign up for your trial tour.
-                                        Info sessions are mandatory for potential guides to sign up for the next step in recruitment. Learn more about the process
-                                        on our "<a class="underline text-blue-500" href="/join-guides">Join Guides</a>" page.
-                                    </p>
-                                </div>
-                            </a>
-                        </swiper-slide>
+                    <!-- Event Card 2: Shine with Guides -->
+                    <swiper-slide class="flex justify-center items-start">
+                        <a href="https://www.instagram.com/p/DTqzVa_CfFw/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
+                            <div class="relative max-w-2xl mx-auto p-4 pb-10 group cursor-pointer">
+                                <img class="events-image mb-2 object-top" loading="lazy" src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/shine-with-guides.jpg" alt="Shine with Guides Infographic">
+                                <p class="font-['Montserrat'] font-bold text-black text-2xl sm:text-3xl leading-tight mb-2">
+                                    Shine with Guides: Spring 2026 Recruitment
+                                </p>
+                                <p class="font-['Montserrat'] font-medium text-base sm:text-lg leading-relaxed text-gray-900">
+                                    Join us on the of last week of January to hear from current guides about what we do and how you can become a guide!
+                                    Learn more about the recruitment process, ask questions, meet current tour guides, and sign up for your trial tour.
+                                    Info sessions are mandatory for potential guides to sign up for the next step in recruitment. Learn more about the process
+                                    on our "<a class="underline text-blue-500" href="/join-guides">Join Guides</a>" page.
+                                </p>
+                            </div>
+                        </a>
+                    </swiper-slide>
 
-                        <!-- Event Card 3: Raising the bar -->
-                        <swiper-slide class="flex justify-center items-start">
-                            <a href="https://www.instagram.com/p/DT-zAhwjRc8/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
-                                <div class="relative max-w-2xl mx-auto p-4 pb-10 group cursor-pointer">
-                                    <img class="events-image mb-2 object-top" loading="lazy" src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/RTB.jpg" alt="Raising the bar Infographic">
-                                    <p class="font-['Montserrat'] font-bold text-black text-2xl sm:text-3xl leading-tight mb-2">
-                                        OAAAPA X VGS: Raising The Bar
-                                    </p>
-                                    <p class="font-['Montserrat'] font-medium text-base sm:text-lg leading-relaxed text-gray-900">
-                                        Join OAAAPA and Guides on Wednesday, January 28th 5pm-7pm for the first RTB of the semester! (If weather permits) 
-                                        It will be hosted at the PAC (first floor of Newcomb Hall) and food will be provided!
-                                    </p>
-                                </div>
-                            </a>
-                        </swiper-slide>
+                    <!-- Event Card 3: Raising the bar -->
+                    <swiper-slide class="flex justify-center items-start">
+                        <a href="https://www.instagram.com/p/DT-zAhwjRc8/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
+                            <div class="relative max-w-2xl mx-auto p-4 pb-10 group cursor-pointer">
+                                <img class="events-image mb-2 object-top" loading="lazy" src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/RTB.jpg" alt="Raising the bar Infographic">
+                                <p class="font-['Montserrat'] font-bold text-black text-2xl sm:text-3xl leading-tight mb-2">
+                                    OAAAPA X VGS: Raising The Bar
+                                </p>
+                                <p class="font-['Montserrat'] font-medium text-base sm:text-lg leading-relaxed text-gray-900">
+                                    Join OAAAPA and Guides on Wednesday, January 28th 5pm-7pm for the first RTB of the semester! (If weather permits) 
+                                    It will be hosted at the PAC (first floor of Newcomb Hall) and food will be provided!
+                                </p>
+                            </div>
+                        </a>
+                    </swiper-slide>
 
-                    </swiper>
+                </swiper>
             </div>
         </div>
     </section>
