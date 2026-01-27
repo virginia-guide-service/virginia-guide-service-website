@@ -124,6 +124,7 @@
                         <li>Wednesday, January 28th 6:30 PM - 7:30 PM @ MPR</li>
                         <li>Friday, January 30th 4:00 PM - 5:00 PM @ MPR</li>
                         <li>Saturday, January 31st 12:00 PM - 1:00 PM @ MPR</li>
+                        <li>Monday, February 2nd 7:30 PM - 8:30 PM @ Cocke Hall 101</li>
                         <li class="font-bold pt-2">BIPOC Centered Information Sessions:</li>
                         <li>Tuesday, January 27th 7:30 PM - 8:30 PM (MOVED ONLINE)</li>
                         <li>Thursday, January 29th 6:30 PM - 7:30 PM @ MPR</li>

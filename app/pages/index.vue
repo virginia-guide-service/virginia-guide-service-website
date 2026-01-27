@@ -785,6 +785,7 @@ FRONT PAGE (virginiaguides.org)
                         :autoplay="{ delay: 10000, disableOnInteraction: false, pauseOnMouseEnter: true }"
                         :loop="true"
                         :speed="800"
+                        :auto-height="true"
                         :modules="modules"
                         class="scrollElement events-swiper mx-auto max-w-4xl"
                     >
@@ -808,42 +809,36 @@ FRONT PAGE (virginiaguides.org)
                         <swiper-slide class="flex justify-center items-start">
                             <a href="https://www.instagram.com/p/DTqzVa_CfFw/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
                                 <div class="relative max-w-2xl mx-auto p-4 pb-10 group cursor-pointer">
-                                    <!-- Event Image - 450px height, object-center crop -->
-                                    <img class="events-image mb-2 object-top" loading="lazy" src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/shine-with-guides.jpg" alt="Shine with Guides">
-                                    <!-- Event Title -->
+                                    <img class="events-image mb-2 object-top" loading="lazy" src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/shine-with-guides.jpg" alt="Shine with Guides Infographic">
                                     <p class="font-['Montserrat'] font-bold text-black text-2xl sm:text-3xl leading-tight mb-2">
                                         Shine with Guides: Spring 2026 Recruitment
                                     </p>
-                                    <!-- Event Description -->
                                     <p class="font-['Montserrat'] font-medium text-base sm:text-lg leading-relaxed text-gray-900">
                                         Join us on the of last week of January to hear from current guides about what we do and how you can become a guide!
                                         Learn more about the recruitment process, ask questions, meet current tour guides, and sign up for your trial tour.
                                         Info sessions are mandatory for potential guides to sign up for the next step in recruitment. Learn more about the process
-                                        on our <a class="underline text-blue-500" href="/join-guides">"Join Guides"</a> page.
+                                        on our "<a class="underline text-blue-500" href="/join-guides">Join Guides</a>" page.
                                     </p>
                                 </div>
                             </a>
                         </swiper-slide>
-                        
-                        <!-- Event Card 3: Meet the Guides -->
+
+                        <!-- Event Card 3: Raising the bar -->
                         <swiper-slide class="flex justify-center items-start">
-                            <a href="https://www.instagram.com/p/DTyJN4yCfyo/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
+                            <a href="https://www.instagram.com/p/DT-zAhwjRc8/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
                                 <div class="relative max-w-2xl mx-auto p-4 pb-10 group cursor-pointer">
-                                    <img class="events-image mb-2 object-top" loading="lazy" src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/meet-guides.jpg" alt="Meet Guides">
+                                    <img class="events-image mb-2 object-top" loading="lazy" src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/RTB.jpg" alt="Raising the bar Infographic">
                                     <p class="font-['Montserrat'] font-bold text-black text-2xl sm:text-3xl leading-tight mb-2">
-                                        Meet Guides 
+                                        OAAAPA X VGS: Raising The Bar
                                     </p>
                                     <p class="font-['Montserrat'] font-medium text-base sm:text-lg leading-relaxed text-gray-900">
-                                        DUE TO THE WINTER STORM THIS EVENT HAS BEEN MADE <a class="underline text-blue-500" href="https://virginia.zoom.us/j/93711736752?pwd=245K9MhR4PbbUrbdUSf1ptMVCKbaUm.1">VIRTUAL</a> (Passcode: 930753): 
-                                        Come hang out with current Guides on January 25 
-                                        from 4–6 PM! This is a great chance to learn more about the 
-                                        Virginia Guide Service, hear from current members, and ask any questions you have about finding your place 
-                                        in Guides. We'll be hosting multiple sessions created with and for APID, Black, Latinx, and Queer students, 
-                                        so you can join the space that feels right for you.
+                                        Join OAAAPA and Guides on Wednesday, January 28th 5pm-7pm for the first RTB of the semester! (If weather permits) 
+                                        It will be hosted at the PAC (first floor of Newcomb Hall) and food will be provided!
                                     </p>
                                 </div>
                             </a>
                         </swiper-slide>
+
                     </swiper>
             </div>
         </div>
