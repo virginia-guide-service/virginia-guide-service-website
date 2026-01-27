@@ -831,7 +831,7 @@ FRONT PAGE (virginiaguides.org)
                                     OAAAPA X VGS: Raising The Bar
                                 </p>
                                 <p class="font-['Montserrat'] font-medium text-base sm:text-lg leading-relaxed text-gray-900">
-                                    Join OAAAPA and Guides on Wednesday, January 28th 5pm-7pm for the first RTB of the semester! (If weather permits) 
+                                    Join OAAAPA and Guides on Wednesday, January 28th 5pm-7pm for the first RTB of the semester (if weather permits)! 
                                     It will be hosted at the PAC (first floor of Newcomb Hall) and food will be provided!
                                 </p>
                             </div>
