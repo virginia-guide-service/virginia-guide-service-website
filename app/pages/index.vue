@@ -808,7 +808,7 @@ FRONT PAGE (virginiaguides.org)
                     <swiper-slide class="flex justify-center items-start">
                         <a href="https://www.instagram.com/p/DTqzVa_CfFw/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
                             <div class="relative max-w-2xl mx-auto p-4 pb-10 group cursor-pointer">
-                                <img class="events-image mb-2 object-top" loading="lazy" src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/shine-with-guides.jpg" alt="Shine with Guides Infographic">
+                                <img class="events-image mb-2 object-top" loading="lazy" src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/shine.jpg" alt="Shine with Guides Infographic">
                                 <p class="font-['Montserrat'] font-bold text-black text-2xl sm:text-3xl leading-tight mb-2">
                                     Shine with Guides: Spring 2026 Recruitment
                                 </p>
