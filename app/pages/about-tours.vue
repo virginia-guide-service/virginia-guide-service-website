@@ -225,7 +225,7 @@
                         </p>
                         <!--Request Tour Button-->
                         <div class="w-full flex justify-start">
-                            <a href="/your-visit#times-and-registration">
+                            <a href="https://www.descendantsuva.org/tours">
                                 <button class="flex items-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-2 sm:px-6 sm:py-2 md:px-8 md:py-3 shadow-sm hover:bg-gray-100 hover:scale-105 hover:shadow-md transition-all duration-300 ease-in-out cursor-pointer">
                                     <p class="font-['Roboto'] text-gray-800 font-semibold text-sm sm:text-base md:text-lg">
                                         Request Tour
