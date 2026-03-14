@@ -62,31 +62,31 @@
                     <!--Same 5 slides (doubled)-->
                     <a href="/about-tours/#history-of-women-at-uva-tour">
                         <div class="slide flex flex-col justify-start">
-                            <img class="carousel-img" src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/carousel-history-tours/UVAhistoryCarousel_womenatuva.jpg" loading="lazy" alt="">
+                            <img class="carousel-img" src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/carousel-history-tours/UVAhistoryCarousel_womenatuva.jpg" alt="">
                             <p class="carousel-text self-start text-white font-['Roboto']">History of Women at UVA</p>
                         </div>
                     </a>
                     <a href="/about-tours/#history-of-african-americans-tour">
                         <div class="slide flex flex-col">
-                            <img class="carousel-img object-top" src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/carousel-history-tours/UVAhistoryCarousel_africanamericansatuva.jpg" loading="lazy" alt="">
+                            <img class="carousel-img object-top" src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/carousel-history-tours/UVAhistoryCarousel_africanamericansatuva.jpg" alt="">
                             <p class="carousel-text self-start text-white font-['Roboto']">History of African-Americans at UVA</p>
                         </div>
                     </a>
                     <a href="/about-tours/#garden-tours">
                         <div class="slide flex flex-col">
-                            <img class="carousel-img" src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/carousel-history-tours/UVAhistoryCarousel_GardenTours.jpg" loading="lazy" alt="">
+                            <img class="carousel-img" src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/carousel-history-tours/UVAhistoryCarousel_GardenTours.jpg" alt="">
                             <p class="carousel-text self-start text-white font-['Roboto']">Garden Tours</p>
                         </div>
                     </a>
                     <a href="/about-tours/#MEL-tour">
                         <div class="slide flex flex-col">
-                            <img class="carousel-img" src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/carousel-history-tours/UVAhistoryCarousel_MEL.jpeg" loading="lazy" alt="">
+                            <img class="carousel-img" src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/carousel-history-tours/UVAhistoryCarousel_MEL.jpeg" alt="">
                             <p class="carousel-text self-start text-white font-['Roboto']">Memorial to Enslaved Laborers</p>
                         </div>
                     </a>
                     <a href="/about-tours/#childrens-tours">
                         <div class="slide flex flex-col">
-                            <img class="carousel-img" src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/carousel-history-tours/UVAhistoryCarousel_childrenstour.jpg" loading="lazy" alt="">
+                            <img class="carousel-img" src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/carousel-history-tours/UVAhistoryCarousel_childrenstour.jpg" alt="">
                             <p class="carousel-text self-start text-white font-['Roboto']">Children's Tour</p>
                         </div>
                     </a>
@@ -95,3 +95,109 @@
         </div>
     </section>
 </template>
+
+<style>
+/* === Explore UVA History Carousel === */
+.carousel-body {
+    width: 100%;
+    height: var(--height);
+    display: grid;
+    place-items: center;
+}
+.slider {
+    height: 400px;
+    margin: auto;
+    position: relative;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+/* Track that continuously scrolls */
+.slide-track {
+    display: flex;
+    /* 10 slides × 350px */
+    width: calc(350px * 10);
+    animation: scroll 15s linear infinite;
+    will-change: transform;
+}
+/* Left-to-right scrolling animation */
+@keyframes scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(calc(-350px * 5)); }
+}
+/* Pause scrolling on hover */
+.slide-track:hover {
+    animation-play-state: paused;
+}
+/* Individual slide */
+.slide {
+    height: 250px;
+    width: 350px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    perspective: 100px;
+}
+/* Carousel image styling */
+.carousel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1s;
+}
+/* Slight pop-out effect on hover */
+.carousel-img:hover {
+    transform: translateZ(12px);
+    cursor: pointer;
+}
+/* Text overlay */
+.carousel-text {
+    transition: opacity 0.3s ease;
+}
+/* Hide text when image is hovered */
+.slide:hover .carousel-img + .carousel-text {
+    opacity: 0;
+    pointer-events: none;
+}
+ 
+/* === Responsive overrides === */
+ 
+/* Tablet (640px – 1023px) */
+@media (max-width: 1023px) {
+    .slide {
+        width: 280px;
+        height: 220px;
+        padding: 12px;
+    }
+    .slide-track {
+        width: calc(280px * 10);
+    }
+    @keyframes scroll {
+        0%   { transform: translateX(0); }
+        100% { transform: translateX(calc(-280px * 5)); }
+    }
+}
+ 
+/* Mobile (< 640px) */
+@media (max-width: 639px) {
+    .slider {
+        height: 260px;
+    }
+    .slide {
+        width: 200px;
+        height: 180px;
+        padding: 8px;
+    }
+    .slide-track {
+        width: calc(200px * 10);
+    }
+    @keyframes scroll {
+        0%   { transform: translateX(0); }
+        100% { transform: translateX(calc(-200px * 5)); }
+    }
+    .carousel-text {
+        font-size: 0.75rem;
+    }
+}
+</style>
