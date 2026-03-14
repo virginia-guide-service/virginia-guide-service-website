@@ -617,7 +617,7 @@ FRONT PAGE (virginiaguides.org)
                     RIGHT COLUMN: Event Image Carousel
                     Swiper slider with event cards linking to Instagram posts
                     ======================================== -->
-                <div v-if="isMounted">
+                <div v-if="isMounted" class="w-full md:w-3/5">
                     <swiper
                         :slides-per-view="1"
                         :slides-per-group="1"
@@ -728,11 +728,23 @@ FRONT PAGE (virginiaguides.org)
     /* Event images */
     .events-image {
         width: 100%;
-        height: 450px;
-        object-fit: cover;     
+        height: 250px;
+        object-fit: cover;
+    }
+
+    @media (min-width: 640px) {
+        .events-image {
+            height: 350px;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .events-image {
+            height: 450px;
+        }
     }
     /* === Link Cards Swiper === */
-    .mySwiper{
+    .mySwiper {
         width: 100%;
         padding: 40px 40px;
     }
