@@ -23,7 +23,7 @@
     </section>
     
     <!-- Explore UVA History Section -->
-    <ExploreUVAHistoryWhite />
+    <ExploreUVAHistory />
 
     <!--Footer Section-->
     <Footer />
@@ -33,7 +33,7 @@
 <script setup>
     import { onMounted } from "vue"
     import Footer from '~/components/Footer.vue'
-    import ExploreUVAHistoryWhite from '~/components/ExploreUVAHistoryWhite.vue';
+    import ExploreUVAHistory from '~/components/ExploreUVAHistory.vue';
 
     useHead({
         title: 'Donate | Virginia Guides Service',

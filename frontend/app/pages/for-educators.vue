@@ -154,7 +154,7 @@
     <TourReviews />
 
     <!-- Explore UVA History Section -->
-    <ExploreUVAHistoryBlue />
+    <ExploreUVAHistory blue />
 
     <!--Footer Section-->
     <Footer />
@@ -164,7 +164,7 @@
 <script setup>
     import { onMounted } from "vue"
     import Footer from '~/components/Footer.vue'
-    import ExploreUVAHistoryBlue from '~/components/ExploreUVAHistoryBlue.vue';
+    import ExploreUVAHistory from '~/components/ExploreUVAHistory.vue';
     import TourReviews from '~/components/TourReviews.vue'
 
     useHead({

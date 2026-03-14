@@ -239,7 +239,7 @@
     </section>
 
     <!-- Explore UVA History Section -->
-    <ExploreUVAHistoryBlue />
+    <ExploreUVAHistory blue />
 
     <!--Footer Section-->
     <Footer />
@@ -250,7 +250,7 @@
     import { ref } from 'vue';
     import { onMounted } from "vue"
     import Footer from '~/components/Footer.vue'
-    import ExploreUVAHistoryBlue from '~/components/ExploreUVAHistoryBlue.vue';
+    import ExploreUVAHistory from '~/components/ExploreUVAHistory.vue';
 
     useHead({
         title: 'Join Guides | Virginia Guides Service',

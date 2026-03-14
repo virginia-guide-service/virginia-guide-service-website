@@ -563,7 +563,7 @@
     </section>
 
     <!-- Explore UVA History Section -->
-    <ExploreUVAHistoryWhite />
+    <ExploreUVAHistory />
 
     <!--Footer Section-->
     <Footer />
@@ -575,7 +575,7 @@
     import { onMounted } from "vue"
     import { ref } from 'vue'
     import Footer from '~/components/Footer.vue'
-    import ExploreUVAHistoryWhite from '~/components/ExploreUVAHistoryWhite.vue';
+    import ExploreUVAHistory from '~/components/ExploreUVAHistory.vue';
 
     useHead({
         title: 'Take a Tour & Plan Your Visit | Virginia Guides Service',

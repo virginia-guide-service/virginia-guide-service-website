@@ -565,7 +565,7 @@ FRONT PAGE (virginiaguides.org)
          EXPLORE UVA HISTORY SECTION
          Imported component with historical tour content (components/ExploreUVAHistoryBlue.vue)
      ======================================== -->
-    <ExploreUVAHistoryBlue />
+    <ExploreUVAHistory blue />
 
     <!-- ========================================
         TOUR REVIEWS CAROUSEL SECTION
@@ -766,7 +766,7 @@ FRONT PAGE (virginiaguides.org)
 
     /* Components */
     import Footer from '~/components/Footer.vue';
-    import ExploreUVAHistoryBlue from '~/components/ExploreUVAHistoryBlue.vue';
+    import ExploreUVAHistory from '~/components/ExploreUVAHistory.vue';
     import TourReviews from '~/components/TourReviews.vue'
 
     /* Page Metadata

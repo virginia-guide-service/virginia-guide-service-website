@@ -110,14 +110,14 @@
         display: flex;
         flex-direction: column;
         border: 1px solid #f0f0f0;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
         transition: all 0.3s ease-in-out;
     }
 
     .review-card:hover {
         border-color: #E57200;
         transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     }
 
     .review-card-header {
