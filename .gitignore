@@ -1,23 +1,113 @@
-
-# Nuxt build
+# Frontend (Nuxt/Vue)
 .nuxt
 .output
 node_modules
 dist
-
-# Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Env files
+# Backend (Django/Python)
+*.log
+*.pot
+*.pyc
+*.py[cod]
+*$py.class
+__pycache__
+db.sqlite3
+media
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+*.manifest
+*.spec
+
+# Unit test / coverage
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Environments
 .env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+myenv/
+
+# Jupyter
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# mypy
+.mypy_cache/
+
+# IDEs & Editors
+.idea/
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/dictionaries
+.idea/**/shelf
+.idea/**/aws.xml
+.idea/**/contentModel.xml
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
+.idea/**/gradle.xml
+.idea/**/libraries
+atlassian-ide-plugin.xml
+*.iws
+out/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history
+*.sublime-workspace
+*.sublime-project
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+sftp-config.json
+
+# Misc
+.DS_Store
+*.bak
+/site
+google_auth.apps.googleusercontent.com.json
 
 # Large Files (Images)
 public/
 
-# Mac Files
-.DS_Store
-
-# not used in production
+# Not used in production
 app/pages/request-specialty-tours.vue
