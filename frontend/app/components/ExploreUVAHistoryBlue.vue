@@ -173,7 +173,7 @@
     .slide-track {
         width: calc(280px * 10);
     }
-    @keyframes scroll {
+    @keyframes scroll-history-carousel {
         0%   { transform: translateX(0); }
         100% { transform: translateX(calc(-280px * 5)); }
     }

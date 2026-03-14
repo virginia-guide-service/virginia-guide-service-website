@@ -122,7 +122,7 @@
     will-change: transform;
 }
 /* Left-to-right scrolling animation */
-@keyframes scroll {
+@keyframes scroll-history-carousel {
     0%   { transform: translateX(0); }
     100% { transform: translateX(calc(-350px * 5)); }
 }
@@ -173,7 +173,7 @@
     .slide-track {
         width: calc(280px * 10);
     }
-    @keyframes scroll {
+    @keyframes scroll-history-carousel {
         0%   { transform: translateX(0); }
         100% { transform: translateX(calc(-280px * 5)); }
     }
@@ -192,7 +192,7 @@
     .slide-track {
         width: calc(200px * 10);
     }
-    @keyframes scroll {
+    @keyframes scroll-history-carousel {
         0%   { transform: translateX(0); }
         100% { transform: translateX(calc(-200px * 5)); }
     }
