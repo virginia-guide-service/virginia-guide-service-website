@@ -259,7 +259,7 @@
     </section>
 
     <!-- Explore UVA History Section -->
-    <ExploreUVAHistoryWhite />
+    <ExploreUVAHistory />
 
     <!--Footer Section-->
     <Footer />
@@ -269,7 +269,7 @@
 <script setup lang="ts">
     import { onMounted, ref, watch, nextTick } from "vue"
     import Footer from '~/components/Footer.vue'
-    import ExploreUVAHistoryWhite from '~/components/ExploreUVAHistoryWhite.vue'
+    import ExploreUVAHistory from '~/components/ExploreUVAHistory.vue'
 
     useHead({
         title: 'Specialty Tour Request | Virginia Guides Service',
