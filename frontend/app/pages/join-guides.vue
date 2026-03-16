@@ -31,12 +31,12 @@
 
                 <!-- Right: Text -->
                 <div class="scrollElement w-full lg:w-1/2">
-                    <p class="font-['Montserrat'] text-center lg:text-start text-base sm:text-lg leading-relaxed text-gray-900 pt-5">
+                    <p class="font-['Montserrat'] text-start text-base sm:text-lg leading-relaxed text-gray-900 pt-5">
                         The Virginia Guide Service, founded in 1951, is a completely student-run and independent organization dedicated 
                         to preserving and sharing the history of the University of Virginia. Through honest, inclusive, and engaging storytelling, 
                         our guides strive to represent the diversity of student experiences while fostering a welcoming environment for all visitors.
                     </p>
-                    <p class="font-['Montserrat'] text-center lg:text-start text-base sm:text-lg leading-relaxed text-gray-900 pt-5">
+                    <p class="font-['Montserrat'] text-start text-base sm:text-lg leading-relaxed text-gray-900 pt-5 pb-5">
                         Each semester, new trainees undergo a rigorous training process where they study UVA’s history, practice essential 
                         tour-giving skills, and receive mentorship from experienced guides, professors, and community leaders. Together, we are committed to 
                         providing the highest quality tour experience while honoring and expanding the University’s historical narrative—ensuring it remains 
@@ -88,7 +88,7 @@
         <!--Step 1 and 2 Container-->
         <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <!--Step 1-->
-            <div class="scrollElement text-center sm:text-start">
+            <div class="scrollElement text-start">
                 <h1 class="font-Roboto text-lg sm:text-xl font-bold italic pb-2">
                     Step 1: Attend an Info Session and Learn About the Virginia Guides Service
                 </h1>
@@ -108,7 +108,7 @@
 
             <!--Info Sessions and Step 2-->
             <div class="flex flex-col lg:flex-row">
-                <div class="w-full text-center sm:text-start">
+                <div class="w-full text-start">
                     <p class="scrollElement font-Roboto font-light text-base sm:text-lg italic pt-5 pb-2">
                         <span class="font-bold">Info Sessions:</span>
                         We ask that you attend an information session to learn more about the Virginia Guide Service and 
@@ -157,8 +157,8 @@
 
         <!--Banner-->
         <div>
-            <div class="scrollElement w-full bg-dark-green text-center py-6 px-10 lg:px-20 flex justify-center items-center">
-                <span class="font-Roboto text-white text-center text-base sm:text-lg md:text-md">
+            <div class="scrollElement w-full bg-dark-green py-6 px-5 lg:px-20 flex justify-center items-center">
+                <span class="font-Roboto text-white text-base sm:text-lg md:text-md">
                     To begin writing, we encourage you to refer to this <a href="https://docs.google.com/document/d/1SgT3gxmUICInw1gs1LGYnTQ4pzVWFVgJZrtIZ2Z4Mes/edit?usp=sharing" class="underline">historical fact sheet</a>
                     we have put together for you. Once you have written your tour, we recommend practicing giving your tour before you do so officially. 
                     As you prepare, please reach out to our Recruitment Co-Chairs, Natalie <a href="mailto:wmz4hj@virginia.edu" class="underline">(wmz4hj@virginia.edu)</a>
@@ -173,7 +173,7 @@
         <!--Step 3 and 4 Container-->
         <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <!--Step 3-->
-            <div class="scrollElement text-center sm:text-start">
+            <div class="scrollElement text-start">
                 <h1 class="font-Roboto text-lg sm:text-xl font-bold italic pb-2">
                     Step 3: Give Your Trial Tour
                 </h1>
@@ -194,7 +194,7 @@
             </div>
 
             <!--Step 4-->
-            <div class="scrollElement text-center sm:text-start">
+            <div class="scrollElement text-start">
                 <h1 class="font-Roboto text-lg sm:text-xl font-bold italic mb-2 pt-5">
                     Step 4: Interview
                 </h1>
@@ -293,7 +293,7 @@
     /* Infinite Autoscroll Text Banner */
     .running-text-container {
         /* margin: 20px; */
-        font-size: 5em;
+        font-size: clamp(1.5rem, 6vw, 5em);
         /* padding-block: 8px;
         border-block: 1px solid; */
         overflow: hidden;
