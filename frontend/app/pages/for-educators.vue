@@ -20,17 +20,17 @@
 
         <div class="shadow-lg p-6 max-w-2xl mx-auto text-center bg-royal-blue">
             <div class="flex flex-col sm:flex-row justify-evenly items-center gap-4 text-white">
-                <a href="/join-guides" class="group relative text-white text-lg md:text-base font-bold tracking-wide transition-colors duration-300">
+                <a href="/join-guides" class="group relative py-1 text-sm font-bold tracking-widest uppercase transition-colors duration-300">
                     About Us
-                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 ease-out group-hover:w-full"></span>
                 </a>
                 <a href="/your-visit#times-and-registration" 
-                    class="px-6 py-2 bg-white text-royal-blue text-lg md:text-base font-black uppercase tracking-tighter rounded shadow-sm hover:shadow-md hover:bg-gray-100 active:scale-95 transition-all duration-200">
+                    class="px-6 py-2 bg-white text-royal-blue text-xs md:text-sm font-black uppercase tracking-widest rounded shadow-md hover:bg-gray-50 active:scale-95 transition-all duration-200">
                     Request a Tour
                 </a>
-                <a href="/about-tours#specialty-tours" class="group relative text-white text-lg md:text-base font-bold tracking-wide transition-colors duration-300">
+                <a href="/about-tours#specialty-tours" class="group relative py-1 text-sm font-bold tracking-widest uppercase transition-colors duration-300">
                     Other Tours
-                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 ease-out group-hover:w-full"></span>
                 </a>
             </div>
         </div>
