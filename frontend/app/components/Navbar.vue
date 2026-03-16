@@ -33,10 +33,7 @@
     </div>
 
     <!-- Mobile Dropdown Menu -->
-    <transition
-      name="fade-slide"
-      appear
-    >
+    <transition name="fade-slide" appear>
       <nav
         v-if="navOpen"
         class="fixed inset-0 z-50 xl:hidden bg-white/80 backdrop-blur-lg text-black flex flex-col justify-center items-center space-y-6 transition-all duration-500 ease-in-out"
@@ -59,48 +56,12 @@
 
         <!-- Navigation Links -->
         <div class="flex flex-col justify-center items-center h-full text-center space-y-6">
-          <a
-            href="/about-tours"
-            class="font-['Montserrat'] uppercase text-2xl font-medium hover:text-orange-500 transition-colors duration-200"
-            @click="navOpen = false"
-          >
-            About Tours
-          </a>
-          <a
-            href="/join-guides"
-            class="font-['Montserrat'] uppercase text-2xl font-medium hover:text-orange-500 transition-colors duration-200"
-            @click="navOpen = false"
-          >
-            Join Guides
-          </a>
-          <a
-            href="/for-educators"
-            class="font-['Montserrat'] uppercase text-2xl font-medium hover:text-orange-500 transition-colors duration-200"
-            @click="navOpen = false"
-          >
-            For Educators
-          </a>
-          <a
-            href="/feedback"
-            class="font-['Montserrat'] uppercase text-2xl font-medium hover:text-orange-500 transition-colors duration-200"
-            @click="navOpen = false"
-          >
-            Feedback
-          </a>
-          <a
-            href="/donate"
-            class="font-['Montserrat'] uppercase text-2xl font-medium hover:text-orange-500 transition-colors duration-200"
-            @click="navOpen = false"
-          >
-            Donate
-          </a>
-          <a
-            href="/your-visit"
-            class="font-['Montserrat'] uppercase text-2xl font-semibold text-orange-500 hover:text-orange-700 transition-colors duration-200 pt-4 border-t border-orange-500"
-            @click="navOpen = false"
-          >
-            Take a Tour
-          </a>
+          <a href="/about-tours" class="font-['Montserrat'] uppercase text-2xl font-medium hover:text-orange-500 transition-colors duration-200" @click="navOpen = false">About Tours</a>
+          <a href="/join-guides" class="font-['Montserrat'] uppercase text-2xl font-medium hover:text-orange-500 transition-colors duration-200" @click="navOpen = false">Join Guides</a>
+          <a href="/for-educators" class="font-['Montserrat'] uppercase text-2xl font-medium hover:text-orange-500 transition-colors duration-200" @click="navOpen = false">For Educators</a>
+          <a href="/feedback" class="font-['Montserrat'] uppercase text-2xl font-medium hover:text-orange-500 transition-colors duration-200" @click="navOpen = false">Feedback</a>
+          <a href="/donate" class="font-['Montserrat'] uppercase text-2xl font-medium hover:text-orange-500 transition-colors duration-200" @click="navOpen = false">Donate</a>
+          <a href="/your-visit" class="font-['Montserrat'] uppercase text-2xl font-semibold text-orange-500 hover:text-orange-700 transition-colors duration-200 pt-4 border-t border-orange-500 active:scale-95" @click="navOpen = false">Take a Tour</a>
         </div>
       </nav>
     </transition>
@@ -121,45 +82,13 @@
 
       <!-- Navigation Links (Right Side) -->
       <div class="flex items-center gap-x-6">
-        <a href="/about-tours">
-          <button
-            class="font-['Montserrat'] font-medium bg-transparent hover:bg-royal-blue hover:text-white rounded-full px-5 py-2 cursor-pointer transition duration-250"
-          >
-            ABOUT TOURS
-          </button>
-        </a>
-        <a href="/join-guides">
-          <button
-            class="font-['Montserrat'] font-medium bg-transparent hover:bg-royal-blue hover:text-white rounded-full px-5 py-2 cursor-pointer transition duration-250"
-          >
-            JOIN GUIDES
-          </button>
-        </a>
-        <a href="/for-educators">
-          <button
-            class="font-['Montserrat'] font-medium bg-transparent hover:bg-royal-blue hover:text-white rounded-full px-5 py-2 cursor-pointer transition duration-250"
-          >
-            FOR EDUCATORS
-          </button>
-        </a>
-        <a href="/feedback">
-          <button
-            class="font-['Montserrat'] font-medium bg-transparent hover:bg-royal-blue hover:text-white rounded-full px-5 py-2 cursor-pointer transition duration-250"
-          >
-            FEEDBACK
-          </button>
-        </a>
-        <a href="/donate">
-          <button
-            class="font-['Montserrat'] font-medium bg-transparent hover:bg-royal-blue hover:text-white rounded-full px-5 py-2 cursor-pointer transition duration-250"
-          >
-            DONATE
-          </button>
-        </a>
+        <a href="/about-tours" class="nav-link font-['Montserrat'] font-medium px-5 py-2 cursor-pointer">ABOUT TOURS</a>
+        <a href="/join-guides" class="nav-link font-['Montserrat'] font-medium px-5 py-2 cursor-pointer">JOIN GUIDES</a>
+        <a href="/for-educators" class="nav-link font-['Montserrat'] font-medium px-5 py-2 cursor-pointer">FOR EDUCATORS</a>
+        <a href="/feedback" class="nav-link font-['Montserrat'] font-medium px-5 py-2 cursor-pointer">FEEDBACK</a>
+        <a href="/donate" class="nav-link font-['Montserrat'] font-medium px-5 py-2 cursor-pointer">DONATE</a>
         <a href="/your-visit">
-          <button
-            class="font-['Montserrat'] font-medium text-white bg-UVA-orange hover:bg-orange-800 hover:scale-105 rounded-full px-5 py-2 cursor-pointer transition duration-250"
-          >
+          <button class="font-['Montserrat'] font-medium text-white bg-UVA-orange hover:bg-orange-800 hover:scale-105 rounded-full px-5 py-2 cursor-pointer transition duration-250 active:scale-95">
             TAKE A TOUR
           </button>
         </a>
@@ -174,7 +103,6 @@ import { ref, onMounted, onUnmounted } from 'vue'
 const navOpen = ref(false)
 const isScrolled = ref(false)
 
-// only affects desktop header
 const handleScroll = () => {
   isScrolled.value = window.scrollY > 200
 }
@@ -189,7 +117,6 @@ onUnmounted(() => {
 </script>
 
 <style>
-  /* Vue transition for dropdown */
   .fade-slide-enter-active,
   .fade-slide-leave-active {
     transition: opacity 0.5s ease, transform 0.5s ease;
@@ -203,5 +130,23 @@ onUnmounted(() => {
   .fade-slide-leave-from {
     opacity: 1;
     transform: translateY(0);
+  }
+
+  .nav-link {
+    position: relative;
+    padding-bottom: 4px;
+  }
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 1.25rem;
+    width: 0;
+    height: 2px;
+    background-color: currentColor;
+    transition: width 0.3s ease;
+  }
+  .nav-link:hover::after {
+    width: calc(100% - 2.5rem);
   }
 </style>
