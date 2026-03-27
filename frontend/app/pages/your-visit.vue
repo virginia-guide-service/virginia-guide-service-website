@@ -74,17 +74,18 @@
         <!-- Left: Text -->
         <div class="w-full lg:w-1/2 px-5 lg:px-0">
             <p class="scrollElement font-['Montserrat'] text-center lg:text-left font-medium text-dark-green text-4xl sm:text-5xl leading-tight mb-4">
-            HISTORICAL TOURS
+                HISTORICAL TOURS
             </p>
             <p class="scrollElement font-['Montserrat'] text-base sm:text-lg leading-relaxed text-gray-900 pb-5">
                 From its founding to the Civil War. From the Civil Rights Movement to the present day, 
                 student-led history tours trace over 200 years of change, resistance, and community. 
                 Tours navigate the outdoor grounds of the UNESCO World Heritage Site and are written by 
                 students after a semester of intensive training, research, and critical reflection.
+            </p>
+
             <p class="scrollElement font-['Montserrat'] text-base sm:text-lg leading-relaxed text-gray-900 pb-5">
                 <span class="font-bold">All tours are free of charge</span>,
                 regardless of group size.
-            </p> 
             </p>
             <p class="font-['Montserrat'] scrollElement text-sm italic opacity-75 border-t pt-5">
                 The University of Virginia expects parents or guardians to provide supervision over minors on University property. 

@@ -77,12 +77,11 @@
                                 </li>
                             </ul>
                             <!--Button-->
-                            <NuxtLink to="/your-visit#times-and-registration" class="justify-center items-center pt-3">
-                                <button class="rounded-full bg-dark-green px-6 py-2 shadow-md hover:shadow-lg hover:bg-green-700 hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer">
-                                    <p class="font-['Roboto'] text-white text-base font-medium">
-                                        Register Here
-                                    </p>
-                                </button>
+                            <NuxtLink 
+                                to="/your-visit#times-and-registration"
+                                class="inline-block rounded-full bg-dark-green px-6 py-2 shadow-md hover:shadow-lg hover:bg-green-700 hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer font-['Roboto'] text-white text-base font-medium"
+                            >
+                                Register Here
                             </NuxtLink>
                         </div>
                     </div>
