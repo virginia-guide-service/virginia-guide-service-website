@@ -273,6 +273,7 @@ class FeedbackSerializer(serializers.ModelSerializer):
 
     time = serializers.TimeField(
         required=True,
+        input_formats=["%H:%M", "%H:%M:%S"],
         error_messages={
             'invalid': 'Please enter a valid time.',
             'required': 'Time is required.',
