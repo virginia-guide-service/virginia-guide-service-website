@@ -250,6 +250,8 @@ def submit_feedback(request):
     serializer = FeedbackSerializer(data=request.data)
     if serializer.is_valid():
 
+        feedback = serializer.save()
+
         # BACKUP: save submission in DB
         FeedbackBackup.objects.create(
             first_name=feedback.first_name,
@@ -268,7 +270,6 @@ def submit_feedback(request):
             other_comments=feedback.other_comments
         )
     
-        feedback = serializer.save()
         time_formatted = feedback.time.strftime("%-I:%M %p")
         
         # Email sending logic (unchanged)
