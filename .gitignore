@@ -106,9 +106,3 @@ sftp-config.json
 *.bak
 /site
 google_auth.apps.googleusercontent.com.json
-
-# Large Files (Images)
-public/
-
-# Not used in production
-app/pages/request-specialty-tours.vue
