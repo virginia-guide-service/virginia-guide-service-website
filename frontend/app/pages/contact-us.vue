@@ -27,20 +27,20 @@
                         <div class="text-base md:text-lg font-light flex flex-col gap-3">
                             <p>Got questions or want to plan a tour with us? We'd love to hear from you!</p>
                             <p>Let's get in touch.</p>
-                            <p>If you would like to personally contact our chairs, <a href="mailto:jyr7db@virginia.edu, xuy8gc@virginia.edu, gut6hv@virginia.edu" class="underline">Nina, Rose, and Kendyl</a>, feel free to do so as well!</p>
+                            <p>If you would like to personally contact our chairs, <a href="mailto:vmv8gp@virginia.edu, xej7ej@virginia.edu, xcd7vc@virginia.edu" class="underline">Gelila, Holden, and Alice</a>, feel free to do so as well!</p>
                         </div>
                     </div>
 
                     <!--Icons and Links-->
                     <div class="text-base md:text-lg font-light flex flex-col gap-3">
                     <div class="flex items-center gap-2 justify-center md:justify-start">
-                        <a href="mailto:jyr7db@virginia.edu, xuy8gc@virginia.edu, gut6hv@virginia.edu">
+                        <a href="mailto:vmv8gp@virginia.edu, xej7ej@virginia.edu, xcd7vc@virginia.edu">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
                             <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
                             <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
                         </svg>
                         </a>
-                        <a href="mailto:jyr7db@virginia.edu, xuy8gc@virginia.edu, gut6hv@virginia.edu">
+                        <a href="mailto:vmv8gp@virginia.edu, xej7ej@virginia.edu, xcd7vc@virginia.edu">
                         <p>Contact the chairs</p>
                         </a>
                     </div>
