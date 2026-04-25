@@ -38,6 +38,7 @@ MAILGUN_API_KEY = os.getenv("MAILGUN_API_KEY")
 SCHEDULER_EMAIL1 = os.getenv("EMAIL_SCHEDULER_RECEIVER")
 CHAIR_EMAIL1 = os.getenv("EMAIL_CHAIR_RECEIVER")
 CHAIR_EMAIL2 = os.getenv("EMAIL_CHAIR_RECEIVER2")
+CHAIR_EMAIL3 = os.getenv("EMAIL_CHAIR_RECEIVER3")
 
 
 def is_exec_team(user):
@@ -297,7 +298,7 @@ def submit_feedback(request):
                 auth=("api", MAILGUN_API_KEY),
                 data={
                     "from": f"Virginia Guides Website <no-reply@{MAILGUN_DOMAIN}>",
-                    "to": [CHAIR_EMAIL1, CHAIR_EMAIL2],
+                    "to": [CHAIR_EMAIL1, CHAIR_EMAIL2, CHAIR_EMAIL3],
                     "subject": f"[FEEDBACK] Feedback for {feedback.tour_type} ({feedback.date})",
                     "text": full_message,
                     "h:Reply-To": reply_to
@@ -370,7 +371,7 @@ def contact_us(request):
                 auth=("api", MAILGUN_API_KEY),
                 data={
                     "from": f"{contact_us.first_name} {contact_us.last_name} via Virginia Guides Website <no-reply@{MAILGUN_DOMAIN}>",
-                    "to": [CHAIR_EMAIL1, CHAIR_EMAIL2],
+                    "to": [CHAIR_EMAIL1, CHAIR_EMAIL2, CHAIR_EMAIL3],
                     "subject": f"[GUIDES WEBSITE - CONTACT US FORM] {contact_us.subject}",
                     "text": full_message,
                     "h:Reply-To": reply_to,

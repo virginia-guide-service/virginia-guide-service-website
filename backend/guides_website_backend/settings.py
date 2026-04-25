@@ -36,6 +36,7 @@ SCHEDULER_EMAIL = os.getenv("EMAIL_SCHEDULER_RECEIVER")
 SCHEDULER_EMAIL2 = os.getenv("EMAIL_SCHEDULER_RECEIVER2")
 CHAIR_EMAIL = os.getenv("EMAIL_CHAIR_RECEIVER")
 CHAIR_EMAIL2 = os.getenv("EMAIL_CHAIR_RECEIVER2")
+CHAIR_EMAIL3 = os.getenv("EMAIL_CHAIR_RECEIVER3")
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent

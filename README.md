@@ -113,10 +113,11 @@ MAILGUN_API_KEY=your_mailgun_api_key
 MAILGUN_DOMAIN=virginiaguides.org
 DEFAULT_FROM_EMAIL=no-reply@virginiaguides.org
 
-# Scheduler & Chair email recipients (update for production)
+# Scheduler, Chair, Vice Chair email recipients (update for production)
 EMAIL_SCHEDULER_RECEIVER=tech@virginiaguides.org
 EMAIL_CHAIR_RECEIVER=tech@virginiaguides.org
 EMAIL_CHAIR_RECEIVER2=tech@virginiaguides.org
+EMAIL_CHAIR_RECEIVER3=tech@virginiaguides.org
 
 # Local dev email testing only (remove in production)
 EMAIL_HOST=mail.virginiaguides.org
