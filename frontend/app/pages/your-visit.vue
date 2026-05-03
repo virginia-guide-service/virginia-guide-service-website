@@ -563,7 +563,7 @@
             </details>
 
             <details class="group border-b pb-4">
-                <summary class="cursor-pointer text-xl sm:text-2xl xl:flex xl:justify-between xl:items-start">
+                <summary class="cursor-pointer text-xl sm:text-2xl font-medium xl:flex xl:justify-between xl:items-start">
                     <span class="text-[#DC8051] pl-5 xl:pl-0">What accommodations are available for deaf or hard-of-hearing visitors?</span>
                     <span class="text-[#DC8051] group-open:rotate-45 transition-transform hidden xl:block">+</span>
                 </summary>
