@@ -121,9 +121,9 @@
                         <span class="text-UVA-orange font-bold">02.</span>
                         <p class="font-['Montserrat'] text-gray-800 text-lg">
                             Exceptions to our schedule is
-                            <a class="underline" href="https://registrar.virginia.edu/calendar/academic">
-                                when classes are not in session.
-                            </a>
+                            <span class="underline" href="https://registrar.virginia.edu/calendar/academic">
+                                <a href="https://registrar.virginia.edu/calendar/academic">when classes are not in session.</a>
+                            </span> Any tours outside of the academic calendar are scheduled by request.
                         </p>
                     </li>
                     <li class="scrollElement flex gap-4">

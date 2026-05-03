@@ -212,9 +212,10 @@ FRONT PAGE (virginiaguides.org)
                         Links to UVA registrar for schedule exceptions
                         Positioned below the tour times card
                     -->
-                    <div class="relative flex justify-center lg:justify-end text-center text-stone-900 text-xs font-bold italic font-['Roboto'] mt-3">
+                    <div class="relative flex justify-center lg:justify-end text-center text-stone-900 text-sm font-bold italic font-['Roboto'] mt-3">
                         <p class="relative w-full max-w-sm sm:max-w-md">
-                            *Tour dates are subject to the Student Calendar. Some days may not have tours due to student breaks or finals. Click 
+                            *Tour dates are subject to the Student Calendar. Some days may not have tours due to student breaks or finals. Any tours outside of the 
+                            academic calendar are scheduled by request. Click 
                             <a href="https://registrar.virginia.edu/calendar/academic/2025-2026" class="underline">here</a> for details.
                         </p>
                     </div>
