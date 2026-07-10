@@ -100,35 +100,10 @@ python manage.py runserver
 
 The backend API will be running at `http://127.0.0.1:8000`.
 
-Create a `.env` file inside `backend/`:
-```
-# Django
-SECRET_KEY=your_django_secret_key
-DEBUG=True
-ALLOWED_HOSTS=localhost,127.0.0.1
-
-# Mailgun
-EMAIL_BACKEND=anymail.backends.mailgun.EmailBackend
-MAILGUN_API_KEY=your_mailgun_api_key
-MAILGUN_DOMAIN=virginiaguides.org
-DEFAULT_FROM_EMAIL=no-reply@virginiaguides.org
-
-# Scheduler, Chair, Vice Chair email recipients (update for production)
-EMAIL_SCHEDULER_RECEIVER=tech@virginiaguides.org
-EMAIL_CHAIR_RECEIVER=tech@virginiaguides.org
-EMAIL_CHAIR_RECEIVER2=tech@virginiaguides.org
-EMAIL_CHAIR_RECEIVER3=tech@virginiaguides.org
-
-# Local dev email testing only (remove in production)
-EMAIL_HOST=mail.virginiaguides.org
-EMAIL_PORT=587
-EMAIL_USE_TLS=True
-EMAIL_HOST_USER=no-reply@virginiaguides.org
-EMAIL_HOST_PASSWORD=your_email_host_password
-```
+Create a `.env` file inside `backend/` using `.env.example`
 
 > **Note:** The `EMAIL_HOST` block is for local development testing only.
-> In production, all email is handled through Mailgun.
+> In production, all email is handled through Mailgun, so you don't need to worry about the "# Recipients — use real addresses in production" block.
 
 ---
 
