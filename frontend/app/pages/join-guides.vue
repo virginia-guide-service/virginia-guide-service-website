@@ -96,12 +96,13 @@
                     Guides accepts new members at the beginning of each semester. These probationary members, known as “probies," 
                     spend a semester being trained by their Guides Probationary Chairs (fellow students and current Guides) and learning 
                     from older guides to prepare to give tours. Students trying out for Guides must be in their first, second, or third year, 
-                    and should be able to commit to attending weekly Probie Class - a crash course in UVA history led by your Probie Chair - 
+                    and should be able to commit to attending weekly Probie Class - a crash course in UVA history led by your Probie Chair(s) -
                     for three hours each Thursday night during their Probie Semester.
                 </p>
                 <p class="font-Roboto font-light text-base sm:text-lg">
-                    As the recruitment season begins, follow us on Instagram to keep up to date throughout the recruitment process! Our instagram
-                    will also give you a closer look at the regular happenings of the Virginia Guides Service-make sure to check out our student 
+                    As the recruitment season begins, follow us on <a href="https://www.instagram.com/virginiaguides/" class="underline text-blue-500">Instagram</a>
+                    (@virginiaguides) to keep up to date throughout the recruitment process! Our Instagram
+                    will also give you a closer look at the regular happenings of the Virginia Guides Service - make sure to check out our student
                     spotlights and takeovers, which let you hear from current Guides about their experiences in the organization!
                 </p>
             </div>
@@ -116,23 +117,19 @@
                         and learn more about what is expected of VGS members. Information sessions are <span class="font-bold underline">mandatory</span> and a great way to get your questions 
                         answered and better understand what makes VGS so great! In addition to our general information sessions, we have <span class="font-bold">BIPOC-centered information sessions</span>
                         as well. BIPOC Guides will be at these specialized info sessions to answer questions and discuss what it's like to identify within these communities while being part of VGS.
-                        Below is our info session schedule for Spring 2026.
+                        Below is our info session schedule for Fall 2026.
                     </p>
                     <ul class="scrollElement text-center font-Roboto text-base sm:text-lg pb-2">
                         <li class="font-bold ">General Information Sessions:</li>
-                        <li>Monday, January 26th 6:30 PM - 7:30 PM (MOVED <a class="underline text-blue-500" href="https://virginia.zoom.us/j/97903234893?pwd=gSXbR9jGhdDznmM4aZJ9fkbaA8afPC.1">ONLINE</a>)</li>
-                        <li>Wednesday, January 28th 6:30 PM - 7:30 PM @ MPR</li>
-                        <li>Friday, January 30th 4:00 PM - 5:00 PM @ MPR</li>
-                        <li>Saturday, January 31st 12:00 PM - 1:00 PM @ MPR</li>
-                        <li>Monday, February 2nd 7:30 PM - 8:30 PM @ Cocke Hall 101</li>
+                        <li>Monday, August 31st 7:30 PM - 8:30 PM @ TBD</li>
+                        <li>Tuesday, September 1st 5:00 PM - 6:00 PM @ TBD</li>
+                        <li>Wednesday, September 2nd 8:00 PM - 9:00 PM @ MPR</li>
                         <li class="font-bold pt-2">BIPOC Centered Information Sessions:</li>
-                        <li>Tuesday, January 27th 7:30 PM - 8:30 PM (MOVED <a class="underline text-blue-500" href="https://us05web.zoom.us/j/89324547703?pwd=CtZgycVEWFu1KmdplFOlad27cfBDaB.1">ONLINE</a>)</li>
-                        <li>Thursday, January 29th 6:30 PM - 7:30 PM @ MPR</li>
-                        <li class="text-UVA-orange italic font-bold pt-2">LW: Lower West Oval Room (inside the Rotunda basement)</li>
-                        <li class="text-UVA-orange italic font-bold">MPR: Multipurpose Room (beneath Rotunda steps)</li>
+                        <li>Thursday, September 3rd 5:00 PM - 6:00 PM @ MPR</li>
+                        <li class="text-UVA-orange italic font-bold pt-2">MPR: Multipurpose Room (beneath Rotunda steps)</li>
                     </ul>
                     <p class="scrollElement font-Roboto font-light text-base sm:text-lg italic">
-                        For additional Preparation we encourage all those planning on trying out to attend a tour the week of <span class="font-bold underline">January 18th</span> to get a better understanding of all our 
+                        For additional preparation we encourage all those planning on trying out to attend a tour the week of <span class="font-bold underline">August 31st</span> to get a better understanding of what all of our
                         tours encapsulate. While this is not a requirement by any means, the best way to learn what we do is to see it in action!
                     </p>
                     <div class="scrollElement">
@@ -140,12 +137,12 @@
                             Step 2: Prepare to Try Out
                         </h1>
                         <p class="font-Roboto font-light text-base sm:text-lg pb-2">
-                            For our Spring 2026 recruitment season, you will give a 15 minute historical “trial tour” of the Lawn area to two current Guides 
+                            For our Fall 2026 recruitment season, you will give a 15 minute historical “trial tour” of the Lawn area to two current Guides
                             (who will act as your "tourists"). The trial tour is meant to see how well you can craft an organized and meaningful tour, 
                             as well as to assess your public speaking abilities.
                         </p>
                         <p class="font-Roboto font-light text-base sm:text-lg">
-                            You will be able to sign up for a time slot between <span class="font-bold underline italic">February 2nd through the 7th</span> for your trial tour at one of our 
+                            You will be able to sign up for a time slot between <span class="font-bold underline italic">September 9th through the 11th</span> for your trial tour at one of our
                             info sessions (which is why it is important to attend a session)! Other sign-up opportunities may be offered, 
                             and will be announced via Instagram. If you can't make it to the sign-up times, or need to cancel or reschedule 
                             your trial tour for any reason, you can reach out to our Recruitment Co-Chairs to see what slots are available.
@@ -159,10 +156,10 @@
         <div>
             <div class="scrollElement w-full bg-dark-green py-6 px-5 lg:px-20 flex justify-center items-center">
                 <span class="font-Roboto text-white text-base sm:text-lg md:text-md">
-                    To begin writing, we encourage you to refer to this <a href="https://docs.google.com/document/d/1SgT3gxmUICInw1gs1LGYnTQ4pzVWFVgJZrtIZ2Z4Mes/edit?usp=sharing" class="underline">historical fact sheet</a>
+                    To begin writing, we encourage you to refer to this <a href="https://docs.google.com/document/d/1laZHtAQh7trmjpiTc3p2ktDJ_36Ti-eB62a1_8Sn2hA/edit?usp=sharing" class="underline underline-offset-2 decoration-2 text-blue-300 hover:text-blue-200 focus-visible:text-blue-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-200">historical fact sheet</a>
                     we have put together for you. Once you have written your tour, we recommend practicing giving your tour before you do so officially. 
-                    As you prepare, please reach out to our Recruitment Co-Chairs, Natalie <a href="mailto:wmz4hj@virginia.edu" class="underline">(wmz4hj@virginia.edu)</a>
-                     and Menna <a href="mailto:wab7sk@vriginia.edu" class="underline">(wab7sk@vriginia.edu)</a>, for any help you may need. 
+                    As you prepare, please reach out to our Recruitment Co-Chairs, Menna (<a href="mailto:wab7sk@vriginia.edu" class="underline underline-offset-2 decoration-2 text-blue-300 hover:text-blue-200 focus-visible:text-blue-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-200">wab7sk@vriginia.edu</a>)
+                     and Millie (<a href="mailto:zhm8zm@virginia.edu" class="underline underline-offset-2 decoration-2 text-blue-300 hover:text-blue-200 focus-visible:text-blue-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-200">zhm8zm@virginia.edu</a>), for any help you may need.
                     They are equipped to offer you advice on how to go about your tours, suggestions for what to include, 
                     and any help you might need to prepare! The Recruitment Co-Chairs have no say in the selection process, 
                     meaning that you can truly ask them anything - they're here to make sure you have the best possible experience trying out.
