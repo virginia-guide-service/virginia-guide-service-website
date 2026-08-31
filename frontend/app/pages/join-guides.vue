@@ -121,9 +121,10 @@
                     </p>
                     <ul class="scrollElement text-center font-Roboto text-base sm:text-lg pb-2">
                         <li class="font-bold ">General Information Sessions:</li>
-                        <li>Monday, August 31st 7:30 PM - 8:30 PM @ TBD</li>
-                        <li>Tuesday, September 1st 5:00 PM - 6:00 PM @ TBD</li>
+                        <li>Monday, August 31st 7:30 PM - 8:30 PM @ Cocke 101</li>
+                        <li>Tuesday, September 1st 7:00 PM - 8:00 PM @ New Cab 383</li>
                         <li>Wednesday, September 2nd 8:00 PM - 9:00 PM @ MPR</li>
+                        <li>Monday, September 7th 7:30 PM - 8:30 PM @ MPR</li>
                         <li class="font-bold pt-2">BIPOC Centered Information Sessions:</li>
                         <li>Thursday, September 3rd 5:00 PM - 6:00 PM @ MPR</li>
                         <li class="text-UVA-orange italic font-bold pt-2">MPR: Multipurpose Room (beneath Rotunda steps)</li>
