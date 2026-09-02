@@ -167,7 +167,7 @@ def register_tour(request):
 def register_specialty_tour(request):
     if not os.getenv("CLOUDFLARE_SECRET_KEY"):
         return Response(
-            {"error": "Captcha verification is temporarily unavailable. Please try again later."},
+            {"captcha": "Captcha verification is temporarily unavailable. Please try again later."},
             status=status.HTTP_503_SERVICE_UNAVAILABLE,
         )
 
