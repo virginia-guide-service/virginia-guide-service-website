@@ -705,7 +705,7 @@
 
             if (error.value) {
                 console.log('Form submission error:', error.value)
-                if (error.value.statusCode === 400 && error.value.data?.captcha) {
+                if (error.value.data?.captcha) {
                     captchaError.value = error.value.data.captcha
                     window.turnstile?.reset(turnstileWidgetId)
                     turnstileToken.value = ''
