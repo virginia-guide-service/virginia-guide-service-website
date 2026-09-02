@@ -781,10 +781,9 @@
         return
     }
 
-    const script = document.createElement('script')
-    script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit'
-    script.async = true
-    script.onload = () => {
+    const turnstileSrc = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit'
+
+    const renderWidget = () => {
         if (!turnstileContainer.value || !window.turnstile) return
         turnstileWidgetId = window.turnstile.render(turnstileContainer.value, {
             sitekey: config.public.cloudflareSiteKey,
@@ -801,6 +800,22 @@
             }
         })
     }
+
+    const existingScript = document.querySelector(`script[src="${turnstileSrc}"]`) as HTMLScriptElement | null
+    if (existingScript && !window.turnstile) {
+        existingScript.addEventListener('load', renderWidget, { once: true })
+        return
+    }
+
+    if (window.turnstile) {
+        renderWidget()
+        return
+    }
+
+    const script = document.createElement('script')
+    script.src = turnstileSrc
+    script.async = true
+    script.onload = renderWidget
     script.onerror = () => {
         captchaError.value = 'Verification could not be loaded. Please try again.'
     }
