@@ -23,6 +23,7 @@
     "vue-router": "^4.5.1"
   },
   "devDependencies": {
+    "dotenv": "^17.4.2",
     "vite-tsconfig-paths": "^5.1.4"
   }
 }
