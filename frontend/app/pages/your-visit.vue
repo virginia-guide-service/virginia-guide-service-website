@@ -787,6 +787,7 @@
         if (!turnstileContainer.value || !window.turnstile) return
         turnstileWidgetId = window.turnstile.render(turnstileContainer.value, {
             sitekey: config.public.cloudflareSiteKey,
+            action: 'tour_request',
             callback: (token: string) => {
                 turnstileToken.value = token
                 captchaError.value = ''

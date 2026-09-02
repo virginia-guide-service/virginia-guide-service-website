@@ -44,6 +44,11 @@ CHAIR_EMAIL3 = os.getenv("EMAIL_CHAIR_RECEIVER3")
 def verify_turnstile(request):
     token = request.data.get("cf-turnstile-response")
     secret = os.getenv("CLOUDFLARE_SECRET_KEY")
+    allowed_hostnames = {
+        hostname.strip()
+        for hostname in os.getenv("CLOUDFLARE_ALLOWED_HOSTNAMES", "").split(",")
+        if hostname.strip()
+    }
     if not secret:
         return None 
     if not token: 
@@ -71,7 +76,11 @@ def verify_turnstile(request):
     except ValueError:
         return None
 
-    return payload.get("success", False)
+    return (
+        payload.get("success", False)
+        and payload.get("action") == "tour_request"
+        and payload.get("hostname") in allowed_hostnames
+    )
 
 
 def is_exec_team(user):
