@@ -57,7 +57,11 @@ def verify_turnstile(request):
             },
             timeout=10,
         )
-        return response.ok and response.json().get("success", False)
+        try:
+            payload = response.json()
+        except ValueError:
+            return False
+        return response.ok and payload.get("success", False)
     except requests.RequestException:
         return False
 
