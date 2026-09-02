@@ -44,8 +44,11 @@ CHAIR_EMAIL3 = os.getenv("EMAIL_CHAIR_RECEIVER3")
 def verify_turnstile(request):
     token = request.data.get("cf-turnstile-response")
     secret = os.getenv("CLOUDFLARE_SECRET_KEY")
-    if not token or not secret:
+    if not secret:
+        return None 
+    if not token: 
         return False
+
 
     try:
         response = requests.post(
@@ -57,13 +60,18 @@ def verify_turnstile(request):
             },
             timeout=10,
         )
-        try:
-            payload = response.json()
-        except ValueError:
-            return False
-        return response.ok and payload.get("success", False)
     except requests.RequestException:
-        return False
+        return None
+
+    if not response.ok:
+        return None  # Cloudflare-side error, not an invalid token
+
+    try:
+        payload = response.json()
+    except ValueError:
+        return None
+
+    return payload.get("success", False)
 
 
 def is_exec_team(user):
@@ -165,19 +173,22 @@ def register_tour(request):
 
 @api_view(['POST'])
 def register_specialty_tour(request):
-    if not os.getenv("CLOUDFLARE_SECRET_KEY"):
+    serializer = SpecialtyTourRegistrationSerializer(data=request.data)
+    if not serializer.is_valid():
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    verification = verify_turnstile(request)
+    if verification is None:
         return Response(
             {"captcha": "Captcha verification is temporarily unavailable. Please try again later."},
             status=status.HTTP_503_SERVICE_UNAVAILABLE,
         )
-
-    if not verify_turnstile(request):
+    if not verification:
         return Response(
             {"captcha": "Verification failed. Please complete the verification and try again."},
             status=status.HTTP_400_BAD_REQUEST,
         )
 
-    serializer = SpecialtyTourRegistrationSerializer(data=request.data)
     if serializer.is_valid():
         specialty_registration = serializer.save()
 
