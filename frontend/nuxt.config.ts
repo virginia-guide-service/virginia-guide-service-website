@@ -1,7 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
+import { config } from 'dotenv'
+import { resolve } from 'node:path'
 import tailwindcss from "@tailwindcss/vite";
 import tsconfigPaths from "vite-tsconfig-paths";
+
+config({ path: resolve(process.cwd(), '../backend/.env') })
 
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
@@ -12,7 +16,8 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       // allow api to work on the product and development sites -- env variables can be found in vercel
-      apiBase: process.env.NUXT_PUBLIC_API_BASE || 'http://127.0.0.1:8000'
+      apiBase: process.env.NUXT_PUBLIC_API_BASE || 'http://127.0.0.1:8000',
+      cloudflareSiteKey: process.env.NUXT_PUBLIC_CLOUDFLARE_SITE_KEY || '',
       // apiBase: process.env.NUXT_PUBLIC_API_BASE // use for production only 
       // apiBase: 'http://127.0.0.1:8000' // use for local development only (development branch)
     }

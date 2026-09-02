@@ -41,6 +41,27 @@ CHAIR_EMAIL2 = os.getenv("EMAIL_CHAIR_RECEIVER2")
 CHAIR_EMAIL3 = os.getenv("EMAIL_CHAIR_RECEIVER3")
 
 
+def verify_turnstile(request):
+    token = request.data.get("cf-turnstile-response")
+    secret = os.getenv("CLOUDFLARE_SECRET_KEY")
+    if not token or not secret:
+        return False
+
+    try:
+        response = requests.post(
+            "https://challenges.cloudflare.com/turnstile/v0/siteverify",
+            data={
+                "secret": secret,
+                "response": token,
+                "remoteip": request.META.get("REMOTE_ADDR", ""),
+            },
+            timeout=10,
+        )
+        return response.ok and response.json().get("success", False)
+    except requests.RequestException:
+        return False
+
+
 def is_exec_team(user):
     return user.is_staff
 
@@ -140,6 +161,12 @@ def register_tour(request):
 
 @api_view(['POST'])
 def register_specialty_tour(request):
+    if not verify_turnstile(request):
+        return Response(
+            {"captcha": "Verification failed. Please complete the verification and try again."},
+            status=status.HTTP_400_BAD_REQUEST,
+        )
+
     serializer = SpecialtyTourRegistrationSerializer(data=request.data)
     if serializer.is_valid():
         specialty_registration = serializer.save()
