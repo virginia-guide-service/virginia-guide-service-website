@@ -165,6 +165,12 @@ def register_tour(request):
 
 @api_view(['POST'])
 def register_specialty_tour(request):
+    if not os.getenv("CLOUDFLARE_SECRET_KEY"):
+        return Response(
+            {"error": "Captcha verification is temporarily unavailable. Please try again later."},
+            status=status.HTTP_503_SERVICE_UNAVAILABLE,
+        )
+
     if not verify_turnstile(request):
         return Response(
             {"captcha": "Verification failed. Please complete the verification and try again."},
