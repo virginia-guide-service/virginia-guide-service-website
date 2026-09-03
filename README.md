@@ -105,6 +105,24 @@ Create a `.env` file inside `backend/` using `.env.example`
 > **Note:** The `EMAIL_HOST` block is for local development testing only.
 > In production, all email is handled through Mailgun, so you don't need to worry about the "# Recipients — use real addresses in production" block.
 
+### Cloudflare Turnstile Setup
+
+The historical tour registration form is protected with Cloudflare Turnstile.
+Create a Turnstile widget in Cloudflare and allow the domains where the form will
+run, including `localhost` for local development. Put both keys in `backend/.env`:
+
+```bash
+NUXT_PUBLIC_CLOUDFLARE_SITE_KEY=your-turnstile-site-key
+NUXT_PUBLIC_API_BASE=http://127.0.0.1:8000
+CLOUDFLARE_SECRET_KEY=your-turnstile-secret-key
+```
+
+For local development, `frontend/nuxt.config.ts` loads `backend/.env`. The
+`NUXT_PUBLIC_` site key is intentionally exposed to the browser; keep
+`CLOUDFLARE_SECRET_KEY` server-side and do not configure it as a public Vercel
+environment variable. Restart the frontend development server after changing
+these values.
+
 ---
 
 ## Deployment

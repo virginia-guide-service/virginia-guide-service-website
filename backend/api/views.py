@@ -41,6 +41,48 @@ CHAIR_EMAIL2 = os.getenv("EMAIL_CHAIR_RECEIVER2")
 CHAIR_EMAIL3 = os.getenv("EMAIL_CHAIR_RECEIVER3")
 
 
+def verify_turnstile(request):
+    token = request.data.get("cf-turnstile-response")
+    secret = os.getenv("CLOUDFLARE_SECRET_KEY")
+    allowed_hostnames = {
+        hostname.strip()
+        for hostname in os.getenv("CLOUDFLARE_ALLOWED_HOSTNAMES", "").split(",")
+        if hostname.strip()
+    }
+    if not secret:
+        return None 
+    if not token: 
+        return False
+
+
+    try:
+        response = requests.post(
+            "https://challenges.cloudflare.com/turnstile/v0/siteverify",
+            data={
+                "secret": secret,
+                "response": token,
+                "remoteip": request.META.get("REMOTE_ADDR", ""),
+            },
+            timeout=10,
+        )
+    except requests.RequestException:
+        return None
+
+    if not response.ok:
+        return None  # Cloudflare-side error, not an invalid token
+
+    try:
+        payload = response.json()
+    except ValueError:
+        return None
+
+    return (
+        payload.get("success", False)
+        and payload.get("action") == "tour_request"
+        and payload.get("hostname") in allowed_hostnames
+    )
+
+
 def is_exec_team(user):
     return user.is_staff
 
@@ -141,6 +183,21 @@ def register_tour(request):
 @api_view(['POST'])
 def register_specialty_tour(request):
     serializer = SpecialtyTourRegistrationSerializer(data=request.data)
+    if not serializer.is_valid():
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    verification = verify_turnstile(request)
+    if verification is None:
+        return Response(
+            {"captcha": "Captcha verification is temporarily unavailable. Please try again later."},
+            status=status.HTTP_503_SERVICE_UNAVAILABLE,
+        )
+    if not verification:
+        return Response(
+            {"captcha": "Verification failed. Please complete the verification and try again."},
+            status=status.HTTP_400_BAD_REQUEST,
+        )
+
     if serializer.is_valid():
         specialty_registration = serializer.save()
 

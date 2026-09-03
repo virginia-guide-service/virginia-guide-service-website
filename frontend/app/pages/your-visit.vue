@@ -292,8 +292,13 @@
                                     {{ fieldErrors.notes[0] }}
                                 </p>
 
-                                <button type="submit"
-                                    class="font-[Montserrat] bg-dark-green text-white font-semibold rounded-lg px-4 py-2 hover:bg-green-700 transition-all duration-300 ease-in-out cursor-pointer">
+                                <div ref="turnstileContainer" class="mb-5"></div>
+                                <p v-if="captchaError" class="text-red-500 text-sm mb-3">
+                                    {{ captchaError }}
+                                </p>
+
+                                <button type="submit" :disabled="!turnstileToken || loading"
+                                    class="font-[Montserrat] bg-dark-green text-white font-semibold rounded-lg px-4 py-2 hover:bg-green-700 transition-all duration-300 ease-in-out cursor-pointer disabled:cursor-not-allowed disabled:opacity-60">
                                     Request Tour
                                 </button>
                                 
@@ -615,6 +620,19 @@
     const fieldErrors = ref<Record<string, string[]>>({})
     const loading = ref(false)
     const showToast = ref(false)
+    const turnstileContainer = ref<HTMLElement | null>(null)
+    const turnstileToken = ref('')
+    const captchaError = ref('')
+    let turnstileWidgetId: string | undefined
+
+    declare global {
+        interface Window {
+            turnstile?: {
+                render: (container: HTMLElement, options: Record<string, unknown>) => string
+                reset: (widgetId?: string) => void
+            }
+        }
+    }
 
     // Times array with display (AM/PM) and value (24-hour)
     const times = ref<{ display: string; value: string }[]>([])
@@ -662,6 +680,11 @@
 
     async function submitForm(e: Event) {
         e.preventDefault()
+        if (!turnstileToken.value) {
+            captchaError.value = 'Please complete the verification before submitting.'
+            return
+        }
+
         loading.value = true
         showToast.value = false
         fieldErrors.value = {}
@@ -673,12 +696,21 @@
             const { data, error } = await useFetch(`${config.public.apiBase}/register-specialty-tour/`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(form.value),
+                body: JSON.stringify({
+                    ...form.value,
+                    'cf-turnstile-response': turnstileToken.value
+                }),
                 timeout: 60000 // 60 seconds
             })
 
             if (error.value) {
                 console.log('Form submission error:', error.value)
+                if (error.value.data?.captcha) {
+                    captchaError.value = error.value.data.captcha
+                    window.turnstile?.reset(turnstileWidgetId)
+                    turnstileToken.value = ''
+                    return
+                }
                 if (error.value.data) {
                     fieldErrors.value = error.value.data
                 } else {
@@ -742,6 +774,53 @@
 
     const scrollElements = document.querySelectorAll(".scrollElement")
     scrollElements.forEach((element) => observer.observe(element))
+
+    const config = useRuntimeConfig()
+    if (!config.public.cloudflareSiteKey) {
+        captchaError.value = 'Verification is temporarily unavailable. Please try again later.'
+        return
+    }
+
+    const turnstileSrc = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit'
+
+    const renderWidget = () => {
+        if (!turnstileContainer.value || !window.turnstile) return
+        turnstileWidgetId = window.turnstile.render(turnstileContainer.value, {
+            sitekey: config.public.cloudflareSiteKey,
+            action: 'tour_request',
+            callback: (token: string) => {
+                turnstileToken.value = token
+                captchaError.value = ''
+            },
+            'error-callback': () => {
+                captchaError.value = 'Verification could not be loaded. Please try again.'
+            },
+            'expired-callback': () => {
+                turnstileToken.value = ''
+                captchaError.value = 'Verification expired. Please complete it again.'
+            }
+        })
+    }
+
+    const existingScript = document.querySelector(`script[src="${turnstileSrc}"]`) as HTMLScriptElement | null
+    if (existingScript && !window.turnstile) {
+        existingScript.addEventListener('load', renderWidget, { once: true })
+        return
+    }
+
+    if (window.turnstile) {
+        renderWidget()
+        return
+    }
+
+    const script = document.createElement('script')
+    script.src = turnstileSrc
+    script.async = true
+    script.onload = renderWidget
+    script.onerror = () => {
+        captchaError.value = 'Verification could not be loaded. Please try again.'
+    }
+    document.head.appendChild(script)
     })
 
 </script>
